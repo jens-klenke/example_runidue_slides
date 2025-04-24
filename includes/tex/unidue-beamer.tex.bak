@@ -1,0 +1,558 @@
+\documentclass[aspectratio=169,$if(fontsize)$$fontsize$,$else$10pt,$endif$$if(babel-lang)$$babel-lang$,$endif$$if(handout)$handout,$endif$$if(colorlinks)$dvipsnames,$endif$$if(beamer)$ignorenonframetext,$endif$$for(classoption)$$classoption$$sep$,$endfor$]{$documentclass$}
+
+%%%
+\usepackage{amssymb,amsmath, amsthm}
+\usepackage{makecell}
+\usepackage{zref}
+\usepackage{zref-user}
+\usepackage{zref-xr}
+$if(zref-path)$
+\zexternaldocument[S-]{$zref-path$}
+\newcommand{\zeqref}[1]{(\zref{#1})}
+$endif$
+\usepackage{tabu}
+
+
+%%% Kahoot
+\newenvironment<>{kahoot}[1]{%
+  \begin{actionenv}#2%
+      \def\insertblocktitle{#1}%
+      \par%
+      \mode<presentation>{%
+        \setbeamercolor{block title}{fg=black,bg=yellow}
+       \setbeamercolor{block body}{fg=black,bg=yellow!20}
+       \setbeamercolor{itemize item}{fg=orange!20!black}
+       \setbeamertemplate{itemize item}[triangle]
+     }%
+      \usebeamertemplate{block begin}
+      \begin{center}
+\includegraphics[width=0.15\textwidth]{Grafiken/kahoot.png}
+\end{center}}
+    {\par\usebeamertemplate{block end}\end{actionenv}}
+
+%%% R Logo
+\newcommand{\R}{\includegraphics[height=.8\baselineskip]{includes/img/R_logo}}
+
+\usepackage{tikz}
+\usetikzlibrary{arrows, decorations.markings}
+
+\tikzstyle{vecArrow} = [thick, decoration={markings,mark=at position
+   1 with {\arrow[semithick]{open triangle 60}}},
+   double distance=1.4pt, shorten >= 5.5pt,
+   preaction = {decorate},
+   postaction = {draw,line width=1.4pt, white,shorten >= 4.5pt}]
+\tikzstyle{innerWhite} = [semithick, white,line width=1.4pt, shorten >= 4.5pt]
+
+
+\usepackage{textcomp}
+\usepackage{booktabs}
+\usepackage[skip=7pt]{caption} % space between floats (figures, tables) and its captions
+
+\newcounter{preproof}
+\makeatletter \setbeamertemplate{proof begin} {
+\setcounter{preproof}{\value{equation}}
+\setcounter{equation}{0}
+\renewcommand{\theequation}{\Roman{equation}} % or do like this and ref from elsewhere with thmn no as needed
+{\textup{\structure{\textbf\insertproofname}}}} \makeatother
+
+\setbeamertemplate{proof end}{\setcounter{equation}{\value{preproof}}
+\\[.25cm]}
+
+\makeatletter
+\def\newblock{\beamer@newblock} % to make bibtex work
+\makeatother
+
+\newcommand{\npt}{\\[1ex]\pause}
+%\newcounter{transfct}
+\newcommand{\nbs}{\protect{~}}
+
+
+\newcommand{\qedb}{\hfill \textsquare} % to be used outside proof environments
+\newcommand{\pausealt}{ }
+
+\definecolor{dueblue}{RGB}{0,76,147}
+\definecolor{duelightblue}{RGB}{223,228,242}
+\definecolor{duebeige}{RGB}{239,228,191}
+\definecolor{shadecolor}{gray}{0.93}
+$if(shadecolor)$\definecolor{shadecolor}{gray}{$shadecolor$}$endif$ % shade of grey used for chunk background
+\usepackage{etoolbox}
+\usepackage{ifthen}
+\input{includes/tex/ee.sty}
+
+\newcommand{\hil}[1]{\textbf{\color{dueblue}{#1}\color{black}}}
+\newcommand{\hilm}[1]{\mathbf{\color{dueblue}{#1}\color{black}}}
+
+% Reduce the spacing between R code and its output
+\makeatletter
+\preto{\@verbatim}{\topsep=-6pt \partopsep=0pt \parskip=-2ex}
+% \preto{\@snugshade}{\parskip=-4ex}
+\makeatother
+
+
+
+% new packages
+\usepackage{siunitx} 
+%\newcolumntype{d}[1]{D{.}{.}{#1}}
+
+\sisetup{
+  round-mode          = places, % Rounds numbers
+  round-precision     = 1, % to 2 places
+}
+
+
+%%% BEAMER SETTINGS
+
+
+
+% TITLE PAGE
+
+
+
+% What theorem style should be used
+\setbeamerfont{block title}{size=\normalsize}
+\expandafter\ifstrequal\expandafter{$thrm-style$}{block}{%
+  \setbeamertemplate{theorems}[numbered]}{%
+  \setbeamertemplate{theorems}[ams style]}%
+
+\setbeamertemplate{theorem begin}
+{%
+\normalfont
+\begin{\inserttheoremblockenv}
+{%
+%\textup{
+    \structure{%
+      \textbf{\inserttheoremname \inserttheoremnumber}:
+      \ifx\inserttheoremaddition\empty\else\inserttheoremaddition\inserttheorempunctuation\fi\hfill%
+    }%
+  %}%
+}%
+}
+\setbeamertemplate{theorem end}{\end{\inserttheoremblockenv}}
+
+
+
+
+
+
+% Headers for theorems
+
+
+
+\expandafter\ifstrequal\expandafter{$lang$}{de}{%
+\newcommand{\thmncont}{Fortsetzung} % head for continued blocks
+
+\newtheorem{thmn}{Theorem}[section]
+\newtheorem{lem}[thmn]{Lemma}
+\newtheorem{cor}[thmn]{Corollary}
+\newtheorem{defn}[thmn]{Definition}
+\newtheorem{ass}[thmn]{Annahme}
+\newtheorem{rem}[thmn]{Anmerkung}
+\theoremstyle{definition}
+\newtheorem{xmpl}[thmn]{Beispiel}
+\newtheorem{que}[thmn]{Frage}
+
+
+\numberwithin{equation}{section}}{%
+\newcommand{\thmncont}{Continued} % head for continued blocks
+
+\newtheorem{thmn}{Theorem}[section]
+\newtheorem{lem}[thmn]{Lemma}
+\newtheorem{cor}[thmn]{Corollary}
+\newtheorem{defn}[thmn]{Definition}
+\newtheorem{ass}[thmn]{Assumption}
+\newtheorem{rem}[thmn]{Remark}
+\theoremstyle{definition}
+\newtheorem{xmpl}[thmn]{Example}
+\newtheorem{que}[thmn]{Question}
+\numberwithin{equation}{section}
+}%
+
+
+
+% CONTINUING BLOCKS
+\newenvironment{thmn*}{\addtocounter{thmn}{-1}\thmn[\thmncont]}{\endthmn}
+\newenvironment{lem*}{\addtocounter{thmn}{-1}\lem[\thmncont]}{\endlem}
+\newenvironment{cor*}{\addtocounter{thmn}{-1}\cor[\thmncont]}{\endcor}
+\newenvironment{defn*}{\addtocounter{thmn}{-1}\thmn[\thmncont]}{\endthmn}
+\newenvironment{ass*}{\addtocounter{thmn}{-1}\ass[\thmncont]}{\endass}
+\newenvironment{rem*}{\addtocounter{thmn}{-1}\rem[\thmncont]}{\endrem}
+\newenvironment{xmpl*}{\addtocounter{thmn}{-1}\xmpl[\thmncont]}{\endxmpl}
+\newenvironment{que*}{\addtocounter{thmn}{-1}\que[\thmncont]}{\endque}
+
+
+
+
+
+% LAYOUT
+\usetheme{Boadilla}
+\usecolortheme[named=dueblue]{structure}
+
+
+
+% FRAME HEAD
+\usepackage[export]{adjustbox}
+\makeatletter
+\setbeamertemplate{frametitle}{%
+\vspace{.1cm}
+\begin{minipage}[t][1cm]{.8\textwidth}
+    \ifbeamer@plainframe%
+      \Large\insertframetitle%
+    \else
+      \Large\insertframetitle%
+      \ifx\insertframesubtitle\empty
+      \else
+        \\ \small \insertframesubtitle
+      \fi
+    \fi
+\end{minipage}\hfill
+\begin{minipage}[t][1cm]{1.9cm}
+\expandafter\ifstrequal\expandafter{$lang$}{de}{%
+\includegraphics[width=2cm,keepaspectratio=true, valign=t]{includes/img/logo_german}}{%
+\includegraphics[width=2cm,keepaspectratio=true, valign=t]{includes/img/logo_english}}%
+\end{minipage}
+\vspace{-.3cm}
+}
+\makeatother
+
+% FOOTER
+\setbeamertemplate{footline}{\hspace*{.1cm}%
+% \expandafter\ifstrequal\expandafter{$lang$}{de}{%
+% \includegraphics[width=2cm,keepaspectratio=true]{includes/img/logo_german}}{%
+% \includegraphics[width=2cm,keepaspectratio=true]{includes/img/logo_english}}%
+\hfill \scriptsize{{\insertshortauthor : }
+\insertshorttitle---\insertsection \hfill \thesection-\insertframenumber\hspace*{.2cm}}\vspace{1mm}}
+%\hfill \thesection-\insertframenumber\hspace*{.2cm}}\vspace{.1cm}}
+\setbeamertemplate{section in toc}[ball]
+
+% ITEMIZE ETC.
+\setbeamertemplate{caption}[numbered]
+\setbeamertemplate{caption label separator}{: }
+\setbeamertemplate{itemize item}[circle]
+\setbeamertemplate{itemize subitem}[triangle]
+\setbeamertemplate{itemize subsubitem}[circle]
+% \setbeamertemplate{enumerate item}[circle]
+% \setbeamertemplate{enumerate subitem}[circle]
+
+\setbeamercolor{caption name}{fg=normal text.fg}
+\setbeamerfont{caption}{size=\footnotesize}
+\beamertemplatenavigationsymbols$if(navigation)$$navigation$$else$empty$endif$
+$if(fontfamily)$
+  \usepackage[$for(fontfamilyoptions)$$fontfamilyoptions$$sep$,$endfor$]{$fontfamily$}
+$else$
+\usepackage{lmodern}
+%\renewcommand{\familydefault}{cmss}
+\renewcommand{\mathrm}{\mathsf}
+\renewcommand{\textrm}{\textsf}
+$endif$
+
+\newcommand{\GP}{\operatorname{GP}}
+\newcommand{\GEV}{\operatorname{GEV}}
+\newcommand{\di}{\mathrm{i}}
+
+
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+\usepackage{eurosym}
+
+  \else % if luatex or xelatex
+\ifxetex
+\usepackage{mathspec}
+\else
+  \usepackage{fontspec}
+\fi
+\defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+$for(fontfamilies)$
+  \newfontfamily{$fontfamilies.name$}[$fontfamilies.options$]{$fontfamilies.font$}
+$endfor$
+  $if(euro)$
+  \newcommand{\euro}{€}
+$endif$
+  $if(mainfont)$
+  \setmainfont[$for(mainfontoptions)$$mainfontoptions$$sep$,$endfor$]{$mainfont$}
+$endif$
+  $if(sansfont)$
+  \setsansfont[$for(sansfontoptions)$$sansfontoptions$$sep$,$endfor$]{$sansfont$}
+$endif$
+  $if(monofont)$
+  \setmonofont[Mapping=tex-ansi$if(monofontoptions)$,$for(monofontoptions)$$monofontoptions$$sep$,$endfor$$endif$]{$monofont$}
+$endif$
+  $if(mathfont)$
+  \setmathfont(Digits,Latin,Greek)[$for(mathfontoptions)$$mathfontoptions$$sep$,$endfor$]{$mathfont$}
+$endif$
+  $if(CJKmainfont)$
+  \usepackage{xeCJK}
+\setCJKmainfont[$for(CJKoptions)$$CJKoptions$$sep$,$endfor$]{$CJKmainfont$}
+$endif$
+  \fi
+$if(fonttheme)$
+  \usefonttheme{$fonttheme$}
+$endif$
+  $if(mainfont)$
+  \usefonttheme{serif} % use mainfont rather than sansfont for slide text
+$endif$
+  $if(innertheme)$
+  \useinnertheme{$innertheme$}
+$endif$
+  $if(outertheme)$
+  \useoutertheme{$outertheme$}
+$endif$
+  % use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+  \usepackage{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+$if(lang)$
+  \ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+    \usepackage[shorthands=off,$for(babel-otherlangs)$$babel-otherlangs$,$endfor$main=$babel-lang$]{babel}
+    $if(babel-newcommands)$
+      $babel-newcommands$
+    $endif$
+  \else
+    \usepackage{polyglossia}
+    \setmainlanguage[$polyglossia-lang.options$]{$polyglossia-lang.name$}
+    $for(polyglossia-otherlangs)$
+      \setotherlanguage[$polyglossia-otherlangs.options$]{$polyglossia-otherlangs.name$}
+    $endfor$
+  \fi
+$endif$
+\newif\ifbibliography
+$if(natbib)$
+  \usepackage{natbib}
+  \bibliographystyle{$if(biblio-style)$$biblio-style$$else$plainnat$endif$}
+$endif$
+$if(biblatex)$
+  \usepackage[$if(biblio-style)$style=$biblio-style$,$endif$$for(biblatexoptions)$$biblatexoptions$$sep$,$endfor$]{biblatex}
+  $for(bibliography)$
+    \addbibresource{$bibliography$}
+  $endfor$
+$endif$
+$if(verbatim-in-note)$
+  \usepackage{fancyvrb}
+$endif$
+
+\hypersetup{
+$if(title-meta)$
+  pdftitle={$title-meta$},
+$endif$
+$if(author-meta)$
+  pdfauthor={$author-meta$},
+$endif$
+$if(keywords)$
+  pdfkeywords={$for(keywords)$$keywords$$sep$, $endfor$},
+$endif$
+$if(colorlinks)$
+  colorlinks=true,
+  linkcolor=$if(linkcolor)$$linkcolor$$else$Maroon$endif$,
+  citecolor=$if(citecolor)$$citecolor$$else$Blue$endif$,
+  urlcolor=$if(urlcolor)$$urlcolor$$else$Blue$endif$,
+$else$
+  pdfborder={0 0 0},
+$endif$
+breaklinks=true
+}
+
+\urlstyle{same}  % don't use monospace font for urls
+$if(verbatim-in-note)$
+\VerbatimFootnotes % allows verbatim text in footnotes
+$endif$
+$if(listings)$
+\usepackage{listings}
+$endif$
+$if(lhs)$
+\lstnewenvironment{code}{\lstset{language=Haskell,basicstyle=\small\ttfamily}}{}
+$endif$
+
+$if(highlighting-macros)$$highlighting-macros$$endif$
+$if(tables)$\usepackage{longtable}
+
+% These lines are needed to make table captions work with longtable:
+\makeatletter
+\def\fnum@table{\tablename~\thetable}
+\makeatother
+$endif$
+$if(graphics)$
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight0.8\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+$endif$
+
+% Prevent slide breaks in the middle of a paragraph:
+\widowpenalties 1 10000
+\raggedbottom
+
+\makeatletter
+\patchcmd{\beamer@sectionintoc}{\vskip1.5em}{\vskip0.05em}{}{}
+\makeatother
+
+% NEW SECTION
+\AtBeginSection[] {
+\begin{frame}[plain]%<handout:0>
+\expandafter\ifstrequal\expandafter{$lang$}{de}{\frametitle{Überblick}}{\frametitle{Outline}} %
+\vspace{0.5cm}
+\tableofcontents[currentsection, hideallsubsections]
+\end{frame}
+\addtocounter{framenumber}{-\insertframenumber} % collect all begin section commands in one env.!
+}
+
+\AtBeginSubsection[] {
+\begin{frame}<beamer>
+\expandafter\ifstrequal\expandafter{$lang$}{de}{\frametitle{Überblick}}{\frametitle{Outline}}
+\tableofcontents[currentsection,currentsubsection]
+\end{frame}
+}
+
+\usepackage{bbm,bm}
+
+\setlength{\parindent}{0pt}
+% \setlength{\parskip}{6pt plus 2pt minus 1pt}
+\setlength{\parskip}{2ex}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{\setlength{\itemsep}{1.3ex}\setlength{\parskip}{1.3ex}}
+
+
+%%%
+
+
+% TOC
+$if(startatzero)$
+\makeatletter
+\patchcmd{\beamer@sectionintoc}
+  {\ifnum\beamer@tempcount>0}
+  {\ifnum\beamer@tempcount>-1}
+  {}
+  {}
+\beamer@tocsectionnumber=-1
+\setcounter{section}{-1}
+\makeatother
+$endif$
+
+
+$if(links-as-notes)$
+% Make links footnotes instead of hotlinks:
+\renewcommand{\href}[2]{#2\footnote{\url{#1}}}
+$endif$
+$if(strikeout)$
+\usepackage[normalem]{ulem}
+% avoid problems with \sout in headers with hyperref:
+\pdfstringdefDisableCommands{\renewcommand{\sout}{}}
+$endif$
+
+
+$if(numbersections)$
+\setcounter{secnumdepth}{$if(secnumdepth)$$secnumdepth$$else$5$endif$}
+$else$
+\setcounter{secnumdepth}{0}
+$endif$
+$if(dir)$
+\ifxetex
+% load bidi as late as possible as it modifies e.g. graphicx
+$if(latex-dir-rtl)$
+\usepackage[RTLdocument]{bidi}
+$else$
+\usepackage{bidi}
+$endif$
+\fi
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+\TeXXeTstate=1
+\newcommand{\RL}[1]{\beginR #1\endR}
+\newcommand{\LR}[1]{\beginL #1\endL}
+\newenvironment{RTL}{\beginR}{\endR}
+\newenvironment{LTR}{\beginL}{\endL}
+\fi
+$endif$
+$for(header-includes)$
+$header-includes$
+$endfor$
+
+
+
+
+
+$if(title)$
+\title{$title$}
+$endif$
+$if(subtitle)$
+\subtitle{$subtitle$}
+$endif$
+$if(author)$
+\author{$for(author)$$author$$sep$ \and $endfor$}
+$endif$
+$if(institute)$
+\institute{$for(institute)$$institute$$sep$ \and $endfor$}
+$endif$
+\date{$date$}
+$if(titlegraphic)$
+\titlegraphic{\includegraphics{$titlegraphic$}}
+$endif$
+$if(logo)$
+\logo{\includegraphics{$logo$}}
+$endif$
+
+
+
+
+\begin{document}
+
+
+
+$if(title)$
+\begin{frame}[plain]
+  \titlepage
+\end{frame}
+$endif$
+
+$for(include-before)$
+$include-before$
+$endfor$
+
+
+$if(toc)$
+\begin{frame}[plain]
+\expandafter\ifstrequal\expandafter{$lang$}{de}{\frametitle{Überblick}}{\frametitle{Outline}} %
+\vspace{0.5cm}
+\tableofcontents[hideallsubsections]
+\end{frame}
+$endif$
+
+$body$
+
+$if(natbib)$
+$if(bibliography)$
+$if(biblio-title)$
+$if(book-class)$
+\renewcommand\bibname{$biblio-title$}
+$else$
+\renewcommand\refname{$biblio-title$}
+$endif$
+$endif$
+\begin{frame}[allowframebreaks]{$biblio-title$}
+\bibliographytrue
+\bibliography{$for(bibliography)$$bibliography$$sep$,$endfor$}
+\end{frame}
+
+$endif$
+$endif$
+$if(biblatex)$
+\begin{frame}[allowframebreaks]{$biblio-title$}
+\bibliographytrue
+\printbibliography[heading=none]
+\end{frame}
+
+$endif$
+$for(include-after)$
+$include-after$
+
+$endfor$
+\end{document}

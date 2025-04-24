@@ -1,0 +1,29 @@
+\frametitle{Signifikanztests}
+\phantomsection\label{signifikanztests-40}
+\framesubtitle{$\sigma^2$ unbekannt}
+
+\footnotesize
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(MASS)}
+\NormalTok{x }\OtherTok{\textless{}{-}} \FunctionTok{mvrnorm}\NormalTok{(}\AttributeTok{n =} \DecValTok{25}\NormalTok{, }\AttributeTok{empirical =} \ConstantTok{TRUE}\NormalTok{, }\AttributeTok{mu =} \FloatTok{21.5}\NormalTok{, }\AttributeTok{Sigma =} \DecValTok{9}\NormalTok{)}
+\FunctionTok{t.test}\NormalTok{(x, }\AttributeTok{mu =} \DecValTok{20}\NormalTok{, }\AttributeTok{alternative =} \StringTok{"greater"}\NormalTok{, }\AttributeTok{conf.level =} \FloatTok{0.99}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##
+##  One Sample t-test
+##
+## data:  x
+## t = 2.5, df = 24, p-value = 0.01
+## alternative hypothesis: true mean is greater than 20
+## 99 percent confidence interval:
+##   20 Inf
+## sample estimates:
+## mean of x
+##      21.5
+\end{verbatim}
+
+\normalsize

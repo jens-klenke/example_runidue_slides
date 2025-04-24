@@ -1,0 +1,5 @@
+# ToDo
+- Decimalzeichen zu Punkt ändern und Erwähnung auf einer frühen Slide.
+- QuizAcademy 
+- Grafiken - neue AspectRatio
+- Aufgaben Farbe wieder ändern 
