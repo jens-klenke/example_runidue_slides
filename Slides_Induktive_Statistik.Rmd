@@ -5,6 +5,7 @@ date: "Sommersemester 2025"
 output: 
   runidue::lectureslides:
     lang: "en"
+    logo: signet_ude_rgb.png
     keep_tex: true
 editor_options: 
   chunk_output_type: console
