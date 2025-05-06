@@ -145,7 +145,6 @@
 \usepackage{zref-user}
 \usepackage{zref-xr}
 \usepackage{empheq}
-\usepackage{eurosym}
 \usepackage{tikz}
 \usetikzlibrary{arrows, decorations.markings}
 \tikzstyle{arrow} = [ultra thick, - latex, shorten >= 2pt, shorten <= 2pt] % default arrow
@@ -381,30 +380,25 @@ postaction = {draw,line width=1.4pt, white,shorten >= 4.5pt}]
 % Frame Head
 \makeatletter
 \setbeamertemplate{frametitle}{%
-	\makebox[\textwidth]{%
-		\vspace{.1cm}
-		\begin{minipage}[t][1cm]{.84\textwidth}
-			\ifbeamer@plainframe%
-			\Large\insertframetitle%
-			\else
-			\Large\insertframetitle%
-			\ifx\insertframesubtitle\empty
-			\else
-			\\ \small \insertframesubtitle
-			\fi
-			\fi
-		\end{minipage}
-		
-		\hfill
-	
-		\ifstrequal{signet_ude_rgb.png}{FALSE}{}{\begin{minipage}[t][1cm]{1.9cm}\includegraphics[height=1cm,keepaspectratio=true,valign=t, right]{signet_ude_rgb.png}\end{minipage}\vspace{-.3cm}}
-		
-	} % close makebox to have the header in one row
-	
+\vspace{.1cm}
+\begin{minipage}[t][1cm]{1\textwidth}
+    \ifbeamer@plainframe%
+      \Large\insertframetitle%
+    \else
+      \Large\insertframetitle%
+      \hfill
+      \includegraphics[width=2cm,keepaspectratio=true, valign=t]{"C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmarkdown/templates/lectureslides/resources/duelogo"} 
+      \ifx\insertframesubtitle\empty
+      \else
+        \\ \small \insertframesubtitle
+      \fi
+    \fi
+\end{minipage}
+
 }
 \makeatother
 
-%%\ifstrequal{signet_ude_rgb.png}{FALSE}{}{\includegraphics[width=2cm,keepaspectratio=true, valign=t]{signet_ude_rgb.png}\vspace{-.3cm}}
+%%\includegraphics[width=2cm,keepaspectratio=true, valign=t]{"C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmarkdown/templates/lectureslides/resources/duelogo"}
 %    
 
 

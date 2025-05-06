@@ -5,8 +5,13 @@ date: "Sommersemester 2025"
 output: 
   runidue::lectureslides:
     lang: "en"
+<<<<<<< HEAD
+<<<<<<< HEAD
     logo: signet_ude_rgb.png
-    quiz_logo: QuizAcademy.png
+=======
+>>>>>>> parent of 884fa6d (logo tires and fix)
+=======
+>>>>>>> parent of 884fa6d (logo tires and fix)
     keep_tex: true
 editor_options: 
   chunk_output_type: console

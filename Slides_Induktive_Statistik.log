@@ -1,4 +1,12 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
 This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.4.30)  6 MAY 2025 13:15
+=======
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2022.3.31)  24 APR 2025 12:02
+>>>>>>> parent of 884fa6d (logo tires and fix)
+=======
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2022.3.31)  24 APR 2025 12:02
+>>>>>>> parent of 884fa6d (logo tires and fix)
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1507,8 +1515,60 @@ Package: inlinedef 2008/07/10 v1.0 Inlined expansions within definitions
 \forest@PIii@toks=\toks71
 \forest@copy@in=\read5
 \forest@copy@out=\write6
+<<<<<<< HEAD
 \forest@externalize@max@outer@n=\count414
 \forest@externalize@inner@n=\count415
+=======
+\forest@externalize@max@outer@n=\count401
+\forest@externalize@inner@n=\count402
+) (c:/texlive/2021/texmf-dist/tex/generic/soul/soul.sty
+Package: soul 2003/11/17 v2.4 letterspacing/underlining (mf)
+\SOUL@word=\toks70
+\SOUL@lasttoken=\toks71
+\SOUL@cmds=\toks72
+\SOUL@buffer=\toks73
+\SOUL@token=\toks74
+\SOUL@spaceskip=\skip81
+\SOUL@ttwidth=\dimen381
+\SOUL@uldp=\dimen382
+\SOUL@ulht=\dimen383
+) (c:/texlive/2021/texmf-dist/tex/latex/zref/zref.sty
+Package: zref 2020-07-03 v2.32 A new reference scheme for LaTeX (HO)
+(c:/texlive/2021/texmf-dist/tex/latex/zref/zref-base.sty
+Package: zref-base 2020-07-03 v2.32 Module base for zref (HO)
+Package zref Info: New property list: main on input line 764.
+Package zref Info: New property: default on input line 765.
+Package zref Info: New property: page on input line 766.
+)) (c:/texlive/2021/texmf-dist/tex/latex/zref/zref-user.sty
+Package: zref-user 2020-07-03 v2.32 Module user for zref (HO)
+) (c:/texlive/2021/texmf-dist/tex/latex/zref/zref-xr.sty
+Package: zref-xr 2020-07-03 v2.32 Module xr for zref (HO)
+Package zref Info: New property: url on input line 59.
+Package zref Info: New property: urluse on input line 60.
+Package zref Info: New property: externaldocument on input line 61.
+\ZREF@xr@URL=\count403
+) (c:/texlive/2021/texmf-dist/tex/latex/mathtools/empheq.sty
+Package: empheq 2017/03/31 v2.15 Emphasizing equations
+\l_EQ_equationtype_int=\count404
+\l_EQ_alignmentmode_int=\count405
+\l_EQ_totalwidth_dim=\dimen384
+\l_EQ_displaywidth_dim=\dimen385
+\l_EQ_temp_linewidth_dim=\dimen386
+\l_EQ_linewidth_dim=\dimen387
+\EmphEqdelimitershortfall=\dimen388
+\EmphEqdelimiterfactor=\count406
+\g_EQ_toptag_height_dim=\dimen389
+\g_EQ_bottomtag_depth_dim=\dimen390
+\g_EQ_toprow_height_dim=\dimen391
+\g_EQ_bottomrow_depth_dim=\dimen392
+\g_EQ_widesttag_dim=\dimen393
+\EQ_mathdisplay_box=\box117
+\EQ_tag_box=\box118
+\g_EQ_temprow_int=\count407
+<<<<<<< HEAD
+>>>>>>> parent of 884fa6d (logo tires and fix)
+=======
+>>>>>>> parent of 884fa6d (logo tires and fix)
 )
 (C:\Users\Vineet.Dairashri\AppData\Local\Programs\MiKTeX\tex/generic/soul\soul.
 sty
@@ -1554,6 +1614,8 @@ Package: zref-base 2023-09-14 v2.35 Module base for zref (HO)
 ook.sty
 Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
 )
+<<<<<<< HEAD
+<<<<<<< HEAD
 Package zref Info: New property list: main on input line 767.
 Package zref Info: New property: default on input line 768.
 Package zref Info: New property: page on input line 769.
@@ -1561,6 +1623,12 @@ Package zref Info: New property: page on input line 769.
 (C:\Users\Vineet.Dairashri\AppData\Local\Programs\MiKTeX\tex/latex/zref\zref-us
 er.sty
 Package: zref-user 2023-09-14 v2.35 Module user for zref (HO)
+=======
+\tikz@lib@dec@box=\box119
+>>>>>>> parent of 884fa6d (logo tires and fix)
+=======
+\tikz@lib@dec@box=\box119
+>>>>>>> parent of 884fa6d (logo tires and fix)
 )
 (C:\Users\Vineet.Dairashri\AppData\Local\Programs\MiKTeX\tex/latex/zref\zref-xr
 .sty
@@ -1629,6 +1697,8 @@ ies/decorations\pgflibrarydecorations.markings.code.tex))
 rcolorthemestructure.sty) (Slides_Induktive_Statistik.aux)
 \openout1 = `Slides_Induktive_Statistik.aux'.
 
+<<<<<<< HEAD
+<<<<<<< HEAD
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 514.
 LaTeX Font Info:    ... okay on input line 514.
 LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 514.
@@ -1647,6 +1717,31 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 514.
 LaTeX Font Info:    ... okay on input line 514.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 514.
 LaTeX Font Info:    ... okay on input line 514.
+=======
+=======
+>>>>>>> parent of 884fa6d (logo tires and fix)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 488.
+LaTeX Font Info:    ... okay on input line 488.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 488.
+LaTeX Font Info:    ... okay on input line 488.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 488.
+LaTeX Font Info:    ... okay on input line 488.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 488.
+LaTeX Font Info:    ... okay on input line 488.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 488.
+LaTeX Font Info:    ... okay on input line 488.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 488.
+LaTeX Font Info:    ... okay on input line 488.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 488.
+LaTeX Font Info:    ... okay on input line 488.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 488.
+LaTeX Font Info:    ... okay on input line 488.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 488.
+LaTeX Font Info:    ... okay on input line 488.
+<<<<<<< HEAD
+>>>>>>> parent of 884fa6d (logo tires and fix)
+=======
+>>>>>>> parent of 884fa6d (logo tires and fix)
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -1685,6 +1780,7 @@ LaTeX Font Info:    ... okay on input line 514.
 (C:\Users\Vineet.Dairashri\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\
 supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
+<<<<<<< HEAD
 \scratchcounter=\count427
 \scratchdimen=\dimen416
 \scratchbox=\box123
@@ -1699,6 +1795,20 @@ supp-pdf.mkii
 )
 (C:\Users\Vineet.Dairashri\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg
 \epstopdf-base.sty
+=======
+\scratchcounter=\count410
+\scratchdimen=\dimen402
+\scratchbox=\box120
+\nofMPsegments=\count411
+\nofMParguments=\count412
+\everyMPshowfont=\toks75
+\MPscratchCnt=\count413
+\MPscratchDim=\dimen403
+\MPnumerator=\count414
+\makeMPintoPDFobject=\count415
+\everyMPtoPDFconversion=\toks76
+) (c:/texlive/2021/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+>>>>>>> parent of 884fa6d (logo tires and fix)
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
@@ -1707,12 +1817,34 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 topdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
+<<<<<<< HEAD
+<<<<<<< HEAD
 Package hyperref Info: Link coloring ON on input line 514.
 (Slides_Induktive_Statistik.out) (Slides_Induktive_Statistik.out)
+=======
+=======
+>>>>>>> parent of 884fa6d (logo tires and fix)
+Package hyperref Info: Link coloring ON on input line 488.
+(c:/texlive/2021/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
+(c:/texlive/2021/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+) (c:/texlive/2021/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+)
+\c@section@level=\count416
+)
+LaTeX Info: Redefining \ref on input line 488.
+LaTeX Info: Redefining \pageref on input line 488.
+LaTeX Info: Redefining \nameref on input line 488.
+(./Slides_Induktive_Statistik.out) (./Slides_Induktive_Statistik.out)
+>>>>>>> parent of 884fa6d (logo tires and fix)
 \@outlinefile=\write7
 \openout7 = `Slides_Induktive_Statistik.out'.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+<<<<<<< HEAD
+<<<<<<< HEAD
 (Font)                  OT1/lmr/m/n --> OT1/cmss/m/n on input line 514.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
 (Font)                  OT1/lmr/bx/n --> OT1/cmss/b/n on input line 514.
@@ -1782,6 +1914,148 @@ LaTeX Font Info:    Overwriting symbol font `boldpureletters' in version `bold'
 
 (Font)                  OT1/mathkerncmss/bx/sl --> T1/lmss/bx/it on input line 
 514.
+=======
+(Font)                  OT1/lmr/m/n --> OT1/cmss/m/n on input line 488.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/lmr/bx/n --> OT1/cmss/b/n on input line 488.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 488.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmss/b/n --> OT1/lmss/b/n on input line 488.
+\symnumbers=\mathgroup11
+LaTeX Font Info:    Redeclaring symbol font `pureletters' on input line 488.
+LaTeX Font Info:    Encoding `OT1' has changed to `T1' for symbol font
+(Font)              `pureletters' in the math version `normal' on input line 48
+8.
+LaTeX Font Info:    Overwriting symbol font `pureletters' in version `normal'
+(Font)                  OT1/mathkerncmss/m/sl --> T1/lmss/m/it on input line 48
+8.
+LaTeX Font Info:    Encoding `OT1' has changed to `T1' for symbol font
+(Font)              `pureletters' in the math version `bold' on input line 488.
+=======
+(Font)                  OT1/lmr/m/n --> OT1/cmss/m/n on input line 488.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/lmr/bx/n --> OT1/cmss/b/n on input line 488.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 488.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmss/b/n --> OT1/lmss/b/n on input line 488.
+\symnumbers=\mathgroup11
+LaTeX Font Info:    Redeclaring symbol font `pureletters' on input line 488.
+LaTeX Font Info:    Encoding `OT1' has changed to `T1' for symbol font
+(Font)              `pureletters' in the math version `normal' on input line 48
+8.
+LaTeX Font Info:    Overwriting symbol font `pureletters' in version `normal'
+(Font)                  OT1/mathkerncmss/m/sl --> T1/lmss/m/it on input line 48
+8.
+LaTeX Font Info:    Encoding `OT1' has changed to `T1' for symbol font
+(Font)              `pureletters' in the math version `bold' on input line 488.
+
+LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
+(Font)                  OT1/mathkerncmss/bx/sl --> T1/lmss/m/it on input line 4
+88.
+LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
+(Font)                  OT1/lmss/m/n --> T1/lmr/m/n on input line 488.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 488.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 488.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/lmss/m/n --> T1/lmss/m/n on input line 488.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/lmss/bx/n --> T1/lmss/m/n on input line 488.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 488.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/lmr/m/it --> T1/lmss/m/it on input line 488.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/lmr/bx/it --> T1/lmss/m/it on input line 488.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 488.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/lmtt/m/n --> T1/lmtt/m/n on input line 488.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/lmtt/m/n --> T1/lmtt/m/n on input line 488.
+LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
+(Font)                  T1/lmss/m/n --> T1/lmss/b/n on input line 488.
+LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
+(Font)                  T1/lmss/m/it --> T1/lmss/b/it on input line 488.
+LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
+(Font)                  OT1/lmss/b/n --> T1/lmr/b/n on input line 488.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  T1/lmss/b/n --> T1/lmss/b/n on input line 488.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  T1/lmss/m/n --> T1/lmss/b/n on input line 488.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  T1/lmss/m/it --> T1/lmss/b/it on input line 488.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  T1/lmtt/m/n --> T1/lmtt/b/n on input line 488.
+LaTeX Font Info:    Redeclaring symbol font `boldpureletters' on input line 488
+.
+LaTeX Font Info:    Encoding `OT1' has changed to `T1' for symbol font
+(Font)              `boldpureletters' in the math version `normal' on input lin
+e 488.
+LaTeX Font Info:    Overwriting symbol font `boldpureletters' in version `norma
+l'
+(Font)                  OT1/mathkerncmss/bx/sl --> T1/lmss/bx/it on input line 
+488.
+LaTeX Font Info:    Encoding `OT1' has changed to `T1' for symbol font
+(Font)              `boldpureletters' in the math version `bold' on input line 
+488.
+LaTeX Font Info:    Overwriting symbol font `boldpureletters' in version `bold'
+
+(Font)                  OT1/mathkerncmss/bx/sl --> T1/lmss/bx/it on input line 
+488.
+>>>>>>> parent of 884fa6d (logo tires and fix)
+
+LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
+(Font)                  OT1/mathkerncmss/bx/sl --> T1/lmss/m/it on input line 4
+88.
+LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
+(Font)                  OT1/lmss/m/n --> T1/lmr/m/n on input line 488.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 488.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 488.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/lmss/m/n --> T1/lmss/m/n on input line 488.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/lmss/bx/n --> T1/lmss/m/n on input line 488.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 488.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/lmr/m/it --> T1/lmss/m/it on input line 488.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/lmr/bx/it --> T1/lmss/m/it on input line 488.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 488.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/lmtt/m/n --> T1/lmtt/m/n on input line 488.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/lmtt/m/n --> T1/lmtt/m/n on input line 488.
+LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
+(Font)                  T1/lmss/m/n --> T1/lmss/b/n on input line 488.
+LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
+(Font)                  T1/lmss/m/it --> T1/lmss/b/it on input line 488.
+LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
+(Font)                  OT1/lmss/b/n --> T1/lmr/b/n on input line 488.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  T1/lmss/b/n --> T1/lmss/b/n on input line 488.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  T1/lmss/m/n --> T1/lmss/b/n on input line 488.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  T1/lmss/m/it --> T1/lmss/b/it on input line 488.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  T1/lmtt/m/n --> T1/lmtt/b/n on input line 488.
+LaTeX Font Info:    Redeclaring symbol font `boldpureletters' on input line 488
+.
+LaTeX Font Info:    Encoding `OT1' has changed to `T1' for symbol font
+(Font)              `boldpureletters' in the math version `normal' on input lin
+e 488.
+LaTeX Font Info:    Overwriting symbol font `boldpureletters' in version `norma
+l'
+(Font)                  OT1/mathkerncmss/bx/sl --> T1/lmss/bx/it on input line 
+488.
+LaTeX Font Info:    Encoding `OT1' has changed to `T1' for symbol font
+(Font)              `boldpureletters' in the math version `bold' on input line 
+488.
+LaTeX Font Info:    Overwriting symbol font `boldpureletters' in version `bold'
+
+(Font)                  OT1/mathkerncmss/bx/sl --> T1/lmss/bx/it on input line 
+488.
+>>>>>>> parent of 884fa6d (logo tires and fix)
 
 (C:\Users\Vineet.Dairashri\AppData\Local\Programs\MiKTeX\tex/latex/translator\t
 ranslator-basic-dictionary-English.dict
@@ -1807,6 +2081,8 @@ Dictionary: translator-numbers-dictionary, Language: English
 ranslator-theorem-dictionary-English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
 )
+<<<<<<< HEAD
+<<<<<<< HEAD
 Package microtype Info: Patching varwidth to enable character protrusion.
 \MT@vwid@leftmargin=\dimen418
 \MT@vwid@rightmargin=\dimen419
@@ -1817,13 +2093,32 @@ Package microtype Info: Applying patch `eqnum' on input line 514.
 Package microtype Info: Applying patch `footnote' on input line 514.
 Package microtype Info: Applying patch `verbatim' on input line 514.
 LaTeX Info: Redefining \microtypesetup on input line 514.
+=======
+=======
+>>>>>>> parent of 884fa6d (logo tires and fix)
+LaTeX Info: Redefining \microtypecontext on input line 488.
+Package microtype Info: Applying patch `item' on input line 488.
+Package microtype Info: Applying patch `toc' on input line 488.
+Package microtype Info: Applying patch `eqnum' on input line 488.
+
+Package microtype Warning: Unable to apply patch `footnote' on input line 488.
+
+>>>>>>> parent of 884fa6d (logo tires and fix)
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using protrusion set `basicmath'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
+<<<<<<< HEAD
+<<<<<<< HEAD
 LaTeX Info: Redefining \showhyphens on input line 514.
+=======
+LaTeX Info: Redefining \showhyphens on input line 488.
+>>>>>>> parent of 884fa6d (logo tires and fix)
+=======
+LaTeX Info: Redefining \showhyphens on input line 488.
+>>>>>>> parent of 884fa6d (logo tires and fix)
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -1837,6 +2132,7 @@ Package caption Info: End \AtBeginDocument code.
 (Slides_Induktive_Statistik.nav)
 
 
+<<<<<<< HEAD
 
 pdfTeX warning: pdflatex.exe (file C:/Users/Vineet.Dairashri/AppData/Local/R/wi
 n-library/4.3/runidue/rmarkdown/templates/lectureslides/resources/duetower.pdf)
@@ -1865,14 +2161,55 @@ Package pdftex.def Info: signet_ude_rgb.png  used on input line 522.
 (pdftex.def)             Requested size: 30.58763pt x 28.45274pt.
 
 
+=======
+<C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmarkdow
+n/templates/lectureslides/resources/duetower.pdf, id=22, 1456.44125pt x 1092.08
+pt>
+File: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rma
+rkdown/templates/lectureslides/resources/duetower.pdf Graphic file (type pdf)
+<use C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmar
+kdown/templates/lectureslides/resources/duetower.pdf>
+Package pdftex.def Info: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/
+library/runidue/rmarkdown/templates/lectureslides/resources/duetower.pdf  used 
+on input line 492.
+(pdftex.def)             Requested size: 364.10942pt x 273.01933pt.
+[1
+
+{c:/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <c:/Users/jens.k
+lenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmarkdown/templates/lect
+ureslides/resources/duetower.pdf>] (./Slides_Induktive_Statistik.toc)
+<C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmarkdow
+n/templates/lectureslides/resources/duelogo.pdf, id=43, 845.1575pt x 210.7875pt
+>
+File: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rma
+rkdown/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmar
+kdown/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/
+library/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used o
+n input line 496.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
+<<<<<<< HEAD
+>>>>>>> parent of 884fa6d (logo tires and fix)
+=======
+>>>>>>> parent of 884fa6d (logo tires and fix)
 [2
 
- <./signet_ude_rgb.png>]
+ <c:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmarkdo
+wn/templates/lectureslides/resources/duelogo.pdf>]
 LaTeX Font Info:    Trying to load font information for OT1+lmss on input line 
+<<<<<<< HEAD
+<<<<<<< HEAD
 537.
 
 (C:\Users\Vineet.Dairashri\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmss.f
 d
+=======
+=======
+>>>>>>> parent of 884fa6d (logo tires and fix)
+511.
+(c:/texlive/2021/texmf-dist/tex/latex/lm/ot1lmss.fd
+>>>>>>> parent of 884fa6d (logo tires and fix)
 File: ot1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 Package microtype Info: Loading generic protrusion settings for font family
@@ -1880,6 +2217,8 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 5
+<<<<<<< HEAD
+<<<<<<< HEAD
 37.
 
 (C:\Users\Vineet.Dairashri\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
@@ -1906,6 +2245,34 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 537.
 LaTeX Font Info:    Trying to load font information for U+msa on input line 537
+=======
+=======
+>>>>>>> parent of 884fa6d (logo tires and fix)
+11.
+(c:/texlive/2021/texmf-dist/tex/latex/lm/omllmm.fd
+File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
+511.
+(c:/texlive/2021/texmf-dist/tex/latex/lm/omslmsy.fd
+File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
+511.
+(c:/texlive/2021/texmf-dist/tex/latex/lm/omxlmex.fd
+File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 511.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 511.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 511.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 511
+<<<<<<< HEAD
+>>>>>>> parent of 884fa6d (logo tires and fix)
+=======
+>>>>>>> parent of 884fa6d (logo tires and fix)
 .
 
 (C:\Users\Vineet.Dairashri\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\ums
@@ -1916,7 +2283,15 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 -msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
+<<<<<<< HEAD
+<<<<<<< HEAD
 LaTeX Font Info:    Trying to load font information for U+msb on input line 537
+=======
+LaTeX Font Info:    Trying to load font information for U+msb on input line 511
+>>>>>>> parent of 884fa6d (logo tires and fix)
+=======
+LaTeX Font Info:    Trying to load font information for U+msb on input line 511
+>>>>>>> parent of 884fa6d (logo tires and fix)
 .
 
 (C:\Users\Vineet.Dairashri\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\ums
@@ -1928,6 +2303,8 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10> not available
+<<<<<<< HEAD
+<<<<<<< HEAD
 (Font)              Font shape `T1/lmss/m/sl' tried instead on input line 537.
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <7> not available
 (Font)              Font shape `T1/lmss/m/sl' tried instead on input line 537.
@@ -1937,6 +2314,24 @@ LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 5
 37.
 
 (C:\Users\Vineet.Dairashri\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.fd
+=======
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 511.
+LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <7> not available
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 511.
+LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <5> not available
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 511.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 5
+=======
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 511.
+LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <7> not available
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 511.
+LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <5> not available
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 511.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 5
+>>>>>>> parent of 884fa6d (logo tires and fix)
+11.
+(c:/texlive/2021/texmf-dist/tex/latex/lm/ot1lmr.fd
+>>>>>>> parent of 884fa6d (logo tires and fix)
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 (C:\Users\Vineet.Dairashri\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt
@@ -1945,6 +2340,8 @@ File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman
 (RS)
 )
 LaTeX Font Info:    Font shape `T1/lmss/bx/it' in size <10> not available
+<<<<<<< HEAD
+<<<<<<< HEAD
 (Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 537.
 
 LaTeX Font Info:    Font shape `T1/lmss/bx/it' in size <7> not available
@@ -1975,6 +2372,80 @@ Package pdftex.def Info: signet_ude_rgb.png  used on input line 546.
 (pdftex.def)             Requested size: 30.58763pt x 28.45274pt.
 
 Overfull \vbox (1.0748pt too high) detected at line 546
+=======
+(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 511.
+
+LaTeX Font Info:    Font shape `T1/lmss/bx/it' in size <7> not available
+(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 511.
+
+LaTeX Font Info:    Font shape `T1/lmss/bx/it' in size <5> not available
+(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 511.
+
+File: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rma
+rkdown/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmar
+kdown/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/
+library/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used o
+n input line 511.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
+[3
+
+]
+<Resources/Plots/unnamed-chunk-2-1.pdf, id=66, 299.6003pt x 191.24048pt>
+File: Resources/Plots/unnamed-chunk-2-1.pdf Graphic file (type pdf)
+<use Resources/Plots/unnamed-chunk-2-1.pdf>
+Package pdftex.def Info: Resources/Plots/unnamed-chunk-2-1.pdf  used on input l
+ine 520.
+(pdftex.def)             Requested size: 299.59955pt x 191.24pt.
+File: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rma
+rkdown/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmar
+kdown/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/
+library/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used o
+n input line 520.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
+
+Overfull \vbox (1.31982pt too high) detected at line 520
+>>>>>>> parent of 884fa6d (logo tires and fix)
+=======
+(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 511.
+
+LaTeX Font Info:    Font shape `T1/lmss/bx/it' in size <7> not available
+(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 511.
+
+LaTeX Font Info:    Font shape `T1/lmss/bx/it' in size <5> not available
+(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 511.
+
+File: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rma
+rkdown/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmar
+kdown/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/
+library/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used o
+n input line 511.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
+[3
+
+]
+<Resources/Plots/unnamed-chunk-2-1.pdf, id=66, 299.6003pt x 191.24048pt>
+File: Resources/Plots/unnamed-chunk-2-1.pdf Graphic file (type pdf)
+<use Resources/Plots/unnamed-chunk-2-1.pdf>
+Package pdftex.def Info: Resources/Plots/unnamed-chunk-2-1.pdf  used on input l
+ine 520.
+(pdftex.def)             Requested size: 299.59955pt x 191.24pt.
+File: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rma
+rkdown/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmar
+kdown/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/
+library/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used o
+n input line 520.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
+
+Overfull \vbox (1.31982pt too high) detected at line 520
+>>>>>>> parent of 884fa6d (logo tires and fix)
  []
 
 
@@ -1982,6 +2453,8 @@ Overfull \vbox (1.0748pt too high) detected at line 546
 [4
 
  <./Resources/Plots/unnamed-chunk-2-1.pdf>]
+<<<<<<< HEAD
+<<<<<<< HEAD
 File: signet_ude_rgb.png Graphic file (type png)
 <use signet_ude_rgb.png>
 Package pdftex.def Info: signet_ude_rgb.png  used on input line 564.
@@ -2214,6 +2687,593 @@ Package pdftex.def Info: signet_ude_rgb.png  used on input line 902.
 (pdftex.def)             Requested size: 30.58763pt x 28.45274pt.
 
 
+=======
+=======
+File: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rma
+rkdown/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmar
+kdown/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/
+library/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used o
+n input line 538.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
+[5
+
+]
+File: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rma
+rkdown/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmar
+kdown/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/
+library/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used o
+n input line 555.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
+[6
+
+]
+<C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmarkdow
+n/templates/lectureslides/resources/QuizAcademy.png, id=101, 301.125pt x 75.281
+25pt>
+File: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rma
+rkdown/templates/lectureslides/resources/QuizAcademy.png Graphic file (type png
+)
+<use C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmar
+kdown/templates/lectureslides/resources/QuizAcademy.png>
+Package pdftex.def Info: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/
+library/runidue/rmarkdown/templates/lectureslides/resources/QuizAcademy.png  us
+ed on input line 562.
+(pdftex.def)             Requested size: 108.81102pt x 27.2023pt.
+File: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rma
+rkdown/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmar
+kdown/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/
+library/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used o
+n input line 562.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
+[7
+
+ <c:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmarkdo
+wn/templates/lectureslides/resources/QuizAcademy.png>]
+<Resources/Grafiken/Schaetzen.jpg, id=113, 903.375pt x 677.53125pt>
+File: Resources/Grafiken/Schaetzen.jpg Graphic file (type jpg)
+<use Resources/Grafiken/Schaetzen.jpg>
+Package pdftex.def Info: Resources/Grafiken/Schaetzen.jpg  used on input line 5
+70.
+(pdftex.def)             Requested size: 194.40103pt x 145.80594pt.
+File: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rma
+rkdown/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmar
+kdown/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/
+library/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used o
+n input line 570.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
+[8
+
+ <./Resources/Grafiken/Schaetzen.jpg>]
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <9> on input line 593.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 593.
+LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <9> not available
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 593.
+LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <6> not available
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 593.
+LaTeX Font Info:    Font shape `T1/lmss/bx/it' in size <9> not available
+(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 593.
+
+LaTeX Font Info:    Font shape `T1/lmss/bx/it' in size <6> not available
+(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 593.
+
+File: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rma
+rkdown/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmar
+kdown/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/
+library/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used o
+n input line 593.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
+[9
+
+]
+File: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rma
+rkdown/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmar
+kdown/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/
+library/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used o
+n input line 616.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
+[10
+
+] (./Slides_Induktive_Statistik.toc)
+File: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rma
+rkdown/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmar
+kdown/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/
+library/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used o
+n input line 618.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
+[11
+
+]
+File: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rma
+rkdown/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmar
+kdown/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/
+library/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used o
+n input line 644.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
+[12
+
+]
+File: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rma
+rkdown/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmar
+kdown/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/
+library/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used o
+n input line 669.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
+[13
+
+]
+File: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rma
+rkdown/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmar
+kdown/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/
+library/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used o
+n input line 691.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
+[14
+
+]
+File: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rma
+rkdown/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmar
+kdown/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/
+library/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used o
+n input line 703.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
+[15
+
+]
+File: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rma
+rkdown/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmar
+kdown/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/
+library/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used o
+n input line 720.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
+[16
+
+]
+File: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rma
+rkdown/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmar
+kdown/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/
+library/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used o
+n input line 733.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
+[17
+
+]
+File: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rma
+rkdown/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmar
+kdown/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/
+library/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used o
+n input line 760.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
+[18
+
+]
+File: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rma
+rkdown/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmar
+kdown/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/
+library/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used o
+n input line 783.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
+[19
+
+]
+File: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rma
+rkdown/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmar
+kdown/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/
+library/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used o
+n input line 804.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
+[20
+
+]
+File: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rma
+rkdown/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmar
+kdown/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/
+library/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used o
+n input line 817.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
+[21
+
+]
+<Resources/Plots/Vereinigung-1.pdf, id=239, 208.5401pt x 99.26987pt>
+File: Resources/Plots/Vereinigung-1.pdf Graphic file (type pdf)
+<use Resources/Plots/Vereinigung-1.pdf>
+Package pdftex.def Info: Resources/Plots/Vereinigung-1.pdf  used on input line 
+846.
+(pdftex.def)             Requested size: 208.53958pt x 99.2696pt.
+File: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rma
+rkdown/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmar
+kdown/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/
+library/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used o
+n input line 846.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
+[22
+
+ <./Resources/Plots/Vereinigung-1.pdf>]
+<Resources/Plots/Durchschnitt-1.pdf, id=262, 172.12004pt x 108.3799pt>
+File: Resources/Plots/Durchschnitt-1.pdf Graphic file (type pdf)
+<use Resources/Plots/Durchschnitt-1.pdf>
+Package pdftex.def Info: Resources/Plots/Durchschnitt-1.pdf  used on input line
+ 869.
+(pdftex.def)             Requested size: 172.11961pt x 108.37961pt.
+File: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rma
+rkdown/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmar
+kdown/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/
+library/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used o
+n input line 869.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
+[23
+
+ <./Resources/Plots/Durchschnitt-1.pdf>]
+<Resources/Plots/Komplementaerereignis-1.pdf, id=281, 117.4799pt x 72.8602pt>
+File: Resources/Plots/Komplementaerereignis-1.pdf Graphic file (type pdf)
+<use Resources/Plots/Komplementaerereignis-1.pdf>
+Package pdftex.def Info: Resources/Plots/Komplementaerereignis-1.pdf  used on i
+nput line 896.
+(pdftex.def)             Requested size: 117.4796pt x 72.86002pt.
+File: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rma
+rkdown/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmar
+kdown/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/
+library/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used o
+n input line 896.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
+[24
+
+ <./Resources/Plots/Komplementaerereignis-1.pdf>]
+<Resources/Plots/Disjunkt-1.pdf, id=301, 172.12004pt x 108.3799pt>
+File: Resources/Plots/Disjunkt-1.pdf Graphic file (type pdf)
+<use Resources/Plots/Disjunkt-1.pdf>
+Package pdftex.def Info: Resources/Plots/Disjunkt-1.pdf  used on input line 920
+.
+(pdftex.def)             Requested size: 172.11961pt x 108.37961pt.
+File: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rma
+rkdown/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmar
+kdown/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/
+library/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used o
+n input line 920.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
+[25
+
+ <./Resources/Plots/Disjunkt-1.pdf>]
+>>>>>>> parent of 884fa6d (logo tires and fix)
+File: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rma
+rkdown/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmar
+kdown/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/
+library/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used o
+<<<<<<< HEAD
+n input line 538.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
+[5
+
+]
+=======
+n input line 940.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
+[26
+
+]
+<Resources/Plots/Differenzmenge-1.pdf, id=330, 124.77014pt x 77.59991pt>
+File: Resources/Plots/Differenzmenge-1.pdf Graphic file (type pdf)
+<use Resources/Plots/Differenzmenge-1.pdf>
+Package pdftex.def Info: Resources/Plots/Differenzmenge-1.pdf  used on input li
+ne 969.
+(pdftex.def)             Requested size: 124.76982pt x 77.59972pt.
+>>>>>>> parent of 884fa6d (logo tires and fix)
+File: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rma
+rkdown/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmar
+kdown/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/
+library/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used o
+<<<<<<< HEAD
+n input line 555.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
+[6
+
+]
+<C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmarkdow
+n/templates/lectureslides/resources/QuizAcademy.png, id=101, 301.125pt x 75.281
+25pt>
+=======
+n input line 969.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
+
+Overfull \vbox (1.92963pt too high) detected at line 969
+ []
+
+[27
+
+ <./Resources/Plots/Differenzmenge-1.pdf>]
+>>>>>>> parent of 884fa6d (logo tires and fix)
+File: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rma
+rkdown/templates/lectureslides/resources/QuizAcademy.png Graphic file (type png
+)
+<use C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmar
+kdown/templates/lectureslides/resources/QuizAcademy.png>
+Package pdftex.def Info: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/
+library/runidue/rmarkdown/templates/lectureslides/resources/QuizAcademy.png  us
+<<<<<<< HEAD
+ed on input line 562.
+(pdftex.def)             Requested size: 108.81102pt x 27.2023pt.
+File: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rma
+rkdown/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmar
+kdown/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/
+library/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used o
+n input line 562.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
+[7
+
+ <c:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmarkdo
+wn/templates/lectureslides/resources/QuizAcademy.png>]
+<Resources/Grafiken/Schaetzen.jpg, id=113, 903.375pt x 677.53125pt>
+File: Resources/Grafiken/Schaetzen.jpg Graphic file (type jpg)
+<use Resources/Grafiken/Schaetzen.jpg>
+Package pdftex.def Info: Resources/Grafiken/Schaetzen.jpg  used on input line 5
+70.
+(pdftex.def)             Requested size: 194.40103pt x 145.80594pt.
+File: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rma
+rkdown/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmar
+kdown/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/
+library/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used o
+n input line 570.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
+[8
+
+ <./Resources/Grafiken/Schaetzen.jpg>]
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <9> on input line 593.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 593.
+LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <9> not available
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 593.
+LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <6> not available
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 593.
+LaTeX Font Info:    Font shape `T1/lmss/bx/it' in size <9> not available
+(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 593.
+
+LaTeX Font Info:    Font shape `T1/lmss/bx/it' in size <6> not available
+(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 593.
+
+File: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rma
+rkdown/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmar
+kdown/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/
+library/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used o
+n input line 593.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
+[9
+
+]
+File: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rma
+rkdown/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmar
+kdown/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/
+library/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used o
+n input line 616.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
+[10
+
+] (./Slides_Induktive_Statistik.toc)
+File: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rma
+rkdown/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmar
+kdown/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/
+library/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used o
+n input line 618.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
+[11
+
+]
+File: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rma
+rkdown/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmar
+kdown/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/
+library/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used o
+n input line 644.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
+[12
+
+]
+File: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rma
+rkdown/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmar
+kdown/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/
+library/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used o
+n input line 669.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
+[13
+
+]
+File: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rma
+rkdown/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmar
+kdown/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/
+library/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used o
+n input line 691.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
+[14
+
+]
+File: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rma
+rkdown/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmar
+kdown/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/
+library/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used o
+n input line 703.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
+[15
+
+]
+File: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rma
+rkdown/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmar
+kdown/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/
+library/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used o
+n input line 720.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
+[16
+
+]
+File: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rma
+rkdown/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmar
+kdown/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/
+library/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used o
+n input line 733.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
+[17
+
+]
+File: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rma
+rkdown/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmar
+kdown/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/
+library/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used o
+n input line 760.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
+[18
+
+]
+File: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rma
+rkdown/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmar
+kdown/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/
+library/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used o
+n input line 783.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
+[19
+
+]
+File: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rma
+rkdown/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmar
+kdown/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/
+library/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used o
+n input line 804.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
+[20
+
+]
+File: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rma
+rkdown/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmar
+kdown/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/
+library/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used o
+n input line 817.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
+[21
+
+]
+<Resources/Plots/Vereinigung-1.pdf, id=239, 208.5401pt x 99.26987pt>
+File: Resources/Plots/Vereinigung-1.pdf Graphic file (type pdf)
+<use Resources/Plots/Vereinigung-1.pdf>
+Package pdftex.def Info: Resources/Plots/Vereinigung-1.pdf  used on input line 
+846.
+(pdftex.def)             Requested size: 208.53958pt x 99.2696pt.
+File: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rma
+rkdown/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmar
+kdown/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/
+library/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used o
+n input line 846.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
+[22
+
+ <./Resources/Plots/Vereinigung-1.pdf>]
+<Resources/Plots/Durchschnitt-1.pdf, id=262, 172.12004pt x 108.3799pt>
+File: Resources/Plots/Durchschnitt-1.pdf Graphic file (type pdf)
+<use Resources/Plots/Durchschnitt-1.pdf>
+Package pdftex.def Info: Resources/Plots/Durchschnitt-1.pdf  used on input line
+ 869.
+(pdftex.def)             Requested size: 172.11961pt x 108.37961pt.
+File: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rma
+rkdown/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmar
+kdown/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/
+library/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used o
+n input line 869.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
+[23
+
+ <./Resources/Plots/Durchschnitt-1.pdf>]
+<Resources/Plots/Komplementaerereignis-1.pdf, id=281, 117.4799pt x 72.8602pt>
+File: Resources/Plots/Komplementaerereignis-1.pdf Graphic file (type pdf)
+<use Resources/Plots/Komplementaerereignis-1.pdf>
+Package pdftex.def Info: Resources/Plots/Komplementaerereignis-1.pdf  used on i
+nput line 896.
+(pdftex.def)             Requested size: 117.4796pt x 72.86002pt.
+File: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rma
+rkdown/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmar
+kdown/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/
+library/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used o
+n input line 896.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
+>>>>>>> parent of 884fa6d (logo tires and fix)
 [24
 
  <./Resources/Plots/Durchschnitt-1.pdf>]
@@ -2232,6 +3292,7 @@ Package pdftex.def Info: signet_ude_rgb.png  used on input line 929.
 [25
 
  <./Resources/Plots/Komplementaerereignis-1.pdf>]
+<<<<<<< HEAD
 <Resources/Plots/Disjunkt-1.pdf, id=351, 172.12004pt x 108.3799pt>
 File: Resources/Plots/Disjunkt-1.pdf Graphic file (type pdf)
 <use Resources/Plots/Disjunkt-1.pdf>
@@ -2252,6 +3313,53 @@ File: signet_ude_rgb.png Graphic file (type png)
 Package pdftex.def Info: signet_ude_rgb.png  used on input line 973.
 (pdftex.def)             Requested size: 30.58763pt x 28.45274pt.
 
+=======
+<Resources/Plots/Disjunkt-1.pdf, id=301, 172.12004pt x 108.3799pt>
+File: Resources/Plots/Disjunkt-1.pdf Graphic file (type pdf)
+<use Resources/Plots/Disjunkt-1.pdf>
+Package pdftex.def Info: Resources/Plots/Disjunkt-1.pdf  used on input line 920
+.
+(pdftex.def)             Requested size: 172.11961pt x 108.37961pt.
+File: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rma
+rkdown/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmar
+kdown/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/
+library/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used o
+n input line 920.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
+[25
+
+ <./Resources/Plots/Disjunkt-1.pdf>]
+File: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rma
+rkdown/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmar
+kdown/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/
+library/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used o
+n input line 940.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
+[26
+
+]
+<Resources/Plots/Differenzmenge-1.pdf, id=330, 124.77014pt x 77.59991pt>
+File: Resources/Plots/Differenzmenge-1.pdf Graphic file (type pdf)
+<use Resources/Plots/Differenzmenge-1.pdf>
+Package pdftex.def Info: Resources/Plots/Differenzmenge-1.pdf  used on input li
+ne 969.
+(pdftex.def)             Requested size: 124.76982pt x 77.59972pt.
+File: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rma
+rkdown/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmar
+kdown/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/
+library/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used o
+n input line 969.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
+
+Overfull \vbox (1.92963pt too high) detected at line 969
+ []
+>>>>>>> parent of 884fa6d (logo tires and fix)
 
 [27
 
@@ -2275,6 +3383,7 @@ Overfull \vbox (1.6846pt too high) detected at line 1002
 [28
 
  <./Resources/Plots/Differenzmenge-1.pdf>]
+<<<<<<< HEAD
 File: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdo
 wn/templates/lectureslides/resources/QuizAcademy.png Graphic file (type png)
 <use C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdow
@@ -2290,6 +3399,30 @@ Package pdftex.def Info: signet_ude_rgb.png  used on input line 1009.
 
 
 [29
+=======
+File: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rma
+rkdown/templates/lectureslides/resources/QuizAcademy.png Graphic file (type png
+)
+<use C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmar
+kdown/templates/lectureslides/resources/QuizAcademy.png>
+Package pdftex.def Info: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/
+library/runidue/rmarkdown/templates/lectureslides/resources/QuizAcademy.png  us
+ed on input line 976.
+(pdftex.def)             Requested size: 108.81102pt x 27.2023pt.
+=======
+ed on input line 976.
+(pdftex.def)             Requested size: 108.81102pt x 27.2023pt.
+>>>>>>> parent of 884fa6d (logo tires and fix)
+File: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rma
+rkdown/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmar
+kdown/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/
+library/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used o
+n input line 976.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
+[28
+>>>>>>> parent of 884fa6d (logo tires and fix)
 
 ]
 \openout4 = `Slides_Induktive_Statistik.vrb'.
@@ -2304,6 +3437,8 @@ File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <8> not available
 (Font)              Font shape `T1/lmtt/b/n' tried instead on input line 9.
 )
+<<<<<<< HEAD
+<<<<<<< HEAD
 File: signet_ude_rgb.png Graphic file (type png)
 <use signet_ude_rgb.png>
 Package pdftex.def Info: signet_ude_rgb.png  used on input line 1071.
@@ -2311,6 +3446,19 @@ Package pdftex.def Info: signet_ude_rgb.png  used on input line 1071.
 
 
 [30
+=======
+=======
+>>>>>>> parent of 884fa6d (logo tires and fix)
+File: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rma
+rkdown/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmar
+kdown/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/
+library/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used o
+n input line 1038.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
+[29
+>>>>>>> parent of 884fa6d (logo tires and fix)
 
 ]
 \openout4 = `Slides_Induktive_Statistik.vrb'.
@@ -2319,6 +3467,8 @@ Package pdftex.def Info: signet_ude_rgb.png  used on input line 1071.
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <7> not available
 (Font)              Font shape `T1/lmtt/b/n' tried instead on input line 9.
 )
+<<<<<<< HEAD
+<<<<<<< HEAD
 File: signet_ude_rgb.png Graphic file (type png)
 <use signet_ude_rgb.png>
 Package pdftex.def Info: signet_ude_rgb.png  used on input line 1112.
@@ -2573,13 +3723,461 @@ Package pdftex.def Info: signet_ude_rgb.png  used on input line 1571.
 (pdftex.def)             Requested size: 30.58763pt x 28.45274pt.
 
 Overfull \vbox (4.71823pt too high) detected at line 1571
+=======
+File: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rma
+rkdown/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmar
+kdown/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/
+library/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used o
+n input line 1079.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
+[30
+
+]
+File: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rma
+rkdown/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmar
+kdown/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/
+library/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used o
+n input line 1101.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
+[31
+
+]
+File: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rma
+rkdown/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmar
+kdown/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/
+library/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used o
+n input line 1126.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
+[32
+
+]
+File: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rma
+rkdown/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmar
+kdown/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/
+library/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used o
+n input line 1154.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
+[33
+
+]
+<Resources/Plots/unnamed-chunk-3-1.pdf, id=407, 281.39026pt x 179.41028pt>
+File: Resources/Plots/unnamed-chunk-3-1.pdf Graphic file (type pdf)
+<use Resources/Plots/unnamed-chunk-3-1.pdf>
+Package pdftex.def Info: Resources/Plots/unnamed-chunk-3-1.pdf  used on input l
+ine 1163.
+(pdftex.def)             Requested size: 281.38956pt x 179.40984pt.
+File: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rma
+rkdown/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmar
+kdown/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/
+library/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used o
+n input line 1163.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
+[34
+
+ <./Resources/Plots/unnamed-chunk-3-1.pdf>]
+File: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rma
+rkdown/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmar
+kdown/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/
+library/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used o
+n input line 1192.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
+[35
+
+]
+File: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rma
+rkdown/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmar
+kdown/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/
+library/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used o
+n input line 1211.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
+[36
+
+]
+File: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rma
+rkdown/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmar
+kdown/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/
+library/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used o
+n input line 1240.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
+[37
+
+]
+File: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rma
+rkdown/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmar
+kdown/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/
+library/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used o
+n input line 1257.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
+[38
+
+]
+File: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rma
+rkdown/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmar
+kdown/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/
+library/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used o
+n input line 1275.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
+[39
+
+]
+<Resources/Plots/unnamed-chunk-4-1.pdf, id=477, 135.69997pt x 84.70044pt>
+File: Resources/Plots/unnamed-chunk-4-1.pdf Graphic file (type pdf)
+<use Resources/Plots/unnamed-chunk-4-1.pdf>
+Package pdftex.def Info: Resources/Plots/unnamed-chunk-4-1.pdf  used on input l
+ine 1297.
+(pdftex.def)             Requested size: 135.69962pt x 84.70023pt.
+File: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rma
+rkdown/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmar
+kdown/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/
+library/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used o
+n input line 1297.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
+[40
+
+ <./Resources/Plots/unnamed-chunk-4-1.pdf>]
+=======
+File: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rma
+rkdown/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmar
+kdown/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/
+library/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used o
+n input line 1079.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
+[30
+
+]
+File: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rma
+rkdown/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmar
+kdown/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/
+library/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used o
+n input line 1101.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
+[31
+
+]
+File: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rma
+rkdown/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmar
+kdown/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/
+library/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used o
+n input line 1126.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
+[32
+
+]
+File: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rma
+rkdown/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmar
+kdown/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/
+library/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used o
+n input line 1154.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
+[33
+
+]
+<Resources/Plots/unnamed-chunk-3-1.pdf, id=407, 281.39026pt x 179.41028pt>
+File: Resources/Plots/unnamed-chunk-3-1.pdf Graphic file (type pdf)
+<use Resources/Plots/unnamed-chunk-3-1.pdf>
+Package pdftex.def Info: Resources/Plots/unnamed-chunk-3-1.pdf  used on input l
+ine 1163.
+(pdftex.def)             Requested size: 281.38956pt x 179.40984pt.
+File: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rma
+rkdown/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmar
+kdown/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/
+library/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used o
+n input line 1163.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
+[34
+
+ <./Resources/Plots/unnamed-chunk-3-1.pdf>]
+File: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rma
+rkdown/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmar
+kdown/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/
+library/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used o
+n input line 1192.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
+[35
+
+]
+File: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rma
+rkdown/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmar
+kdown/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/
+library/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used o
+n input line 1211.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
+[36
+
+]
+File: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rma
+rkdown/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmar
+kdown/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/
+library/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used o
+n input line 1240.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
+[37
+
+]
+File: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rma
+rkdown/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmar
+kdown/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/
+library/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used o
+n input line 1257.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
+[38
+
+]
+File: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rma
+rkdown/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmar
+kdown/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/
+library/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used o
+n input line 1275.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
+[39
+
+]
+<Resources/Plots/unnamed-chunk-4-1.pdf, id=477, 135.69997pt x 84.70044pt>
+File: Resources/Plots/unnamed-chunk-4-1.pdf Graphic file (type pdf)
+<use Resources/Plots/unnamed-chunk-4-1.pdf>
+Package pdftex.def Info: Resources/Plots/unnamed-chunk-4-1.pdf  used on input l
+ine 1297.
+(pdftex.def)             Requested size: 135.69962pt x 84.70023pt.
+File: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rma
+rkdown/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmar
+kdown/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/
+library/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used o
+n input line 1297.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
+[40
+
+ <./Resources/Plots/unnamed-chunk-4-1.pdf>]
+>>>>>>> parent of 884fa6d (logo tires and fix)
+File: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rma
+rkdown/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmar
+kdown/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/
+library/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used o
+n input line 1315.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
+[41
+
+]
+
+pdfTeX warning: pdflatex.exe (file c:/Users/jens.klenke/AppData/Local/Programs/
+R/R-4.4.1/library/runidue/rmarkdown/templates/lectureslides/resources/Rlogo.pdf
+): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmarkdow
+n/templates/lectureslides/resources/Rlogo.pdf, id=503, 723.70375pt x 558.085pt>
+
+File: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rma
+rkdown/templates/lectureslides/resources/Rlogo.pdf Graphic file (type pdf)
+<use C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmar
+kdown/templates/lectureslides/resources/Rlogo.pdf>
+Package pdftex.def Info: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/
+library/runidue/rmarkdown/templates/lectureslides/resources/Rlogo.pdf  used on 
+input line 1328.
+(pdftex.def)             Requested size: 11.02072pt x 8.50006pt.
+File: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rma
+rkdown/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmar
+kdown/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/
+library/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used o
+n input line 1328.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
+[42
+
+ <c:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmarkdo
+wn/templates/lectureslides/resources/Rlogo.pdf>]
+File: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rma
+rkdown/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmar
+kdown/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/
+library/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used o
+n input line 1353.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
+[43
+
+]
+File: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rma
+rkdown/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmar
+kdown/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/
+library/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used o
+n input line 1380.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
+[44
+
+]
+File: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rma
+rkdown/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmar
+kdown/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/
+library/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used o
+n input line 1400.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
+[45
+
+]
+File: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rma
+rkdown/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmar
+kdown/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/
+library/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used o
+n input line 1419.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
+[46
+
+]
+File: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rma
+rkdown/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmar
+kdown/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/
+library/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used o
+n input line 1433.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
+[47
+
+]
+File: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rma
+rkdown/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmar
+kdown/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/
+library/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used o
+n input line 1457.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
+[48
+
+]
+File: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rma
+rkdown/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmar
+kdown/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/
+library/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used o
+n input line 1473.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
+[49
+
+]
+File: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rma
+rkdown/templates/lectureslides/resources/QuizAcademy.png Graphic file (type png
+)
+<use C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmar
+kdown/templates/lectureslides/resources/QuizAcademy.png>
+Package pdftex.def Info: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/
+library/runidue/rmarkdown/templates/lectureslides/resources/QuizAcademy.png  us
+ed on input line 1480.
+(pdftex.def)             Requested size: 108.81102pt x 27.2023pt.
+File: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rma
+rkdown/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmar
+kdown/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/
+library/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used o
+n input line 1480.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
+[50
+
+]
+File: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rma
+rkdown/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmar
+kdown/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/
+library/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used o
+n input line 1503.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
+[51
+
+]
+File: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rma
+rkdown/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmar
+kdown/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/
+library/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used o
+n input line 1514.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
+[52
+
+]
+<Resources/Plots/BedingteWkeit-1.pdf, id=602, 208.5401pt x 132.05034pt>
+File: Resources/Plots/BedingteWkeit-1.pdf Graphic file (type pdf)
+<use Resources/Plots/BedingteWkeit-1.pdf>
+Package pdftex.def Info: Resources/Plots/BedingteWkeit-1.pdf  used on input lin
+e 1538.
+(pdftex.def)             Requested size: 208.53958pt x 132.05pt.
+File: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rma
+rkdown/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmar
+kdown/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/
+library/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used o
+n input line 1538.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
+
+Overfull \vbox (4.96326pt too high) detected at line 1538
+<<<<<<< HEAD
+>>>>>>> parent of 884fa6d (logo tires and fix)
+=======
+>>>>>>> parent of 884fa6d (logo tires and fix)
  []
 
 
+<<<<<<< HEAD
 
 [54
 
  <./Resources/Plots/BedingteWkeit-1.pdf>]
+<<<<<<< HEAD
 File: signet_ude_rgb.png Graphic file (type png)
 <use signet_ude_rgb.png>
 Package pdftex.def Info: signet_ude_rgb.png  used on input line 1597.
@@ -2622,6 +4220,132 @@ Package pdftex.def Info: signet_ude_rgb.png  used on input line 1691.
 (pdftex.def)             Requested size: 30.58763pt x 28.45274pt.
 
 
+=======
+File: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rma
+rkdown/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmar
+kdown/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/
+library/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used o
+n input line 1564.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
+[54
+
+]
+File: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rma
+rkdown/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmar
+kdown/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/
+library/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used o
+n input line 1575.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
+[55
+
+]
+File: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rma
+rkdown/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmar
+kdown/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/
+library/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used o
+n input line 1598.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
+[56
+
+]
+File: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rma
+rkdown/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmar
+kdown/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/
+library/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used o
+n input line 1627.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
+[57
+
+]
+File: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rma
+rkdown/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmar
+kdown/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/
+library/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used o
+n input line 1658.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
+[58
+
+]
+=======
+ <./Resources/Plots/BedingteWkeit-1.pdf>]
+File: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rma
+rkdown/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmar
+kdown/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/
+library/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used o
+n input line 1564.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
+[54
+
+]
+File: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rma
+rkdown/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmar
+kdown/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/
+library/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used o
+n input line 1575.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
+[55
+
+]
+File: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rma
+rkdown/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmar
+kdown/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/
+library/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used o
+n input line 1598.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
+[56
+
+]
+File: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rma
+rkdown/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmar
+kdown/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/
+library/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used o
+n input line 1627.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
+[57
+
+]
+File: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rma
+rkdown/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmar
+kdown/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/
+library/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used o
+n input line 1658.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
+[58
+
+]
+>>>>>>> parent of 884fa6d (logo tires and fix)
+File: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rma
+rkdown/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmar
+kdown/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/
+library/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used o
+n input line 1682.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
+<<<<<<< HEAD
+>>>>>>> parent of 884fa6d (logo tires and fix)
+=======
+>>>>>>> parent of 884fa6d (logo tires and fix)
 [59
 
 ]
@@ -2653,6 +4377,8 @@ ged.
 (rerunfilecheck)             Checksum: D1692F7B75D7955FC5D208B452E4954E;186.
  ) 
 Here is how much of TeX's memory you used:
+<<<<<<< HEAD
+<<<<<<< HEAD
  46139 strings out of 469959
  1017005 string characters out of 5464510
  1418168 words of memory out of 5000000
@@ -2692,5 +4418,44 @@ Output written on Slides_Induktive_Statistik.pdf (60 pages, 1200084 bytes).
 PDF statistics:
  929 PDF objects out of 1000 (max. 8388607)
  183 named destinations out of 1000 (max. 500000)
+=======
+=======
+>>>>>>> parent of 884fa6d (logo tires and fix)
+ 45644 strings out of 478276
+ 998247 string characters out of 5850489
+ 1304471 words of memory out of 5000000
+ 62632 multiletter control sequences out of 15000+600000
+ 574459 words of font info for 187 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 128i,22n,133p,1680b,814s stack positions out of 5000i,500n,10000p,200000b,80000s
+{c:/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{c:/texlive/2021
+/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{c:/texlive/2021/texmf-dist/fonts/enc/
+dvips/lm/lm-mathsy.enc}{c:/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc
+}{c:/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}<c:/texlive/2021/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2021/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmss10.pfb><c:/texlive/2021/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmss8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmssi10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/lm/lme
+x10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/lm/lmmi10.pfb><c:/texliv
+e/2021/texmf-dist/fonts/type1/public/lm/lmmi9.pfb><c:/texlive/2021/texmf-dist/f
+onts/type1/public/lm/lmss10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/
+lm/lmss12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/lm/lmss8.pfb><c:/t
+exlive/2021/texmf-dist/fonts/type1/public/lm/lmss9.pfb><c:/texlive/2021/texmf-d
+ist/fonts/type1/public/lm/lmssbx10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/
+public/lm/lmsso10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsso8.
+pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/lm/lmsso9.pfb><c:/texlive/20
+21/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><c:/texlive/2021/texmf-dist/font
+s/type1/public/lm/lmsy7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/lm/l
+msy9.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/lm/lmtk10.pfb><c:/texli
+ve/2021/texmf-dist/fonts/type1/public/lm/lmtt8.pfb><c:/texlive/2021/texmf-dist/
+fonts/type1/public/lm/lmtti10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/publi
+c/amsfonts/symbols/msam10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/am
+sfonts/symbols/msbm10.pfb>
+Output written on Slides_Induktive_Statistik.pdf (59 pages, 1090000 bytes).
+PDF statistics:
+ 811 PDF objects out of 1000 (max. 8388607)
+ 647 compressed objects within 7 object streams
+ 180 named destinations out of 1000 (max. 500000)
+>>>>>>> parent of 884fa6d (logo tires and fix)
  61593 words of extra memory for PDF output out of 61914 (max. 10000000)
 
