@@ -6,6 +6,7 @@ output:
   runidue::lectureslides:
     lang: "en"
     logo: signet_ude_rgb.png
+    quiz_logo: QuizAcademy.png
     keep_tex: true
 editor_options: 
   chunk_output_type: console
@@ -82,6 +83,15 @@ Ziel: Schlussfolgerungen von einer Stichprobe auf die Grundgesamtheit
 \includegraphics[height=0.6\textheight, keepaspectratio]{Resources/Grafiken/Schaetzen.jpg}
 \end{center}
 \source{\href{https://blog.ritter-sport.de/2014/08/05/schatzt-euch-bunt/}{https://blog.ritter-sport.de/2014/08/05/schatzt-euch-bunt/}}
+
+
+
+## Motivation
+
+\framesubtitle{Quiz}
+
+\Quiz{Nue Quiz Section}\endQuiz
+
 
 
 

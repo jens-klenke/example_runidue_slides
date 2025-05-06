@@ -125,10 +125,10 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Additional packages
 \makeatletter
-\def\input@path{{"C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmarkdown/templates/lectureslides/resources/"}}  % make them visible to tex to overcome warnings
+\def\input@path{{"C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdown/templates/lectureslides/resources/"}}  % make them visible to tex to overcome warnings
 \makeatother
 
-\input{"C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmarkdown/templates/lectureslides/resources/ee.sty"}
+\input{"C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdown/templates/lectureslides/resources/ee.sty"}
 \usepackage{BeamerColor}
 \usepackage{hypernat}
 \usepackage{mathtools}
@@ -201,7 +201,7 @@ postaction = {draw,line width=1.4pt, white,shorten >= 4.5pt}]
      }%
       \usebeamertemplate{block begin}
       \begin{center}
-\includegraphics[width=0.25\textwidth]{"C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmarkdown/templates/lectureslides/resources/kahootlogo2"}
+\includegraphics[width=0.25\textwidth]{"C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdown/templates/lectureslides/resources/kahootlogo2"}
 \end{center}}
     {\par\usebeamertemplate{block end}\end{actionenv}}
 \newcommand{\kahootblock}[1]{\begin{kahoot}{#1}\end{kahoot}}
@@ -219,10 +219,30 @@ postaction = {draw,line width=1.4pt, white,shorten >= 4.5pt}]
 		}%
 		\usebeamertemplate{block begin}
 		\begin{center}
-			\includegraphics[width=0.25\textwidth]{"C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmarkdown/templates/lectureslides/resources/QuizAcademy.png"}
+			\includegraphics[width=0.25\textwidth]{"C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdown/templates/lectureslides/resources/QuizAcademy.png"}
 	\end{center}}
 	{\par\usebeamertemplate{block end}\end{actionenv}}
 \newcommand{\QuizAcademyblock}[1]{\begin{QuizAcademy}{#1}\end{QuizAcademy}}
+
+
+% New code for General Quiz 
+\newenvironment<>{Quiz}[1]{%
+	\begin{actionenv}#2%
+		\def\insertblocktitle{#1}%
+		\par%
+		\mode<presentation>{%
+			\setbeamercolor{block title}{fg=black,bg=yellow}
+			\setbeamercolor{block body}{fg=black,bg=yellow!20}
+			\setbeamercolor{itemize item}{fg=orange!20!black}
+			\setbeamertemplate{itemize item}[triangle]
+		}%
+		\usebeamertemplate{block begin}
+		\begin{center}
+			\includegraphics[width=0.25\textwidth]{"C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdown/templates/lectureslides/resources/QuizAcademy.png"}
+	\end{center}}
+	{\par\usebeamertemplate{block end}\end{actionenv}}
+\newcommand{\Quizblock}[1]{\begin{Quiz}{#1}\end{Quiz}}
+
 
 
 
@@ -230,7 +250,7 @@ postaction = {draw,line width=1.4pt, white,shorten >= 4.5pt}]
 \makeatletter
 \newcommand*\fsize{\dimexpr\f@size pt\relax} % returns current font size
 \makeatother
-\newcommand{\R}{\includegraphics[height=.85\fsize, clip=T]{"C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmarkdown/templates/lectureslides/resources/Rlogo"}\ }
+\newcommand{\R}{\includegraphics[height=.85\fsize, clip=T]{"C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdown/templates/lectureslides/resources/Rlogo"}\ }
 \newcommand{\btVFill}{\vskip0pt plus 1filll}
 \newcommand{\source}[1]{\btVFill\scriptsize \textit{\expandafter\ifstrequal\expandafter{en}{de}{Quelle: }{Source: }}#1}
 
@@ -494,7 +514,7 @@ postaction = {draw,line width=1.4pt, white,shorten >= 4.5pt}]
 \begin{document}
 
 
-      {\usebackgroundtemplate{\includegraphics[scale=0.25]{"C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmarkdown/templates/lectureslides/resources/duetower"}}
+      {\usebackgroundtemplate{\includegraphics[scale=0.25]{"C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdown/templates/lectureslides/resources/duetower"}}
     \frame[plain]{\titlepage}}
   
 
@@ -577,6 +597,13 @@ Ziel: Schlussfolgerungen von einer Stichprobe auf die Grundgesamtheit
 
 \begin{frame}{Motivation}
 \phantomsection\label{motivation-6}
+\framesubtitle{Quiz}
+
+\Quiz{Nue Quiz Section}\endQuiz
+\end{frame}
+
+\begin{frame}{Motivation}
+\phantomsection\label{motivation-7}
 Man beachte: Wahrscheinlichkeitsrechnung
 
 \begin{itemize}
