@@ -75,6 +75,11 @@ Ziel: Schlussfolgerungen von einer Stichprobe auf die Grundgesamtheit
 \QuizAcademy{Schokoladenwürfel}\endQuizAcademy
 
 
+## Motivatiion
+\framesubtitle{Quiz}
+
+\Quiz{new section}\endQuiz
+
 
 ## Motivation
 
