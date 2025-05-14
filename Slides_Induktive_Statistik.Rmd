@@ -4,18 +4,18 @@ author: "Prof. Dr. Christoph Hanck"
 date: "Sommersemester 2025"
 output: 
   runidue::lectureslides:
+    
     lang: "en"
-<<<<<<< HEAD
-<<<<<<< HEAD
-    logo: signet_ude_rgb.png
-=======
->>>>>>> parent of 884fa6d (logo tires and fix)
-=======
->>>>>>> parent of 884fa6d (logo tires and fix)
+#    logo: signet_ude_rgb.png
     keep_tex: true
 editor_options: 
   chunk_output_type: console
 classoption: aspectratio=169
+
+params:
+  #kahoot: kahootlogo2.png
+
+
 ---
 
 ```{r, include=F}
@@ -81,6 +81,11 @@ Ziel: Schlussfolgerungen von einer Stichprobe auf die Grundgesamtheit
 \QuizAcademy{Schokoladenwürfel}\endQuizAcademy
 
 
+## Motivation
+\framesubtitle{GeneralQuiz}
+
+\GeneralQuiz{new section}\endGeneralQuiz
+
 
 ## Motivation
 
@@ -88,15 +93,6 @@ Ziel: Schlussfolgerungen von einer Stichprobe auf die Grundgesamtheit
 \includegraphics[height=0.6\textheight, keepaspectratio]{Resources/Grafiken/Schaetzen.jpg}
 \end{center}
 \source{\href{https://blog.ritter-sport.de/2014/08/05/schatzt-euch-bunt/}{https://blog.ritter-sport.de/2014/08/05/schatzt-euch-bunt/}}
-
-
-
-## Motivation
-
-\framesubtitle{Quiz}
-
-\Quiz{Nue Quiz Section}\endQuiz
-
 
 
 
