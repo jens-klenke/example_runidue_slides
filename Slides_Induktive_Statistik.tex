@@ -201,10 +201,13 @@ postaction = {draw,line width=1.4pt, white,shorten >= 4.5pt}]
      }%
       \usebeamertemplate{block begin}
       \begin{center}
-\includegraphics[width=0.25\textwidth]{"C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdown/templates/lectureslides/resources/kahootlogo2"}
+      	
+					\includegraphics[width=0.25\textwidth]{"C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdown/templates/lectureslides/resources/kahootlogo2"}
+		
 \end{center}}
     {\par\usebeamertemplate{block end}\end{actionenv}}
 \newcommand{\kahootblock}[1]{\begin{kahoot}{#1}\end{kahoot}}
+
 
 % QuizAcademy Block
 \newenvironment<>{QuizAcademy}[1]{%
@@ -219,14 +222,16 @@ postaction = {draw,line width=1.4pt, white,shorten >= 4.5pt}]
 		}%
 		\usebeamertemplate{block begin}
 		\begin{center}
-			\includegraphics[width=0.25\textwidth]{"C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdown/templates/lectureslides/resources/QuizAcademy.png"}
+			
+				\includegraphics[width=0.25\textwidth]{"C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdown/templates/lectureslides/resources/QuizAcademy.png"}  
+		
 	\end{center}}
 	{\par\usebeamertemplate{block end}\end{actionenv}}
 \newcommand{\QuizAcademyblock}[1]{\begin{QuizAcademy}{#1}\end{QuizAcademy}}
 
 
 % New code for General Quiz 
-\newenvironment<>{Quiz}[1]{%
+\newenvironment<>{GeneralQuiz}[1]{%	
 	\begin{actionenv}#2%
 		\def\insertblocktitle{#1}%
 		\par%
@@ -238,10 +243,11 @@ postaction = {draw,line width=1.4pt, white,shorten >= 4.5pt}]
 		}%
 		\usebeamertemplate{block begin}
 		\begin{center}
-			\includegraphics[width=0.25\textwidth]{"C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdown/templates/lectureslides/resources/QuizAcademy.png"}
+				\includegraphics[width=0.25\textwidth]{"C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdown/templates/lectureslides/resources/QuizAcademy.png"}  
+			
 	\end{center}}
 	{\par\usebeamertemplate{block end}\end{actionenv}}
-\newcommand{\Quizblock}[1]{\begin{Quiz}{#1}\end{Quiz}}
+\newcommand{\Quizblock}[1]{\begin{GeneralQuiz}{#1}\end{GeneralQuiz}}
 
 
 
@@ -397,17 +403,15 @@ postaction = {draw,line width=1.4pt, white,shorten >= 4.5pt}]
 		
 		\hfill
 	
-		\ifstrequal{signet_ude_rgb.png}{FALSE}{}{\begin{minipage}[t][1cm]{1.9cm}\includegraphics[height=1cm,keepaspectratio=true,valign=t, right]{signet_ude_rgb.png}\end{minipage}\vspace{-.3cm}}
+		\includegraphics[width=2cm,keepaspectratio=true, valign=t]{"C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdown/templates/lectureslides/resources/duelogo"}
 		
 	} % close makebox to have the header in one row
 	
 }
 \makeatother
 
-%%\ifstrequal{signet_ude_rgb.png}{FALSE}{}{\includegraphics[width=2cm,keepaspectratio=true, valign=t]{signet_ude_rgb.png}\vspace{-.3cm}}
+%%\includegraphics[width=2cm,keepaspectratio=true, valign=t]{"C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdown/templates/lectureslides/resources/duelogo"}
 %    
-
-
 
 
 
@@ -587,15 +591,15 @@ Ziel: Schlussfolgerungen von einer Stichprobe auf die Grundgesamtheit
 \QuizAcademy{Schokoladenwürfel}\endQuizAcademy
 \end{frame}
 
-\begin{frame}{Motivatiion}
-\phantomsection\label{motivatiion}
-\framesubtitle{Quiz}
+\begin{frame}{Motivation}
+\phantomsection\label{motivation-5}
+\framesubtitle{General Quiz}
 
-\Quiz{new section}\endQuiz
+\GeneralQuiz{new section}\endGeneralQuiz
 \end{frame}
 
 \begin{frame}{Motivation}
-\phantomsection\label{motivation-5}
+\phantomsection\label{motivation-6}
 \begin{center}
 \includegraphics[height=0.6\textheight, keepaspectratio]{Resources/Grafiken/Schaetzen.jpg}
 \end{center}
@@ -603,7 +607,7 @@ Ziel: Schlussfolgerungen von einer Stichprobe auf die Grundgesamtheit
 \end{frame}
 
 \begin{frame}{Motivation}
-\phantomsection\label{motivation-6}
+\phantomsection\label{motivation-7}
 Man beachte: Wahrscheinlichkeitsrechnung
 
 \begin{itemize}

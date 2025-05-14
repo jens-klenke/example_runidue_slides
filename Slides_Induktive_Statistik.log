@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.4.30)  6 MAY 2025 18:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.4.30)  14 MAY 2025 14:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1629,24 +1629,24 @@ ies/decorations\pgflibrarydecorations.markings.code.tex))
 rcolorthemestructure.sty) (Slides_Induktive_Statistik.aux)
 \openout1 = `Slides_Induktive_Statistik.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 514.
-LaTeX Font Info:    ... okay on input line 514.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 514.
-LaTeX Font Info:    ... okay on input line 514.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 514.
-LaTeX Font Info:    ... okay on input line 514.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 514.
-LaTeX Font Info:    ... okay on input line 514.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 514.
-LaTeX Font Info:    ... okay on input line 514.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 514.
-LaTeX Font Info:    ... okay on input line 514.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 514.
-LaTeX Font Info:    ... okay on input line 514.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 514.
-LaTeX Font Info:    ... okay on input line 514.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 514.
-LaTeX Font Info:    ... okay on input line 514.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 518.
+LaTeX Font Info:    ... okay on input line 518.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 518.
+LaTeX Font Info:    ... okay on input line 518.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 518.
+LaTeX Font Info:    ... okay on input line 518.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 518.
+LaTeX Font Info:    ... okay on input line 518.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 518.
+LaTeX Font Info:    ... okay on input line 518.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 518.
+LaTeX Font Info:    ... okay on input line 518.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 518.
+LaTeX Font Info:    ... okay on input line 518.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 518.
+LaTeX Font Info:    ... okay on input line 518.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 518.
+LaTeX Font Info:    ... okay on input line 518.
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -1707,81 +1707,81 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 topdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package hyperref Info: Link coloring ON on input line 514.
+Package hyperref Info: Link coloring ON on input line 518.
 (Slides_Induktive_Statistik.out) (Slides_Induktive_Statistik.out)
 \@outlinefile=\write7
 \openout7 = `Slides_Induktive_Statistik.out'.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/lmr/m/n --> OT1/cmss/m/n on input line 514.
+(Font)                  OT1/lmr/m/n --> OT1/cmss/m/n on input line 518.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/lmr/bx/n --> OT1/cmss/b/n on input line 514.
+(Font)                  OT1/lmr/bx/n --> OT1/cmss/b/n on input line 518.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 514.
+(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 518.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmss/b/n --> OT1/lmss/b/n on input line 514.
+(Font)                  OT1/cmss/b/n --> OT1/lmss/b/n on input line 518.
 \symnumbers=\mathgroup11
-LaTeX Font Info:    Redeclaring symbol font `pureletters' on input line 514.
+LaTeX Font Info:    Redeclaring symbol font `pureletters' on input line 518.
 LaTeX Font Info:    Encoding `OT1' has changed to `T1' for symbol font
 (Font)              `pureletters' in the math version `normal' on input line 51
-4.
+8.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `normal'
 (Font)                  OT1/mathkerncmss/m/sl --> T1/lmss/m/it on input line 51
-4.
+8.
 LaTeX Font Info:    Encoding `OT1' has changed to `T1' for symbol font
-(Font)              `pureletters' in the math version `bold' on input line 514.
+(Font)              `pureletters' in the math version `bold' on input line 518.
 
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
 (Font)                  OT1/mathkerncmss/bx/sl --> T1/lmss/m/it on input line 5
-14.
+18.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/lmss/m/n --> T1/lmr/m/n on input line 514.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 514.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 514.
+(Font)                  OT1/lmss/m/n --> T1/lmr/m/n on input line 518.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 518.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 518.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/lmss/m/n --> T1/lmss/m/n on input line 514.
+(Font)                  OT1/lmss/m/n --> T1/lmss/m/n on input line 518.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/lmss/bx/n --> T1/lmss/m/n on input line 514.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 514.
+(Font)                  OT1/lmss/bx/n --> T1/lmss/m/n on input line 518.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 518.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/lmr/m/it --> T1/lmss/m/it on input line 514.
+(Font)                  OT1/lmr/m/it --> T1/lmss/m/it on input line 518.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/lmr/bx/it --> T1/lmss/m/it on input line 514.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 514.
+(Font)                  OT1/lmr/bx/it --> T1/lmss/m/it on input line 518.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 518.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/lmtt/m/n --> T1/lmtt/m/n on input line 514.
+(Font)                  OT1/lmtt/m/n --> T1/lmtt/m/n on input line 518.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/lmtt/m/n --> T1/lmtt/m/n on input line 514.
+(Font)                  OT1/lmtt/m/n --> T1/lmtt/m/n on input line 518.
 LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
-(Font)                  T1/lmss/m/n --> T1/lmss/b/n on input line 514.
+(Font)                  T1/lmss/m/n --> T1/lmss/b/n on input line 518.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  T1/lmss/m/it --> T1/lmss/b/it on input line 514.
+(Font)                  T1/lmss/m/it --> T1/lmss/b/it on input line 518.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  OT1/lmss/b/n --> T1/lmr/b/n on input line 514.
+(Font)                  OT1/lmss/b/n --> T1/lmr/b/n on input line 518.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  T1/lmss/b/n --> T1/lmss/b/n on input line 514.
+(Font)                  T1/lmss/b/n --> T1/lmss/b/n on input line 518.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  T1/lmss/m/n --> T1/lmss/b/n on input line 514.
+(Font)                  T1/lmss/m/n --> T1/lmss/b/n on input line 518.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  T1/lmss/m/it --> T1/lmss/b/it on input line 514.
+(Font)                  T1/lmss/m/it --> T1/lmss/b/it on input line 518.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  T1/lmtt/m/n --> T1/lmtt/b/n on input line 514.
-LaTeX Font Info:    Redeclaring symbol font `boldpureletters' on input line 514
+(Font)                  T1/lmtt/m/n --> T1/lmtt/b/n on input line 518.
+LaTeX Font Info:    Redeclaring symbol font `boldpureletters' on input line 518
 .
 LaTeX Font Info:    Encoding `OT1' has changed to `T1' for symbol font
 (Font)              `boldpureletters' in the math version `normal' on input lin
-e 514.
+e 518.
 LaTeX Font Info:    Overwriting symbol font `boldpureletters' in version `norma
 l'
 (Font)                  OT1/mathkerncmss/bx/sl --> T1/lmss/bx/it on input line 
-514.
+518.
 LaTeX Font Info:    Encoding `OT1' has changed to `T1' for symbol font
 (Font)              `boldpureletters' in the math version `bold' on input line 
-514.
+518.
 LaTeX Font Info:    Overwriting symbol font `boldpureletters' in version `bold'
 
 (Font)                  OT1/mathkerncmss/bx/sl --> T1/lmss/bx/it on input line 
-514.
+518.
 
 (C:\Users\Vineet.Dairashri\AppData\Local\Programs\MiKTeX\tex/latex/translator\t
 ranslator-basic-dictionary-English.dict
@@ -1810,20 +1810,20 @@ Dictionary: translator-theorem-dictionary, Language: English
 Package microtype Info: Patching varwidth to enable character protrusion.
 \MT@vwid@leftmargin=\dimen418
 \MT@vwid@rightmargin=\dimen419
-LaTeX Info: Redefining \microtypecontext on input line 514.
-Package microtype Info: Applying patch `item' on input line 514.
-Package microtype Info: Applying patch `toc' on input line 514.
-Package microtype Info: Applying patch `eqnum' on input line 514.
-Package microtype Info: Applying patch `footnote' on input line 514.
-Package microtype Info: Applying patch `verbatim' on input line 514.
-LaTeX Info: Redefining \microtypesetup on input line 514.
+LaTeX Info: Redefining \microtypecontext on input line 518.
+Package microtype Info: Applying patch `item' on input line 518.
+Package microtype Info: Applying patch `toc' on input line 518.
+Package microtype Info: Applying patch `eqnum' on input line 518.
+Package microtype Info: Applying patch `footnote' on input line 518.
+Package microtype Info: Applying patch `verbatim' on input line 518.
+LaTeX Info: Redefining \microtypesetup on input line 518.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using protrusion set `basicmath'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 514.
+LaTeX Info: Redefining \showhyphens on input line 518.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -1849,7 +1849,7 @@ wn/templates/lectureslides/resources/duetower.pdf Graphic file (type pdf)
 n/templates/lectureslides/resources/duetower.pdf>
 Package pdftex.def Info: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/
 4.3/runidue/rmarkdown/templates/lectureslides/resources/duetower.pdf  used on i
-nput line 518.
+nput line 522.
 (pdftex.def)             Requested size: 364.10942pt x 273.01933pt.
 [1
 
@@ -1858,18 +1858,24 @@ nput line 518.
 enc} <C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdo
 wn/templates/lectureslides/resources/duetower.pdf>] (Slides_Induktive_Statistik
 .toc)
-<signet_ude_rgb.png, id=43, 189.8292pt x 176.5797pt>
-File: signet_ude_rgb.png Graphic file (type png)
-<use signet_ude_rgb.png>
-Package pdftex.def Info: signet_ude_rgb.png  used on input line 522.
-(pdftex.def)             Requested size: 30.58763pt x 28.45274pt.
+<C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdown/te
+mplates/lectureslides/resources/duelogo.pdf, id=43, 845.1575pt x 210.7875pt>
+File: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdo
+wn/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdow
+n/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/
+4.3/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used on in
+put line 526.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
 
 
 [2
 
- <./signet_ude_rgb.png>]
+ <C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdown/t
+emplates/lectureslides/resources/duelogo.pdf>]
 LaTeX Font Info:    Trying to load font information for OT1+lmss on input line 
-537.
+541.
 
 (C:\Users\Vineet.Dairashri\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmss.f
 d
@@ -1880,32 +1886,32 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 5
-37.
+41.
 
 (C:\Users\Vineet.Dairashri\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-537.
+541.
 
 (C:\Users\Vineet.Dairashri\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.f
 d
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-537.
+541.
 
 (C:\Users\Vineet.Dairashri\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.f
 d
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 537.
+(Font)              <10> on input line 541.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 537.
+(Font)              <7> on input line 541.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 537.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 537
+(Font)              <5> on input line 541.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 541
 .
 
 (C:\Users\Vineet.Dairashri\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\ums
@@ -1916,7 +1922,7 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 -msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 537
+LaTeX Font Info:    Trying to load font information for U+msb on input line 541
 .
 
 (C:\Users\Vineet.Dairashri\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\ums
@@ -1928,13 +1934,13 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 537.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 541.
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <7> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 537.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 541.
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <5> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 537.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 541.
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 5
-37.
+41.
 
 (C:\Users\Vineet.Dairashri\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
@@ -1945,36 +1951,44 @@ File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman
 (RS)
 )
 LaTeX Font Info:    Font shape `T1/lmss/bx/it' in size <10> not available
-(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 537.
+(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 541.
 
 LaTeX Font Info:    Font shape `T1/lmss/bx/it' in size <7> not available
-(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 537.
+(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 541.
 
 LaTeX Font Info:    Font shape `T1/lmss/bx/it' in size <5> not available
-(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 537.
+(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 541.
 
-File: signet_ude_rgb.png Graphic file (type png)
-<use signet_ude_rgb.png>
-Package pdftex.def Info: signet_ude_rgb.png  used on input line 537.
-(pdftex.def)             Requested size: 30.58763pt x 28.45274pt.
+File: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdo
+wn/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdow
+n/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/
+4.3/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used on in
+put line 541.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
 
 
 [3
 
 {C:/Users/Vineet.Dairashri/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-
 mathsy.enc}]
-<Resources/Plots/unnamed-chunk-2-1.pdf, id=68, 299.6003pt x 191.24048pt>
+<Resources/Plots/unnamed-chunk-2-1.pdf, id=70, 299.6003pt x 191.24048pt>
 File: Resources/Plots/unnamed-chunk-2-1.pdf Graphic file (type pdf)
 <use Resources/Plots/unnamed-chunk-2-1.pdf>
 Package pdftex.def Info: Resources/Plots/unnamed-chunk-2-1.pdf  used on input l
-ine 546.
+ine 550.
 (pdftex.def)             Requested size: 299.59955pt x 191.24pt.
-File: signet_ude_rgb.png Graphic file (type png)
-<use signet_ude_rgb.png>
-Package pdftex.def Info: signet_ude_rgb.png  used on input line 546.
-(pdftex.def)             Requested size: 30.58763pt x 28.45274pt.
+File: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdo
+wn/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdow
+n/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/
+4.3/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used on in
+put line 550.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
 
-Overfull \vbox (1.0748pt too high) detected at line 546
+Overfull \vbox (1.0748pt too high) detected at line 550
  []
 
 
@@ -1982,26 +1996,34 @@ Overfull \vbox (1.0748pt too high) detected at line 546
 [4
 
  <./Resources/Plots/unnamed-chunk-2-1.pdf>]
-File: signet_ude_rgb.png Graphic file (type png)
-<use signet_ude_rgb.png>
-Package pdftex.def Info: signet_ude_rgb.png  used on input line 564.
-(pdftex.def)             Requested size: 30.58763pt x 28.45274pt.
+File: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdo
+wn/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdow
+n/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/
+4.3/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used on in
+put line 568.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
 
 
 [5
 
 ]
-File: signet_ude_rgb.png Graphic file (type png)
-<use signet_ude_rgb.png>
-Package pdftex.def Info: signet_ude_rgb.png  used on input line 581.
-(pdftex.def)             Requested size: 30.58763pt x 28.45274pt.
+File: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdo
+wn/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdow
+n/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/
+4.3/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used on in
+put line 585.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
 
 
 [6
 
 ]
 <C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdown/te
-mplates/lectureslides/resources/QuizAcademy.png, id=109, 301.125pt x 75.28125pt
+mplates/lectureslides/resources/QuizAcademy.png, id=111, 301.125pt x 75.28125pt
 >
 File: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdo
 wn/templates/lectureslides/resources/QuizAcademy.png Graphic file (type png)
@@ -2009,12 +2031,16 @@ wn/templates/lectureslides/resources/QuizAcademy.png Graphic file (type png)
 n/templates/lectureslides/resources/QuizAcademy.png>
 Package pdftex.def Info: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/
 4.3/runidue/rmarkdown/templates/lectureslides/resources/QuizAcademy.png  used o
-n input line 588.
+n input line 592.
 (pdftex.def)             Requested size: 108.81102pt x 27.2023pt.
-File: signet_ude_rgb.png Graphic file (type png)
-<use signet_ude_rgb.png>
-Package pdftex.def Info: signet_ude_rgb.png  used on input line 588.
-(pdftex.def)             Requested size: 30.58763pt x 28.45274pt.
+File: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdo
+wn/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdow
+n/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/
+4.3/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used on in
+put line 592.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
 
 
 [7
@@ -2027,95 +2053,127 @@ wn/templates/lectureslides/resources/QuizAcademy.png Graphic file (type png)
 n/templates/lectureslides/resources/QuizAcademy.png>
 Package pdftex.def Info: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/
 4.3/runidue/rmarkdown/templates/lectureslides/resources/QuizAcademy.png  used o
-n input line 595.
+n input line 599.
 (pdftex.def)             Requested size: 108.81102pt x 27.2023pt.
-File: signet_ude_rgb.png Graphic file (type png)
-<use signet_ude_rgb.png>
-Package pdftex.def Info: signet_ude_rgb.png  used on input line 595.
-(pdftex.def)             Requested size: 30.58763pt x 28.45274pt.
+File: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdo
+wn/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdow
+n/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/
+4.3/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used on in
+put line 599.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
 
 
 [8
 
 ]
-<Resources/Grafiken/Schaetzen.jpg, id=132, 903.375pt x 677.53125pt>
+<Resources/Grafiken/Schaetzen.jpg, id=135, 903.375pt x 677.53125pt>
 File: Resources/Grafiken/Schaetzen.jpg Graphic file (type jpg)
 <use Resources/Grafiken/Schaetzen.jpg>
 Package pdftex.def Info: Resources/Grafiken/Schaetzen.jpg  used on input line 6
-03.
+07.
 (pdftex.def)             Requested size: 194.40103pt x 145.80591pt.
-File: signet_ude_rgb.png Graphic file (type png)
-<use signet_ude_rgb.png>
-Package pdftex.def Info: signet_ude_rgb.png  used on input line 603.
-(pdftex.def)             Requested size: 30.58763pt x 28.45274pt.
+File: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdo
+wn/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdow
+n/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/
+4.3/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used on in
+put line 607.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
 
 
 [9
 
  <./Resources/Grafiken/Schaetzen.jpg>]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 626.
+(Font)              <9> on input line 630.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 626.
+(Font)              <6> on input line 630.
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <9> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 626.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 630.
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <6> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 626.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 630.
 LaTeX Font Info:    Font shape `T1/lmss/bx/it' in size <9> not available
-(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 626.
+(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 630.
 
 LaTeX Font Info:    Font shape `T1/lmss/bx/it' in size <6> not available
-(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 626.
+(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 630.
 
-File: signet_ude_rgb.png Graphic file (type png)
-<use signet_ude_rgb.png>
-Package pdftex.def Info: signet_ude_rgb.png  used on input line 626.
-(pdftex.def)             Requested size: 30.58763pt x 28.45274pt.
+File: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdo
+wn/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdow
+n/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/
+4.3/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used on in
+put line 630.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
 
 
 [10
 
 ]
-File: signet_ude_rgb.png Graphic file (type png)
-<use signet_ude_rgb.png>
-Package pdftex.def Info: signet_ude_rgb.png  used on input line 649.
-(pdftex.def)             Requested size: 30.58763pt x 28.45274pt.
+File: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdo
+wn/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdow
+n/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/
+4.3/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used on in
+put line 653.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
 
 
 [11
 
 ] (Slides_Induktive_Statistik.toc)
-File: signet_ude_rgb.png Graphic file (type png)
-<use signet_ude_rgb.png>
-Package pdftex.def Info: signet_ude_rgb.png  used on input line 651.
-(pdftex.def)             Requested size: 30.58763pt x 28.45274pt.
+File: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdo
+wn/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdow
+n/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/
+4.3/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used on in
+put line 655.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
 
 
 [12
 
 ]
-File: signet_ude_rgb.png Graphic file (type png)
-<use signet_ude_rgb.png>
-Package pdftex.def Info: signet_ude_rgb.png  used on input line 677.
-(pdftex.def)             Requested size: 30.58763pt x 28.45274pt.
+File: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdo
+wn/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdow
+n/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/
+4.3/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used on in
+put line 681.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
 
 
 [13
 
 ]
-File: signet_ude_rgb.png Graphic file (type png)
-<use signet_ude_rgb.png>
-Package pdftex.def Info: signet_ude_rgb.png  used on input line 702.
-(pdftex.def)             Requested size: 30.58763pt x 28.45274pt.
+File: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdo
+wn/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdow
+n/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/
+4.3/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used on in
+put line 706.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
 
 
 [14
 
 ]
-File: signet_ude_rgb.png Graphic file (type png)
-<use signet_ude_rgb.png>
-Package pdftex.def Info: signet_ude_rgb.png  used on input line 724.
-(pdftex.def)             Requested size: 30.58763pt x 28.45274pt.
+File: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdo
+wn/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdow
+n/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/
+4.3/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used on in
+put line 728.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
 
 
 [15
@@ -2123,151 +2181,203 @@ Package pdftex.def Info: signet_ude_rgb.png  used on input line 724.
 {C:/Users/Vineet.Dairashri/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-
 mathit.enc}{C:/Users/Vineet.Dairashri/AppData/Local/Programs/MiKTeX/fonts/enc/d
 vips/lm/lm-rm.enc}]
-File: signet_ude_rgb.png Graphic file (type png)
-<use signet_ude_rgb.png>
-Package pdftex.def Info: signet_ude_rgb.png  used on input line 736.
-(pdftex.def)             Requested size: 30.58763pt x 28.45274pt.
+File: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdo
+wn/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdow
+n/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/
+4.3/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used on in
+put line 740.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
 
 
 [16
 
 ]
-File: signet_ude_rgb.png Graphic file (type png)
-<use signet_ude_rgb.png>
-Package pdftex.def Info: signet_ude_rgb.png  used on input line 753.
-(pdftex.def)             Requested size: 30.58763pt x 28.45274pt.
+File: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdo
+wn/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdow
+n/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/
+4.3/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used on in
+put line 757.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
 
 
 [17
 
 {C:/Users/Vineet.Dairashri/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-
 mathex.enc}]
-File: signet_ude_rgb.png Graphic file (type png)
-<use signet_ude_rgb.png>
-Package pdftex.def Info: signet_ude_rgb.png  used on input line 766.
-(pdftex.def)             Requested size: 30.58763pt x 28.45274pt.
+File: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdo
+wn/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdow
+n/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/
+4.3/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used on in
+put line 770.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
 
 
 [18
 
 ]
-File: signet_ude_rgb.png Graphic file (type png)
-<use signet_ude_rgb.png>
-Package pdftex.def Info: signet_ude_rgb.png  used on input line 793.
-(pdftex.def)             Requested size: 30.58763pt x 28.45274pt.
+File: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdo
+wn/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdow
+n/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/
+4.3/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used on in
+put line 797.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
 
 
 [19
 
 ]
-File: signet_ude_rgb.png Graphic file (type png)
-<use signet_ude_rgb.png>
-Package pdftex.def Info: signet_ude_rgb.png  used on input line 816.
-(pdftex.def)             Requested size: 30.58763pt x 28.45274pt.
+File: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdo
+wn/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdow
+n/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/
+4.3/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used on in
+put line 820.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
 
 
 [20
 
 ]
-File: signet_ude_rgb.png Graphic file (type png)
-<use signet_ude_rgb.png>
-Package pdftex.def Info: signet_ude_rgb.png  used on input line 837.
-(pdftex.def)             Requested size: 30.58763pt x 28.45274pt.
+File: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdo
+wn/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdow
+n/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/
+4.3/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used on in
+put line 841.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
 
 
 [21
 
 ]
-File: signet_ude_rgb.png Graphic file (type png)
-<use signet_ude_rgb.png>
-Package pdftex.def Info: signet_ude_rgb.png  used on input line 850.
-(pdftex.def)             Requested size: 30.58763pt x 28.45274pt.
+File: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdo
+wn/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdow
+n/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/
+4.3/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used on in
+put line 854.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
 
 
 [22
 
 ]
-<Resources/Plots/Vereinigung-1.pdf, id=283, 208.5401pt x 99.26987pt>
+<Resources/Plots/Vereinigung-1.pdf, id=286, 208.5401pt x 99.26987pt>
 File: Resources/Plots/Vereinigung-1.pdf Graphic file (type pdf)
 <use Resources/Plots/Vereinigung-1.pdf>
 Package pdftex.def Info: Resources/Plots/Vereinigung-1.pdf  used on input line 
-879.
+883.
 (pdftex.def)             Requested size: 208.53958pt x 99.2696pt.
-File: signet_ude_rgb.png Graphic file (type png)
-<use signet_ude_rgb.png>
-Package pdftex.def Info: signet_ude_rgb.png  used on input line 879.
-(pdftex.def)             Requested size: 30.58763pt x 28.45274pt.
+File: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdo
+wn/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdow
+n/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/
+4.3/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used on in
+put line 883.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
 
 
 [23
 
  <./Resources/Plots/Vereinigung-1.pdf>]
-<Resources/Plots/Durchschnitt-1.pdf, id=308, 172.12004pt x 108.3799pt>
+<Resources/Plots/Durchschnitt-1.pdf, id=311, 172.12004pt x 108.3799pt>
 File: Resources/Plots/Durchschnitt-1.pdf Graphic file (type pdf)
 <use Resources/Plots/Durchschnitt-1.pdf>
 Package pdftex.def Info: Resources/Plots/Durchschnitt-1.pdf  used on input line
- 902.
+ 906.
 (pdftex.def)             Requested size: 172.11961pt x 108.37961pt.
-File: signet_ude_rgb.png Graphic file (type png)
-<use signet_ude_rgb.png>
-Package pdftex.def Info: signet_ude_rgb.png  used on input line 902.
-(pdftex.def)             Requested size: 30.58763pt x 28.45274pt.
+File: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdo
+wn/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdow
+n/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/
+4.3/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used on in
+put line 906.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
 
 
 [24
 
  <./Resources/Plots/Durchschnitt-1.pdf>]
-<Resources/Plots/Komplementaerereignis-1.pdf, id=329, 117.4799pt x 72.8602pt>
+<Resources/Plots/Komplementaerereignis-1.pdf, id=332, 117.4799pt x 72.8602pt>
 File: Resources/Plots/Komplementaerereignis-1.pdf Graphic file (type pdf)
 <use Resources/Plots/Komplementaerereignis-1.pdf>
 Package pdftex.def Info: Resources/Plots/Komplementaerereignis-1.pdf  used on i
-nput line 929.
+nput line 933.
 (pdftex.def)             Requested size: 117.4796pt x 72.86002pt.
-File: signet_ude_rgb.png Graphic file (type png)
-<use signet_ude_rgb.png>
-Package pdftex.def Info: signet_ude_rgb.png  used on input line 929.
-(pdftex.def)             Requested size: 30.58763pt x 28.45274pt.
+File: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdo
+wn/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdow
+n/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/
+4.3/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used on in
+put line 933.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
 
 
 [25
 
  <./Resources/Plots/Komplementaerereignis-1.pdf>]
-<Resources/Plots/Disjunkt-1.pdf, id=351, 172.12004pt x 108.3799pt>
+<Resources/Plots/Disjunkt-1.pdf, id=354, 172.12004pt x 108.3799pt>
 File: Resources/Plots/Disjunkt-1.pdf Graphic file (type pdf)
 <use Resources/Plots/Disjunkt-1.pdf>
-Package pdftex.def Info: Resources/Plots/Disjunkt-1.pdf  used on input line 953
+Package pdftex.def Info: Resources/Plots/Disjunkt-1.pdf  used on input line 957
 .
 (pdftex.def)             Requested size: 172.11961pt x 108.37961pt.
-File: signet_ude_rgb.png Graphic file (type png)
-<use signet_ude_rgb.png>
-Package pdftex.def Info: signet_ude_rgb.png  used on input line 953.
-(pdftex.def)             Requested size: 30.58763pt x 28.45274pt.
+File: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdo
+wn/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdow
+n/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/
+4.3/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used on in
+put line 957.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
 
 
 [26
 
  <./Resources/Plots/Disjunkt-1.pdf>]
-File: signet_ude_rgb.png Graphic file (type png)
-<use signet_ude_rgb.png>
-Package pdftex.def Info: signet_ude_rgb.png  used on input line 973.
-(pdftex.def)             Requested size: 30.58763pt x 28.45274pt.
+File: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdo
+wn/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdow
+n/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/
+4.3/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used on in
+put line 977.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
 
 
 [27
 
 ]
-<Resources/Plots/Differenzmenge-1.pdf, id=383, 124.77014pt x 77.59991pt>
+<Resources/Plots/Differenzmenge-1.pdf, id=386, 124.77014pt x 77.59991pt>
 File: Resources/Plots/Differenzmenge-1.pdf Graphic file (type pdf)
 <use Resources/Plots/Differenzmenge-1.pdf>
 Package pdftex.def Info: Resources/Plots/Differenzmenge-1.pdf  used on input li
-ne 1002.
+ne 1006.
 (pdftex.def)             Requested size: 124.76982pt x 77.59972pt.
-File: signet_ude_rgb.png Graphic file (type png)
-<use signet_ude_rgb.png>
-Package pdftex.def Info: signet_ude_rgb.png  used on input line 1002.
-(pdftex.def)             Requested size: 30.58763pt x 28.45274pt.
+File: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdo
+wn/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdow
+n/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/
+4.3/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used on in
+put line 1006.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
 
-Overfull \vbox (1.6846pt too high) detected at line 1002
+Overfull \vbox (1.6846pt too high) detected at line 1006
  []
 
 
@@ -2281,12 +2391,16 @@ wn/templates/lectureslides/resources/QuizAcademy.png Graphic file (type png)
 n/templates/lectureslides/resources/QuizAcademy.png>
 Package pdftex.def Info: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/
 4.3/runidue/rmarkdown/templates/lectureslides/resources/QuizAcademy.png  used o
-n input line 1009.
+n input line 1013.
 (pdftex.def)             Requested size: 108.81102pt x 27.2023pt.
-File: signet_ude_rgb.png Graphic file (type png)
-<use signet_ude_rgb.png>
-Package pdftex.def Info: signet_ude_rgb.png  used on input line 1009.
-(pdftex.def)             Requested size: 30.58763pt x 28.45274pt.
+File: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdo
+wn/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdow
+n/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/
+4.3/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used on in
+put line 1013.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
 
 
 [29
@@ -2304,10 +2418,14 @@ File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <8> not available
 (Font)              Font shape `T1/lmtt/b/n' tried instead on input line 9.
 )
-File: signet_ude_rgb.png Graphic file (type png)
-<use signet_ude_rgb.png>
-Package pdftex.def Info: signet_ude_rgb.png  used on input line 1071.
-(pdftex.def)             Requested size: 30.58763pt x 28.45274pt.
+File: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdo
+wn/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdow
+n/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/
+4.3/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used on in
+put line 1075.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
 
 
 [30
@@ -2319,121 +2437,169 @@ Package pdftex.def Info: signet_ude_rgb.png  used on input line 1071.
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <7> not available
 (Font)              Font shape `T1/lmtt/b/n' tried instead on input line 9.
 )
-File: signet_ude_rgb.png Graphic file (type png)
-<use signet_ude_rgb.png>
-Package pdftex.def Info: signet_ude_rgb.png  used on input line 1112.
-(pdftex.def)             Requested size: 30.58763pt x 28.45274pt.
+File: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdo
+wn/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdow
+n/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/
+4.3/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used on in
+put line 1116.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
 
 
 [31
 
 ]
-File: signet_ude_rgb.png Graphic file (type png)
-<use signet_ude_rgb.png>
-Package pdftex.def Info: signet_ude_rgb.png  used on input line 1134.
-(pdftex.def)             Requested size: 30.58763pt x 28.45274pt.
+File: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdo
+wn/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdow
+n/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/
+4.3/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used on in
+put line 1138.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
 
 
 [32
 
 ]
-File: signet_ude_rgb.png Graphic file (type png)
-<use signet_ude_rgb.png>
-Package pdftex.def Info: signet_ude_rgb.png  used on input line 1159.
-(pdftex.def)             Requested size: 30.58763pt x 28.45274pt.
+File: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdo
+wn/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdow
+n/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/
+4.3/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used on in
+put line 1163.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
 
 
 [33
 
 ]
-File: signet_ude_rgb.png Graphic file (type png)
-<use signet_ude_rgb.png>
-Package pdftex.def Info: signet_ude_rgb.png  used on input line 1187.
-(pdftex.def)             Requested size: 30.58763pt x 28.45274pt.
+File: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdo
+wn/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdow
+n/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/
+4.3/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used on in
+put line 1191.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
 
 
 [34
 
 ]
-<Resources/Plots/unnamed-chunk-3-1.pdf, id=478, 281.39026pt x 179.41028pt>
+<Resources/Plots/unnamed-chunk-3-1.pdf, id=481, 281.39026pt x 179.41028pt>
 File: Resources/Plots/unnamed-chunk-3-1.pdf Graphic file (type pdf)
 <use Resources/Plots/unnamed-chunk-3-1.pdf>
 Package pdftex.def Info: Resources/Plots/unnamed-chunk-3-1.pdf  used on input l
-ine 1196.
+ine 1200.
 (pdftex.def)             Requested size: 281.38956pt x 179.40984pt.
-File: signet_ude_rgb.png Graphic file (type png)
-<use signet_ude_rgb.png>
-Package pdftex.def Info: signet_ude_rgb.png  used on input line 1196.
-(pdftex.def)             Requested size: 30.58763pt x 28.45274pt.
+File: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdo
+wn/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdow
+n/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/
+4.3/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used on in
+put line 1200.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
 
 
 [35
 
  <./Resources/Plots/unnamed-chunk-3-1.pdf>]
-File: signet_ude_rgb.png Graphic file (type png)
-<use signet_ude_rgb.png>
-Package pdftex.def Info: signet_ude_rgb.png  used on input line 1225.
-(pdftex.def)             Requested size: 30.58763pt x 28.45274pt.
+File: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdo
+wn/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdow
+n/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/
+4.3/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used on in
+put line 1229.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
 
 
 [36
 
 ]
-File: signet_ude_rgb.png Graphic file (type png)
-<use signet_ude_rgb.png>
-Package pdftex.def Info: signet_ude_rgb.png  used on input line 1244.
-(pdftex.def)             Requested size: 30.58763pt x 28.45274pt.
+File: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdo
+wn/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdow
+n/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/
+4.3/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used on in
+put line 1248.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
 
 
 [37
 
 ]
-File: signet_ude_rgb.png Graphic file (type png)
-<use signet_ude_rgb.png>
-Package pdftex.def Info: signet_ude_rgb.png  used on input line 1273.
-(pdftex.def)             Requested size: 30.58763pt x 28.45274pt.
+File: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdo
+wn/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdow
+n/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/
+4.3/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used on in
+put line 1277.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
 
 
 [38
 
 ]
-File: signet_ude_rgb.png Graphic file (type png)
-<use signet_ude_rgb.png>
-Package pdftex.def Info: signet_ude_rgb.png  used on input line 1290.
-(pdftex.def)             Requested size: 30.58763pt x 28.45274pt.
+File: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdo
+wn/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdow
+n/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/
+4.3/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used on in
+put line 1294.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
 
 
 [39
 
 ]
-File: signet_ude_rgb.png Graphic file (type png)
-<use signet_ude_rgb.png>
-Package pdftex.def Info: signet_ude_rgb.png  used on input line 1308.
-(pdftex.def)             Requested size: 30.58763pt x 28.45274pt.
+File: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdo
+wn/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdow
+n/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/
+4.3/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used on in
+put line 1312.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
 
 
 [40
 
 ]
-<Resources/Plots/unnamed-chunk-4-1.pdf, id=559, 135.69997pt x 84.70044pt>
+<Resources/Plots/unnamed-chunk-4-1.pdf, id=562, 135.69997pt x 84.70044pt>
 File: Resources/Plots/unnamed-chunk-4-1.pdf Graphic file (type pdf)
 <use Resources/Plots/unnamed-chunk-4-1.pdf>
 Package pdftex.def Info: Resources/Plots/unnamed-chunk-4-1.pdf  used on input l
-ine 1330.
+ine 1334.
 (pdftex.def)             Requested size: 135.69962pt x 84.70023pt.
-File: signet_ude_rgb.png Graphic file (type png)
-<use signet_ude_rgb.png>
-Package pdftex.def Info: signet_ude_rgb.png  used on input line 1330.
-(pdftex.def)             Requested size: 30.58763pt x 28.45274pt.
+File: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdo
+wn/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdow
+n/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/
+4.3/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used on in
+put line 1334.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
 
 
 [41
 
  <./Resources/Plots/unnamed-chunk-4-1.pdf>]
-File: signet_ude_rgb.png Graphic file (type png)
-<use signet_ude_rgb.png>
-Package pdftex.def Info: signet_ude_rgb.png  used on input line 1348.
-(pdftex.def)             Requested size: 30.58763pt x 28.45274pt.
+File: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdo
+wn/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdow
+n/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/
+4.3/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used on in
+put line 1352.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
 
 
 [42
@@ -2444,83 +2610,115 @@ pdfTeX warning: pdflatex.exe (file C:/Users/Vineet.Dairashri/AppData/Local/R/wi
 n-library/4.3/runidue/rmarkdown/templates/lectureslides/resources/Rlogo.pdf): P
 DF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
 <C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdown/te
-mplates/lectureslides/resources/Rlogo.pdf, id=589, 723.70375pt x 558.085pt>
+mplates/lectureslides/resources/Rlogo.pdf, id=592, 723.70375pt x 558.085pt>
 File: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdo
 wn/templates/lectureslides/resources/Rlogo.pdf Graphic file (type pdf)
 <use C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdow
 n/templates/lectureslides/resources/Rlogo.pdf>
 Package pdftex.def Info: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/
 4.3/runidue/rmarkdown/templates/lectureslides/resources/Rlogo.pdf  used on inpu
-t line 1361.
+t line 1365.
 (pdftex.def)             Requested size: 11.02072pt x 8.50006pt.
-File: signet_ude_rgb.png Graphic file (type png)
-<use signet_ude_rgb.png>
-Package pdftex.def Info: signet_ude_rgb.png  used on input line 1361.
-(pdftex.def)             Requested size: 30.58763pt x 28.45274pt.
+File: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdo
+wn/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdow
+n/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/
+4.3/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used on in
+put line 1365.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
 
 
 [43
 
  <C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdown/t
 emplates/lectureslides/resources/Rlogo.pdf>]
-File: signet_ude_rgb.png Graphic file (type png)
-<use signet_ude_rgb.png>
-Package pdftex.def Info: signet_ude_rgb.png  used on input line 1386.
-(pdftex.def)             Requested size: 30.58763pt x 28.45274pt.
+File: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdo
+wn/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdow
+n/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/
+4.3/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used on in
+put line 1390.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
 
 
 [44
 
 ]
-File: signet_ude_rgb.png Graphic file (type png)
-<use signet_ude_rgb.png>
-Package pdftex.def Info: signet_ude_rgb.png  used on input line 1413.
-(pdftex.def)             Requested size: 30.58763pt x 28.45274pt.
+File: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdo
+wn/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdow
+n/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/
+4.3/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used on in
+put line 1417.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
 
 
 [45
 
 ]
-File: signet_ude_rgb.png Graphic file (type png)
-<use signet_ude_rgb.png>
-Package pdftex.def Info: signet_ude_rgb.png  used on input line 1433.
-(pdftex.def)             Requested size: 30.58763pt x 28.45274pt.
+File: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdo
+wn/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdow
+n/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/
+4.3/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used on in
+put line 1437.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
 
 
 [46
 
 ]
-File: signet_ude_rgb.png Graphic file (type png)
-<use signet_ude_rgb.png>
-Package pdftex.def Info: signet_ude_rgb.png  used on input line 1452.
-(pdftex.def)             Requested size: 30.58763pt x 28.45274pt.
+File: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdo
+wn/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdow
+n/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/
+4.3/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used on in
+put line 1456.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
 
 
 [47
 
 ]
-File: signet_ude_rgb.png Graphic file (type png)
-<use signet_ude_rgb.png>
-Package pdftex.def Info: signet_ude_rgb.png  used on input line 1466.
-(pdftex.def)             Requested size: 30.58763pt x 28.45274pt.
+File: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdo
+wn/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdow
+n/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/
+4.3/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used on in
+put line 1470.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
 
 
 [48
 
 ]
-File: signet_ude_rgb.png Graphic file (type png)
-<use signet_ude_rgb.png>
-Package pdftex.def Info: signet_ude_rgb.png  used on input line 1490.
-(pdftex.def)             Requested size: 30.58763pt x 28.45274pt.
+File: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdo
+wn/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdow
+n/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/
+4.3/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used on in
+put line 1494.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
 
 
 [49
 
 ]
-File: signet_ude_rgb.png Graphic file (type png)
-<use signet_ude_rgb.png>
-Package pdftex.def Info: signet_ude_rgb.png  used on input line 1506.
-(pdftex.def)             Requested size: 30.58763pt x 28.45274pt.
+File: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdo
+wn/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdow
+n/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/
+4.3/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used on in
+put line 1510.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
 
 
 [50
@@ -2532,47 +2730,63 @@ wn/templates/lectureslides/resources/QuizAcademy.png Graphic file (type png)
 n/templates/lectureslides/resources/QuizAcademy.png>
 Package pdftex.def Info: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/
 4.3/runidue/rmarkdown/templates/lectureslides/resources/QuizAcademy.png  used o
-n input line 1513.
+n input line 1517.
 (pdftex.def)             Requested size: 108.81102pt x 27.2023pt.
-File: signet_ude_rgb.png Graphic file (type png)
-<use signet_ude_rgb.png>
-Package pdftex.def Info: signet_ude_rgb.png  used on input line 1513.
-(pdftex.def)             Requested size: 30.58763pt x 28.45274pt.
+File: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdo
+wn/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdow
+n/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/
+4.3/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used on in
+put line 1517.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
 
 
 [51
 
 ]
-File: signet_ude_rgb.png Graphic file (type png)
-<use signet_ude_rgb.png>
-Package pdftex.def Info: signet_ude_rgb.png  used on input line 1536.
-(pdftex.def)             Requested size: 30.58763pt x 28.45274pt.
+File: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdo
+wn/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdow
+n/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/
+4.3/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used on in
+put line 1540.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
 
 
 [52
 
 ]
-File: signet_ude_rgb.png Graphic file (type png)
-<use signet_ude_rgb.png>
-Package pdftex.def Info: signet_ude_rgb.png  used on input line 1547.
-(pdftex.def)             Requested size: 30.58763pt x 28.45274pt.
+File: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdo
+wn/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdow
+n/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/
+4.3/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used on in
+put line 1551.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
 
 
 [53
 
 ]
-<Resources/Plots/BedingteWkeit-1.pdf, id=709, 208.5401pt x 132.05034pt>
+<Resources/Plots/BedingteWkeit-1.pdf, id=712, 208.5401pt x 132.05034pt>
 File: Resources/Plots/BedingteWkeit-1.pdf Graphic file (type pdf)
 <use Resources/Plots/BedingteWkeit-1.pdf>
 Package pdftex.def Info: Resources/Plots/BedingteWkeit-1.pdf  used on input lin
-e 1571.
+e 1575.
 (pdftex.def)             Requested size: 208.53958pt x 132.05pt.
-File: signet_ude_rgb.png Graphic file (type png)
-<use signet_ude_rgb.png>
-Package pdftex.def Info: signet_ude_rgb.png  used on input line 1571.
-(pdftex.def)             Requested size: 30.58763pt x 28.45274pt.
+File: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdo
+wn/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdow
+n/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/
+4.3/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used on in
+put line 1575.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
 
-Overfull \vbox (4.71823pt too high) detected at line 1571
+Overfull \vbox (4.71823pt too high) detected at line 1575
  []
 
 
@@ -2580,55 +2794,79 @@ Overfull \vbox (4.71823pt too high) detected at line 1571
 [54
 
  <./Resources/Plots/BedingteWkeit-1.pdf>]
-File: signet_ude_rgb.png Graphic file (type png)
-<use signet_ude_rgb.png>
-Package pdftex.def Info: signet_ude_rgb.png  used on input line 1597.
-(pdftex.def)             Requested size: 30.58763pt x 28.45274pt.
+File: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdo
+wn/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdow
+n/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/
+4.3/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used on in
+put line 1601.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
 
 
 [55
 
 ]
-File: signet_ude_rgb.png Graphic file (type png)
-<use signet_ude_rgb.png>
-Package pdftex.def Info: signet_ude_rgb.png  used on input line 1608.
-(pdftex.def)             Requested size: 30.58763pt x 28.45274pt.
+File: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdo
+wn/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdow
+n/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/
+4.3/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used on in
+put line 1612.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
 
 
 [56
 
 ]
-File: signet_ude_rgb.png Graphic file (type png)
-<use signet_ude_rgb.png>
-Package pdftex.def Info: signet_ude_rgb.png  used on input line 1631.
-(pdftex.def)             Requested size: 30.58763pt x 28.45274pt.
+File: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdo
+wn/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdow
+n/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/
+4.3/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used on in
+put line 1635.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
 
 
 [57
 
 ]
-File: signet_ude_rgb.png Graphic file (type png)
-<use signet_ude_rgb.png>
-Package pdftex.def Info: signet_ude_rgb.png  used on input line 1660.
-(pdftex.def)             Requested size: 30.58763pt x 28.45274pt.
+File: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdo
+wn/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdow
+n/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/
+4.3/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used on in
+put line 1664.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
 
 
 [58
 
 ]
-File: signet_ude_rgb.png Graphic file (type png)
-<use signet_ude_rgb.png>
-Package pdftex.def Info: signet_ude_rgb.png  used on input line 1691.
-(pdftex.def)             Requested size: 30.58763pt x 28.45274pt.
+File: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdo
+wn/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdow
+n/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/
+4.3/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used on in
+put line 1695.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
 
 
 [59
 
 ]
-File: signet_ude_rgb.png Graphic file (type png)
-<use signet_ude_rgb.png>
-Package pdftex.def Info: signet_ude_rgb.png  used on input line 1715.
-(pdftex.def)             Requested size: 30.58763pt x 28.45274pt.
+File: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdo
+wn/templates/lectureslides/resources/duelogo.pdf Graphic file (type pdf)
+<use C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdow
+n/templates/lectureslides/resources/duelogo.pdf>
+Package pdftex.def Info: C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/
+4.3/runidue/rmarkdown/templates/lectureslides/resources/duelogo.pdf  used on in
+put line 1719.
+(pdftex.def)             Requested size: 56.9055pt x 14.19055pt.
 
 
 [60
@@ -2653,10 +2891,10 @@ ged.
 (rerunfilecheck)             Checksum: D1692F7B75D7955FC5D208B452E4954E;186.
  ) 
 Here is how much of TeX's memory you used:
- 46139 strings out of 469959
- 1017003 string characters out of 5464510
- 1418168 words of memory out of 5000000
- 71715 multiletter control sequences out of 15000+600000
+ 46142 strings out of 469959
+ 1018148 string characters out of 5464510
+ 1418204 words of memory out of 5000000
+ 71718 multiletter control sequences out of 15000+600000
  732025 words of font info for 199 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,22n,133p,1682b,838s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -2688,9 +2926,9 @@ s/type1/public/lm/lmtti10.pfb><C:/Users/Vineet.Dairashri/AppData/Local/Programs
 /MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/Vineet.Dairash
 ri/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb
 >
-Output written on Slides_Induktive_Statistik.pdf (60 pages, 1199913 bytes).
+Output written on Slides_Induktive_Statistik.pdf (60 pages, 1190941 bytes).
 PDF statistics:
- 929 PDF objects out of 1000 (max. 8388607)
+ 932 PDF objects out of 1000 (max. 8388607)
  183 named destinations out of 1000 (max. 500000)
  61593 words of extra memory for PDF output out of 61914 (max. 10000000)
 
