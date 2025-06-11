@@ -15,7 +15,6 @@ editor_options:
   chunk_output_type: console
 classoption: aspectratio=169
 
-
 ---
 
 ```{r, include=F}
