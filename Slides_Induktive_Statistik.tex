@@ -128,8 +128,8 @@
 \def\input@path{{"C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdown/templates/lectureslides/resources/"}}  % make them visible to tex to overcome warnings
 \makeatother
 
-\input{"C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdown/templates/lectureslides/resources/ee.sty"}
-\usepackage{BeamerColor}
+\input{ee.sty}
+\input{BeamerColor.sty}
 \usepackage{hypernat}
 \usepackage{mathtools}
 \usepackage[export]{adjustbox}
@@ -231,7 +231,7 @@ postaction = {draw,line width=1.4pt, white,shorten >= 4.5pt}]
 
 
 % New code for General Quiz 
-\newenvironment<>{GeneralQuiz}[1]{%	
+\newenvironment<>{Quiz}[1]{%	
 	\begin{actionenv}#2%
 		\def\insertblocktitle{#1}%
 		\par%
@@ -247,7 +247,7 @@ postaction = {draw,line width=1.4pt, white,shorten >= 4.5pt}]
 			
 	\end{center}}
 	{\par\usebeamertemplate{block end}\end{actionenv}}
-\newcommand{\Quizblock}[1]{\begin{GeneralQuiz}{#1}\end{GeneralQuiz}}
+\newcommand{\Quizblock}[1]{\begin{Quiz}{#1}\end{Quiz}}
 
 
 
@@ -327,16 +327,87 @@ postaction = {draw,line width=1.4pt, white,shorten >= 4.5pt}]
 }
 \setbeamertemplate{theorem end}{\leavevmode\end{\inserttheoremblockenv}}
 
-\preto{\xmpl}{
-    \setbeamercolor{block title}{fg=black,bg=sandy!70!white}
-    \setbeamercolor{block body}{fg=black, bg=sandy!20!white}
-}
 
+%\preto{\xmpl}{
+%   \setbeamercolor{block title}{fg=black,bg=sandy!70!white}
+%    \setbeamercolor{block body}{fg=black, bg=sandy!20!white}
+%}
+
+%\preto{\exe}{
+%    \setbeamercolor{block title}{fg=black,bg=darklime!70!white}
+%    \setbeamercolor{block body}{fg=black, bg=darklime!20!white}
+%}
+
+
+% user-defined color for exe\Exercise
+\def\exerciseboxcolor{blue}
 \preto{\exe}{
-    \setbeamercolor{block title}{fg=black,bg=darklime!70!white}
-    \setbeamercolor{block body}{fg=black, bg=darklime!20!white}
+	\setbeamercolor{block title}{fg=black, bg=\exerciseboxcolor!70!white}
+	\setbeamercolor{block body}{fg=black, bg=\exerciseboxcolor!20!white}
 }
 
+
+\def\beispielboxcolor{yellow}
+\preto{\xmpl}{
+    \setbeamercolor{block title}{fg=black,bg=\beispielboxcolor!70!white}
+    \setbeamercolor{block body}{fg=black, bg=\beispielboxcolor!20!white}
+   
+}
+
+\def\lemmaboxcolor{blue}
+\preto{\lem}{
+    \setbeamercolor{block title}{fg=black,bg=\lemmaboxcolor!70!white}
+    \setbeamercolor{block body}{fg=black, bg=\lemmaboxcolor!20!white}
+   
+}
+
+\def\definitionboxcolor{green}
+\preto{\defn}{
+    \setbeamercolor{block title}{fg=black,bg=\definitionboxcolor!70!white}
+    \setbeamercolor{block body}{fg=black, bg=\definitionboxcolor!20!white}
+}
+
+\def\theoremboxcolor{blue}
+\preto{\thmn}{
+    \setbeamercolor{block title}{fg=black,bg=\theoremboxcolor!70!white}
+    \setbeamercolor{block body}{fg=black, bg=\theoremboxcolor!20!white}
+}
+
+\def\corollaryboxcolor{blue}
+\preto{\cor}{
+    \setbeamercolor{block title}{fg=black,bg=\corollaryboxcolor!70!white}
+    \setbeamercolor{block body}{fg=black, bg=\corollaryboxcolor!20!white}
+}
+
+\def\assumptionboxcolor{blue}
+\preto{\ass}{
+    \setbeamercolor{block title}{fg=black,bg=\assumptionboxcolor!70!white}
+    \setbeamercolor{block body}{fg=black, bg=\assumptionboxcolor!20!white}
+}
+
+\def\remarkboxcolor{blue}
+\preto{\rem}{
+    \setbeamercolor{block title}{fg=black,bg=\remarkboxcolor!70!white}
+    \setbeamercolor{block body}{fg=black, bg=\remarkboxcolor!20!white}
+}
+
+\def\propositionboxcolor{blue}
+\preto{\prop}{
+    \setbeamercolor{block title}{fg=black,bg=\propositionboxcolor!70!white}
+    \setbeamercolor{block body}{fg=black, bg=\propositionboxcolor!20!white}
+}
+
+\def\frageboxcolor{blue}
+\preto{\que}{
+    \setbeamercolor{block title}{fg=black,bg=\frageboxcolor!70!white}
+    \setbeamercolor{block body}{fg=black, bg=\frageboxcolor!20!white}
+}
+
+\def\mathematicaltheoremboxcolor{blue}
+\preto{\mthmn}{
+    \setbeamercolor{block title}{fg=black,bg=\mathematicaltheoremboxcolor!70!white}
+    \setbeamercolor{block body}{fg=black, bg=\mathematicaltheoremboxcolor!20!white}
+}
 
 
 
@@ -595,7 +666,7 @@ Ziel: Schlussfolgerungen von einer Stichprobe auf die Grundgesamtheit
 \phantomsection\label{motivation-5}
 \framesubtitle{General Quiz}
 
-\GeneralQuiz{new section}\endGeneralQuiz
+\Quiz{new section}\endQuiz
 \end{frame}
 
 \begin{frame}{Motivation}

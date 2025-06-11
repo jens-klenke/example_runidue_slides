@@ -18,14 +18,7 @@ classoption: aspectratio=169
 
 ---
 
-```{r, include=F}
-knitr::opts_chunk$set(cache = T)
-def.chunk.hook  <- knitr::knit_hooks$get("chunk")
-knitr::knit_hooks$set(chunk = function(x, options) {
-  x <- def.chunk.hook(x, options)
-  ifelse(options$size != "normalsize", paste0("\n \\", options$size,"\n\n", x, "\n\n \\normalsize"), x)
-})
-```
+
 
 
 # Einleitung
@@ -41,18 +34,10 @@ knitr::knit_hooks$set(chunk = function(x, options) {
 ## Motivation
 \framesubtitle{Beispiel: Lernerfolg}
  
-```{r, echo = F}
-#library(devtools)
-#install_github("martinschmelzer/runidue")
-library(runidue)
-library(scales)
-load("Resources/Data/JACKvsEXAM.RData")
-model <- lm(Exam ~ JACK, data = JACKvsEXAM)
 
-plot(x = jitter(JACKvsEXAM$JACK, factor = 0.33), y = JACKvsEXAM$Exam, col = alpha("steelblue", 0.5),
-     pch = 19, xlab = "JACK Bonuspunkte", ylab = "Punkte in der Klausur")
-abline(coef(model), col = "red2", lwd = 2)
-```
+\footnotesize
+\begin{center}\includegraphics{Resources/Plots/unnamed-chunk-2-1} \end{center}
+\normalsize
 
 
 
@@ -253,15 +238,10 @@ $A_7=\{2,3\}$, $A_8=\{1,2,3\}=\Omega$. Die Potenzmenge ist \[PM(\Omega)=\{A_1,\l
 
 \vspace{-0.5cm}
 
-```{r Vereinigung, echo = F, fig.width = 0.6, fig.asp = 0.5}
-library(venn)
-#venn("11 + 10 + 01", snames = c("$A_1$", "$A_2$"), ellipse = F, zcolor = rep("tomato3", 3), opacity = 1, cexsn = 0.001)
-#text(c("$A_1$", "$A_2$"), x = c(200, 850), y = 800, cex = 1.5)
 
-venn("11 + 10 + 01", snames = c(" ", " "), ellipse = F, zcolor = rep("tomato3", 3), opacity = 1, cexsn = 0.001)
-text(c("$A_1$", "$A_2$"), x = c(200, 850), y = 800, cex = 1.5)
-
-```
+\footnotesize
+\begin{center}\includegraphics{Resources/Plots/Vereinigung-1} \end{center}
+\normalsize
 
 
 ## Grundlegende Begriffe
@@ -272,18 +252,10 @@ text(c("$A_1$", "$A_2$"), x = c(200, 850), y = 800, cex = 1.5)
 
 \vspace{-0.5cm}
 
-```{r Durchschnitt, echo = F, fig.width = 0.5}
-#library(venn)
-#venn("A B", 
-#     snames = c("$A_1$", "$A_2$"), zcolor = "tomato3", # Labels und Farbe
-#     opacity = 1, sncs = 1.3)                          # Farbstärke und Textgröße
 
-library(venn)
-venn("11", 
-     snames = c(" ", " "), zcolor = "tomato3", # Labels und Farbe
-     opacity = 1, sncs = 1.3)                          # Farbstärke und Textgröße
-text(c("$A_1$", "$A_2$"), x = c(200, 850), y = 800, cex = 1.5)
-```
+\footnotesize
+\begin{center}\includegraphics{Resources/Plots/Durchschnitt-1} \end{center}
+\normalsize
 
 
 
@@ -297,12 +269,10 @@ text(c("$A_1$", "$A_2$"), x = c(200, 850), y = 800, cex = 1.5)
 
 <!-- \vspace{-0.5cm} -->
 
-```{r Komplementaerereignis, echo = F, fig.width = 0.35}
-library(venn)
-venn("~A", snames = c("A"), ellipse = F, zcolor = "tomato3", cexil = 0.001, cexsn = 0.001, opacity=1, sncs=0.0001)
-text("A", x = 500, y = 500, cex = 1.5)
-text("$\\bar{A}$", x = 800, y = 800, cex = 1.5)
-```
+
+\footnotesize
+\begin{center}\includegraphics{Resources/Plots/Komplementaerereignis-1} \end{center}
+\normalsize
 
 
 
@@ -313,16 +283,10 @@ text("$\\bar{A}$", x = 800, y = 800, cex = 1.5)
 - Komplementäre Ereignisse sind daher immer auch disjunkt, die Umkehrung gilt aber nicht.
 - So sind im Beispiel \ref{xmpl:potenz} $A_2=\{1\}$ und $A_3 = \{2\}$ zwar disjunkt, aber nicht komplementär. Denn wenn $A_3$ nicht eintritt, folgt nicht notwendigerweise das Eintreten von $A_2$; es könnte auch $A_4=\{3\}$ eintreten.
 
-```{r Disjunkt, echo = F, fig.width = 0.5}
-library(grid)
-plot(c(0, 3), c(0, 2), xaxt = "n", yaxt = "n", type = "n", xlab = "", ylab = "")
-grid.circle(x = .4,  y = .5,  r = .2)
-grid.circle(x = .42, y = .45, r = .1)
-grid.circle(x = .75, y = .6,  r = .12)
-text(x = .8,  y = 1.25, labels = "$A_6$", cex = 1.3)
-text(x = 1,   y = .6,  labels = "$A_2$", cex = 1.3)
-text(x = 2.3, y = 1.2, labels = "$A_3$", cex = 1.3)
-```
+
+\footnotesize
+\begin{center}\includegraphics{Resources/Plots/Disjunkt-1} \end{center}
+\normalsize
 
 
 
@@ -345,11 +309,10 @@ text(x = 2.3, y = 1.2, labels = "$A_3$", cex = 1.3)
     Nur $\omega_3=3$ führt dazu, dass $A_6\setminus A_5$ eintritt. Das Beispiel zeigt, dass im Allgemeinen $A_i\setminus A_j \neq A_j\setminus A_i$.
 
 \vspace{-0.75em}
-```{r Differenzmenge, echo = F, fig.width = 0.37}
-library(venn)
-venn("10", ellipse = F, zcolor = "tomato3", cexsn = 0.001, opacity=1, sncs=0.0001)
-text(x = c(210, 850),y = c(750, 750), labels = c("$A_1\\quad$", "$\\;A_2$"))
-```
+
+\footnotesize
+\begin{center}\includegraphics{Resources/Plots/Differenzmenge-1} \end{center}
+\normalsize
 
 
 
@@ -363,27 +326,95 @@ text(x = c(210, 850),y = c(750, 750), labels = c("$A_1\\quad$", "$\\;A_2$"))
 ## Grundlegende Begriffe
 \framesubtitle{Mengen in R}
 
-```{r Mengen}
+
+\footnotesize
+
+
+``` r
 x <- c(1,3,5)
 y <- c(2,3,6)
 
 union(x,y)
+```
 
+```
+## [1] 1 3 5 2 6
+```
+
+
+``` r
 intersect(x,y)
+```
 
+```
+## [1] 3
+```
+
+
+``` r
 setdiff(x,y)
+```
 
+```
+## [1] 1 5
+```
+
+
+``` r
 setdiff(y,x)
+```
 
+```
+## [1] 2 6
+```
+
+
+``` r
 setdiff(union(x,y),y) # Komplement von y, wenn Omega = union(x,y)
 ```
+
+```
+## [1] 1 5
+```
+\normalsize
 
 ## Grundlegende Begriffe
 \framesubtitle{Mengen in R}
 
-```{r Mengen2, results='hold', fontsize='\\scriptsize'}
+
+\scriptsize
+
+
+``` r
 rje::powerSet(x)
 ```
+
+```
+## [[1]]
+## numeric(0)
+## 
+## [[2]]
+## [1] 1
+## 
+## [[3]]
+## [1] 3
+## 
+## [[4]]
+## [1] 1 3
+## 
+## [[5]]
+## [1] 5
+## 
+## [[6]]
+## [1] 1 5
+## 
+## [[7]]
+## [1] 3 5
+## 
+## [[8]]
+## [1] 1 3 5
+```
+\normalsize
 
 
 
@@ -444,18 +475,10 @@ System von Ereignissen}, wenn für diese Zerlegung gilt:
 ## Grundlegende Begriffe
 \framesubtitle{Vollständiges Ereignissystem}
 
-```{r, echo = F, fig.width = 0.8}
-par(mar = c(3.5, 3.5, 2, 2.3), bty = "o")
-plot(c(0, 3), c(0, 2), xaxt = "n", yaxt = "n", type = "n", xlab = "", ylab = "", xaxs = "i", yaxs = "i")
-segments(x0 = 0,   x1 = 1,   y0 = 0.3,  y1 = 2)
-segments(x0 = .6,  x1 = 1.2, y0 = 1.32, y1 = 0)
-segments(x0 = 1.5, x1 = 2,   y0 = 0,    y1 = 2)
-segments(x0 = 1.8, x1 = 3,   y0 = 1.2,  y1 = 1.5)
-segments(x0 = 2.2, x1 = 2.8, y0 = 1.3,  y1 = 0)
 
-text(x = c(0.3, 0.6, 1.3, 2.4, 2.1, 2.7), y = c(1.6, .5, 1.1, 1.6, .5, 1), labels = paste0("$A_",1:6,"$"))
-mtext("$\\Omega$", las = 1, side = 4, line = .5, cex = 1.2, at = 1.75)
-```
+\footnotesize
+\begin{center}\includegraphics{Resources/Plots/unnamed-chunk-3-1} \end{center}
+\normalsize
 
 
 
@@ -555,11 +578,10 @@ Ihre Herleitung findet sich im Buch auf S.\ 23.
 
 \[P(A\cup B)=P(A)+P(B)-\textcolor[RGB]{205,79,57}{P(A\cap B)}\]
  
-```{r, echo = F, fig.width = 0.4}
-venn("11", zcolor = "tomato3", opacity=1, cexsn = 0.001, sncs=0.0001)
-text(c("$A$", "$B$"), x=c(190, 850), y=770, cex=1.2)
-mtext("$\\Omega$", las = 1, side = 4, line = -3, cex = 1.1, at = 750)
-```
+
+\footnotesize
+\begin{center}\includegraphics{Resources/Plots/unnamed-chunk-4-1} \end{center}
+\normalsize
  
 - $A$ und $B$ sind nicht disjunkt, da $A\cap B \not=\emptyset$. $A\cap B$ entspricht der roten Fläche.
 - $(A\cup B)$ würde mit $P(A)+P(B)$ die Wahrscheinlichkeit für $A\cap B$ doppelt erfassen; folglich muss $P(A\cap B)$ subtrahiert werden.
@@ -729,21 +751,10 @@ Eine Laplace-Münze und ein Laplace-Würfel werden gemeinsam geworfen. Wie groß
  
 \vspace{-.5cm}
 
-```{r BedingteWkeit, echo = F, fig.width=0.6}
-library(plotrix)
-par(mar = c(2, 2, 2, 3), xpd = F)
-plot(c(-1, 2.5), c(-1.25, 1.25), xaxt = 'n', yaxt = 'n', type = 'n', xlab = '', ylab = '', asp = 1)
-rect(xleft = 3, xright = -2, ybottom = -2, ytop = sin(pi - .4),col = "steelblue", border = "black")
-draw.circle(x = 0, y = 0, radius = 1, col = "white")
-abline(h = sin(pi - .4))
-x <- cos(seq(pi - .4, 2 * pi + .4, .001))
-y <- sin(seq(pi - .4, 2 * pi + .4, .001))
-polygon(x = x, y = y, col = "tomato3")
-mtext("$\\Omega$", las = 1, side = 4, line = .25, cex = 1.3, at = 1, col = "black")
-mtext("$B$", las = 1, side = 4, line = 1, cex = 1.1, at = -0.5, col = "steelblue")
-mtext("\\rotatebox{90}{\\makebox[14ex]{\\upbracefill}}", las = 1, side = 4, line = .5, cex = 1, at = -1.25)
-text(x = -.85, y = 0.85, labels = "$A$", cex = 1.5)
-```
+
+\footnotesize
+\begin{center}\includegraphics{Resources/Plots/BedingteWkeit-1} \end{center}
+\normalsize
 
 
 
