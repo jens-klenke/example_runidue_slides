@@ -1,0 +1,1125 @@
+\documentclass[9pt,english,]{beamer}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\usepackage{hyperref}
+\PassOptionsToPackage{usenames,dvipsnames}{color} % color is loaded by hyperref
+\hypersetup{unicode=true,
+            pdftitle={Elements of Matrix Algebra},
+            pdfauthor={Yannick Hoga},
+            colorlinks=true,
+            linkcolor=dueblue,
+            citecolor=dueblue,
+            urlcolor=dueblue,
+            breaklinks=true}
+\urlstyle{same}  % don't use monospace font for urls
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[shorthands=off,main=english]{babel}
+\else
+  \usepackage{polyglossia}
+  \setmainlanguage[]{}
+\fi
+
+
+\usepackage{longtable,booktabs}
+\IfFileExists{parskip.sty}{%
+\usepackage{parskip}
+}{% else
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{3em plus 1pt minus 1pt}%{6pt plus 2pt minus 1pt}
+}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+
+\setcounter{secnumdepth}{0}
+% Redefines (sub)paragraphs to behave more like sections
+\ifx\paragraph\undefined\else
+\let\oldparagraph\paragraph
+\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+\let\oldsubparagraph\subparagraph
+\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+%%% Use protect on footnotes to avoid problems with footnotes in titles
+\let\rmarkdownfootnote\footnote%
+\def\footnote{\protect\rmarkdownfootnote}
+
+
+  \title{Elements of Matrix Algebra}
+    \author{Yannick Hoga}
+  
+  \providecommand{\institute}[1]{}
+  \expandafter\ifstrequal\expandafter{default}{default}{%
+  \institute{\expandafter\ifstrequal\expandafter{en}{de}{%
+  Universität Duisburg-Essen}{%
+  University of Duisburg-Essen}}}{%
+  
+  \institute{default}
+}
+
+
+    \date{Winter 2024}
+
+
+% up until here https://github.com/rstudio/rmarkdown/blob/master/inst/rmd/latex/default-1.17.0.2.tex
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Additional packages
+\makeatletter
+\def\input@path{{"C:/Users/Yannick.Hoga/AppData/Local/Programs/R/R-4.3.3/library/runidue/rmarkdown/templates/lectureslides/resources/"}}  % make them visible to tex to overcome warnings
+\makeatother
+
+\input{"C:/Users/Yannick.Hoga/AppData/Local/Programs/R/R-4.3.3/library/runidue/rmarkdown/templates/lectureslides/resources/ee.sty"}
+\usepackage{BeamerColor}
+\usepackage{hypernat}
+\usepackage{mathtools}
+\usepackage[export]{adjustbox}
+\usepackage{makecell}
+\usepackage{diagbox}
+\usepackage{bm, bbm}
+\usepackage{subfig}
+\usepackage{forest}
+\usepackage[labelfont={footnotesize,color=dueblue},font=footnotesize]{caption}
+\usepackage{soul}
+\usepackage{textcomp}
+\usepackage{zref}
+\usepackage{zref-user}
+\usepackage{zref-xr}
+\usepackage{empheq}
+\usepackage{tikz}
+\usetikzlibrary{arrows, decorations.markings}
+\tikzstyle{arrow} = [ultra thick, - latex, shorten >= 2pt, shorten <= 2pt] % default arrow
+\tikzstyle{box} = [rectangle,rounded corners,fill=dueblue, text=white, align=center, node distance=1.25cm] % default node
+
+% \usepackage{etoolbox}
+
+\makeatletter
+\let\@@magyar@captionfix\relax
+\makeatother
+
+%%% ZREF
+
+%%% New colors
+\definecolor{dueblue}{RGB}{0,76,147}
+\definecolor{duelightblue}{RGB}{223,228,242}
+\definecolor{duebeige}{RGB}{239,228,191}
+\definecolor{darkgrey}{RGB}{40, 40, 40}
+\definecolor{salmon}{RGB}{239, 148, 108}
+\definecolor{lime}{RGB}{219, 254, 135}
+\definecolor{sandy}{RGB}{255, 227, 129}
+\definecolor{darklime}{RGB}{153, 194, 77}
+
+
+%%% Additional commands
+\newcommand{\npt}{\\[1ex]\pause}
+\newcommand{\nbs}{\protect{~}}
+\newcommand{\qedb}{\hfill \textsquare} % to be used outside proof environments
+\newcommand{\pausealt}{ }
+\newcommand{\blue}[1]{{\color{dueblue}{#1}\color{black}}}
+\newcommand{\hil}[1]{\textbf{\color{dueblue}{#1}\color{black}}}
+\newcommand{\hilm}[1]{\mathbf{\color{dueblue}{#1}\color{black}}}
+\newcommand{\mps}{\par\medbreak}
+\newcommand{\sd}{\operatorname{sd}}
+\newcommand{\SD}{\operatorname{SD}}
+
+% Kahoot Block
+\newenvironment<>{kahoot}[1]{%
+  \begin{actionenv}#2%
+      \def\insertblocktitle{#1}%
+      \par%
+      \mode<presentation>{%
+      \setbeamercolor{block title}{fg=black,bg=yellow}
+       \setbeamercolor{block body}{fg=black,bg=yellow!20}
+       \setbeamercolor{itemize item}{fg=orange!20!black}
+       \setbeamertemplate{itemize item}[triangle]
+     }%
+      \usebeamertemplate{block begin}
+      \begin{center}
+\includegraphics[width=0.25\textwidth]{"C:/Users/Yannick.Hoga/AppData/Local/Programs/R/R-4.3.3/library/runidue/rmarkdown/templates/lectureslides/resources/kahootlogo2"}
+\end{center}}
+    {\par\usebeamertemplate{block end}\end{actionenv}}
+\newcommand{\kahootblock}[1]{\begin{kahoot}{#1}\end{kahoot}}
+
+\makeatletter
+\newcommand*\fsize{\dimexpr\f@size pt\relax} % returns current font size
+\makeatother
+\newcommand{\R}{\includegraphics[height=.85\fsize, clip=T]{"C:/Users/Yannick.Hoga/AppData/Local/Programs/R/R-4.3.3/library/runidue/rmarkdown/templates/lectureslides/resources/Rlogo"}\ }
+\newcommand{\btVFill}{\vskip0pt plus 1filll}
+\newcommand{\source}[1]{\btVFill\scriptsize \textit{\expandafter\ifstrequal\expandafter{en}{de}{Quelle: }{Source: }}#1}
+
+
+
+% BLOCK ENVIRONMENTS (THEOREMS)
+\expandafter\ifstrequal\expandafter{box}{blank}{
+}{
+\setbeamerfont{block title}{size=\normalsize}
+\setbeamercolor{block title}{bg=duelightblue,fg=black}
+\setbeamercolor{block body}{bg=duelightblue!37,fg=black}
+}%
+\setbeamertemplate{blocks}[rounded][shadow=false]
+
+% Headers for theorems
+\expandafter\ifstrequal\expandafter{en}{de}{%
+  \newcommand{\thmncont}{Fortsetzung}
+  \newtheorem{thmn}{Theorem}[section]
+  \newtheorem{lem}[thmn]{Lemma}
+  \newtheorem{cor}[thmn]{Corollary}
+  \newtheorem{defn}[thmn]{Definition}
+  \newtheorem{ass}[thmn]{Annahme}
+  \newtheorem{rem}[thmn]{Anmerkung}
+  \newtheorem{prop}[thmn]{Proposition}
+  \theoremstyle{definition}
+  \newtheorem{xmpl}[thmn]{Beispiel}
+  \newtheorem{que}[thmn]{Frage}
+  \newtheorem{exe}[thmn]{Aufgabe}
+  \numberwithin{equation}{section}}{%%%
+  \newcommand{\thmncont}{Continued}
+  \newtheorem{thmn}{Theorem}[section]
+  \newtheorem{lem}[thmn]{Lemma}
+  \newtheorem{cor}[thmn]{Corollary}
+  \newtheorem{defn}[thmn]{Definition}
+  \newtheorem{ass}[thmn]{Assumption}
+  \newtheorem{rem}[thmn]{Remark}
+  \newtheorem{prop}[thmn]{Proposition}
+  \theoremstyle{definition}
+  \newtheorem{xmpl}[thmn]{Example}
+  \newtheorem{que}[thmn]{Question}
+  \newtheorem{exe}[thmn]{Exercise}
+  \numberwithin{equation}{section}
+}%
+
+
+
+\setbeamertemplate{theorems}[numbered]
+\setbeamerfont{block title}{size=\normalsize}
+\setbeamertemplate{theorem begin}
+{%
+  \expandafter\ifstrequal\expandafter{\inserttheoremaddition}{*}{\addtocounter{thmn}{-1}}{}
+  \normalfont
+  \begin{\inserttheoremblockenv}{%
+    \structure{%
+      \textcolor{darkgrey}{\textbf{\inserttheoremname \inserttheoremnumber}:
+      \ifx\inserttheoremaddition\empty\else\expandafter\ifstrequal\expandafter{\inserttheoremaddition}{*}{\thmncont\inserttheorempunctuation}{\inserttheoremaddition\inserttheorempunctuation}\fi}%
+    }%
+  }%
+}
+\setbeamertemplate{theorem end}{\leavevmode\end{\inserttheoremblockenv}}
+
+\preto{\xmpl}{
+    \setbeamercolor{block title}{fg=black,bg=sandy!70!white}
+    \setbeamercolor{block body}{fg=black, bg=sandy!20!white}
+}
+
+\preto{\exe}{
+    \setbeamercolor{block title}{fg=black,bg=darklime!70!white}
+    \setbeamercolor{block body}{fg=black, bg=darklime!20!white}
+}
+
+
+
+
+% Spacings
+\AtBeginEnvironment{figure}{\setlength{\parskip}{-2ex}}
+\AtBeginEnvironment{center}{\smallbreak}
+\AtEndEnvironment{center}{\smallbreak}
+\AtBeginEnvironment{itemize}{\smallskip \setlength{\itemsep}{0.3ex}\setlength{\parskip}{1ex}}
+\AtEndEnvironment{itemize}{\smallskip}
+\preto{\enumerate}{\medskip  \setlength{\itemsep}{0.75ex}\setlength{\parskip}{1ex}}
+\AtEndEnvironment{enumerate}{\smallskip}
+
+
+
+% \let\tempone\itemize
+% \let\temptwo\enditemize
+% \renewenvironment{itemize}{\tempone\setlength{\itemsep}{1ex}\setlength{\parskip}{1.2ex}}{\temptwo}
+
+% \let\tempone\enumerate
+% \let\temptwo\endenumerate
+% \renewenvironment{enumerate}{\tempone\setlength{\itemsep}{1ex}\setlength{\parskip}{1.2ex}}{\temptwo}
+% 
+
+
+
+
+%%% LAYOUT
+\usecolortheme[named=dueblue]{structure}
+\beamertemplatenavigationsymbolsempty
+\setbeamersize{text margin left=10pt, text margin right=10pt}
+
+
+% Spacing before and after code chunks / output
+\makeatletter
+\preto{\@verbatim}{\topsep=-2pt \partopsep=2pt \parskip=-2ex}
+\makeatother
+
+% spacing before figure captions
+\setlength{\abovecaptionskip}{0pt}
+\setlength{\belowcaptionskip}{-1em plus 1em minus 0em}
+
+% spacing aorund display equations
+\setlength{\abovedisplayskip}{3pt}
+%\setlength{\belowdisplayskip}{3pt}
+
+ % 
+
+% Frame Head
+\makeatletter
+\setbeamertemplate{frametitle}{%
+\vspace{.1cm}
+\begin{minipage}[t][1cm]{.84\textwidth}
+    \ifbeamer@plainframe%
+      \Large\insertframetitle%
+    \else
+      \Large\insertframetitle%
+      \ifx\insertframesubtitle\empty
+      \else
+        \\ \small \insertframesubtitle
+      \fi
+    \fi
+\end{minipage}\hfill
+
+
+\ifstrequal{FALSE}{FALSE}{}{\begin{minipage}[t][1cm]{1.9cm}\includegraphics[width=2cm,keepaspectratio=true, valign=t]{FALSE}\end{minipage}\vspace{-.3cm}}
+
+
+}
+\makeatother
+
+% Footer
+\setbeamercolor{footlinecolor}{bg=dueblue,fg=white}
+
+
+\ifstrequal{colored}{colored}{
+\setbeamertemplate{footline}{
+  % \hbox{
+  \begin{beamercolorbox}[wd=\paperwidth,ht=0.4cm, leftskip=0cm, rightskip=0cm]{footlinecolor}
+    \hfill \scriptsize{{\insertshortauthor : }
+    \insertshorttitle---\insertsection \hfill \thesection-\insertframenumber\hspace*{.15cm}}\vspace{1mm}
+  \end{beamercolorbox}
+  % }
+}
+\addtobeamertemplate{footline}{\hypersetup{linkcolor=.}}{}
+}{
+\setbeamertemplate{footline}{\hspace*{.1cm}%
+\hfill \scriptsize{{\insertshortauthor : }
+\insertshorttitle---\insertsection \hfill \thesection-\insertframenumber\hspace*{.2cm}}\vspace{1mm}}
+}
+
+
+
+
+% TOC
+
+
+\setbeamertemplate{section in toc shaded}[default][50]
+\defbeamertemplate{section in toc}{customcircle}
+{\leavevmode\leftskip=4ex%
+  \llap{%
+    \usebeamerfont*{section number projected}%
+    \usebeamercolor{section number projected}%
+    \begin{pgfpicture}{-1ex}{-.2ex}{1ex}{2ex}
+      \color{bg}
+      \pgfpathcircle{\pgfpoint{0pt}{.75ex}}{1.3ex}
+      \pgfusepath{fill}
+      \pgftext[base]{\color{fg}\inserttocsectionnumber}
+    \end{pgfpicture}\kern1.25ex%
+  }%
+  \hspace{0.8ex}\inserttocsection\par}
+
+\setbeamertemplate{section in toc}[customcircle]
+
+% \usepackage{xpatch}
+% \xpatchcmd{\itemize}
+%   {\def\makelabel}
+%   {\setlength{\itemsep}{1ex}\def\makelabel}
+%   {}
+%   {}
+% \makeatletter
+% \xpatchcmd{\beamer@enum@}
+%   {\def\makelabel}
+%   {\setlength{\itemsep}{1ex}\def\makelabel}
+%   {}
+%   {}
+% \makeatother
+
+% NEW SECTION
+
+
+\AtBeginSection[] {
+{
+\setbeamertemplate{footline}{}
+\begin{frame}{\expandafter\ifstrequal\expandafter{en}{de}{Überblick}{Outline}}
+\vspace{0.5cm}
+\tableofcontents[currentsection]
+\end{frame}
+\addtocounter{framenumber}{-\insertframenumber} % collect all begin section commands in one env.!
+}
+}
+
+% ITEMIZE, ENUMERATE, DESCRIPTION
+\defbeamertemplate*{description item}{defaultperiod}{\insertdescriptionitem.}
+\setbeamersize{description width=15pt} % left margin for description
+
+\setlength{\topsep}{1ex}
+\setlength{\leftmargini}{10pt+.5\labelwidth}
+\setlength{\leftmarginii}{15pt}
+\setlength{\leftmarginiii}{15pt}
+
+
+\setbeamertemplate{caption}[numbered]
+\setbeamertemplate{caption label separator}{: }
+\setbeamertemplate{itemize item}[circle]
+\setbeamertemplate{itemize subitem}[triangle]
+\setbeamertemplate{enumerate item}[default]
+\setbeamertemplate{enumerate subitem}[default]
+\setbeamertemplate{description item}[defaultperiod]
+\setbeamertemplate{description subitem}[defaultperiod]
+
+
+\providecommand{\tightlist}{}% \setlength{\itemsep}{0.75ex}\setlength{\parskip}{1.2ex}
+% allow environments inside environments
+\let\otherbegin\begin
+\let\otherend\end
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% from here on https://github.com/rstudio/rmarkdown/blob/master/inst/rmd/latex/default-1.17.0.2.tex
+
+
+
+\begin{document}
+
+
+      {\usebackgroundtemplate{\includegraphics[scale=0.25]{"C:/Users/Yannick.Hoga/AppData/Local/Programs/R/R-4.3.3/library/runidue/rmarkdown/templates/lectureslides/resources/duetower"}}
+    \frame[plain]{\titlepage}}
+  
+
+% 
+\begin{frame}{Introduction}
+\protect\hypertarget{introduction}{}
+The material covered here may be found in numerous appendices of
+econometrics textbooks. We will only give definitions and results
+relevant to econometrics (you will be asked to verify some in the
+exercises). For more, see, e.g.,
+
+\begin{itemize}
+\tightlist
+\item
+  Rao and Rao (1998) \emph{Matrix Algebra and Its Applications to
+  Statistics and Econometrics}. World Scientific, 1st ed.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Has the necessary background on linear algebra.
+  \end{itemize}
+\item
+  Magnus and Neudecker (2019) \emph{Matrix Differential Calculus with
+  Applications in Statistics and Econometrics}. Wiley, 3rd ed.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    The title summarizes it aptly.
+  \end{itemize}
+\item
+  Lütkepohl (1996) \emph{Handbook of Matrices}. Wiley, 3rd ed.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Has a lot more results for ready reference.
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Definitions, Notation, Terminology}
+\protect\hypertarget{definitions-notation-terminology}{}
+\defn[Matrix]A \((m \times n)\) \hil{matrix} \(\mA\) is an array of
+numbers: \[
+\mA=\left(%
+\begin{array}{ccc}
+  a_{11} & \cdots & a_{1n} \\
+  \vdots & \ddots & \vdots \\
+  a_{m1} & \cdots & a_{mn}
+\end{array}%
+\right)
+\] Alternative notation: \(\mA\;(m \times n)\),
+\(\mA=[a_{ij}]\;(m\times n)\). \medskip
+
+\(m\) and \(n\) are positive integers denoting the \hil{row dimension}
+and the \hil{column dimension}, respectively, \((m \times n)\) is the
+\hil{dimension} or order of \(\mA\).\medskip
+
+For our purposes, the \(a_{ij},\;i = 1,\ldots, m,\;j = 1,\ldots, n\),
+are elements of \(\mathbb{R}\).\medskip
+
+As such, \(\mA\) can be viewed as a linear mapping
+\(\mA:\mathbb{R}^n\to\mathbb{R}^m\). \enddefn
+\end{frame}
+
+\begin{frame}{}
+\protect\hypertarget{section}{}
+\defn[Block Matrix]\[
+\mA= \left(%
+\begin{array}{ccc}
+  \mA_{11} & \cdots & \mA_{1n} \\
+  \vdots & \ddots & \vdots \\
+  \mA_{m1} & \cdots & \mA_{mn} \\
+\end{array}%
+\right)
+\] Here, the \(\mA_{ij}\) are \((m_i \times n_j)\) submatrices of
+\(\mA\). A matrix written in terms of submatrices rather than individual
+elements is often called a \hil{partitioned matrix} or a
+\hil{block matrix}. \enddefn
+\end{frame}
+
+\begin{frame}{}
+\protect\hypertarget{section-1}{}
+\defn[Special Matrices and Elements]A matrix \(\mA\;(m \times m)\)
+having the same number of rows and columns is a \hil{square} or
+\hil{quadratic matrix}.\medskip
+
+The elements \(a_{ii}, \;i= 1,\ldots,m,\) constitute its
+\hil{principal diagonal}.\medskip
+
+If \(a_{ii}=1\) for \(i = 1,\ldots, m\), and \(a_{ij}= 0\) for
+\(i\neq j\) is an (\(m \times m)\) \hil{identity matrix}, denoted
+\(\mI_m\).\medskip
+
+A \((1\times n)\) matrix \(\va\) is an \(n\)-dimensional
+\hil{row vector} or \((1\times n)\) vector.\medskip
+
+An \((m \times 1)\) matrix \(\vb\) is an \(m\)-dimensional
+\hil{column vector}. \enddefn
+\end{frame}
+
+\begin{frame}{}
+\protect\hypertarget{section-2}{}
+\defn[Trace and Transpose]The \hil{trace} of \(\mA\) is defined as \[
+  \tr(\mA) = \sum_{i=1}^ma_{ii}
+\] The \hil{transpose} of \(\mA\;(m \times n)\) is defined as \[
+\mA^\top=\left(%
+\begin{array}{ccc}
+  a_{11} & \cdots & a_{1n} \\
+  \vdots & \ddots & \vdots \\
+  a_{m1} & \cdots & a_{mn}
+\end{array}%
+\right)^\top=\left(%
+\begin{array}{ccc}
+  a_{11} & \cdots & a_{m1} \\
+  \vdots & \ddots & \vdots \\
+  a_{1n} & \cdots & a_{mn}
+\end{array}%
+\right)
+\] \(\mA^\top\) is \((n \times m)\). That is, the rows of \(\mA\) are
+the columns of \(\mA^\top\). \enddefn
+\end{frame}
+
+\begin{frame}{}
+\protect\hypertarget{section-3}{}
+\defn[Determinant]The \hil{determinant} of \(\mA\;(m\times m)\)
+\begin{eqnarray*}
+ \det(\mA) =|\mA|&=& a_{i1} \textrm{cof}(a_{i1})+\ldots+
+a_{im}\textrm{cof}(a_{im}) \\&=&
+a_{1j}\textrm{cof}(a_{1j})+\ldots+ a_{mj}\textrm{cof}(a_{mj}),
+\end{eqnarray*} where
+\(\textrm{cof}(a_{ij})=(-1)^{i+j}\textrm{minor}(a_{ij})\) and \[
+\textrm{minor}(a_{ij})=\left|%
+\begin{array}{cccccc}
+  a_{1,1} & \cdots & a_{1,j-1} &  a_{1,j+1} & \cdots &  a_{1,m}\\
+  \vdots &  & \vdots & \vdots &  & \vdots \\
+  a_{i-1,1} & \cdots & a_{i-1,j-1} & a_{i-1,j+1} & \cdots & a_{i-1,m} \\
+   a_{i+1,1} & \cdots & a_{i+1,j-1} & a_{i+1,j+1} & \cdots & a_{i+1,m} \\
+  \vdots &  & \vdots & \vdots &  & \vdots \\
+  a_{m,1} & \cdots & a_{m,j-1} & a_{m,j+1} & \cdots & a_{m,m} \\
+\end{array}%
+\right|
+\] \enddefn
+\end{frame}
+
+\begin{frame}{}
+\protect\hypertarget{section-4}{}
+\defn[Inverses]For \(\mA \;(m \times m)\) with \(\det(\mA)\neq 0\), the
+\hil{inverse} of \(\mA\) is the unique \((m \times m)\) matrix
+\(\mA^{-1}\) satisfying \(\mA\mA^{-1} = \mA^{-1}\mA = \mI_m\).\medskip
+
+An \((n \times m)\) matrix \(\mA^-\) is a \hil{generalized inverse} of
+the \((m \times n)\) matrix \(\mA\) if it satisfies
+\(\mA\mA^-\mA = \mA\). \(\mA^-\) is generally not unique.\medskip
+
+The \((n \times m)\) matrix \(\mA^+\) is the
+\hil{Moore--Penrose (generalized) inverse} of the \((m \times n)\)
+matrix \(\mA\) if it satisfies
+
+\begin{itemize} 
+  \item $\mA\mA^+\mA = \mA$,
+  \item $\mA^+\mA\mA^+ = \mA^+$, 
+  \item $(\mA\mA^+)^\top = \mA\mA^+$, 
+  \item $(\mA^+\mA)^\top = \mA^+\mA$ .
+\end{itemize}
+
+\(\mA^+\) exists and is unique. \enddefn
+\end{frame}
+
+\begin{frame}{}
+\protect\hypertarget{section-5}{}
+\defn[Certain Matrix Products]\hil{Power} of a matrix
+\(\mA\;(m \times m)\): \[ \mA^i=\begin{cases} \prod_{j=1}^i \mA =
+\underbrace{\mA\times
+\cdots \times \mA}_{i \textrm{ times}} & \text{for positive integers, }i\in\mathbb{Z}^+ \\[.5cm] \mI_m &\textrm{for } i=0 \\[.5cm]
+(\prod_{j=1}^{-i} \mA)^{-1} & \text{for }i\in\mathbb{Z}^-,
+\text{if } \det(\mA)\neq 0
+\end{cases}
+\] The \((m \times m)\) matrix \(\mA^{1/2}\) is a \hil{square root} of
+the \((m \times m)\) matrix \(\mA\) if \(\mA^{1/2}\mA^{1/2}=\mA\).
+\enddefn
+\end{frame}
+
+\begin{frame}{}
+\protect\hypertarget{section-6}{}
+\defn[Vectorization]The \hil{vectorization} of \(\mA\;(m \times n)\) is
+\[
+\vec(\mA)=\left(%
+\begin{array}{c}
+  a_{11} \\
+  \vdots \\
+  a_{m1} \\
+  a_{12} \\
+  \vdots \\
+  a_{m2} \\
+  \vdots \\
+  a_{1n} \\
+  \vdots \\
+  a_{mn} \\
+\end{array}%
+\right)\;(mn \times 1) \] That is, vec stacks the columns of \(\mA\) in
+a column vector. \enddefn
+\end{frame}
+
+\begin{frame}{}
+\protect\hypertarget{section-7}{}
+\defn[Some Matrix Properties]\zlabel{matrixproperties}
+\begin{enumerate}
+\item\zlabel{it:9.1} An $(m \times m)$ matrix with $\mA = \mA^\top$ is \hil{symmetric}.
+
+\item\zlabel{it:9.2} An $(m \times m)$ matrix $\mA$ is \hil{idempotent} if $\mA^2 = \mA$.
+
+\item\zlabel{it:9.3} An $(m \times m)$ matrix $\mA$ is \hil{nonsingular} or \hil{invertible} or \hil{regular} if $\det(\mA) \neq 0$ and thus $\mA^{-1}$ exists.
+
+\item\zlabel{it:9.4} An $(m \times m)$ matrix $\mA$ is \hil{orthogonal} if $\mA$ is nonsingular and $\mA^\top = \mA^{-1}$.
+
+\end{enumerate}
+\enddefn
+\end{frame}
+
+\begin{frame}{Concepts Related to Individual Matrices}
+\protect\hypertarget{concepts-related-to-individual-matrices}{}
+\defn[Definiteness]\zlabel{Definiteness}
+
+A symmetric \((m \times m)\) matrix \(\mA\) is
+
+\begin{itemize}
+
+\item \hil{positive definite} if $\vx^\top \mA\vx > 0$ for all $(m\times 1)$ vectors $\vx \neq \vzero$ 
+
+\item \hil{positive semidefinite} if $\vx^\top \mA\vx \geqslant 0$ for all $(m \times 1)$ vectors $\vx$
+
+\item \hil{negative definite} if $\vx^\top \mA\vx < 0$ for all $(m\times 1)$ vectors $\vx \neq \vzero$
+
+\item \hil{negative semidefinite} if $\vx^\top \mA\vx \leqslant 0$ for all $(m \times 1)$ vectors $\vx$
+
+\item \hil{indefinite} if there exist $(m \times 1)$ vectors $\vx$ and $\vy$ such that $\vx^\top \mA\vx > 0$ and $\vy^\top \mA\vy < 0 $.
+
+\end{itemize}
+\enddefn
+\end{frame}
+
+\begin{frame}{}
+\protect\hypertarget{section-8}{}
+\defn[Triangular Matrices]An \((m \times m)\) matrix \[
+\mA=\left(%
+\begin{array}{cccc}
+  a_{11} & 0 & \cdots & 0 \\
+  \vdots & \ddots & \ddots & \vdots \\
+  \vdots &  & \ddots & 0 \\
+  a_{m1} & \cdots & \cdots & a_{mm} \\
+\end{array}%
+\right)
+\] is \hil{lower triangular}.\medskip
+
+A matrix \(\mA\;(m\times m)\) that is both upper and lower triangular is
+a \hil{diagonal matrix}, denoted \(\mA = \diag(a_{11},\ldots,a_{mm})\).
+\enddefn
+\end{frame}
+
+\begin{frame}{Further Concepts}
+\protect\hypertarget{further-concepts}{}
+\defn\zlabel{linindep}
+
+The \(m\)-dimensional row or column vectors \(\vx_1,\ldots,\vx_k\) are
+\hil{linearly independent} if, for scalars \(c_1,\ldots,c_k\),
+\(c_1\vx_1+\ldots+c_k \vx_k = \vzero\) implies \(c_1,\ldots,c_k = 0\).
+\enddefn
+
+\defn
+
+The \hil{rank} of \(\mA\;(m\times n)\), denoted \(\rk(\mA)\), is the
+maximum number of linearly independent rows or columns of \(\mA\).
+\enddefn
+
+\defn\zlabel{quadrform}
+
+Given a symmetric \((m \times m)\) matrix \(\mA\), the function
+\(Q: \mathbb{R}^m\rightarrow\mathbb{R}\) defined by
+\(Q(\vx) = \vx^\top \mA\vx\) is called a \hil{quadratic form}. \enddefn
+
+\defn
+
+The polynomial in \(\mA\) given by \(\det(\lambda\,\mI_m - \mA)\) is the
+\hil{characteristic polynomial} of the \((m \times m)\) matrix \(\mA\).
+\enddefn
+\end{frame}
+
+\begin{frame}{}
+\protect\hypertarget{section-9}{}
+\defn[Eigenvalues and Eigenvectors]The \hil{eigenvalues} of an
+\((m \times m)\) matrix \(\mA\) are the roots of the characteristic
+polynomial of \(\mA\).\medskip
+
+(Note that eigenvalues can be complex depending on the
+polynomial.)\medskip
+
+An \((m \times 1)\) vector \(\vv \neq \vzero\) satisfying
+\(\mA\vv = \lambda \vv\), where \(\lambda\) is an eigenvalue of \(\mA\),
+is an \hil{eigenvector} corresponding to the eigenvalue \(\lambda\).
+\enddefn
+\end{frame}
+
+\begin{frame}{Kronecker Product}
+\protect\hypertarget{kronecker-product}{}
+\defn
+
+The \hil{Kronecker product} of \(\mA\;(m\times n)\) and
+\(\mB\;(p\times q)\) is defined as the \((mp \times nq)\) matrix \[
+  \mA\otimes \mB=\left(%
+\begin{array}{ccc}
+  a_{11}\mB & \cdots & a_{1n}\mB \\
+  \vdots & \ddots & \vdots \\
+  a_{m1}\mB & \cdots & a_{mn}\mB
+\end{array}%
+\right)
+\] \enddefn
+\end{frame}
+
+\begin{frame}{Operations Relating Matrices}
+\protect\hypertarget{operations-relating-matrices}{}
+\defn
+\begin{enumerate} 
+
+\item \hil{Addition:} $\mA \;(m \times n),\;\mB\;(m \times n): \mA+\mB= [a_{ij}+b_{ij}]\;(m \times n)$ 
+
+\item $\mA,\mB,\mC\;(m\times n) : (\mA \pm
+\mB) \pm \mC = \mA \pm (\mB \pm \mC)$ 
+  
+\item \hil{Multiplication by a scalar:} $\mA\;(m \times n),\;c$ a scalar $c\mA = [c\cdot a_{ij}]\;(m \times
+n)$
+
+\item \hil{Matrix multiplication} or matrix product: $\mA \; (m \times
+n),\; \mB\;(n \times p)$
+\[
+  \mA\mB_{ij}=\sum_{k=1}^na_{ik}b_{kj}\;\;\forall\;i=1,\ldots,m;\;j=1,\ldots,p\;(m \times p) 
+\]
+If the blocks are conformable, multiplication of partitioned matrices proceeds analogously.
+
+\end{enumerate}
+\enddefn
+\end{frame}
+
+\begin{frame}{Rules}
+\protect\hypertarget{rules}{}
+\prop\zlabel{rules1}
+\begin{enumerate}
+\item\zlabel{it:19.1} $\mA\;(m \times n)$ : $\mI_m\mA = \mA\mI_n=\mA$
+
+\item\zlabel{it:19.2} $\mA\; (m\times n),\mB,\mC\;(n \times r)$ : $\mA(\mB \pm \mC) = \mA\mB \pm \mA\mC$
+
+\item\zlabel{it:19.3} $\mA\;(m\times n),\mB,\mC \;(p\times q)$ : $\mA \otimes (\mB \pm \mC) = \mA \otimes \mB \pm \mA \otimes \mC$
+
+\item\zlabel{it:19.4} $\mA,\mB\;(m\times n)$ : $(\mA\pm \mB)^\top = \mA^\top\pm \mB^\top$
+
+\item\zlabel{it:19.5} $\mA, \mB\; (m \times m)$ : $\tr(\mA \pm \mB) = \tr(\mA)\pm \tr(\mB)$
+
+\item\zlabel{it:19.6} $\mA, \mB\; (m \times n)$ : $\rk(\mA \pm \mB) \leqslant \rk(\mA) + \rk(\mB)$
+
+\item\zlabel{it:19.7} $\mA\;(m\times n),\mB\;(n\times p)$ : $\rk(\mA\mB) \leqslant \min(\rk(\mA),\rk(\mB))$
+
+\item\zlabel{it:19.8} $\mA \;(m \times m)$ : $\mA + \mA^\top$ is a symmetric $(m \times m)$ matrix
+
+\end{enumerate}
+\endprop
+\end{frame}
+
+\begin{frame}{Rules (2)}
+\protect\hypertarget{rules-2}{}
+\prop\zlabel{rules2}
+\begin{enumerate}
+\item\zlabel{it:20.1} $(\mA\mB)\mC = \mA(\mB\mC) = \mA\mB\mC$
+
+\item\zlabel{it:20.2} $\mA\mB \neq \mB\mA$ in general
+
+\item\zlabel{it:20.3}  $\mA\;(m \times n), \mB\;(p\times q),\mC\;(n\times r),\mD\;(q \times s) : (\mA \otimes \mB)(\mC \otimes \mD) = \mA\mC\otimes \mB\mD$.
+
+\item\zlabel{it:20.4} $(\mA\mB)^\top = \mB^\top \mA^\top$
+    
+\item\zlabel{it:20.5} $(\mA\mB)^{-1}= \mB^{-1}\mA^{-1}$
+
+\item\zlabel{it:20.6} $\mA\;(m \times n), \mB\;(n \times m) : \tr(\mA\mB)= \tr(\mB\mA)$\\
+This holds more generally for any cyclical permutation of matrices $\mA_1,\ldots,\mA_n$ such that the product remains defined. 
+
+\item\zlabel{it:20.7} $\mA,\mB\;(m \times m) : \det(\mA\mB) = \det(\mA)\det(\mB)$
+
+\item\zlabel{it:20.8} $\mA\;(m \times n):\rk(\mA)=\rk(\mA^\top)=\rk(\mA^\top\mA)=\rk(\mA\mA^\top)$
+
+\item\zlabel{it:20.9} $\mA\;(m\times n)$: $\mA^\top \mA$ and $\mA\mA^\top$ are symmetric positive semidefinite.\\
+If, furthermore, $\rk(\mA)=n$, then $\mA^\top \mA$ is positive definite.
+
+\end{enumerate}
+\endprop
+\end{frame}
+
+\begin{frame}{Rules (3)}
+\protect\hypertarget{rules-3}{}
+\prop\zlabel{rules3}
+
+For square \(\mA\; (m\times m)\) the following hold:
+
+\begin{enumerate}
+ \item\zlabel{it:21.1} $\tr(\mA^\top) = \tr(\mA)$
+ 
+ \item\zlabel{it:21.2} $\det(\mA^\top) = \det(\mA)$ 
+ 
+ \item\zlabel{it:21.3} $(\mA^\top)^{-1} = (\mA^{-1})^\top$, if $\mA$ is nonsingular. 
+
+  \item\zlabel{it:21.4} $\det(\mA^{-1})= 1/\det(\mA)$ 
+  
+  \item\zlabel{it:21.5} $\lambda$ is eigenvalue of $\mA$ with eigenvector $\vv$ $\Rightarrow$ $1/\lambda$ is an eigenvalue of $\mA^{-1}$ with eigenvector $\vv$.
+
+  \item\zlabel{it:21.6} $ \rk(\mA) = m \Leftrightarrow \mA^{-1}$ exists
+    
+  \item\zlabel{it:21.7} $\rk(\mA) =m \Rightarrow \mA^+ = \mA^{-1}$
+
+\end{enumerate}
+\endprop
+\end{frame}
+
+\begin{frame}{Orthogonal Matrices}
+\protect\hypertarget{orthogonal-matrices}{}
+\prop
+
+\(\mA\) is orthogonal \(\Leftrightarrow\)
+
+\begin{enumerate}
+ \item\zlabel{it:22.1}  $\mA\mA^\top = \mI_m \Leftrightarrow \mA^\top \mA = \mI_m$. 
+ 
+ \item\zlabel{it:22.2} $\mA^\top$ is orthogonal. 
+
+\item\zlabel{it:22.3} $\mA^{-1}$ is orthogonal.
+\end{enumerate}
+\endprop
+\end{frame}
+
+\begin{frame}{Partitioned Inverses}
+\protect\hypertarget{partitioned-inverses}{}
+\prop\zlabel{partitionedinverses}
+
+\(\mA\;(m \times m), \mB\;(m \times n), \mC\;(n \times m), \mD\;(n \times n)\)
+: \[
+\left(%
+\begin{array}{cc}
+  \mA & \mB \\
+  \mC & \mD \\
+\end{array}%
+\right)^{-1}=\hspace{8cm}\]\[\left(%
+\begin{array}{cc}
+  \mA^{-1} + \mA^{-1}\mB(\mD-\mC\mA^{-1}\mB)^{-1}\mC\mA^{-1}
+ & -\mA^{-1}\mB(\mD-\mC\mA^{-1}\mB)   \\
+  -(\mD-\mC\mA^{-1}\mB)^{-1}\mC\mA^{-1}  & (\mD-\mC\mA^{-1}\mB)^{-1} \\
+\end{array}%
+\right),
+\] provided the respective inverses exist. \endprop
+\end{frame}
+
+\begin{frame}{Partitioned Inverses}
+\protect\hypertarget{partitioned-inverses-1}{}
+\prop
+
+For nonsingular \(\mA_i\;(m_i \times m_i)\), \(i = 1,\ldots, r\): \[
+\left(%
+\begin{array}{ccc}
+  \mA_1 &  & \mZeros \\
+   & \ddots &  \\
+  \mZeros &  & \mA_r \\
+\end{array}%
+\right)^{-1}=\left(%
+\begin{array}{ccc}
+  \mA_1^{-1} &  &0 \\
+   & \ddots &  \\
+  0 &  & \mA_r^{-1} \\
+\end{array}%
+\right)
+\] \endprop
+\end{frame}
+
+\begin{frame}{Relationship Between the Properties}
+\protect\hypertarget{relationship-between-the-properties}{}
+\prop
+\begin{enumerate}
+\item\zlabel{it:25.1} $\mB$ is nonsingular $\Rightarrow\ \det(\mB\mA\mB^{-1}) = \det(\mA)$
+
+\item\zlabel{it:25.2} $\det(\mI_m) = 1$
+
+\item\zlabel{it:25.3} $\mA\;(m \times m)$ with eigenvalues $\lambda_1,\ldots,\lambda_m : \det(\mA) =\prod_{j=1}^m
+\lambda_j$
+
+\item\zlabel{it:25.4} $\mA\;(m \times m) : \rk(\mA) < m\ \Leftrightarrow\ \det(\mA) = 0$
+
+\item\zlabel{it:25.5} $\rk(\mA)=m\ \Leftrightarrow\ \det(\mA) \neq 0$
+
+\item\zlabel{it:25.6} $\mA$ is singular $\Leftrightarrow\ \det(\mA) = 0$
+
+\item\zlabel{it:25.7} If $\mA$ and $\mD$ are square, then 
+\[
+\left|%
+\begin{array}{cc}
+  \mA & \mB \\
+  0 & \mD \\
+\end{array}%
+\right|=|\mA||\mD|
+\] 
+
+\item\zlabel{it:25.8} If $\mA$ and $\mD$ are square and $\mA^{-1}$ exists, then 
+\[
+\left|%
+\begin{array}{cc}
+  \mA & \mB \\
+  \mC & \mD \\
+\end{array}%
+\right|=|\mA||\mD-\mC\mA^{-1}\mB|
+\]
+\end{enumerate}
+\endprop
+\end{frame}
+
+\begin{frame}{Relationship Between the Properties}
+\protect\hypertarget{relationship-between-the-properties-1}{}
+\prop\label{propsidempotent}\zlabel{propsidempotent} For idempotent
+\(\mA \;(m \times m)\):
+
+\begin{enumerate} 
+\item\zlabel{it:26.1} $\rk(\mA) = m\ \Rightarrow\ \mA = \mI_m$
+
+\item\zlabel{it:26.2} $\rk(\mA) = \tr(\mA)$
+
+\item\zlabel{it:26.3} $\rk(\mI_m-\mA) = m-\rk(\mA)$
+\end{enumerate}
+\endprop
+\end{frame}
+
+\begin{frame}{Relationship Between the Properties}
+\protect\hypertarget{relationship-between-the-properties-2}{}
+\prop\zlabel{relprop3}
+
+For square \(\mA\;(m \times m)\):
+
+\begin{enumerate}
+ \item\zlabel{it:27.1} $\mA = \diag(a_{11},\ldots,a_{mm}) \Rightarrow
+a_{11},\ldots,a_{mm}$ are the eigenvalues of $\mA$.\\
+In fact, triangularity of $\mA$ suffices. 
+
+\item\zlabel{it:27.2} $\mA$ is symmetric $\Rightarrow$ all eigenvalues of $\mA$ are real numbers. 
+
+\item\zlabel{it:27.3} $\mA$ is idempotent $\Rightarrow$ all eigenvalues of $\mA$ are 0 or 1.
+
+\item\zlabel{it:27.4} $\mA$ is singular $\Leftrightarrow$ 0 is an eigenvalue of $\mA$.
+
+\item\zlabel{it:27.5} $\mA$ is nonsingular $\Leftrightarrow$ all eigenvalues of $\mA$ are nonzero.
+ 
+\item\zlabel{it:27.6} $\mA$ symmetric: $\mA$ is positive definite $\Leftrightarrow$ all eigenvalues of $\mA$
+are real and greater than 0. 
+
+\item\zlabel{it:27.7} $\mA$ symmetric: $\mA$ is positive semidefinite $\Leftrightarrow$ all eigenvalues of $\mA$ are real and greater than or equal to 0. 
+
+\item\zlabel{it:27.8} $\mA$ has eigenvalues $\lambda_1,\ldots,\lambda_m : \tr(\mA) = \sum_{j=1}^m\lambda_j$.\note{Proof goes by Schur decomposition of a square matrix and flipping the trace, see L\"utkepohl, 5.2.3(2)}
+\end{enumerate}
+\endprop
+\end{frame}
+
+\begin{frame}{Relationship Between the Properties}
+\protect\hypertarget{relationship-between-the-properties-3}{}
+\prop\zlabel{prop:pd and det}
+
+\(\mA\) positive (semi) definite \(\Leftrightarrow\) \[ 
+\det\left(\begin{array}{ccc}
+  a_{11} & \cdots & a_{1i} \\
+  \vdots & \ddots & \vdots \\
+  a_{i1} & \cdots & a_{ii}
+\end{array}%
+\right)>0\;(\geqslant 0)\;\;\textrm{ for } i = 1,\ldots,m.
+\] \(\mA\) negative (semi) definite \(\Leftrightarrow\) \[
+\det\left(\begin{array}{ccc}
+  a_{11} & \cdots & a_{1i} \\
+  \vdots & \ddots & \vdots \\
+  a_{i1} & \cdots & a_{ii}
+\end{array}%
+\right)\begin{cases}>0\;(\geqslant 0) &i \textrm{
+even}\\<0\;(\leqslant 0) &i \textrm{ odd}\end{cases}\;\;\textrm{
+for } i = 1,\ldots,m.
+\] \endprop
+\end{frame}
+
+\begin{frame}{Spectral Decomposition of a Symmetric Matrix}
+\protect\hypertarget{spectral-decomposition-of-a-symmetric-matrix}{}
+\thmn\zlabel{spectraldecomp}
+
+Let \(\mA\;(m \times m)\) be symmetric with eigenvalues
+\(\lambda_1,\ldots,\lambda_m\). Then, \[ 
+  \mA= \mU\mLambda \mU^\top,
+\] where \(\mLambda = \diag(\lambda_1,\ldots,\lambda_m)\) and \(\mU\) is
+the real orthogonal \((m \times m)\) matrix whose columns are the
+orthonormal eigenvectors \(\vv_1,\ldots,\vv_m\) of \(\mA\)
+(i.e.~\(\vv_i^\top\vv_j=1\) if \(i=j\) and \(0\) else) associated with
+\(\lambda_1,\ldots,\lambda_m\). In other ``words,'\,' \[
+  \mA=\sum_{j=1}^m\lambda_j\vv_j\vv_j^\top.
+\] \endthmn
+\end{frame}
+
+\begin{frame}{Cholesky Decomposition}
+\protect\hypertarget{cholesky-decomposition}{}
+\thmn\label{cholesky}\zlabel{cholesky} \(\mA\;(m \times m)\) symmetric
+positive definite:
+
+There exists a unique lower (upper) triangular \((m \times m)\) matrix
+\(\mB\) with real positive diagonal elements such that
+\(\mA = \mB\mB^\top\). \endthmn
+
+\xmpl \(\mA\;(2\times 2)\)
+
+\begin{eqnarray*}
+\left(%
+\begin{array}{cc}
+  a_{11} & a_{12} \\
+  a_{12} & a_{22} \\
+\end{array}%
+\right)&=&\left(%
+\begin{array}{cc}
+  b_{11} & 0 \\
+  b_{12} & b_{22} \\
+\end{array}%
+\right)\left(%
+\begin{array}{cc}
+  b_{11} & b_{12} \\
+  0 & b_{22} \\
+\end{array}%
+\right) \Rightarrow \\[.5cm]
+b_{11}&=&\sqrt{a_{11}},\\b_{12}&=&a_{12}/b_{11},\\b_{22}&=&\sqrt{a_{22}-b_{12}^2}.
+\end{eqnarray*} \endxmpl
+\end{frame}
+
+\begin{frame}{Matrix Calculus}
+\protect\hypertarget{matrix-calculus}{}
+Let \(f(\vx)\) be a differentiable real-valued function of the
+\((m \times 1)\) vector \(\vx = (x_1,\ldots,x_m)^\top\).
+
+\defn[Gradient]\zlabel{def:Gradient}
+
+The \hil{gradient} of \(f(\cdot)\) is \[
+  \frac{\partial f}{\partial \vx}:=\left(%
+\begin{array}{c}
+  \frac{\partial f}{\partial x_1} \\
+  \vdots \\
+  \frac{\partial f}{\partial x_m} \\
+\end{array}%
+\right)\;\;(m\times 1)
+\] and \[
+  \frac{\partial f}{\partial \vx^\top}:=\left(
+  \frac{\partial f}{\partial x_1} , \cdots , \frac{\partial f}{\partial x_m}\right)\;\;(1\times m)
+\] \enddefn
+\end{frame}
+
+\begin{frame}{Matrix Calculus}
+\protect\hypertarget{matrix-calculus-1}{}
+\defn[Hessian]The \hil{Hessian} of \(f(\cdot)\) is \[
+  \frac{\partial^2 f}{\partial \vx\partial \vx^\top}:=\left(%
+\begin{array}{ccc}
+  \frac{\partial^2 f}{\partial x_1\partial x_1}&\cdots&\frac{\partial^2 f}{\partial x_1\partial x_m} \\
+  \vdots &\ddots&\vdots\\
+  \frac{\partial^2 f}{\partial x_m\partial x_1}&\cdots&\frac{\partial^2 f}{\partial x_m\partial x_m}\\
+\end{array}%
+\right)\;\;(m\times m)
+\] \enddefn
+\end{frame}
+
+\begin{frame}{Matrix Calculus}
+\protect\hypertarget{matrix-calculus-2}{}
+\defn[Jacobian]Let \(\vy(\vx)=(y_1(\vx),\ldots, y_n(\vx))^\top\) be an
+\((n \times 1)\) vector of differentiable functions of the
+\((m \times 1)\) vector \(\vx= (x_1,\ldots, x_m)^\top\). That is,
+\(\vy\) is a function mapping a subset of \(\mathbb{R}^m\) on a subset
+of \(\mathbb{R}^n\).\medskip
+
+The \hil{Jacobian} of \(\vy(\cdot)\) is defined as \[
+  \frac{\partial \vy}{\partial \vx^\top}:=\left(%
+\begin{array}{ccc}
+  \frac{\partial y_1}{\partial x_1}&\cdots&\frac{\partial y_1}{\partial x_m} \\
+  \vdots &\ddots&\vdots\\
+  \frac{\partial y_n}{\partial x_1}&\cdots&\frac{\partial y_n}{\partial x_m}\\
+\end{array}%
+\right)\;\;(n\times m)
+\] \enddefn
+\end{frame}
+
+\begin{frame}{Matrix Calculus}
+\protect\hypertarget{matrix-calculus-3}{}
+\prop\zlabel{matrdiff}
+
+We have
+
+\begin{enumerate}
+\item $\vx,\;\va\;(m \times 1)$ \[\frac{\partial \va^\top \vx}{\partial \vx}=\va\] 
+
+\item  $\vx\; (m \times 1),\;\mA\;(m \times m)$
+\[
+  \frac{\partial \vx^\top \mA \vx}{\partial \vx}=(\mA+\mA^\top)\vx
+\] 
+(Note how the formula simplifies if $\mA$ is symmetric.)
+
+\item
+\[
+  \frac{\partial^2 \vx^\top \mA \vx}{\partial \vx\partial \vx^\top}=(\mA+\mA^\top)
+\]
+\end{enumerate}
+\endprop
+\end{frame}
+
+
+
+
+\end{document}

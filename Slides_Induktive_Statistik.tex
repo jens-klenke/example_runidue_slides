@@ -128,8 +128,8 @@
 \def\input@path{{"C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdown/templates/lectureslides/resources/"}}  % make them visible to tex to overcome warnings
 \makeatother
 
-\input{"C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdown/templates/lectureslides/resources/ee.sty"}
-\usepackage{BeamerColor}
+\input{ee.sty}
+\input{BeamerColor.sty}
 \usepackage{hypernat}
 \usepackage{mathtools}
 \usepackage[export]{adjustbox}
@@ -145,6 +145,7 @@
 \usepackage{zref-user}
 \usepackage{zref-xr}
 \usepackage{empheq}
+\usepackage{eurosym}
 \usepackage{tikz}
 \usetikzlibrary{arrows, decorations.markings}
 \tikzstyle{arrow} = [ultra thick, - latex, shorten >= 2pt, shorten <= 2pt] % default arrow
@@ -200,10 +201,13 @@ postaction = {draw,line width=1.4pt, white,shorten >= 4.5pt}]
      }%
       \usebeamertemplate{block begin}
       \begin{center}
-\includegraphics[width=0.25\textwidth]{"C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdown/templates/lectureslides/resources/kahootlogo2"}
+      	
+					\includegraphics[width=0.25\textwidth]{"C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdown/templates/lectureslides/resources/kahootlogo2"}
+		
 \end{center}}
     {\par\usebeamertemplate{block end}\end{actionenv}}
 \newcommand{\kahootblock}[1]{\begin{kahoot}{#1}\end{kahoot}}
+
 
 % QuizAcademy Block
 \newenvironment<>{QuizAcademy}[1]{%
@@ -218,14 +222,16 @@ postaction = {draw,line width=1.4pt, white,shorten >= 4.5pt}]
 		}%
 		\usebeamertemplate{block begin}
 		\begin{center}
-			\includegraphics[width=0.25\textwidth]{"C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdown/templates/lectureslides/resources/QuizAcademy.png"}
+			
+				\includegraphics[width=0.25\textwidth]{"C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdown/templates/lectureslides/resources/QuizAcademy.png"}  
+		
 	\end{center}}
 	{\par\usebeamertemplate{block end}\end{actionenv}}
 \newcommand{\QuizAcademyblock}[1]{\begin{QuizAcademy}{#1}\end{QuizAcademy}}
 
 
 % New code for General Quiz 
-\newenvironment<>{Quiz}[1]{%
+\newenvironment<>{Quiz}[1]{%	
 	\begin{actionenv}#2%
 		\def\insertblocktitle{#1}%
 		\par%
@@ -237,7 +243,8 @@ postaction = {draw,line width=1.4pt, white,shorten >= 4.5pt}]
 		}%
 		\usebeamertemplate{block begin}
 		\begin{center}
-			\includegraphics[width=0.25\textwidth]{"C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdown/templates/lectureslides/resources/QuizAcademy.png"}
+				\includegraphics[width=0.25\textwidth]{"C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdown/templates/lectureslides/resources/QuizAcademy.png"}  
+			
 	\end{center}}
 	{\par\usebeamertemplate{block end}\end{actionenv}}
 \newcommand{\Quizblock}[1]{\begin{Quiz}{#1}\end{Quiz}}
@@ -320,16 +327,87 @@ postaction = {draw,line width=1.4pt, white,shorten >= 4.5pt}]
 }
 \setbeamertemplate{theorem end}{\leavevmode\end{\inserttheoremblockenv}}
 
-\preto{\xmpl}{
-    \setbeamercolor{block title}{fg=black,bg=sandy!70!white}
-    \setbeamercolor{block body}{fg=black, bg=sandy!20!white}
-}
 
+%\preto{\xmpl}{
+%   \setbeamercolor{block title}{fg=black,bg=sandy!70!white}
+%    \setbeamercolor{block body}{fg=black, bg=sandy!20!white}
+%}
+
+%\preto{\exe}{
+%    \setbeamercolor{block title}{fg=black,bg=darklime!70!white}
+%    \setbeamercolor{block body}{fg=black, bg=darklime!20!white}
+%}
+
+
+% user-defined color for exe\Exercise
+\def\exerciseboxcolor{blue}
 \preto{\exe}{
-    \setbeamercolor{block title}{fg=black,bg=darklime!70!white}
-    \setbeamercolor{block body}{fg=black, bg=darklime!20!white}
+	\setbeamercolor{block title}{fg=black, bg=\exerciseboxcolor!70!white}
+	\setbeamercolor{block body}{fg=black, bg=\exerciseboxcolor!20!white}
 }
 
+
+\def\beispielboxcolor{yellow}
+\preto{\xmpl}{
+    \setbeamercolor{block title}{fg=black,bg=\beispielboxcolor!70!white}
+    \setbeamercolor{block body}{fg=black, bg=\beispielboxcolor!20!white}
+   
+}
+
+\def\lemmaboxcolor{blue}
+\preto{\lem}{
+    \setbeamercolor{block title}{fg=black,bg=\lemmaboxcolor!70!white}
+    \setbeamercolor{block body}{fg=black, bg=\lemmaboxcolor!20!white}
+   
+}
+
+\def\definitionboxcolor{green}
+\preto{\defn}{
+    \setbeamercolor{block title}{fg=black,bg=\definitionboxcolor!70!white}
+    \setbeamercolor{block body}{fg=black, bg=\definitionboxcolor!20!white}
+}
+
+\def\theoremboxcolor{blue}
+\preto{\thmn}{
+    \setbeamercolor{block title}{fg=black,bg=\theoremboxcolor!70!white}
+    \setbeamercolor{block body}{fg=black, bg=\theoremboxcolor!20!white}
+}
+
+\def\corollaryboxcolor{blue}
+\preto{\cor}{
+    \setbeamercolor{block title}{fg=black,bg=\corollaryboxcolor!70!white}
+    \setbeamercolor{block body}{fg=black, bg=\corollaryboxcolor!20!white}
+}
+
+\def\assumptionboxcolor{blue}
+\preto{\ass}{
+    \setbeamercolor{block title}{fg=black,bg=\assumptionboxcolor!70!white}
+    \setbeamercolor{block body}{fg=black, bg=\assumptionboxcolor!20!white}
+}
+
+\def\remarkboxcolor{blue}
+\preto{\rem}{
+    \setbeamercolor{block title}{fg=black,bg=\remarkboxcolor!70!white}
+    \setbeamercolor{block body}{fg=black, bg=\remarkboxcolor!20!white}
+}
+
+\def\propositionboxcolor{blue}
+\preto{\prop}{
+    \setbeamercolor{block title}{fg=black,bg=\propositionboxcolor!70!white}
+    \setbeamercolor{block body}{fg=black, bg=\propositionboxcolor!20!white}
+}
+
+\def\frageboxcolor{blue}
+\preto{\que}{
+    \setbeamercolor{block title}{fg=black,bg=\frageboxcolor!70!white}
+    \setbeamercolor{block body}{fg=black, bg=\frageboxcolor!20!white}
+}
+
+\def\mathematicaltheoremboxcolor{blue}
+\preto{\mthmn}{
+    \setbeamercolor{block title}{fg=black,bg=\mathematicaltheoremboxcolor!70!white}
+    \setbeamercolor{block body}{fg=black, bg=\mathematicaltheoremboxcolor!20!white}
+}
 
 
 
@@ -380,28 +458,31 @@ postaction = {draw,line width=1.4pt, white,shorten >= 4.5pt}]
 % Frame Head
 \makeatletter
 \setbeamertemplate{frametitle}{%
-\vspace{.1cm}
-\begin{minipage}[t][1cm]{1\textwidth}
-    \ifbeamer@plainframe%
-      \Large\insertframetitle%
-    \else
-      \Large\insertframetitle%
-      \hfill
-      \includegraphics[width=2cm,keepaspectratio=true, valign=t]{"C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmarkdown/templates/lectureslides/resources/duelogo"} 
-      \ifx\insertframesubtitle\empty
-      \else
-        \\ \small \insertframesubtitle
-      \fi
-    \fi
-\end{minipage}
-
+	\makebox[\textwidth]{%
+		\vspace{.1cm}
+		\begin{minipage}[t][1cm]{.84\textwidth}
+			\ifbeamer@plainframe%
+			\Large\insertframetitle%
+			\else
+			\Large\insertframetitle%
+			\ifx\insertframesubtitle\empty
+			\else
+			\\ \small \insertframesubtitle
+			\fi
+			\fi
+		\end{minipage}
+		
+		\hfill
+	
+		\includegraphics[width=2cm,keepaspectratio=true, valign=t]{"C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdown/templates/lectureslides/resources/duelogo"}
+		
+	} % close makebox to have the header in one row
+	
 }
 \makeatother
 
-%%\includegraphics[width=2cm,keepaspectratio=true, valign=t]{"C:/Users/jens.klenke/AppData/Local/Programs/R/R-4.4.1/library/runidue/rmarkdown/templates/lectureslides/resources/duelogo"}
+%%\includegraphics[width=2cm,keepaspectratio=true, valign=t]{"C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdown/templates/lectureslides/resources/duelogo"}
 %    
-
-
 
 
 
@@ -583,17 +664,17 @@ Ziel: Schlussfolgerungen von einer Stichprobe auf die Grundgesamtheit
 
 \begin{frame}{Motivation}
 \phantomsection\label{motivation-5}
-\begin{center}
-\includegraphics[height=0.6\textheight, keepaspectratio]{Resources/Grafiken/Schaetzen.jpg}
-\end{center}
-\source{\href{https://blog.ritter-sport.de/2014/08/05/schatzt-euch-bunt/}{https://blog.ritter-sport.de/2014/08/05/schatzt-euch-bunt/}}
+\framesubtitle{General Quiz}
+
+\Quiz{new section}\endQuiz
 \end{frame}
 
 \begin{frame}{Motivation}
 \phantomsection\label{motivation-6}
-\framesubtitle{Quiz}
-
-\Quiz{Nue Quiz Section}\endQuiz
+\begin{center}
+\includegraphics[height=0.6\textheight, keepaspectratio]{Resources/Grafiken/Schaetzen.jpg}
+\end{center}
+\source{\href{https://blog.ritter-sport.de/2014/08/05/schatzt-euch-bunt/}{https://blog.ritter-sport.de/2014/08/05/schatzt-euch-bunt/}}
 \end{frame}
 
 \begin{frame}{Motivation}
