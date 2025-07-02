@@ -16,12 +16,7 @@ link-citations: true
 zref-path: "MatrixAlgebra/MatrixAlgebraWinter2024"
 ---
 
-```{r setup, include=FALSE}
-pkgs <- list("grid", "plotrix", "RColorBrewer", "gtools", "scatterplot3d", "latex2exp",
-             "MASS", "gridExtra", "scales", "AER", "stargazer", "ivreg",
-             "tikzDevice", "knitr", "highr","spatstat", "haven")
-invisible(lapply(pkgs, library, character.only = T))
-```
+
 
 
 # Einführung
@@ -102,9 +97,17 @@ Yannick Hoga & Karolina Gliszczynska\\
 ## Was ist Ökonometrie und wofür brauchen wir sie?
 \framesubtitle{DAG Dünger}
 
-```{r, echo=FALSE, fig.cap="Dünger", out.width = '80%'}
-knitr::include_graphics("Resources/DAGDuenger.jpeg")
-```  
+
+\footnotesize
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{Resources/DAGDuenger} 
+
+}
+
+\caption[Dünger]{Dünger}\label{fig:unnamed-chunk-1}
+\end{figure}
+\normalsize
 
 ## Was ist Ökonometrie und wofür brauchen wir sie?
 
@@ -122,9 +125,17 @@ knitr::include_graphics("Resources/DAGDuenger.jpeg")
 
 - Die \emph{angenommene} Problemstellung als DAG:
 
-```{r, echo=FALSE, fig.cap="Lohnregression", out.width = '80%'}
-knitr::include_graphics("Resources/DAGLoehne.jpeg")
-```  
+
+\footnotesize
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\linewidth]{Resources/DAGLoehne} 
+
+}
+
+\caption[Lohnregression]{Lohnregression}\label{fig:unnamed-chunk-2}
+\end{figure}
+\normalsize
 
 
 <!-- Beispiel aus Angrist and Pischke (2015, Chapter 1)-->
@@ -300,19 +311,10 @@ dann ist ein Mittelwertvergleich (wie in Tabelle\ \ref{tab:NHIS}) auch hier irre
 
 \endxmpl
 
-```{r, wage, echo = F, fig.asp = 0.5}
-dat    <- read.table("Resources/cps09mar.txt")
-hrwage <- as.matrix( dat[,5] / (dat[,6]*dat[,7]) )
-lnwage <- log(hrwage)
 
-den    <- density(hrwage, from=0, to=100, adjust=2)	
-den1   <- density(lnwage, bw=0.08, from=0, to=6, adjust=2)		
-
-plot(den1$x, den1$y, type="l", lty=1, xlab="Density of US log wages", ylab="", xaxt="n", yaxt="n",
-     xlim=c(0,6),ylim=c(0,0.7), 
-     title="", xaxs="i", yaxs="i", bty="n", lwd=1.4)
-axis(side=1, seq(0,6,1), lwd=1.4)
-```
+\footnotesize
+\begin{center}\includegraphics{Resources/Plots/wage-1} \end{center}
+\normalsize
 
 
 ## Momente
@@ -388,24 +390,10 @@ oder, im diskreten Fall, die \hil{gemeinsamen Punktwahrscheinlichkeiten} $\Pr\{X
 
 \endxmpl
 
-```{r, wage2a, echo = F, fig.asp = 0.5}
-f <- (dat[,2]==1)
-m <- (dat[,2]==0)
 
-# take log hourly wage for each group
-f_lnwage  <- lnwage[f]
-m_lnwage  <- lnwage[m]
-
-# (estimated) densities
-f_den <- density(f_lnwage,from=0,to=6,adjust=2)		
-m_den <- density(m_lnwage,from=0,to=6,adjust=2)		
-
-plot(m_den$x, m_den$y, type="l",lty=1,xlab="",ylab="",xaxt="n", yaxt="n", xlim=c(0,6),ylim=c(0,0.75),title=NULL,xaxs="i",yaxs="i",bty="n",lwd=1.4, col="blue")
-lines(f_den,lwd=1.4, col="red")
-axis(side=1,seq(0,10,1),lwd=1.4)
-text(4.3,0.4,"Men")
-text(1.5,0.4,"Women")
-```
+\footnotesize
+\begin{center}\includegraphics{Resources/Plots/wage2a-1} \end{center}
+\normalsize
 
 
 ## Bedingte Momente
@@ -458,17 +446,10 @@ text(1.5,0.4,"Women")
 
 ## Bedingte Momente
 
-```{r, wage3, echo = F, fig.asp = 0.5}
-wd=1
-plot(m_den$x, m_den$y, type="l",lty=1,xlab="",ylab="",xaxt="n", yaxt="n", xlim=c(0,6),ylim=c(0,0.75),title=NULL,xaxs="i",yaxs="i",bty="n",lwd=wd, col="blue")
-lines(f_den,lwd=wd, col="red")
-axis(side=1,seq(0,10,1),lwd=wd)
-text(4.3,0.4,"Men")
-text(1.5,0.4,"Women")
 
-abline( v=mean(f_lnwage), col="red", lty="dotted" )
-abline( v=mean(m_lnwage), col="blue", lty="dotted" )
-```
+\footnotesize
+\begin{center}\includegraphics{Resources/Plots/wage3-1} \end{center}
+\normalsize
 
 
 ## Bedingte Momente
@@ -492,118 +473,10 @@ wobei \alert{$experience = age - education - 6$} die Arbeitsmarkterfahrung (geme
 
 ## Bedingte Momente
 
-```{r, wage4, echo = F, fig.asp=0.5}
-wm <- (dat[,11]==1)&(dat[,2]==0)&(dat[,4]==12)
-dat1 <- dat[wm,]
-y <- as.matrix(log(dat1[,5]/(dat1[,6]*dat1[,7])))
-x <- as.matrix(dat1[,1]-dat1[,4]-6)
-n <- length(y)
 
-#######################################################
-## Joint PDF of LogWage and experience
-#######################################################
-
-## bandwidths
-hx <- sd(x)/(n^(1/6))
-hy <- sd(y)/(n^(1/6))
-
-## evaluation region 
-xg <- seq(0,47,.5)
-yg <- seq(1.8,3.9,0.05)	
-nx <- length(xg)
-ny <- length(yg)
-fjoint <- matrix(0,nx,ny)
-
-## Joint density
-for(i in 1:length(xg)){	
-  fi <- dnorm(x - xg[i],sd=hx)
-  for(j in 1:length(yg)){
-    fj <- dnorm(y - yg[j],sd=hy)
-    fjoint[i,j] <- mean(fi*fj)		
-  }	
-}
-
-########################################################################
-## Conditional Mean estimated by Local Linear Nonparametric Estimation
-########################################################################
-
-# Reference Rule
-x1 <- matrix(1,n,1)
-zz <- cbind(x1,x,x^2,x^3,x^4)
-beta <- solve((t(zz)%*%zz),(t(zz)%*%y))
-xtrim <- (x<=40)*(x>=0)
-b <- mean(((beta[3]+x*3*beta[4]+(x^2)*6*beta[5])^2)*xtrim)
-e <- y - zz%*%beta
-sig <- (sum(e^2))/(n-5)
-h <- 0.58*((40*sig/n/b)^.2)
-
-# Local Linear Regression Estimation
-mx <- xg
-for (j in 1:length(mx)){
-  xj <- x-xg[j]
-  xx <- cbind(x1,xj)
-  xh <- xx*(dnorm(xj/h)%*%cbind(1,1))
-  beta <- solve(t(xh)%*%xx,t(xh)%*%y)
-  mx[j] <- beta[1]
-}
-
-wd <- 1.0
-
-par(mfrow = c(1, 2))
-par(mar=c(2,2,2,0))
-contour(xg,yg,fjoint,ylim=c(1.8,3.9),xlim=c(0,47),zlim=c(5*10^(-3),max(fjoint)),nlevels=7,drawlabels=FALSE,xlab="Labor Market Experience (Years)",ylab="Log Dollars per Hour",xaxs="i",yaxs="i",yaxt="n",xaxt="n",bty="n",lwd=wd)	
-axis(side=1,seq(0,50,5),lwd=wd)
-axis(side=2,seq(1.5,4.5,.5),lwd=wd)
-lines(xg,mx,lwd=wd)
-abline(v=5, col="red", lty="dashed")
-abline(v=10, col="blue", lty="dashed")
-abline(v=25, col="green", lty="dashed")
-legend("bottomright","Conditional Expectation",lty=1,cex=.8,bty="n",lwd=wd)
-
-#######################################################
-## Conditional Density estimated by Gaussian Kernel 
-#######################################################
-
-## bandwidth 
-hx <- sd(x)/(n^(1/6))
-hy <- sd(y)/(n^(1/6))
-
-## evaluation points
-yg <- seq(0.8,4.8,0.02)
-
-## conditional densities
-fx5 <- dnorm(x-5,sd=hx)
-fx10 <- dnorm(x-10,sd=hx)
-fx25 <- dnorm(x-25,sd=hx)
-fy5 <- matrix(nrow=length(yg),ncol=1)
-fy10 <- matrix(nrow=length(yg),ncol=1)
-fy25 <- matrix(nrow=length(yg),ncol=1)
-for (i in 1:length(yg)){
-  fy <- dnorm(y-yg[i],sd=hy)
-  fy5[i] <- mean(fy*fx5)/mean(fx5)
-  fy10[i] <- mean(fy*fx10)/mean(fx10)
-  fy25[i] <- mean(fy*fx25)/mean(fx25)
-}
-
-wd <- 1.0
-
-leg1 <- expression(X==5)
-leg2 <- expression(X==10)
-leg3 <- expression(X==25)
-
-par(mar=c(2,1,2,0))
-plot(yg,fy5,lty=1,type="l",title=NULL,xaxs="i",yaxs="i",xlab="Log Dollars per Hour",
-     ylab="",xlim=c(0.8,4.7),ylim=c(0,1.06),yaxt="n",xaxt="n",bty="n",lwd=wd, col="red")
-lines(yg,fy10,lwd=wd, col="blue")
-lines(yg,fy25,lwd=wd, col="green")
-axis(side=1,seq(1,4.5,0.5),lwd=wd)
-text(1.3,.3,leg1, cex=0.6)
-text(1.8,.7,leg2, cex=0.6)
-text(3.8,.6,leg3, cex=0.6)
-arrows(1.5,.27,1.78,0.23,angle=20,length=.1,lwd=wd)
-arrows(2.08,.68,2.37,0.64,angle=20,length=.1,lwd=wd)
-arrows(3.6,.57,3.4,0.52,angle=20,length=.1,lwd=wd)
-```
+\footnotesize
+\begin{center}\includegraphics{Resources/Plots/wage4-1} \end{center}
+\normalsize
 \begin{center}
 Labor market experience (years)\,\,\qquad\qquad Log dollars per hour
 \end{center}
@@ -955,17 +828,10 @@ da $X$ und $X^2$ wegen der Normalverteilungsannahme unkorreliert sind.
 
 ## Beispiel
 
-```{r, ProjExp, echo = F, fig.asp = 0.7}
-set.seed(123)
-X <- rnorm(100)
-Y <- X + X^2
-plot(X, Y)
-lines(sort(X),sort(X) + sort(X)^2, col="red")
-lines(sort(X), sort(X) + 1, col="blue")
 
-text(1.5, 2, labels = "$\\mathcal{P}(Y\\mid X)$", pos=4)
-text(1.2, 5, labels = "$m(X)$", pos=4)
-```
+\footnotesize
+\begin{center}\includegraphics{Resources/Plots/ProjExp-1} \end{center}
+\normalsize
 
 
 ## Weitere Interpretation des BLP
@@ -1447,116 +1313,50 @@ Wenn $\sum_{i=1}^{n}X_iX_i^\prime$ positiv definit ist, dann ist der KQ Schätze
 
 ## Visualisierung KQ Schätzer
 
-```{r, KQIllu1, echo = F, fig.height=0.6, fig.width=0.6, fig.asp=1}
-set.seed(27)
 
-beta <- 1.5
-beta.tilde <- 2
-
-n <- 20
-X <- 2*runif(n)
-u <- rnorm(n)
-Y <- X*beta + u
-
-# Plot 1
-plot(X,Y, ylim = c(-2,5), xlim = c(-2,5))
-```
+\footnotesize
+\begin{center}\includegraphics{Resources/Plots/KQIllu1-1} \end{center}
+\normalsize
 
 ## Visualisierung KQ Schätzer
 
-```{r, KQIllu2, echo = F, fig.height=0.6, fig.width=0.6, fig.asp=1}
-# Plot 2
-plot(X,Y, ylim = c(-2,5), xlim = c(-2,5))
-abline(0,beta.tilde,col="black",lwd=1.5, lty= 2)
 
-text(x = 2.6, y = 4.5, "$X\\widetilde{\\mathbf{\\beta}}$")
-```
+\footnotesize
+\begin{center}\includegraphics{Resources/Plots/KQIllu2-1} \end{center}
+\normalsize
 
 
 ## Visualisierung KQ Schätzer
 
-```{r, KQIllu3, echo = F, fig.height=0.6, fig.width=0.6, fig.asp=1}
-# Plot 3
-plot(X,Y, ylim = c(-2,5), xlim = c(-2,5))
-abline(0,beta.tilde,col="black",lwd=1.5, lty= 2)
 
-text(x = 2.6, y = 4.5, "$X\\widetilde{\\mathbf{\\beta}}$")
-
-for(j in 16)
-{
-  segments(X[j],Y[j],X[j],beta.tilde*X[j],col="black",lty=2, lwd = 1.5)
-}
-
-text(x = 1.8, y = 1, "$\\widetilde{e}_i$")
-```
+\footnotesize
+\begin{center}\includegraphics{Resources/Plots/KQIllu3-1} \end{center}
+\normalsize
 
 
 ## Visualisierung KQ Schätzer
 
-```{r, KQIllu4, echo = F, fig.height=0.6, fig.width=0.6, fig.asp=1}
-# Plot 4
-plot(X,Y, ylim = c(-2,5), xlim = c(-2,5))
-abline(0,beta.tilde,col="black",lwd=1.5, lty= 2)
 
-for(j in 16)
-{
-  segments(X[j],Y[j],X[j],beta.tilde*X[j],col="black",lty=2, lwd = 1.5)
-  segments(X[j],Y[j],X[j]+Y[j]-beta.tilde*X[j],Y[j],col="black",lty=2, lwd = 1.5)
-  segments(X[j]+Y[j]-beta.tilde*X[j],Y[j],X[j]+Y[j]-beta.tilde*X[j],beta.tilde*X[j],col="black",lty=2, lwd = 1.5)
-  segments(X[j]+Y[j]-beta.tilde*X[j],beta.tilde*X[j],X[j],beta.tilde*X[j],col="black",lty=2, lwd = 1.5)
-}
-
-text(x = 2.6, y = 4.5, "$X\\widetilde{\\mathbf{\\beta}}$")
-text(x = 1.9, y = 1, "$\\widetilde{e}_i^2$")
-```
+\footnotesize
+\begin{center}\includegraphics{Resources/Plots/KQIllu4-1} \end{center}
+\normalsize
 
 
 ## Visualisierung KQ Schätzer
 
-```{r, KQIllu5, echo = F, fig.height=0.6, fig.width=0.6, fig.asp=1}
-# Plot 5
-plot(X,Y, ylim = c(-2,5), xlim = c(-2,5))
 
-ls.line <- lm(Y~X-1)
-abline(ls.line,col="black",lwd=1.5, lty = 1)
-text(x = 2.85, y = 4, "$X\\widehat{\\mathbf{\\beta}}$")
-
-
-for (j in 16)
-{
-  segments(X[j],Y[j],X[j],ls.line$coefficients[1]*X[j],col="black",lty=1,lwd=1.5)
-  segments(X[j],Y[j],X[j]+Y[j]-ls.line$coefficients[1]*X[j],Y[j],col="black",lty=1,lwd=1.5)
-  segments(X[j]+Y[j]-ls.line$coefficients[1]*X[j],Y[j],X[j]+Y[j]-ls.line$coefficients[1]*X[j],ls.line$coefficients[1]*X[j],col="black",lty=1,lwd=1.5)
-  segments(X[j]+Y[j]-ls.line$coefficients[1]*X[j],ls.line$coefficients[1]*X[j],X[j],ls.line$coefficients[1]*X[j],col="black",lty=1,lwd=1.5)
-}
-
-text(x = 1.8, y = 1, "$\\widehat{e}_i^2$")
-```
+\footnotesize
+\begin{center}\includegraphics{Resources/Plots/KQIllu5-1} \end{center}
+\normalsize
 
 
 
 ## Visualisierung KQ Schätzer
 
-```{r, KQIllu6, echo = F, fig.height=0.6, fig.width=0.6, fig.asp=1}
-plot(X,Y, ylim = c(-2,5), xlim = c(-2,5))
-abline(ls.line,col="black",lwd=1.5, lty = 1)
-abline(0,beta.tilde,col="black",lwd=1.5, lty= 2)
-text(x = 2.85, y = 3.8, "$X\\widehat{\\mathbf{\\beta}}$")
-text(x = 2.6, y = 4.5, "$X\\widetilde{\\mathbf{\\beta}}$")
 
-for (j in 16)
-{
-  segments(X[j],Y[j],X[j],ls.line$coefficients[1]*X[j],col="black",lty=1,lwd=1.5)
-  segments(X[j],Y[j],X[j]+Y[j]-ls.line$coefficients[1]*X[j],Y[j],col="black",lty=1,lwd=1.5)
-  segments(X[j]+Y[j]-ls.line$coefficients[1]*X[j],Y[j],X[j]+Y[j]-ls.line$coefficients[1]*X[j],ls.line$coefficients[1]*X[j],col="black",lty=1,lwd=1.5)
-  segments(X[j]+Y[j]-ls.line$coefficients[1]*X[j],ls.line$coefficients[1]*X[j],X[j],ls.line$coefficients[1]*X[j],col="black",lty=1,lwd=1.5)
-  
-  segments(X[j],Y[j],X[j],beta.tilde*X[j],col="black",lty=2, lwd = 1.5)
-  segments(X[j],Y[j],X[j]+Y[j]-beta.tilde*X[j],Y[j],col="black",lty=2, lwd = 1.5)
-  segments(X[j]+Y[j]-beta.tilde*X[j],Y[j],X[j]+Y[j]-beta.tilde*X[j],beta.tilde*X[j],col="black",lty=2, lwd = 1.5)
-  segments(X[j]+Y[j]-beta.tilde*X[j],beta.tilde*X[j],X[j],beta.tilde*X[j],col="black",lty=2, lwd = 1.5)
-}
-```
+\footnotesize
+\begin{center}\includegraphics{Resources/Plots/KQIllu6-1} \end{center}
+\normalsize
 
 
 
@@ -1582,19 +1382,53 @@ for (j in 16)
 
 ## KQ Schätzer in \R
 
-```{r, KQinR1, echo = T, eval = T, fig.asp=0.6}
+
+\footnotesize
+
+
+``` r
 card <- read_dta("Resources/Card1995/Card1995.dta")    # Daten auf moodle oder Buch HP
 ols  <- lm(lwage76 ~ ed76, data=card)                  # KQ Schätzung
 summary(ols)
 ```
 
+```
+## 
+## Call:
+## lm(formula = lwage76 ~ ed76, data = card)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -1.7380 -0.2776  0.0237  0.2884  1.4608 
+## 
+## Coefficients:
+##             Estimate Std. Error t value Pr(>|t|)    
+## (Intercept)  5.57088    0.03883   143.5   <2e-16 ***
+## ed76         0.05209    0.00287    18.1   <2e-16 ***
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## Residual standard error: 0.421 on 3008 degrees of freedom
+##   (603 Beobachtungen als fehlend gelöscht)
+## Multiple R-squared:  0.0987,	Adjusted R-squared:  0.0984 
+## F-statistic:  330 on 1 and 3008 DF,  p-value: <2e-16
+```
+\normalsize
+
 
 ## KQ Schätzer in \R
 
-```{r, KQinR2, echo = T, eval = T, fig.asp=0.6}
+
+\footnotesize
+
+
+``` r
 plot(lwage76 ~ ed76, data = card)                      # plotte Resultate
 abline(ols, col="blue")                                # mit Regressionsgerade als Vergleich
 ```
+
+\begin{center}\includegraphics{Resources/Plots/KQinR2-1} \end{center}
+\normalsize
 
 
 
@@ -1706,20 +1540,10 @@ Die \hil{Projektionsmatrix} und \hil{Residuenmachermatrix} sind
 ## Visualisierung in \R
 \framesubtitle{Lineare Projektion von Baumvolumen auf Umfang und Höhe}
 
-```{r, RegPlane, echo = F, fig.asp = 0.75}
-data(trees)
-s3d <- scatterplot3d(trees,
-                     angle=67, scale.y=0.7, pch=20, main="Residuen und angepasste Werte")
-# Now adding a regression plane to the "scatterplot3d"
-attach(trees)
-my.lm <- lm(Volume ~ Girth + Height)
-s3d$plane3d(my.lm, lty = "dotted")
-orig     <- s3d$xyz.convert(Girth, Height, Volume)
-plane    <- s3d$xyz.convert(Girth, Height, fitted(my.lm))
-i.negpos <- 1 + (resid(my.lm) > 0)
-segments(orig$x, orig$y, plane$x, plane$y,
-         col = c("blue", "red")[i.negpos], lty = (2:1)[i.negpos])
-```   
+
+\footnotesize
+\begin{center}\includegraphics{Resources/Plots/RegPlane-1} \end{center}
+\normalsize
 
 
 ## Projektionsmatrix
@@ -1848,39 +1672,10 @@ Wenn $\mX^\prime\mX$ p.d.\ ist, dann gelten
 ## Angepasste Werte und Residuen
 
 
-```{r, Illu, echo = F, fig.asp = 0.75}
-#Make a blank canvas
-plot(0, type = "n", main="Projektion von $Y$ auf $X_1$ und $X_2$" ,xlim = c(-2, 22), ylim = c(-2, 22), xlab = "", ylab = "", xaxt = 'n', yaxt = 'n', axes = FALSE)
 
-# Shade the area between the two lower arrows
-polygon(x = c(2, 10, 15), y = c(3, 9, 0), col = rgb(0.1, 0.1, 0.1, alpha = 0.1),border = NA)
-
-
-# Draw the arrows
-arrows(x0 = 2, y0 = 3, x1 = 8, y1 = 21, length = 0.1, angle = 20, col = "black", lwd = 2)
-arrows(x0 = 2, y0 = 3, x1 = 10, y1 = 9, length = 0.1, angle = 20, col = "black", lwd = 2)
-arrows(x0 = 2, y0 = 3, x1 = 15, y1 = 0, length = 0.1, angle = 20, col = "black", lwd = 2)
-
-# Draw the dotted segments
-segments(x0 = 8, y0 = 21, x1 = 8, y1 = 4, col = "black", lty = "dotted", lwd = 2)
-segments(x0 = 2, y0 = 3, x1 = 8.1, y1 = 4, col = "black", lty = "dotted", lwd = 2)
-
-# Draw the perpendicular sign
-segments(x0 = 7.5, y0 = 4.4, x1 = 8, y1 = 4.5, col = "black", lwd = 2)
-segments(x0 = 7.5, y0 = 4.4, x1 = 7.5, y1 = 4, col = "black", lwd = 2)
-
-# Add the texts to the plot
-# t1=TeX(r"(Y)")
-# t2=TeX(r"(\hat{\theta})")
-# t3=expression("X"[2])
-# t4=TeX(r"(\hat{Y})")
-# t5=expression("X"[1])
-text(8, 21, "$Y$", pos = 3, col = "black", cex = 1)
-text(8.5, 13, "$\\hat{e}$", pos = 3, col = "black", cex = 1)
-text(10.2, 9, "$X_2$", pos = 3, col = "black", cex = 1)
-text(8, 2, "$\\hat{Y}$", pos = 3, col = "black", cex = 1)
-text(16, -1, "$X_1$", pos = 3, col = "black", cex = 1)
-``` 
+\footnotesize
+\begin{center}\includegraphics{Resources/Plots/Illu-1} \end{center}
+\normalsize
 
 ## Angepasste Werte und Residuen
 
@@ -2181,7 +1976,11 @@ mit $e_i\overset{\text{u.i.v.}}{\sim}N(0,1)$, $\beta_0=0$ und $n=100$.
 
 ## Illustration der Unverzerrtheit in \R
 
-```{r, Unbiased1, echo = T, eval = F}
+
+\footnotesize
+
+
+``` r
 n    <- 100            # Stichprobenlänge
 reps <- 500            # Anzahl Wiederholungen
 KQ   <- rep(NA, reps)  # Vektor für KQ Schätzer
@@ -2197,23 +1996,14 @@ abline(v=0, lty=1)                     # Wahrer Wert von beta_0
 abline(v=mean(KQ), lty=2, col="blue")  # Stichprobenmittel über KQ Schätzer
 ```
 
+\normalsize
+
 ## Illustration der Unverzerrtheit in \R
 
-```{r, Unbiased2, echo = F, eval = T}
-n    <- 100      
-reps <- 500
-KQ   <- rep(NA, reps)
 
-for (r in 1:reps){
-  Y     <- rnorm(n)
-  KQ[r] <- mean(Y)
-}
-
-plot( density(KQ), col="blue", lwd=3, 
-     main="Kerndichteschaetzung des KQ Schaetzers", xlab="")
-abline(v=0, lty=1)
-abline(v=mean(KQ), lty=2, col="blue")
-```
+\footnotesize
+\begin{center}\includegraphics{Resources/Plots/Unbiased2-1} \end{center}
+\normalsize
 
 
 ## Illustration der bedingten Unverzerrtheit in \R
@@ -2237,7 +2027,11 @@ mit $e_i\overset{\text{u.i.v.}}{\sim}N(0,1)$, $X_i=i$, $\beta_0=0$, $\beta_1=1$ 
 
 ## Illustration der bedingten Unverzerrtheit in \R
 
-```{r, Unbiased3, echo = T, eval = F}
+
+\footnotesize
+
+
+``` r
 n    <- 10              # Stichprobenlänge
 reps <- 500             # Anzahl Wiederholungen
 X    <- 1:10            # Fixe Regressoren
@@ -2252,24 +2046,15 @@ plot( density(KQ), col="blue", lwd=3,
 abline(v=1, lty=1)                     # Wahrer Wert von beta_1
 abline(v=mean(KQ), lty=2, col="blue")  # Stichprobenmittel über KQ Schätzer
 ```
+
+\normalsize
 
 ## Illustration der bedingten Unverzerrtheit in \R
 
-```{r, Unbiased4, echo = F, eval = T}
-n    <- 10              # Stichprobenlänge
-reps <- 500             # Anzahl Wiederholungen
-X    <- 1:10            # Fixe Regressoren
-KQ   <- rep(NA, reps)   # Vektor für KQ Schätzer
 
-for (r in 1:reps){
-   Y     <- X + rnorm(n)    # DGP
-   KQ[r] <- lm(Y ~ X)$coefficients[2]  # Betrachten nur beta_1 hier
-}
-plot( density(KQ), col="blue", lwd=3,
-      main="Kerndichteschaetzung des KQ Schaetzers gegeben X", xlab="")
-abline(v=1, lty=1)                     # Wahrer Wert von beta_1
-abline(v=mean(KQ), lty=2, col="blue")  # Stichprobenmittel über KQ Schätzer
-```
+\footnotesize
+\begin{center}\includegraphics{Resources/Plots/Unbiased4-1} \end{center}
+\normalsize
 
 
 
@@ -2410,11 +2195,10 @@ Unter der zusätzlichen Annahme \ref{ass:cond hom} vereinfacht sich die Formel z
    \]
 - Die Fehler in diesem Modell sind \alert{bedingt heteroskedastisch}, da je länger die Ausbildungsdauer, desto größer die Varianz im Verdienst (d.h. $\Var(e\mid X)$ steigt in $X$).
 
-```{r, Heterosk, echo = F, eval = T, fig.asp=0.44}
-par(mar=c(3.6,3.1,0.55,0.55))
-plot(lwage76 ~ ed76, data = card)                      # plotte Resultate
-abline(ols, col="blue")                                # mit Regressionsgerade als Vergleich
-```
+
+\footnotesize
+\begin{center}\includegraphics{Resources/Plots/Heterosk-1} \end{center}
+\normalsize
 
 \endxmpl
 
@@ -2551,7 +2335,11 @@ mit $\beta_0=0$ und $e_i\overset{\text{u.i.v.}}{\sim}N(0,1)$.
 
 ## Illustration des GMT via \R Beispiel  {.allowframebreaks}
 
-```{r, GMT, echo = T, eval = T}
+
+\footnotesize
+
+
+``` r
 n    <- 100      
 reps <- 1e6
 
@@ -2574,6 +2362,9 @@ abline(v=0, lty=2)
 legend('topright', c("$\\widehat{\\beta}_0$", "$\\widetilde{\\beta}_0$"), 
                                                             col=c("blue", "red"), lwd=3)
 ```
+
+\begin{center}\includegraphics{Resources/Plots/GMT-1} \end{center}
+\normalsize
 
 
 ## Überblick
@@ -2816,7 +2607,11 @@ wobei $\vmu=\E[\mZ]$, $\mV=\Var(\mZ)$.
 \endxmpl
 
 
-```{r, ZGWS, echo = T, fig.cap = "Zentraler Grenzwertsatz", fig.asp = 0.7}
+
+\footnotesize
+
+
+``` r
 # generiere u.i.v. Rademacher ZVen
 Z.bar <- matrix((rbinom(4000000, size=1, prob=0.5)-0.5) * 2, nrow=20000, ncol=200)
 
@@ -2841,6 +2636,16 @@ curve(dnorm(x, sd=1), col="red", add=TRUE)
 hist(sqrt(200) * Z.bar[200, ], freq=FALSE, main="n=200", xlab="", xlim=c(-4,4), ylim=c(0,0.7))
 curve(dnorm(x, sd=1), col="red", add=TRUE)
 ```
+
+\begin{figure}
+
+{\centering \includegraphics{Resources/Plots/ZGWS-1} 
+
+}
+
+\caption[Zentraler Grenzwertsatz]{Zentraler Grenzwertsatz}\label{fig:ZGWS}
+\end{figure}
+\normalsize
 
 
 ## Überblick
@@ -2932,7 +2737,11 @@ Warum ist $g(\mA,\vb)=\mA^{-1}\vb$ stetig (für die Anwendung von CMT 1)?
 
 \endxmpl
 
-```{r, KQ_cons, echo = T, fig.asp = 0.7}
+
+\footnotesize
+
+
+``` r
 Y.bar <- matrix( rnorm(4000000), nrow=20000, ncol=200 )
 Y.bar <- apply(Y.bar, 1, function(x) {cumsum(x)/1:length(x)})
 x <- seq(-10,10,by=0.02)
@@ -2952,6 +2761,9 @@ hist(Y.bar[200, ], freq=FALSE, main="n=200", xlab="", xlim=c(-3, 3), ylim=c(0,4)
 abline(v=0, lty="dashed")
 ```
 
+\begin{center}\includegraphics{Resources/Plots/KQ_cons-1} \end{center}
+\normalsize
+
 
 ## \R Illustration von Inkonsistenz {.allowframebreaks}
 \framesubtitle{Oder warum Momentenbedingungen wichtig sind}
@@ -2963,7 +2775,11 @@ abline(v=0, lty="dashed")
 
 \endxmpl
 
-```{r, KQ_incons, echo = T, fig.asp = 0.7}
+
+\footnotesize
+
+
+``` r
 Y.bar <- matrix( rt(4000000, df=1.9), nrow=20000, ncol=200 )
 Y.bar <- apply(Y.bar, 1, function(x) {cumsum(x)/1:length(x)})
 x <- seq(-10,10,by=0.02)
@@ -2982,6 +2798,9 @@ abline(v=0, lty="dashed")
 hist(Y.bar[200, ], freq=FALSE, main="n=200", xlab="", xlim=c(-3, 3), ylim=c(0,4))
 abline(v=0, lty="dashed")
 ```
+
+\begin{center}\includegraphics{Resources/Plots/KQ_incons-1} \end{center}
+\normalsize
 
 
 
@@ -3118,7 +2937,11 @@ wobei der vorletzte Schritt aus Proposition\ \zref{S-rules3}.\zref{S-it:21.3} un
 
 ## \R Illustration
 
-```{r, InNor1, echo = T, fig.asp = 0.7}
+
+\footnotesize
+
+
+``` r
 r <- 100000
 n <- 100
 k_vec <- c(8,6,4)
@@ -3144,11 +2967,17 @@ f[,4] <- dnorm(x)
 wd = 1.4
 ```
 
+\normalsize
+
 
 ## \R Illustration {.allowframebreaks}
 
 
-```{r, InNor2, echo = T, fig.asp = 0.7}
+
+\footnotesize
+
+
+``` r
 leg1 <- expression('N(0,1)'^8)
 leg2 <- expression('N(0,1)'^6)
 leg3 <- expression('N(0,1)'^4)
@@ -3163,6 +2992,9 @@ lines(x,f[,4],lty=1,lwd=wd)
 axis(1,seq(-3,3,1),lwd=wd)
 legend("topright",legend=leg,lty=c(5,6,2,1),lwd=wd,bty="n")
 ```
+
+\begin{center}\includegraphics{Resources/Plots/InNor2-1} \end{center}
+\normalsize
 
 
 ## Diskussion von Theorem \ref{thm:KQ AN}
@@ -3244,32 +3076,10 @@ und einem \hil{kritischen Wert} $c$.
 - Ideal: \alert{Kleine} Werte von $T$ sind wahrscheinlich unter $\mathbb{H}_0$ und \alert{große} Werte von $T$ sind wahrscheinlich unter $\mathbb{H}_1$.
 
 
-```{r, Illu_test, echo = F, fig.asp = 0.5}
-wd <- 1.4
 
-par(mfrow = c(1, 2))
-plot.new()
-plot.window(c(-5,5),c(-5,5))
-W1 <- ellipse(a=1,b=1.1,centre=c(0,0),phi=0,npoly=1024)
-W2 <- ellipse(a=4.8,b=5.3,centre=c(0,0),phi=0,npoly=1024)
-plot(W1,add=TRUE,lwd=wd)
-plot(W2,add=TRUE,lwd=wd)
-text(0,0,"$\\mathbb{H}_0$",cex=1)
-text(3,3,"$\\mathbb{H}_1$",cex=1)
-
-
-plot.new()
-plot.window(c(-5,5),c(-5,5))
-W2 <- ellipse(a=4.8,b=5.3,centre=c(0,0),phi=0,npoly=1024)
-plot(W2,add=TRUE,lwd=wd)
-x <- seq(-4.7,4.7,.01)
-y <- sin(x)
-lines(x,y,lty=1,lwd=wd)
-text(0,3,   "$T<c$", cex=1)
-text(0,-3,  "$T>c$", cex=1)
-text(4,0,   "$S_0$", cex=1)
-text(4,-1.5,"$S_1$", cex=1)
-```
+\footnotesize
+\begin{center}\includegraphics{Resources/Plots/Illu_test-1} \end{center}
+\normalsize
 
 
 ## Teststatistik und kritische Werte
@@ -3498,22 +3308,10 @@ Wir haben also gezeigt, dass
 
 ## $p$-Wert
 
-```{r, pVal, echo = F, fig.asp = 0.6}
-xax <- seq(-4,4,by=.1)
-t <- 1.8
-par(mfrow=c(1,2))
-plot(xax,dnorm(xax),type="l",xlab="t-Statistik",ylab="As. Nullverteilung",lwd=1.5) 
-title("Zweiseitiger Test")
-abline(v=t,lty=2)
-abline(v=-t,lty=2)
-polygon(c(t,seq(t,xax[length(xax)],by=.01),xax[length(xax)]),c(0,dnorm(seq(t,xax[length(xax)],by=.01)),0),col="lightyellow") 
-polygon(c(xax[1],seq(xax[1],-t,by=.01),-t),c(0,dnorm(seq(xax[1],-t,by=.01)),0),col="lightyellow") 
 
-plot(xax,dnorm(xax),type="l",xlab="t-Statistik",ylab="As. Nullverteilung",lwd=1.5) 
-title("Rechtsseitiger Test")
-abline(v=t,lty=2)
-polygon(c(t,seq(t,xax[length(xax)],by=.01),xax[length(xax)]),c(0,dnorm(seq(t,xax[length(xax)],by=.01)),0),col="lightyellow") 
-```
+\footnotesize
+\begin{center}\includegraphics{Resources/Plots/pVal-1} \end{center}
+\normalsize
 
 
 ## Rezept
@@ -3810,18 +3608,69 @@ Wir bezeichnen $\sqrt{\big(\widehat{\mV}_{\vbeta}^{\text{HC0}}\big)_{ii}/n}$ als
 
 ## $t$-Test im \R Beispiel {.allowframebreaks}
 
-```{r, Card1, echo = T, eval = T}
+
+\footnotesize
+
+
+``` r
 card$exper      <- card$age76 - card$ed76 - 6         # add experience variable
 card            <- card[is.na(card$lwage76)==FALSE, ] # remove NAs
 KQ              <- lm(lwage76 ~ ed76 + exper + I(exper^2/100) + black + 
                         reg76r + smsa76r, data=card)
 summary( KQ )  # only shows homoskedasticity-only standard errors (s.e.s)
+```
 
+```
+## 
+## Call:
+## lm(formula = lwage76 ~ ed76 + exper + I(exper^2/100) + black + 
+##     reg76r + smsa76r, data = card)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -1.5930 -0.2232  0.0189  0.2422  1.3319 
+## 
+## Coefficients:
+##                Estimate Std. Error t value Pr(>|t|)    
+## (Intercept)     4.73366    0.06760   70.02  < 2e-16 ***
+## ed76            0.07401    0.00351   21.11  < 2e-16 ***
+## exper           0.08360    0.00665   12.57  < 2e-16 ***
+## I(exper^2/100) -0.22409    0.03178   -7.05  2.2e-12 ***
+## black          -0.18963    0.01763  -10.76  < 2e-16 ***
+## reg76r         -0.12486    0.01512   -8.26  < 2e-16 ***
+## smsa76r         0.16142    0.01557   10.37  < 2e-16 ***
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## Residual standard error: 0.374 on 3003 degrees of freedom
+## Multiple R-squared:  0.291,	Adjusted R-squared:  0.289 
+## F-statistic:  205 on 6 and 3003 DF,  p-value: <2e-16
+```
+
+
+``` r
 library(sandwich)
 library(lmtest)
 teststatsRobust <- coeftest(KQ, df = Inf, vcov = vcovHC(KQ, type="HC0"))  # HC-consistent s.e.s
 teststatsRobust
 ```
+
+```
+## 
+## z test of coefficients:
+## 
+##                Estimate Std. Error z value Pr(>|z|)    
+## (Intercept)     4.73366    0.07008   67.55  < 2e-16 ***
+## ed76            0.07401    0.00364   20.34  < 2e-16 ***
+## exper           0.08360    0.00672   12.43  < 2e-16 ***
+## I(exper^2/100) -0.22409    0.03177   -7.05  1.8e-12 ***
+## black          -0.18963    0.01741  -10.89  < 2e-16 ***
+## reg76r         -0.12486    0.01533   -8.14  3.8e-16 ***
+## smsa76r         0.16142    0.01516   10.65  < 2e-16 ***
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+```
+\normalsize
 
 
 
@@ -3911,9 +3760,26 @@ wobei $\chi_{q}^{2}(\cdot)$ die Verteilungsfunktion einer $\chi_q^2$-Verteilung 
 
 \endxmpl
 
-```{r, Card2, echo = T, eval = T}
+
+\footnotesize
+
+
+``` r
 waldtest(KQ, 1:6, vcov = vcovHC(KQ, type="HC0"), test = "Chisq")
 ```
+
+```
+## Wald test
+## 
+## Model 1: lwage76 ~ ed76 + exper + I(exper^2/100) + black + reg76r + smsa76r
+## Model 2: lwage76 ~ 1
+##   Res.Df Df Chisq Pr(>Chisq)    
+## 1   3003                        
+## 2   3009 -6  1309     <2e-16 ***
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+```
+\normalsize
 
 
 ## Überblick
@@ -4018,7 +3884,11 @@ Folgt direkt aus \eqref{eq:h7} und Theorem \ref{thm:t Test}.
 ## 1.\ $\vtheta=\va^\prime\vbeta$
 \framesubtitle{\R Illustration}
 
-```{r, CI_Illu1, echo = T, eval = F}
+
+\footnotesize
+
+
+``` r
 beta   <- 2
 reps   <- 25
 Bounds <- matrix(0, nrow = reps, ncol = 2)
@@ -4035,26 +3905,16 @@ segments(x0= 1:25, y0=Bounds[,1], x1 = 1:25, y1 = Bounds[,2])
 abline(h=2, col = "red", lty = 2, lwd = 2)
 ```
 
+\normalsize
+
 
 ## 1.\ $\vtheta=\va^\prime\vbeta$
 \framesubtitle{\R Illustration}
 
-```{r, CI_Illu2, echo = F, eval = T}
-beta   <- 2
-reps   <- 25
-Bounds <- matrix(0, nrow = reps, ncol = 2)
-for (i in 1:reps) {
-  e   <- rnorm(100)
-  Y   <- beta + e
-  reg <- lm(Y ~ 1)
-  Bounds[i, 1] <-  reg$coefficients - 1.645 * sqrt(diag(vcov(reg))) # lower bound 
-  Bounds[i, 2] <-  reg$coefficients + 1.645 * sqrt(diag(vcov(reg))) # upper bound 
-}
-plot(1, type="n", xlab="Wiederholung", ylab="$\\beta$",
-     ylim=c(min(Bounds), max(Bounds)), xlim=c(1, 25))
-segments(x0= 1:25, y0=Bounds[,1], x1 = 1:25, y1 = Bounds[,2])
-abline(h=2, col = "red", lty = 2, lwd = 2)
-```
+
+\footnotesize
+\begin{center}\includegraphics{Resources/Plots/CI_Illu2-1} \end{center}
+\normalsize
 
 
 
@@ -4198,31 +4058,10 @@ da dort ja gilt $\E[X\eps]\overset{\eqref{eq:uncorr}}{=}\vzero$.
 ## 2. Messfehler in den Regressoren
 
 
-```{r, Messfehler, echo = F, eval = T}
-x <- c(1,7)
-m <- c(.5,3.5)
-f <- c(10/11,34/11)
 
-wd <- 1.4
-
-plot(x,m,type="l",lty=1,ylab="Abhaengige Variable",xlab="Regressor",xaxs="i",yaxs="i",ylim=c(.4,3.5),xlim=c(.1,7.9),xaxt="n",yaxt="n",bty="n",lwd=wd)
-lines(x,f,lwd=wd)
-axis(side=1,at=seq(0,8,1),lwd=wd)
-axis(side=2,seq(0,4,1),lwd=wd)
-points(2,1,pch=19,cex=1.0)
-points(4,2,pch=19,cex=1.0)
-points(6,3,pch=19,cex=1.0)
-points(1,1,pch=1,cex=1.0)
-points(3,1,pch=1,cex=1.0)
-points(3,2,pch=1,cex=1.0)
-points(5,2,pch=1,cex=1.0)
-points(5,3,pch=1,cex=1.0)
-points(7,3,pch=1,cex=1.0)
-text(4.7,3.4,"Kein Messfehler")
-text(4.3,1.4,"Mit Messfehler")
-arrows(5.7,3.35,6.3,3.2,length=0.1,lwd=wd)
-arrows(3.4,1.4,2.7,1.5,length=0.1,lwd=wd)
-```
+\footnotesize
+\begin{center}\includegraphics{Resources/Plots/Messfehler-1} \end{center}
+\normalsize
 
 
 ## 3. Simultane Gleichungssyteme
@@ -4250,23 +4089,10 @@ wobei $\E[u^d]=\E[u^s]=\E[u^s u^d]=0$.
 - Z.B.\ gibt es im Angebots- und Nachfragemodell $Q^s=\widetilde{P}+u^s$ und $Q^{d}=4-\widetilde{P}+u^d$ für Rademacher-verteilte $u^{s}$ und $u^d$ (d.h.\ $\pm1$ mit Wkt.\ 1/2) \alert{4 Gleichgewichtszustände}, also 4 Paare $(P,Q)$.
 
 
-```{r, DS, echo = F, eval = T, fig.asp=0.5}
-L <- .9
-U <- 3.1
 
-plot(c(L,U),c(2,2),type="l",lty=1,ylab="Quantity",xlab="Price",xaxs="i",yaxs="i",ylim=c(.7,3.3),xlim=c(L,3.9),xaxt="n",yaxt="n",bty="n",lwd=wd)
-axis(side=1,at=seq(0,4,1),lwd=wd)
-axis(side=2,seq(0,4,1),lwd=wd)
-lines(c(L,U),c(L,U),lwd=wd)
-lines(c(L,U),c(U,L),lwd=wd)
-points(1,2,pch=19)
-points(3,2,pch=19)
-points(2,1,pch=19)
-points(2,3,pch=19)
-text(3.4,.9,"Demand")
-text(3.4,3.1,"Supply")
-text(3.5,2,"Regression")
-```
+\footnotesize
+\begin{center}\includegraphics{Resources/Plots/DS-1} \end{center}
+\normalsize
 
 
 
@@ -4507,12 +4333,29 @@ sein (\alert{nearc4}), denn:
 ## \R Beispiel
 
 
-```{r, Card3, echo = T, eval = T}
+
+\footnotesize
+
+
+``` r
 # IV estimation
 IV <- ivreg(lwage76 ~ ed76 + exper + I(exper^2/100) + black + reg76r + smsa76r
                   | nearc4 + exper + I(exper^2/100) + black + reg76r + smsa76r, data=card)
 IV
 ```
+
+```
+## 
+## Call:
+## ivreg(formula = lwage76 ~ ed76 + exper + I(exper^2/100) + black +     reg76r + smsa76r | nearc4 + exper + I(exper^2/100) + black +     reg76r + smsa76r, data = card)
+## 
+## Coefficients:
+##    (Intercept)            ed76           exper  I(exper^2/100)           black  
+##          3.753           0.132           0.107          -0.228          -0.131  
+##         reg76r         smsa76r  
+##         -0.105           0.131
+```
+\normalsize
 
 \xmpl[*]
 
@@ -4625,7 +4468,11 @@ X_i & \overset{\text{siehe}}{\underset{\eqref{eq:Zerl fit resid}}{=}}\widehat{\v
 
 \endxmpl
 
-```{r, Card4, echo = T, eval = T}
+
+\footnotesize
+
+
+``` r
 # Standard KQ
 KQ   <- lm(lwage76 ~ ed76 + exper + I(exper^2/100) + black + 
                         reg76r + smsa76r, data=card)
@@ -4644,6 +4491,42 @@ ivbyhand <- lm(lwage76 ~ fitted(redf) + exper + I(exper^2/100) + black + reg76r 
 stargazer(KQ, IV, redf, ivbyhand, type="text",
 keep=c("ed", "near", "exp", "bl"), keep.stat=c("n", "rsq"))
 ```
+
+```
+## 
+## ========================================================
+##                          Dependent variable:            
+##               ------------------------------------------
+##                      lwage76           ed76     lwage76 
+##                  OLS    instrumental    OLS       OLS   
+##                           variable                      
+##                  (1)        (2)         (3)       (4)   
+## --------------------------------------------------------
+## ed76          0.074***    0.132***                      
+##                (0.004)    (0.049)                       
+##                                                         
+## nearc4                               0.337***           
+##                                       (0.083)           
+##                                                         
+## fitted(redf)                                   0.132*** 
+##                                                 (0.050) 
+##                                                         
+## exper         0.084***    0.107***   -0.410*** 0.107*** 
+##                (0.007)    (0.021)     (0.034)   (0.022) 
+##                                                         
+## I(exper2/100) -0.224***  -0.228***     0.073   -0.228***
+##                (0.032)    (0.033)     (0.165)   (0.034) 
+##                                                         
+## black         -0.190***   -0.131**   -1.006*** -0.131** 
+##                (0.018)    (0.053)     (0.090)   (0.054) 
+##                                                         
+## --------------------------------------------------------
+## Observations    3,010      3,010       3,010     3,010  
+## R2              0.291      0.225       0.474     0.187  
+## ========================================================
+## Note:                        *p<0.1; **p<0.05; ***p<0.01
+```
+\normalsize
 
 
 ## Überblick
@@ -4796,12 +4679,53 @@ nearc4b &= \text{"In Bezirk mit}\  \text{\color{red}{privatem}}\ \text{4-Jahres 
 
 <!-- Hansen (2022, Table 12.1) Column 2SLS(b) -->
 
-```{r, Card5, echo = T, eval = T}
+
+\footnotesize
+
+
+``` r
 TSLS <- ivreg(lwage76 ~ black + reg76r + smsa76r  # exogenous variables
                   | ed76 + exper + I(exper^2/100) # endogenous variables
                   | nearc4a + nearc4b + age76 + I(age76^2), data=card) # instruments
 summary(TSLS)
 ```
+
+```
+## 
+## Call:
+## ivreg(formula = lwage76 ~ black + reg76r + smsa76r | ed76 + exper + 
+##     I(exper^2/100) | nearc4a + nearc4b + age76 + I(age76^2), 
+##     data = card)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -1.9206 -0.2722  0.0207  0.2819  1.4304 
+## 
+## Coefficients:
+##                Estimate Std. Error t value Pr(>|t|)    
+## (Intercept)      3.7481     0.4834    7.75  1.2e-14 ***
+## ed76             0.1597     0.0409    3.90  9.7e-05 ***
+## exper            0.0470     0.0250    1.88  0.06021 .  
+## I(exper^2/100)  -0.0323     0.1281   -0.25  0.80126    
+## black           -0.0640     0.0630   -1.02  0.30961    
+## reg76r          -0.0857     0.0256   -3.34  0.00083 ***
+## smsa76r          0.0835     0.0412    2.02  0.04307 *  
+## 
+## Diagnostic tests:
+##                                    df1  df2 statistic p-value    
+## Weak instruments (ed76)              4 3002      8.65 6.2e-07 ***
+## Weak instruments (exper)             4 3002   1215.98 < 2e-16 ***
+## Weak instruments (I(exper^2/100))    4 3002   1113.77 < 2e-16 ***
+## Wu-Hausman                           2 3001      2.98   0.051 .  
+## Sargan                               1   NA      0.52   0.469    
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## Residual standard error: 0.433 on 3003 degrees of freedom
+## Multiple R-Squared: 0.0511,	Adjusted R-squared: 0.0492 
+## Wald test:  130 on 6 and 3003 DF,  p-value: <2e-16
+```
+\normalsize
 
 
 

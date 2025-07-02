@@ -6,6 +6,7 @@ output:
   runidue::lectureslides:
     
     lang: "en"
+#    logo: signet_ude_rgb.png
  #   logo: signet_ude_rgb.png
     
     keep_tex: true
@@ -14,8 +15,8 @@ output:
 editor_options: 
   chunk_output_type: console
 classoption: aspectratio=169
-
-
+params:
+  #kahoot: kahootlogo2.png
 ---
 
 
@@ -67,9 +68,15 @@ Ziel: Schlussfolgerungen von einer Stichprobe auf die Grundgesamtheit
 
 
 ## Motivation
+
+\framesubtitle{GeneralQuiz}
+
+\Quiz{new section}\endQuiz
+
 \framesubtitle{General Quiz}
 
 \Quiz{new section}\endQuiz
+
 
 
 ## Motivation

@@ -1,5 +1,17 @@
 \documentclass[10pt,english,aspectratio=169]{beamer}
 \usepackage{lmodern}
+
+
+%\WarningFilter{microtype}{Unable to apply patch}
+
+\IfFileExists{microtype.sty}{%
+	\usepackage[final,nopatch=footnote]{microtype}
+	\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+
+\RequirePackage{silence}
+\WarningFilter{latex}{Command \showhyphens has changed}
+
 \usepackage{amssymb,amsmath}
 \usepackage{ifxetex,ifluatex}
 
@@ -17,10 +29,6 @@
 % use upquote if available, for straight quotes in verbatim environments
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
 % use microtype if available
-\IfFileExists{microtype.sty}{%
-\usepackage{microtype}
-\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
-}{}
 \usepackage{hyperref}
 \PassOptionsToPackage{usenames,dvipsnames}{color} % color is loaded by hyperref
 \hypersetup{unicode=true,
@@ -38,6 +46,9 @@
   \usepackage{polyglossia}
   \setmainlanguage[]{}
 \fi
+
+
+
 
 
 \usepackage{color}
@@ -130,6 +141,7 @@
 
 \input{ee.sty}
 \input{BeamerColor.sty}
+\usepackage{xcolor}
 \usepackage{hypernat}
 \usepackage{mathtools}
 \usepackage[export]{adjustbox}
@@ -187,6 +199,7 @@ postaction = {draw,line width=1.4pt, white,shorten >= 4.5pt}]
 \newcommand{\mps}{\par\medbreak}
 \newcommand{\sd}{\operatorname{sd}}
 \newcommand{\SD}{\operatorname{SD}}
+\providecommand{\mathcolor}[2]{\begingroup\color{#1}#2\endgroup}
 
 % Kahoot Block
 \newenvironment<>{kahoot}[1]{%
@@ -328,17 +341,6 @@ postaction = {draw,line width=1.4pt, white,shorten >= 4.5pt}]
 \setbeamertemplate{theorem end}{\leavevmode\end{\inserttheoremblockenv}}
 
 
-%\preto{\xmpl}{
-%   \setbeamercolor{block title}{fg=black,bg=sandy!70!white}
-%    \setbeamercolor{block body}{fg=black, bg=sandy!20!white}
-%}
-
-%\preto{\exe}{
-%    \setbeamercolor{block title}{fg=black,bg=darklime!70!white}
-%    \setbeamercolor{block body}{fg=black, bg=darklime!20!white}
-%}
-
-
 % user-defined color for exe\Exercise
 \def\exerciseboxcolor{blue}
 \preto{\exe}{
@@ -403,10 +405,10 @@ postaction = {draw,line width=1.4pt, white,shorten >= 4.5pt}]
     \setbeamercolor{block body}{fg=black, bg=\frageboxcolor!20!white}
 }
 
-\def\mathematicaltheoremboxcolor{blue}
+\def\maththeoremboxcolor{blue}
 \preto{\mthmn}{
-    \setbeamercolor{block title}{fg=black,bg=\mathematicaltheoremboxcolor!70!white}
-    \setbeamercolor{block body}{fg=black, bg=\mathematicaltheoremboxcolor!20!white}
+    \setbeamercolor{block title}{fg=black,bg=\maththeoremboxcolor!70!white}
+    \setbeamercolor{block body}{fg=black, bg=\maththeoremboxcolor!20!white}
 }
 
 
@@ -664,6 +666,10 @@ Ziel: Schlussfolgerungen von einer Stichprobe auf die Grundgesamtheit
 
 \begin{frame}{Motivation}
 \phantomsection\label{motivation-5}
+\framesubtitle{GeneralQuiz}
+
+\Quiz{new section}\endQuiz
+
 \framesubtitle{General Quiz}
 
 \Quiz{new section}\endQuiz

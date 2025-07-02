@@ -1,50 +1,43 @@
-\frametitle{\R Beispiel}
-\protect\hypertarget{beispiel-7}{}
+\frametitle{\R Illustration von Inkonsistenz}
+\phantomsection\label{illustration-von-inkonsistenz}
+\framesubtitle{Oder warum Momentenbedingungen wichtig sind}
+
+\xmpl
+
+\begin{itemize}
+\tightlist
+\item
+  Betrachte das Modell \(Y=\beta+e\) mit \(\beta=0\) und
+  \(e\sim t_{1.9}\).
+\item
+  Hier gilt \(\E[Y^2]=\infty\), in Verletzung von Annahme \ref{ass:1}.
+\end{itemize}
+
+\endxmpl
+
 \footnotesize
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\NormalTok{TSLS }\OtherTok{\textless{}{-}} \FunctionTok{ivreg}\NormalTok{(lwage76 }\SpecialCharTok{\textasciitilde{}}\NormalTok{ black }\SpecialCharTok{+}\NormalTok{ reg76r }\SpecialCharTok{+}\NormalTok{ smsa76r  }\CommentTok{\# exogenous variables}
-                  \SpecialCharTok{|}\NormalTok{ ed76 }\SpecialCharTok{+}\NormalTok{ exper }\SpecialCharTok{+} \FunctionTok{I}\NormalTok{(exper}\SpecialCharTok{\^{}}\DecValTok{2}\SpecialCharTok{/}\DecValTok{100}\NormalTok{) }\CommentTok{\# endogenous variables}
-                  \SpecialCharTok{|}\NormalTok{ nearc4a }\SpecialCharTok{+}\NormalTok{ nearc4b }\SpecialCharTok{+}\NormalTok{ age76 }\SpecialCharTok{+} \FunctionTok{I}\NormalTok{(age76}\SpecialCharTok{\^{}}\DecValTok{2}\NormalTok{), }\AttributeTok{data=}\NormalTok{card) }\CommentTok{\# instruments}
-\FunctionTok{summary}\NormalTok{(TSLS)}
+\NormalTok{Y.bar }\OtherTok{\textless{}{-}} \FunctionTok{matrix}\NormalTok{( }\FunctionTok{rt}\NormalTok{(}\DecValTok{4000000}\NormalTok{, }\AttributeTok{df=}\FloatTok{1.9}\NormalTok{), }\AttributeTok{nrow=}\DecValTok{20000}\NormalTok{, }\AttributeTok{ncol=}\DecValTok{200}\NormalTok{ )}
+\NormalTok{Y.bar }\OtherTok{\textless{}{-}} \FunctionTok{apply}\NormalTok{(Y.bar, }\DecValTok{1}\NormalTok{, }\ControlFlowTok{function}\NormalTok{(x) \{}\FunctionTok{cumsum}\NormalTok{(x)}\SpecialCharTok{/}\DecValTok{1}\SpecialCharTok{:}\FunctionTok{length}\NormalTok{(x)\})}
+\NormalTok{x }\OtherTok{\textless{}{-}} \FunctionTok{seq}\NormalTok{(}\SpecialCharTok{{-}}\DecValTok{10}\NormalTok{,}\DecValTok{10}\NormalTok{,}\AttributeTok{by=}\FloatTok{0.02}\NormalTok{)}
+\FunctionTok{par}\NormalTok{(}\AttributeTok{mfrow=}\FunctionTok{c}\NormalTok{(}\DecValTok{2}\NormalTok{,}\DecValTok{2}\NormalTok{))}
+
+\CommentTok{\# n=2}
+\FunctionTok{hist}\NormalTok{(Y.bar[}\DecValTok{2}\NormalTok{, ],   }\AttributeTok{freq=}\ConstantTok{FALSE}\NormalTok{, }\AttributeTok{main=}\StringTok{"n=2"}\NormalTok{, }\AttributeTok{xlab=}\StringTok{""}\NormalTok{, }\AttributeTok{xlim=}\FunctionTok{c}\NormalTok{(}\SpecialCharTok{{-}}\DecValTok{3}\NormalTok{, }\DecValTok{3}\NormalTok{), }\AttributeTok{ylim=}\FunctionTok{c}\NormalTok{(}\DecValTok{0}\NormalTok{,}\DecValTok{4}\NormalTok{))}
+\FunctionTok{abline}\NormalTok{(}\AttributeTok{v=}\DecValTok{0}\NormalTok{, }\AttributeTok{lty=}\StringTok{"dashed"}\NormalTok{)}
+\CommentTok{\# n=20}
+\FunctionTok{hist}\NormalTok{(Y.bar[}\DecValTok{20}\NormalTok{, ],  }\AttributeTok{freq=}\ConstantTok{FALSE}\NormalTok{, }\AttributeTok{main=}\StringTok{"n=20"}\NormalTok{, }\AttributeTok{xlab=}\StringTok{""}\NormalTok{, }\AttributeTok{xlim=}\FunctionTok{c}\NormalTok{(}\SpecialCharTok{{-}}\DecValTok{3}\NormalTok{, }\DecValTok{3}\NormalTok{), }\AttributeTok{ylim=}\FunctionTok{c}\NormalTok{(}\DecValTok{0}\NormalTok{,}\DecValTok{4}\NormalTok{))}
+\FunctionTok{abline}\NormalTok{(}\AttributeTok{v=}\DecValTok{0}\NormalTok{, }\AttributeTok{lty=}\StringTok{"dashed"}\NormalTok{)}
+\CommentTok{\# n=50}
+\FunctionTok{hist}\NormalTok{(Y.bar[}\DecValTok{50}\NormalTok{, ],  }\AttributeTok{freq=}\ConstantTok{FALSE}\NormalTok{, }\AttributeTok{main=}\StringTok{"n=50"}\NormalTok{, }\AttributeTok{xlab=}\StringTok{""}\NormalTok{, }\AttributeTok{xlim=}\FunctionTok{c}\NormalTok{(}\SpecialCharTok{{-}}\DecValTok{3}\NormalTok{, }\DecValTok{3}\NormalTok{), }\AttributeTok{ylim=}\FunctionTok{c}\NormalTok{(}\DecValTok{0}\NormalTok{,}\DecValTok{4}\NormalTok{))}
+\FunctionTok{abline}\NormalTok{(}\AttributeTok{v=}\DecValTok{0}\NormalTok{, }\AttributeTok{lty=}\StringTok{"dashed"}\NormalTok{)}
+\CommentTok{\# n=200}
+\FunctionTok{hist}\NormalTok{(Y.bar[}\DecValTok{200}\NormalTok{, ], }\AttributeTok{freq=}\ConstantTok{FALSE}\NormalTok{, }\AttributeTok{main=}\StringTok{"n=200"}\NormalTok{, }\AttributeTok{xlab=}\StringTok{""}\NormalTok{, }\AttributeTok{xlim=}\FunctionTok{c}\NormalTok{(}\SpecialCharTok{{-}}\DecValTok{3}\NormalTok{, }\DecValTok{3}\NormalTok{), }\AttributeTok{ylim=}\FunctionTok{c}\NormalTok{(}\DecValTok{0}\NormalTok{,}\DecValTok{4}\NormalTok{))}
+\FunctionTok{abline}\NormalTok{(}\AttributeTok{v=}\DecValTok{0}\NormalTok{, }\AttributeTok{lty=}\StringTok{"dashed"}\NormalTok{)}
 \end{Highlighting}
 \end{Shaded}
 
-\begin{verbatim}
-##
-## Call:
-## ivreg(formula = lwage76 ~ black + reg76r + smsa76r | ed76 + exper +
-##     I(exper^2/100) | nearc4a + nearc4b + age76 + I(age76^2),
-##     data = card)
-##
-## Residuals:
-##     Min      1Q  Median      3Q     Max
-## -1.9206 -0.2722  0.0207  0.2819  1.4304
-##
-## Coefficients:
-##                Estimate Std. Error t value Pr(>|t|)
-## (Intercept)      3.7481     0.4834    7.75  1.2e-14 ***
-## ed76             0.1597     0.0409    3.90  9.7e-05 ***
-## exper            0.0470     0.0250    1.88  0.06021 .
-## I(exper^2/100)  -0.0323     0.1281   -0.25  0.80126
-## black           -0.0640     0.0630   -1.02  0.30961
-## reg76r          -0.0857     0.0256   -3.34  0.00083 ***
-## smsa76r          0.0835     0.0412    2.02  0.04307 *
-##
-## Diagnostic tests:
-##                                    df1  df2 statistic p-value
-## Weak instruments (ed76)              4 3002      8.65 6.2e-07 ***
-## Weak instruments (exper)             4 3002   1215.98 < 2e-16 ***
-## Weak instruments (I(exper^2/100))    4 3002   1113.77 < 2e-16 ***
-## Wu-Hausman                           2 3001      2.98   0.051 .
-## Sargan                               1   NA      0.52   0.469
-## ---
-## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-##
-## Residual standard error: 0.433 on 3003 degrees of freedom
-## Multiple R-Squared: 0.0511,  Adjusted R-squared: 0.0492
-## Wald test:  130 on 6 and 3003 DF,  p-value: <2e-16
-\end{verbatim}
-
+\begin{center}\includegraphics{Resources/Plots/KQ_incons-1} \end{center}
 \normalsize

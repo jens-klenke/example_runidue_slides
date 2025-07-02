@@ -1,5 +1,17 @@
 \documentclass[9pt,ngerman,]{beamer}
 \usepackage{lmodern}
+
+
+%\WarningFilter{microtype}{Unable to apply patch}
+
+\IfFileExists{microtype.sty}{%
+	\usepackage[final,nopatch=footnote]{microtype}
+	\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+
+\RequirePackage{silence}
+\WarningFilter{latex}{Command \showhyphens has changed}
+
 \usepackage{amssymb,amsmath}
 \usepackage{ifxetex,ifluatex}
 
@@ -17,10 +29,6 @@
 % use upquote if available, for straight quotes in verbatim environments
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
 % use microtype if available
-\IfFileExists{microtype.sty}{%
-\usepackage{microtype}
-\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
-}{}
 \usepackage{hyperref}
 \PassOptionsToPackage{usenames,dvipsnames}{color} % color is loaded by hyperref
 \hypersetup{unicode=true,
@@ -39,29 +47,46 @@
   \setmainlanguage[]{}
 \fi
 
+
+
+%---------------- CSL / citeproc for Beamer - clickable -------------------------
 \newlength{\cslhangindent}
 \setlength{\cslhangindent}{1.5em}
-\newlength{\csllabelwidth}
-\setlength{\csllabelwidth}{3em}
-\newlength{\cslentryspacingunit} % times entry-spacing
-\setlength{\cslentryspacingunit}{\parskip}
-\newenvironment{CSLReferences}[2] % #1 hanging-ident, #2 entry spacing
- {% don't indent paragraphs
-  \setlength{\parindent}{0pt}
-  % turn on hanging indent if param 1 is 1
-  \ifodd #1
-  \let\oldpar\par
-  \def\par{\hangindent=\cslhangindent\oldpar}
-  \fi
-  % set entry spacing
-  \setlength{\parskip}{#2\cslentryspacingunit}
- }%
- {}
-\usepackage{calc}
-\newcommand{\CSLBlock}[1]{#1\hfill\break}
-\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{#1}}
-\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{#1}\break}
-\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
+
+% 1) bibliography environment
+\newenvironment{CSLReferences}[2]
+{%
+	\ifodd #1\relax\fi
+	\begin{list}{}{%
+			\setlength{\leftmargin}{\cslhangindent}%
+			\setlength{\itemindent}{-\cslhangindent}%
+			\setlength{\itemsep}{\dimexpr #2\baselineskip\relax}%
+			\setlength{\topsep}{0pt}\setlength{\partopsep}{0pt}}%
+		\raggedright
+	}{\end{list}\par}
+\providecommand{\citeproctext}{} % silent fallback
+\providecommand{\CSLBlock}[1]{#1\hfill\break}
+\providecommand{\CSLRightInline}[1]{\hspace{1em}#1}
+\providecommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
+
+%------------------- Changes for hyperlink -------------------------
+% 2) Hyperlink layer (Beamer already loads hyperref)
+\providecommand{\Hypertarget}[2]{\hypertarget{#1}{#2}}
+\providecommand{\Hyperlink}[2]{\hyperlink{#1}{#2}}
+\providecommand{\citeproc}[2]{\Hyperlink{#1}{#2}}
+
+% 3) Patch \bibitem so each entry gets an anchor BEFORE the real \item
+\AtBeginEnvironment{CSLReferences}{
+	\let\oldbibitem\bibitem
+	\renewcommand\bibitem[2][]{
+		\Hypertarget{#2}{} 
+		\oldbibitem[#1]{#2}
+	}%
+}
+\AtEndEnvironment{CSLReferences}{
+	\let\bibitem\oldbibitem
+}
+
 
 \usepackage{color}
 \usepackage{fancyvrb}
@@ -148,11 +173,12 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Additional packages
 \makeatletter
-\def\input@path{{"C:/Users/Yannick.Hoga/AppData/Local/R/win-library/4.3/runidue/rmarkdown/templates/lectureslides/resources/"}}  % make them visible to tex to overcome warnings
+\def\input@path{{"C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdown/templates/lectureslides/resources/"}}  % make them visible to tex to overcome warnings
 \makeatother
 
-\input{"C:/Users/Yannick.Hoga/AppData/Local/R/win-library/4.3/runidue/rmarkdown/templates/lectureslides/resources/ee.sty"}
-\usepackage{BeamerColor}
+\input{ee.sty}
+\input{BeamerColor.sty}
+\usepackage{xcolor}
 \usepackage{hypernat}
 \usepackage{mathtools}
 \usepackage[export]{adjustbox}
@@ -168,9 +194,16 @@
 \usepackage{zref-user}
 \usepackage{zref-xr}
 \usepackage{empheq}
+\usepackage{eurosym}
 \usepackage{tikz}
 \usetikzlibrary{arrows, decorations.markings}
 \tikzstyle{arrow} = [ultra thick, - latex, shorten >= 2pt, shorten <= 2pt] % default arrow
+\tikzstyle{vecArrow} = [thick, decoration={markings,mark=at position
+	1 with {\arrow[semithick]{open triangle 60}}},
+double distance=1.4pt, shorten >= 5.5pt,
+preaction = {decorate},
+postaction = {draw,line width=1.4pt, white,shorten >= 4.5pt}]
+\tikzstyle{innerWhite} = [semithick, white,line width=1.4pt, shorten >= 4.5pt] % vec arrow
 \tikzstyle{box} = [rectangle,rounded corners,fill=dueblue, text=white, align=center, node distance=1.25cm] % default node
 
 % \usepackage{etoolbox}
@@ -205,6 +238,7 @@
 \newcommand{\mps}{\par\medbreak}
 \newcommand{\sd}{\operatorname{sd}}
 \newcommand{\SD}{\operatorname{SD}}
+\providecommand{\mathcolor}[2]{\begingroup\color{#1}#2\endgroup}
 
 % Kahoot Block
 \newenvironment<>{kahoot}[1]{%
@@ -219,15 +253,62 @@
      }%
       \usebeamertemplate{block begin}
       \begin{center}
-\includegraphics[width=0.25\textwidth]{"C:/Users/Yannick.Hoga/AppData/Local/R/win-library/4.3/runidue/rmarkdown/templates/lectureslides/resources/kahootlogo2"}
+      	
+					\ifstrequal{FALSE}{FALSE}{}{\begin{minipage}[t][1cm]{1.9cm}\includegraphics[height=1cm,keepaspectratio=true,valign=t, right]{FALSE}\end{minipage}\vspace{-.3cm}}
+		
 \end{center}}
     {\par\usebeamertemplate{block end}\end{actionenv}}
 \newcommand{\kahootblock}[1]{\begin{kahoot}{#1}\end{kahoot}}
 
+
+% QuizAcademy Block
+\newenvironment<>{QuizAcademy}[1]{%
+	\begin{actionenv}#2%
+		\def\insertblocktitle{#1}%
+		\par%
+		\mode<presentation>{%
+			\setbeamercolor{block title}{fg=black,bg=yellow}
+			\setbeamercolor{block body}{fg=black,bg=yellow!20}
+			\setbeamercolor{itemize item}{fg=orange!20!black}
+			\setbeamertemplate{itemize item}[triangle]
+		}%
+		\usebeamertemplate{block begin}
+		\begin{center}
+			
+				\includegraphics[width=0.25\textwidth]{"C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdown/templates/lectureslides/resources/QuizAcademy.png"}  
+		
+	\end{center}}
+	{\par\usebeamertemplate{block end}\end{actionenv}}
+\newcommand{\QuizAcademyblock}[1]{\begin{QuizAcademy}{#1}\end{QuizAcademy}}
+
+
+% New code for General Quiz 
+\newenvironment<>{Quiz}[1]{%	
+	\begin{actionenv}#2%
+		\def\insertblocktitle{#1}%
+		\par%
+		\mode<presentation>{%
+			\setbeamercolor{block title}{fg=black,bg=yellow}
+			\setbeamercolor{block body}{fg=black,bg=yellow!20}
+			\setbeamercolor{itemize item}{fg=orange!20!black}
+			\setbeamertemplate{itemize item}[triangle]
+		}%
+		\usebeamertemplate{block begin}
+		\begin{center}
+				\includegraphics[width=0.25\textwidth]{"C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdown/templates/lectureslides/resources/QuizAcademy.png"}  
+			
+	\end{center}}
+	{\par\usebeamertemplate{block end}\end{actionenv}}
+\newcommand{\Quizblock}[1]{\begin{Quiz}{#1}\end{Quiz}}
+
+
+
+
+% Rlogo
 \makeatletter
 \newcommand*\fsize{\dimexpr\f@size pt\relax} % returns current font size
 \makeatother
-\newcommand{\R}{\includegraphics[height=.85\fsize, clip=T]{"C:/Users/Yannick.Hoga/AppData/Local/R/win-library/4.3/runidue/rmarkdown/templates/lectureslides/resources/Rlogo"}\ }
+\newcommand{\R}{\includegraphics[height=.85\fsize, clip=T]{"C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdown/templates/lectureslides/resources/Rlogo"}\ }
 \newcommand{\btVFill}{\vskip0pt plus 1filll}
 \newcommand{\source}[1]{\btVFill\scriptsize \textit{\expandafter\ifstrequal\expandafter{de}{de}{Quelle: }{Source: }}#1}
 
@@ -272,6 +353,15 @@
   \numberwithin{equation}{section}
 }%
 
+% CONTINUING BLOCKS
+\newenvironment{thmn*}{\addtocounter{thmn}{-1}\thmn[\thmncont]}{\endthmn}
+\newenvironment{lem*}{\addtocounter{thmn}{-1}\lem[\thmncont]}{\endlem}
+\newenvironment{cor*}{\addtocounter{thmn}{-1}\cor[\thmncont]}{\endcor}
+\newenvironment{defn*}{\addtocounter{thmn}{-1}\thmn[\thmncont]}{\endthmn}
+\newenvironment{ass*}{\addtocounter{thmn}{-1}\ass[\thmncont]}{\endass}
+\newenvironment{rem*}{\addtocounter{thmn}{-1}\rem[\thmncont]}{\endrem}
+\newenvironment{xmpl*}{\addtocounter{thmn}{-1}\xmpl[\thmncont]}{\endxmpl}
+\newenvironment{que*}{\addtocounter{thmn}{-1}\que[\thmncont]}{\endque}
 
 
 \setbeamertemplate{theorems}[numbered]
@@ -289,16 +379,76 @@
 }
 \setbeamertemplate{theorem end}{\leavevmode\end{\inserttheoremblockenv}}
 
-\preto{\xmpl}{
-    \setbeamercolor{block title}{fg=black,bg=sandy!70!white}
-    \setbeamercolor{block body}{fg=black, bg=sandy!20!white}
-}
 
+% user-defined color for exe\Exercise
+\def\exerciseboxcolor{blue}
 \preto{\exe}{
-    \setbeamercolor{block title}{fg=black,bg=darklime!70!white}
-    \setbeamercolor{block body}{fg=black, bg=darklime!20!white}
+	\setbeamercolor{block title}{fg=black, bg=\exerciseboxcolor!70!white}
+	\setbeamercolor{block body}{fg=black, bg=\exerciseboxcolor!20!white}
 }
 
+
+\def\beispielboxcolor{yellow}
+\preto{\xmpl}{
+    \setbeamercolor{block title}{fg=black,bg=\beispielboxcolor!70!white}
+    \setbeamercolor{block body}{fg=black, bg=\beispielboxcolor!20!white}
+   
+}
+
+\def\lemmaboxcolor{blue}
+\preto{\lem}{
+    \setbeamercolor{block title}{fg=black,bg=\lemmaboxcolor!70!white}
+    \setbeamercolor{block body}{fg=black, bg=\lemmaboxcolor!20!white}
+   
+}
+
+\def\definitionboxcolor{green}
+\preto{\defn}{
+    \setbeamercolor{block title}{fg=black,bg=\definitionboxcolor!70!white}
+    \setbeamercolor{block body}{fg=black, bg=\definitionboxcolor!20!white}
+}
+
+\def\theoremboxcolor{blue}
+\preto{\thmn}{
+    \setbeamercolor{block title}{fg=black,bg=\theoremboxcolor!70!white}
+    \setbeamercolor{block body}{fg=black, bg=\theoremboxcolor!20!white}
+}
+
+\def\corollaryboxcolor{blue}
+\preto{\cor}{
+    \setbeamercolor{block title}{fg=black,bg=\corollaryboxcolor!70!white}
+    \setbeamercolor{block body}{fg=black, bg=\corollaryboxcolor!20!white}
+}
+
+\def\assumptionboxcolor{blue}
+\preto{\ass}{
+    \setbeamercolor{block title}{fg=black,bg=\assumptionboxcolor!70!white}
+    \setbeamercolor{block body}{fg=black, bg=\assumptionboxcolor!20!white}
+}
+
+\def\remarkboxcolor{blue}
+\preto{\rem}{
+    \setbeamercolor{block title}{fg=black,bg=\remarkboxcolor!70!white}
+    \setbeamercolor{block body}{fg=black, bg=\remarkboxcolor!20!white}
+}
+
+\def\propositionboxcolor{blue}
+\preto{\prop}{
+    \setbeamercolor{block title}{fg=black,bg=\propositionboxcolor!70!white}
+    \setbeamercolor{block body}{fg=black, bg=\propositionboxcolor!20!white}
+}
+
+\def\frageboxcolor{blue}
+\preto{\que}{
+    \setbeamercolor{block title}{fg=black,bg=\frageboxcolor!70!white}
+    \setbeamercolor{block body}{fg=black, bg=\frageboxcolor!20!white}
+}
+
+\def\maththeoremboxcolor{blue}
+\preto{\mthmn}{
+    \setbeamercolor{block title}{fg=black,bg=\maththeoremboxcolor!70!white}
+    \setbeamercolor{block body}{fg=black, bg=\maththeoremboxcolor!20!white}
+}
 
 
 
@@ -349,25 +499,33 @@
 % Frame Head
 \makeatletter
 \setbeamertemplate{frametitle}{%
-\vspace{.1cm}
-\begin{minipage}[t][1cm]{.84\textwidth}
-    \ifbeamer@plainframe%
-      \Large\insertframetitle%
-    \else
-      \Large\insertframetitle%
-      \ifx\insertframesubtitle\empty
-      \else
-        \\ \small \insertframesubtitle
-      \fi
-    \fi
-\end{minipage}\hfill
-
-
-\ifstrequal{FALSE}{FALSE}{}{\begin{minipage}[t][1cm]{1.9cm}\includegraphics[width=2cm,keepaspectratio=true, valign=t]{FALSE}\end{minipage}\vspace{-.3cm}}
-
-
+	\makebox[\textwidth]{%
+		\vspace{.1cm}
+		\begin{minipage}[t][1cm]{.84\textwidth}
+			\ifbeamer@plainframe%
+			\Large\insertframetitle%
+			\else
+			\Large\insertframetitle%
+			\ifx\insertframesubtitle\empty
+			\else
+			\\ \small \insertframesubtitle
+			\fi
+			\fi
+		\end{minipage}
+		
+		\hfill
+	
+		\ifstrequal{FALSE}{FALSE}{}{\begin{minipage}[t][1cm]{1.9cm}\includegraphics[height=1cm,keepaspectratio=true,valign=t, right]{FALSE}\end{minipage}\vspace{-.3cm}}
+		
+	} % close makebox to have the header in one row
+	
 }
 \makeatother
+
+%%\ifstrequal{FALSE}{FALSE}{}{\includegraphics[width=2cm,keepaspectratio=true, valign=t]{FALSE}\vspace{-.3cm}}
+%    
+
+
 
 % Footer
 \setbeamercolor{footlinecolor}{bg=dueblue,fg=white}
@@ -472,16 +630,15 @@
 \begin{document}
 
 
-      {\usebackgroundtemplate{\includegraphics[scale=0.25]{"C:/Users/Yannick.Hoga/AppData/Local/R/win-library/4.3/runidue/rmarkdown/templates/lectureslides/resources/duetower"}}
+      {\usebackgroundtemplate{\includegraphics[scale=0.25]{"C:/Users/Vineet.Dairashri/AppData/Local/R/win-library/4.3/runidue/rmarkdown/templates/lectureslides/resources/duetower"}}
     \frame[plain]{\titlepage}}
   
 
 % 
-\hypertarget{einfuxfchrung}{%
-\section{Einführung}\label{einfuxfchrung}}
+\section{Einführung}\label{einfuxfchrung}
 
 \begin{frame}{Überblick}
-\protect\hypertarget{uxfcberblick}{}
+\phantomsection\label{uxfcberblick}
 \begin{itemize}
 \tightlist
 \item
@@ -494,7 +651,7 @@
 \end{frame}
 
 \begin{frame}{Details zur Veranstaltung}
-\protect\hypertarget{details-zur-veranstaltung}{}
+\phantomsection\label{details-zur-veranstaltung}
 \begin{itemize}
 \tightlist
 \item
@@ -520,7 +677,7 @@
 \end{frame}
 
 \begin{frame}[fragile]{Ressourcen}
-\protect\hypertarget{ressourcen}{}
+\phantomsection\label{ressourcen}
 \begin{itemize}
 \item
   \hil{Literatur:}
@@ -566,12 +723,12 @@
 \end{frame}
 
 \begin{frame}{F \& A}
-\protect\hypertarget{f-a}{}
+\phantomsection\label{f-a}
 \centerline{Spezielle Fragen?}
 \end{frame}
 
 \begin{frame}{Überblick}
-\protect\hypertarget{uxfcberblick-1}{}
+\phantomsection\label{uxfcberblick-1}
 \begin{itemize}
 \tightlist
 \item
@@ -584,7 +741,7 @@
 \end{frame}
 
 \begin{frame}{Was ist Ökonometrie und wofür brauchen wir sie?}
-\protect\hypertarget{was-ist-uxf6konometrie-und-wofuxfcr-brauchen-wir-sie}{}
+\phantomsection\label{was-ist-uxf6konometrie-und-wofuxfcr-brauchen-wir-sie}
 \begin{itemize}
 \tightlist
 \item
@@ -625,7 +782,7 @@
 \end{frame}
 
 \begin{frame}{Was ist Ökonometrie und wofür brauchen wir sie?}
-\protect\hypertarget{was-ist-uxf6konometrie-und-wofuxfcr-brauchen-wir-sie-1}{}
+\phantomsection\label{was-ist-uxf6konometrie-und-wofuxfcr-brauchen-wir-sie-1}
 \begin{itemize}
 \item
   Allerdings sollen solche Aussagen typischerweise \hil{ceteris paribus}
@@ -665,7 +822,7 @@
 \end{frame}
 
 \begin{frame}{Was ist Ökonometrie und wofür brauchen wir sie?}
-\protect\hypertarget{was-ist-uxf6konometrie-und-wofuxfcr-brauchen-wir-sie-2}{}
+\phantomsection\label{was-ist-uxf6konometrie-und-wofuxfcr-brauchen-wir-sie-2}
 \framesubtitle{DAG Dünger}
 
 \footnotesize
@@ -681,7 +838,7 @@
 \end{frame}
 
 \begin{frame}{Was ist Ökonometrie und wofür brauchen wir sie?}
-\protect\hypertarget{was-ist-uxf6konometrie-und-wofuxfcr-brauchen-wir-sie-3}{}
+\phantomsection\label{was-ist-uxf6konometrie-und-wofuxfcr-brauchen-wir-sie-3}
 \begin{itemize}
 \tightlist
 \item
@@ -718,7 +875,7 @@
 \end{frame}
 
 \begin{frame}{Was ist Ökonometrie und wofür brauchen wir sie?}
-\protect\hypertarget{was-ist-uxf6konometrie-und-wofuxfcr-brauchen-wir-sie-4}{}
+\phantomsection\label{was-ist-uxf6konometrie-und-wofuxfcr-brauchen-wir-sie-4}
 \framesubtitle{DAG Lohnregression}
 
 \begin{itemize}
@@ -740,7 +897,7 @@
 \end{frame}
 
 \begin{frame}{Gesundheitsökonomisches Beispiel}
-\protect\hypertarget{gesundheitsuxf6konomisches-beispiel}{}
+\phantomsection\label{gesundheitsuxf6konomisches-beispiel}
 \begin{itemize}
 \tightlist
 \item
@@ -782,7 +939,7 @@ Sample Size     &    8.114 & 1.281 \\
 \end{frame}
 
 \begin{frame}{Gesundheitsökonomisches Beispiel}
-\protect\hypertarget{gesundheitsuxf6konomisches-beispiel-1}{}
+\phantomsection\label{gesundheitsuxf6konomisches-beispiel-1}
 \begin{itemize}
 \tightlist
 \item
@@ -814,7 +971,7 @@ Sample Size     &    8.114 & 1.281 \\
 \end{frame}
 
 \begin{frame}{Gesundheitsökonomisches Beispiel}
-\protect\hypertarget{gesundheitsuxf6konomisches-beispiel-2}{}
+\phantomsection\label{gesundheitsuxf6konomisches-beispiel-2}
 \begin{itemize}
 \tightlist
 \item
@@ -844,7 +1001,7 @@ Sample Size     &    8.114 & 1.281 \\
 
 \begin{itemize}
   
-  \item Betrachte 2 (hypothethische) Studierende am MIT in Boston.
+  \item Betrachte 2 (hypothetische) Studierende am MIT in Boston.
   \item Gesunde \alert{Maria} und kränkelnder \alert{Khuzdar} mit $Y_{Maria}(1)=Y_{Maria}(0)=5$ und $Y_{Khuzdar}(1)=4$ und $Y_{Khuzdar}(0)=3$, so dass individuelle kausale Effekte
 \begin{align*}
   Y_{Maria}(1)-Y_{Maria}(0)&=0,\\
@@ -857,7 +1014,7 @@ Sample Size     &    8.114 & 1.281 \\
 \end{frame}
 
 \begin{frame}{Gesundheitsökonomisches Beispiel}
-\protect\hypertarget{gesundheitsuxf6konomisches-beispiel-3}{}
+\phantomsection\label{gesundheitsuxf6konomisches-beispiel-3}
 \xmpl[*]
 
 \begin{table}[t!]
@@ -891,7 +1048,7 @@ Individueller kausaler Effekt $Y(1)-Y(0)$)    &  1 & 0 \\
 \end{frame}
 
 \begin{frame}{Gesundheitsökonomisches Beispiel}
-\protect\hypertarget{gesundheitsuxf6konomisches-beispiel-4}{}
+\phantomsection\label{gesundheitsuxf6konomisches-beispiel-4}
 \begin{itemize}
 \tightlist
 \item
@@ -917,7 +1074,7 @@ Individueller kausaler Effekt $Y(1)-Y(0)$)    &  1 & 0 \\
 \end{frame}
 
 \begin{frame}{Ziel der Veranstaltung}
-\protect\hypertarget{ziel-der-veranstaltung}{}
+\phantomsection\label{ziel-der-veranstaltung}
 \begin{itemize}
 \tightlist
 \item
@@ -950,7 +1107,7 @@ Individueller kausaler Effekt $Y(1)-Y(0)$)    &  1 & 0 \\
 \end{frame}
 
 \begin{frame}{Überblick}
-\protect\hypertarget{uxfcberblick-2}{}
+\phantomsection\label{uxfcberblick-2}
 \begin{itemize}
 \tightlist
 \item
@@ -963,7 +1120,7 @@ Individueller kausaler Effekt $Y(1)-Y(0)$)    &  1 & 0 \\
 \end{frame}
 
 \begin{frame}{Wiederholung}
-\protect\hypertarget{wiederholung}{}
+\phantomsection\label{wiederholung}
 \begin{itemize}
 \tightlist
 \item
@@ -982,7 +1139,7 @@ Individueller kausaler Effekt $Y(1)-Y(0)$)    &  1 & 0 \\
 \end{frame}
 
 \begin{frame}{Zufallsvariable}
-\protect\hypertarget{zufallsvariable}{}
+\phantomsection\label{zufallsvariable}
 \begin{itemize}
 \tightlist
 \item
@@ -1028,7 +1185,7 @@ Individueller kausaler Effekt $Y(1)-Y(0)$)    &  1 & 0 \\
 \end{frame}
 
 \begin{frame}{Zufallsvariable}
-\protect\hypertarget{zufallsvariable-1}{}
+\phantomsection\label{zufallsvariable-1}
 \xmpl[Löhne aus dem US CPS]
 
 \begin{itemize}
@@ -1049,7 +1206,7 @@ Individueller kausaler Effekt $Y(1)-Y(0)$)    &  1 & 0 \\
 \end{frame}
 
 \begin{frame}{Momente}
-\protect\hypertarget{momente}{}
+\phantomsection\label{momente}
 \begin{itemize}
 \tightlist
 \item
@@ -1090,7 +1247,7 @@ Individueller kausaler Effekt $Y(1)-Y(0)$)    &  1 & 0 \\
 \end{frame}
 
 \begin{frame}{Momente}
-\protect\hypertarget{momente-1}{}
+\phantomsection\label{momente-1}
 \framesubtitle{Rechenregeln}
 
 \thmn\label{eq:mom} Seien \(X\) und \(Y\) zwei Zufallsvariablen und
@@ -1115,7 +1272,7 @@ Individueller kausaler Effekt $Y(1)-Y(0)$)    &  1 & 0 \\
 \end{frame}
 
 \begin{frame}{Gemeinsame Verteilung}
-\protect\hypertarget{gemeinsame-verteilung}{}
+\phantomsection\label{gemeinsame-verteilung}
 \begin{itemize}
 \tightlist
 \item
@@ -1135,7 +1292,7 @@ Individueller kausaler Effekt $Y(1)-Y(0)$)    &  1 & 0 \\
 \end{frame}
 
 \begin{frame}{Bedingte Verteilung}
-\protect\hypertarget{bedingte-verteilung}{}
+\phantomsection\label{bedingte-verteilung}
 \begin{itemize}
 \tightlist
 \item
@@ -1165,7 +1322,7 @@ Individueller kausaler Effekt $Y(1)-Y(0)$)    &  1 & 0 \\
 \end{frame}
 
 \begin{frame}{Bedingte Verteilung}
-\protect\hypertarget{bedingte-verteilung-1}{}
+\phantomsection\label{bedingte-verteilung-1}
 \xmpl[Löhne aus dem US CPS]
 
 \begin{itemize}
@@ -1187,7 +1344,7 @@ Individueller kausaler Effekt $Y(1)-Y(0)$)    &  1 & 0 \\
 \end{frame}
 
 \begin{frame}{Bedingte Momente}
-\protect\hypertarget{bedingte-momente}{}
+\phantomsection\label{bedingte-momente}
 \begin{itemize}
 \tightlist
 \item
@@ -1208,7 +1365,7 @@ Individueller kausaler Effekt $Y(1)-Y(0)$)    &  1 & 0 \\
 \end{frame}
 
 \begin{frame}{Bedingte Momente}
-\protect\hypertarget{bedingte-momente-1}{}
+\phantomsection\label{bedingte-momente-1}
 \begin{itemize}
 \tightlist
 \item
@@ -1229,7 +1386,7 @@ Individueller kausaler Effekt $Y(1)-Y(0)$)    &  1 & 0 \\
 \end{frame}
 
 \begin{frame}{Bedingte Momente}
-\protect\hypertarget{bedingte-momente-2}{}
+\phantomsection\label{bedingte-momente-2}
 \xmpl[Löhne aus dem US CPS]
 
 \begin{itemize}
@@ -1256,14 +1413,14 @@ Individueller kausaler Effekt $Y(1)-Y(0)$)    &  1 & 0 \\
 \end{frame}
 
 \begin{frame}{Bedingte Momente}
-\protect\hypertarget{bedingte-momente-3}{}
+\phantomsection\label{bedingte-momente-3}
 \footnotesize
 \begin{center}\includegraphics{Resources/Plots/wage3-1} \end{center}
 \normalsize
 \end{frame}
 
 \begin{frame}{Bedingte Momente}
-\protect\hypertarget{bedingte-momente-4}{}
+\phantomsection\label{bedingte-momente-4}
 \xmpl[Löhne aus dem US CPS]
 
 \begin{itemize}
@@ -1293,7 +1450,7 @@ Individueller kausaler Effekt $Y(1)-Y(0)$)    &  1 & 0 \\
 \end{frame}
 
 \begin{frame}{Bedingte Momente}
-\protect\hypertarget{bedingte-momente-5}{}
+\phantomsection\label{bedingte-momente-5}
 \footnotesize
 \begin{center}\includegraphics{Resources/Plots/wage4-1} \end{center}
 \normalsize
@@ -1311,7 +1468,7 @@ Labor market experience (years)\,\,\qquad\qquad Log dollars per hour
 \end{frame}
 
 \begin{frame}{Bedingte Momente}
-\protect\hypertarget{bedingte-momente-6}{}
+\phantomsection\label{bedingte-momente-6}
 \framesubtitle{Rechenregeln}
 
 \begin{itemize}
@@ -1347,7 +1504,7 @@ Zufallsvariablen und \(a,b\in\mathbb{R}\). Dann gelten:
 \end{frame}
 
 \begin{frame}{Eigenschaften der bedingten Erwartung}
-\protect\hypertarget{eigenschaften-der-bedingten-erwartung}{}
+\phantomsection\label{eigenschaften-der-bedingten-erwartung}
 \thmn[\hil{Gesetz vom iterierten Erwartungswert (GIE)}]Wenn
 \(\E|Y|<\infty\), dann gilt für jede ZV \(X\)
 \begin{equation}\label{eq:GIE}
@@ -1373,7 +1530,7 @@ Zufallsvariablen und \(a,b\in\mathbb{R}\). Dann gelten:
 \end{frame}
 
 \begin{frame}{Eigenschaften der bedingten Erwartung}
-\protect\hypertarget{eigenschaften-der-bedingten-erwartung-1}{}
+\phantomsection\label{eigenschaften-der-bedingten-erwartung-1}
 \begin{itemize}
 \tightlist
 \item
@@ -1400,18 +1557,17 @@ Funktionen \(h(\cdot)\) \begin{equation}\label{eq:pull out}
 \end{equation} \endthmn
 \end{frame}
 
-\hypertarget{regression-projektion-und-kausalituxe4t}{%
 \section{Regression, Projektion und
-Kausalität}\label{regression-projektion-und-kausalituxe4t}}
+Kausalität}\label{regression-projektion-und-kausalituxe4t}
 
 \begin{frame}{}
-\protect\hypertarget{section}{}
+\phantomsection\label{section}
 \centerline{\textbf{Regression, Projektion und Kausalität}}
 \centerline{(Hansen, 2022, Kapitel 2)}
 \end{frame}
 
 \begin{frame}{Überblick}
-\protect\hypertarget{uxfcberblick-3}{}
+\phantomsection\label{uxfcberblick-3}
 \begin{itemize}
 \tightlist
 \item
@@ -1426,7 +1582,7 @@ Kausalität}\label{regression-projektion-und-kausalituxe4t}}
 \end{frame}
 
 \begin{frame}{Bedingte Erwartung und Prognose}
-\protect\hypertarget{bedingte-erwartung-und-prognose}{}
+\phantomsection\label{bedingte-erwartung-und-prognose}
 \begin{itemize}
 \tightlist
 \item
@@ -1470,7 +1626,7 @@ Kausalität}\label{regression-projektion-und-kausalituxe4t}}
 \end{frame}
 
 \begin{frame}{Optimale Vorhersage}
-\protect\hypertarget{optimale-vorhersage}{}
+\phantomsection\label{optimale-vorhersage}
 \begin{itemize}
 \tightlist
 \item
@@ -1504,7 +1660,7 @@ Kausalität}\label{regression-projektion-und-kausalituxe4t}}
 \end{frame}
 
 \begin{frame}{Optimales \(g\)?}
-\protect\hypertarget{optimales-g}{}
+\phantomsection\label{optimales-g}
 \begin{itemize}
 \tightlist
 \item
@@ -1543,7 +1699,7 @@ gegeben \(X\). \endthmn
 \end{frame}
 
 \begin{frame}{Eigenschaften des Regressionsfehlers}
-\protect\hypertarget{eigenschaften-des-regressionsfehlers}{}
+\phantomsection\label{eigenschaften-des-regressionsfehlers}
 \begin{itemize}
 \tightlist
 \item
@@ -1564,7 +1720,7 @@ gegeben \(X\). \endthmn
 \end{frame}
 
 \begin{frame}{}
-\protect\hypertarget{section-1}{}
+\phantomsection\label{section-1}
 \begin{proof}[Beweis von Theorem \ref{thm:Opt Cond Exp}]
 Für beliebiges $g$ ergibt sich der MQF zu
 \begin{align*}
@@ -1582,7 +1738,7 @@ wobei wir ausgenutzt haben, dass
 \end{frame}
 
 \begin{frame}{Bedingtes Erwartungswertmodell}
-\protect\hypertarget{bedingtes-erwartungswertmodell}{}
+\phantomsection\label{bedingtes-erwartungswertmodell}
 \begin{itemize}
 \tightlist
 \item
@@ -1601,7 +1757,7 @@ wobei wir ausgenutzt haben, dass
 \end{frame}
 
 \begin{frame}{Beispiel}
-\protect\hypertarget{beispiel}{}
+\phantomsection\label{beispiel}
 \framesubtitle{Linearität entsteht oft ganz  natürlich...}
 
 \xmpl[Bivariate Normalverteilung]\label{ex:Biv Norm}
@@ -1622,7 +1778,7 @@ wobei $\rho$ die Korrelation zwischen $X$ und $Y$ bezeichnet.
 \end{frame}
 
 \begin{frame}{Verschiedene Perspektiven}
-\protect\hypertarget{verschiedene-perspektiven}{}
+\phantomsection\label{verschiedene-perspektiven}
 \begin{itemize}
 \item
   Standard Ökonometrie Lehrbücher: Nehmen an, dass \[
@@ -1635,7 +1791,7 @@ wobei $\rho$ die Korrelation zwischen $X$ und $Y$ bezeichnet.
 \end{frame}
 
 \begin{frame}{Überblick}
-\protect\hypertarget{uxfcberblick-4}{}
+\phantomsection\label{uxfcberblick-4}
 \begin{itemize}
 \tightlist
 \item
@@ -1650,7 +1806,7 @@ wobei $\rho$ die Korrelation zwischen $X$ und $Y$ bezeichnet.
 \end{frame}
 
 \begin{frame}{Lineare Projektion}
-\protect\hypertarget{lineare-projektion}{}
+\phantomsection\label{lineare-projektion}
 \begin{itemize}
 \tightlist
 \item
@@ -1680,7 +1836,7 @@ wobei $\rho$ die Korrelation zwischen $X$ und $Y$ bezeichnet.
 \end{frame}
 
 \begin{frame}{Lineare Projektionskoeffizienten}
-\protect\hypertarget{lineare-projektionskoeffizienten}{}
+\phantomsection\label{lineare-projektionskoeffizienten}
 \begin{itemize}
 \tightlist
 \item
@@ -1715,7 +1871,7 @@ wobei $\rho$ die Korrelation zwischen $X$ und $Y$ bezeichnet.
 \end{frame}
 
 \begin{frame}{BLP und Projektionsfehler}
-\protect\hypertarget{blp-und-projektionsfehler}{}
+\phantomsection\label{blp-und-projektionsfehler}
 \begin{itemize}
 \tightlist
 \item
@@ -1749,7 +1905,7 @@ wobei $\rho$ die Korrelation zwischen $X$ und $Y$ bezeichnet.
 \end{frame}
 
 \begin{frame}{Lineares Projektionsmodell}
-\protect\hypertarget{lineares-projektionsmodell}{}
+\phantomsection\label{lineares-projektionsmodell}
 \defn[Lineares Projektionsmodell]Das Modell \begin{align*}
   Y &= X^\prime\vbeta + e,\\
   \E[X e ] &=\vzero,\\
@@ -1779,7 +1935,7 @@ wobei $\rho$ die Korrelation zwischen $X$ und $Y$ bezeichnet.
 \end{frame}
 
 \begin{frame}{Beispiel}
-\protect\hypertarget{beispiel-1}{}
+\phantomsection\label{beispiel-1}
 \xmpl[Vergleich: Projektion \& bedingter EW]
 
 \begin{itemize}
@@ -1803,14 +1959,14 @@ da $X$ und $X^2$ wegen der Normalverteilungsannahme unkorreliert sind.
 \end{frame}
 
 \begin{frame}{Beispiel}
-\protect\hypertarget{beispiel-2}{}
+\phantomsection\label{beispiel-2}
 \footnotesize
 \begin{center}\includegraphics{Resources/Plots/ProjExp-1} \end{center}
 \normalsize
 \end{frame}
 
 \begin{frame}{Weitere Interpretation des BLP}
-\protect\hypertarget{weitere-interpretation-des-blp}{}
+\phantomsection\label{weitere-interpretation-des-blp}
 \begin{itemize}
 \tightlist
 \item
@@ -1841,7 +1997,7 @@ da $X$ und $X^2$ wegen der Normalverteilungsannahme unkorreliert sind.
 \end{frame}
 
 \begin{frame}{Überblick}
-\protect\hypertarget{uxfcberblick-5}{}
+\phantomsection\label{uxfcberblick-5}
 \begin{itemize}
 \tightlist
 \item
@@ -1856,7 +2012,7 @@ da $X$ und $X^2$ wegen der Normalverteilungsannahme unkorreliert sind.
 \end{frame}
 
 \begin{frame}{Potential Outcomes Framework}
-\protect\hypertarget{potential-outcomes-framework}{}
+\phantomsection\label{potential-outcomes-framework}
 \xmpl[Lohnregression]
 
 \begin{itemize}
@@ -1882,12 +2038,12 @@ da $X$ und $X^2$ wegen der Normalverteilungsannahme unkorreliert sind.
   \end{enumerate}
 \item
   Also führen wir nun das \hil{Potential Outcomes Framework} von Rubin
-  (1974) ein\ldots{}
+  (\citeproc{ref-Rub74}{1974}) ein\ldots{}
 \end{itemize}
 \end{frame}
 
 \begin{frame}{Potential Outcomes Framework}
-\protect\hypertarget{potential-outcomes-framework-1}{}
+\phantomsection\label{potential-outcomes-framework-1}
 \begin{itemize}
 \tightlist
 \item
@@ -1913,7 +2069,7 @@ Auf Englisch bezeichnen wir diesen als
 \end{frame}
 
 \begin{frame}{Potential Outcomes Framework}
-\protect\hypertarget{potential-outcomes-framework-2}{}
+\phantomsection\label{potential-outcomes-framework-2}
 \begin{itemize}
 \tightlist
 \item
@@ -1945,7 +2101,7 @@ Auf Englisch bezeichnen wir diesen als
 \end{frame}
 
 \begin{frame}{Schätzung des ATE}
-\protect\hypertarget{schuxe4tzung-des-ate}{}
+\phantomsection\label{schuxe4tzung-des-ate}
 \begin{itemize}
 \tightlist
 \item
@@ -1976,7 +2132,7 @@ statistisch \alert{unabhängig} von \(u\). \endass
 \end{frame}
 
 \begin{frame}{Schätzung des ATE}
-\protect\hypertarget{schuxe4tzung-des-ate-1}{}
+\phantomsection\label{schuxe4tzung-des-ate-1}
 \xmpl[Lohnregression]
 
 \begin{itemize}
@@ -1994,7 +2150,7 @@ statistisch \alert{unabhängig} von \(u\). \endass
 \end{frame}
 
 \begin{frame}{Erweiterung unseres Frameworks}
-\protect\hypertarget{erweiterung-unseres-frameworks}{}
+\phantomsection\label{erweiterung-unseres-frameworks}
 \begin{itemize}
 \tightlist
 \item
@@ -2027,7 +2183,7 @@ gegeben \(X=x\) ist \[
 \end{frame}
 
 \begin{frame}{Bedingte Unabhängigkeitsannahme}
-\protect\hypertarget{bedingte-unabhuxe4ngigkeitsannahme}{}
+\phantomsection\label{bedingte-unabhuxe4ngigkeitsannahme}
 \begin{itemize}
 \tightlist
 \item
@@ -2058,7 +2214,7 @@ gegeben \(X=x\) ist \[
 \end{frame}
 
 \begin{frame}{Verbindung \(ATE(x)\) und BEF \(m(d,x)\)}
-\protect\hypertarget{verbindung-atex-und-bef-mdx}{}
+\phantomsection\label{verbindung-atex-und-bef-mdx}
 \begin{itemize}
 \tightlist
 \item
@@ -2085,7 +2241,7 @@ gegeben \(X=x\) ist \[
 \end{frame}
 
 \begin{frame}{Verbindung \(ATE(x)\) und BEF \(m(d,x)\)}
-\protect\hypertarget{verbindung-atex-und-bef-mdx-1}{}
+\phantomsection\label{verbindung-atex-und-bef-mdx-1}
 \begin{itemize}
 \tightlist
 \item
@@ -2120,7 +2276,7 @@ der Behandlung der bedingte ATE ist: \[
 \end{frame}
 
 \begin{frame}{Verbindung \(ATE(x)\) und BEF \(m(d,x)\)}
-\protect\hypertarget{verbindung-atex-und-bef-mdx-2}{}
+\phantomsection\label{verbindung-atex-und-bef-mdx-2}
 \framesubtitle{Stetige Behandlung}
 
 \begin{itemize}
@@ -2155,7 +2311,7 @@ ATE ist: \[
 \end{frame}
 
 \begin{frame}{Verbindung \(ATE(x)\) und BEF \(m(d,x)\)}
-\protect\hypertarget{verbindung-atex-und-bef-mdx-3}{}
+\phantomsection\label{verbindung-atex-und-bef-mdx-3}
 \framesubtitle{Der additiv separable Fall}
 
 \begin{itemize}
@@ -2189,7 +2345,7 @@ ATE ist: \[
 \end{frame}
 
 \begin{frame}{Verbindung \(ATE(x)\) und Regressionskoeffizienten}
-\protect\hypertarget{verbindung-atex-und-regressionskoeffizienten}{}
+\phantomsection\label{verbindung-atex-und-regressionskoeffizienten}
 \framesubtitle{Lineares Modell}
 
 \begin{itemize}
@@ -2217,7 +2373,7 @@ Aus vorheriger Folie:
 \end{frame}
 
 \begin{frame}{Beispiel: BEF und ATE}
-\protect\hypertarget{beispiel-bef-und-ate}{}
+\phantomsection\label{beispiel-bef-und-ate}
 \framesubtitle{BUA ist keine Selbstverständlichkeit}
 
 \xmpl[Cobb--Douglas Produktionsfunktion]
@@ -2242,7 +2398,7 @@ Aus vorheriger Folie:
 \end{frame}
 
 \begin{frame}{Beispiel: BEF und ATE}
-\protect\hypertarget{beispiel-bef-und-ate-1}{}
+\phantomsection\label{beispiel-bef-und-ate-1}
 \xmpl[*]
 
 \begin{itemize}
@@ -2264,7 +2420,7 @@ Aus vorheriger Folie:
 \end{frame}
 
 \begin{frame}{Überblick}
-\protect\hypertarget{uxfcberblick-6}{}
+\phantomsection\label{uxfcberblick-6}
 \begin{itemize}
 \tightlist
 \item
@@ -2279,7 +2435,7 @@ Aus vorheriger Folie:
 \end{frame}
 
 \begin{frame}{Zusammenhänge in Kürze}
-\protect\hypertarget{zusammenhuxe4nge-in-kuxfcrze}{}
+\phantomsection\label{zusammenhuxe4nge-in-kuxfcrze}
 \framesubtitle{BEF und BLP}
 
 \begin{itemize}
@@ -2309,7 +2465,7 @@ Aus vorheriger Folie:
 \end{frame}
 
 \begin{frame}{Zusammenhänge in Kürze}
-\protect\hypertarget{zusammenhuxe4nge-in-kuxfcrze-1}{}
+\phantomsection\label{zusammenhuxe4nge-in-kuxfcrze-1}
 \framesubtitle{BEF und ATE}
 
 \begin{itemize}
@@ -2338,7 +2494,7 @@ Aus vorheriger Folie:
 \end{frame}
 
 \begin{frame}{Warnung}
-\protect\hypertarget{warnung}{}
+\phantomsection\label{warnung}
 \xmpl[Von Regen und Regenschirmen]
 
 \begin{itemize}
@@ -2367,7 +2523,7 @@ Aus vorheriger Folie:
 \end{frame}
 
 \begin{frame}{Drei Interpretationen}
-\protect\hypertarget{drei-interpretationen}{}
+\phantomsection\label{drei-interpretationen}
 Ein lineares Modell der Form \[
   Y=X^\prime\vbeta+\varepsilon
 \] kann auf \alert{drei Arten} interpretiert werden (von allgemein zu
@@ -2393,17 +2549,16 @@ benennen alles mit \(e\)! (b) Keine unterschiedliche Notation für \(X\)
 und \(D\) -- alles wird in \(X\) subsumiert.
 \end{frame}
 
-\hypertarget{lineare-regression}{%
-\section{Lineare Regression}\label{lineare-regression}}
+\section{Lineare Regression}\label{lineare-regression}
 
 \begin{frame}{}
-\protect\hypertarget{section-2}{}
+\phantomsection\label{section-2}
 \centerline{\textbf{Lineare Regression}}
 \centerline{(Hansen, 2022, Kapitel 3)}
 \end{frame}
 
 \begin{frame}{Das lineare Modell}
-\protect\hypertarget{das-lineare-modell}{}
+\phantomsection\label{das-lineare-modell}
 \begin{itemize}
 \tightlist
 \item
@@ -2433,7 +2588,7 @@ und \(D\) -- alles wird in \(X\) subsumiert.
 \end{frame}
 
 \begin{frame}{Überblick}
-\protect\hypertarget{uxfcberblick-7}{}
+\phantomsection\label{uxfcberblick-7}
 \begin{itemize}
 \tightlist
 \item
@@ -2448,7 +2603,7 @@ und \(D\) -- alles wird in \(X\) subsumiert.
 \end{frame}
 
 \begin{frame}{KQ Schätzer}
-\protect\hypertarget{kq-schuxe4tzer}{}
+\phantomsection\label{kq-schuxe4tzer}
 \begin{itemize}
 \tightlist
 \item
@@ -2477,7 +2632,7 @@ identisch verteilte Ziehungen aus einer gemeinsamen Verteilung \(F\).
 \end{frame}
 
 \begin{frame}{KQ Schätzer}
-\protect\hypertarget{kq-schuxe4tzer-1}{}
+\phantomsection\label{kq-schuxe4tzer-1}
 \begin{itemize}
 \tightlist
 \item
@@ -2499,55 +2654,56 @@ ist, dann ist der KQ Schätzer \alert{eindeutig} und gleich \[
 \end{frame}
 
 \begin{frame}{Visualisierung KQ Schätzer}
-\protect\hypertarget{visualisierung-kq-schuxe4tzer}{}
+\phantomsection\label{visualisierung-kq-schuxe4tzer}
 \footnotesize
 \begin{center}\includegraphics{Resources/Plots/KQIllu1-1} \end{center}
 \normalsize
 \end{frame}
 
 \begin{frame}{Visualisierung KQ Schätzer}
-\protect\hypertarget{visualisierung-kq-schuxe4tzer-1}{}
+\phantomsection\label{visualisierung-kq-schuxe4tzer-1}
 \footnotesize
 \begin{center}\includegraphics{Resources/Plots/KQIllu2-1} \end{center}
 \normalsize
 \end{frame}
 
 \begin{frame}{Visualisierung KQ Schätzer}
-\protect\hypertarget{visualisierung-kq-schuxe4tzer-2}{}
+\phantomsection\label{visualisierung-kq-schuxe4tzer-2}
 \footnotesize
 \begin{center}\includegraphics{Resources/Plots/KQIllu3-1} \end{center}
 \normalsize
 \end{frame}
 
 \begin{frame}{Visualisierung KQ Schätzer}
-\protect\hypertarget{visualisierung-kq-schuxe4tzer-3}{}
+\phantomsection\label{visualisierung-kq-schuxe4tzer-3}
 \footnotesize
 \begin{center}\includegraphics{Resources/Plots/KQIllu4-1} \end{center}
 \normalsize
 \end{frame}
 
 \begin{frame}{Visualisierung KQ Schätzer}
-\protect\hypertarget{visualisierung-kq-schuxe4tzer-4}{}
+\phantomsection\label{visualisierung-kq-schuxe4tzer-4}
 \footnotesize
 \begin{center}\includegraphics{Resources/Plots/KQIllu5-1} \end{center}
 \normalsize
 \end{frame}
 
 \begin{frame}{Visualisierung KQ Schätzer}
-\protect\hypertarget{visualisierung-kq-schuxe4tzer-5}{}
+\phantomsection\label{visualisierung-kq-schuxe4tzer-5}
 \footnotesize
 \begin{center}\includegraphics{Resources/Plots/KQIllu6-1} \end{center}
 \normalsize
 \end{frame}
 
 \begin{frame}{KQ Schätzer in \R}
-\protect\hypertarget{kq-schuxe4tzer-in}{}
+\phantomsection\label{kq-schuxe4tzer-in}
 \xmpl[Card (1995)]\label{ex:Card}
 
 \begin{itemize}
 \tightlist
 \item
-  Betrachten Sie die Lohnregression von Card (1995) \[
+  Betrachten Sie die Lohnregression von Card
+  (\citeproc{ref-Car95}{1995}) \[
    \log(wage) = \beta_0+\beta_1\cdot educ + e.
    \]
 
@@ -2583,7 +2739,7 @@ ist, dann ist der KQ Schätzer \alert{eindeutig} und gleich \[
 \end{frame}
 
 \begin{frame}[fragile]{KQ Schätzer in \R}
-\protect\hypertarget{kq-schuxe4tzer-in-1}{}
+\phantomsection\label{kq-schuxe4tzer-in-1}
 \footnotesize
 
 \begin{Shaded}
@@ -2611,7 +2767,7 @@ ist, dann ist der KQ Schätzer \alert{eindeutig} und gleich \[
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 ## 
 ## Residual standard error: 0.421 on 3008 degrees of freedom
-##   (603 observations deleted due to missingness)
+##   (603 Beobachtungen als fehlend gelöscht)
 ## Multiple R-squared:  0.0987, Adjusted R-squared:  0.0984 
 ## F-statistic:  330 on 1 and 3008 DF,  p-value: <2e-16
 \end{verbatim}
@@ -2620,7 +2776,7 @@ ist, dann ist der KQ Schätzer \alert{eindeutig} und gleich \[
 \end{frame}
 
 \begin{frame}[fragile]{KQ Schätzer in \R}
-\protect\hypertarget{kq-schuxe4tzer-in-2}{}
+\phantomsection\label{kq-schuxe4tzer-in-2}
 \footnotesize
 
 \begin{Shaded}
@@ -2635,7 +2791,7 @@ ist, dann ist der KQ Schätzer \alert{eindeutig} und gleich \[
 \end{frame}
 
 \begin{frame}{Matrixnotation}
-\protect\hypertarget{matrixnotation}{}
+\phantomsection\label{matrixnotation}
 \begin{itemize}
 \tightlist
 \item
@@ -2657,7 +2813,7 @@ ist, dann ist der KQ Schätzer \alert{eindeutig} und gleich \[
 \end{frame}
 
 \begin{frame}{Positive Definitheit}
-\protect\hypertarget{positive-definitheit}{}
+\phantomsection\label{positive-definitheit}
 \begin{itemize}
 \tightlist
 \item
@@ -2673,7 +2829,7 @@ ist, dann ist der KQ Schätzer \alert{eindeutig} und gleich \[
   \end{equation}
 \item
   Vollen Rang zu haben heißt, dass die Spalten von
-  \(\mX=(\vx_1\,|\, \ldots\,|\, \vx_k)=\) linear unabhängig sind (siehe
+  \(\mX=(\vx_1\,|\, \ldots\,|\,  \vx_k)=\) linear unabhängig sind (siehe
   Definition~\zref{S-linindep}), d.h. \[
   \sum_{i=1}^{k}c_i\vx_i=\vzero\qquad\Longrightarrow\qquad c_1=\ldots=c_k=0.
   \]
@@ -2689,7 +2845,7 @@ ist, dann ist der KQ Schätzer \alert{eindeutig} und gleich \[
 \end{frame}
 
 \begin{frame}{Positive Definitheit}
-\protect\hypertarget{positive-definitheit-1}{}
+\phantomsection\label{positive-definitheit-1}
 \xmpl
 \begin{itemize}
 \item Betrachte das volle \hil{Dummy-Variablen} Modell:
@@ -2719,7 +2875,7 @@ so dass $\beta_1+\beta_3=$ Durchschnittslohn von Frauen.
 \end{frame}
 
 \begin{frame}{Überblick}
-\protect\hypertarget{uxfcberblick-8}{}
+\phantomsection\label{uxfcberblick-8}
 \begin{itemize}
 \tightlist
 \item
@@ -2735,7 +2891,7 @@ so dass $\beta_1+\beta_3=$ Durchschnittslohn von Frauen.
 \end{frame}
 
 \begin{frame}{Terminologie}
-\protect\hypertarget{terminologie}{}
+\phantomsection\label{terminologie}
 \begin{itemize}
 \tightlist
 \item
@@ -2766,7 +2922,7 @@ so dass $\beta_1+\beta_3=$ Durchschnittslohn von Frauen.
 \end{frame}
 
 \begin{frame}{Visualisierung in \R}
-\protect\hypertarget{visualisierung-in}{}
+\phantomsection\label{visualisierung-in}
 \framesubtitle{Lineare Projektion von Baumvolumen auf Umfang und Höhe}
 
 \footnotesize
@@ -2775,7 +2931,7 @@ so dass $\beta_1+\beta_3=$ Durchschnittslohn von Frauen.
 \end{frame}
 
 \begin{frame}{Projektionsmatrix}
-\protect\hypertarget{projektionsmatrix}{}
+\phantomsection\label{projektionsmatrix}
 \thmn[Eigenschaften von $\mP$ (Hansen, 2022, Theorem 3.3)]\label{thm:Eig P}
 Wenn \(\mX^\prime\mX\) p.d.~ist, dann gilt
 
@@ -2792,7 +2948,7 @@ Wenn \(\mX^\prime\mX\) p.d.~ist, dann gilt
 \end{frame}
 
 \begin{frame}{Projektionsmatrix}
-\protect\hypertarget{projektionsmatrix-1}{}
+\phantomsection\label{projektionsmatrix-1}
 \begin{block}{Beweis von Theorem \ref{thm:Eig P}}
 \begin{enumerate}
   \item Per Definition gilt $\mP\mX=\mX(\mX^\prime\mX)^{-1}\mX^\prime\mX=\mX$.
@@ -2817,7 +2973,7 @@ Wenn \(\mX^\prime\mX\) p.d.~ist, dann gilt
 \end{frame}
 
 \begin{frame}{Projektionsmatrix}
-\protect\hypertarget{projektionsmatrix-2}{}
+\phantomsection\label{projektionsmatrix-2}
 \xmpl[Transformierte Regressoren]
 
 \begin{itemize}
@@ -2839,7 +2995,7 @@ Wenn \(\mX^\prime\mX\) p.d.~ist, dann gilt
 \end{frame}
 
 \begin{frame}{Projektionsmatrix}
-\protect\hypertarget{projektionsmatrix-3}{}
+\phantomsection\label{projektionsmatrix-3}
 \xmpl[*]
 
 \begin{itemize}
@@ -2860,7 +3016,7 @@ Wenn \(\mX^\prime\mX\) p.d.~ist, dann gilt
 \end{frame}
 
 \begin{frame}{Residuenmachermatrix}
-\protect\hypertarget{residuenmachermatrix}{}
+\phantomsection\label{residuenmachermatrix}
 \begin{itemize}
 \tightlist
 \item
@@ -2884,7 +3040,7 @@ p.d.~ist, dann gilt
 \end{frame}
 
 \begin{frame}{Angepasste Werte und Residuen}
-\protect\hypertarget{angepasste-werte-und-residuen}{}
+\phantomsection\label{angepasste-werte-und-residuen}
 \thmn[Orthogonalität]\label{thm:ortho} Wenn \(\mX^\prime\mX\) p.d.~ist,
 dann gelten \begin{align}
   \mX^\prime\widehat{\ve}&=\vzeros,\label{eq:X e.hat}\\
@@ -2921,14 +3077,14 @@ dann gelten \begin{align}
 \end{frame}
 
 \begin{frame}{Angepasste Werte und Residuen}
-\protect\hypertarget{angepasste-werte-und-residuen-1}{}
+\phantomsection\label{angepasste-werte-und-residuen-1}
 \footnotesize
 \begin{center}\includegraphics{Resources/Plots/Illu-1} \end{center}
 \normalsize
 \end{frame}
 
 \begin{frame}{Angepasste Werte und Residuen}
-\protect\hypertarget{angepasste-werte-und-residuen-2}{}
+\phantomsection\label{angepasste-werte-und-residuen-2}
 \begin{block}{Beweis von Theorem \ref{thm:ortho}}
 \eqref{eq:X e.hat} folgt direkt aus
 \begin{eqnarray*}
@@ -2950,7 +3106,7 @@ dann gelten \begin{align}
 \end{frame}
 
 \begin{frame}{Überblick}
-\protect\hypertarget{uxfcberblick-9}{}
+\phantomsection\label{uxfcberblick-9}
 \begin{itemize}
 \tightlist
 \item
@@ -2965,7 +3121,7 @@ dann gelten \begin{align}
 \end{frame}
 
 \begin{frame}{FWL Theorem}
-\protect\hypertarget{fwl-theorem}{}
+\phantomsection\label{fwl-theorem}
 \begin{itemize}
 \tightlist
 \item
@@ -3002,7 +3158,7 @@ durch folgenden Algorithmus:
 \end{frame}
 
 \begin{frame}{FWL Theorem}
-\protect\hypertarget{fwl-theorem-1}{}
+\phantomsection\label{fwl-theorem-1}
 \begin{block}{Beweis von Theorem \ref{thm:FWL} (1/3)}
 Der KQ Schätzer aus dem Algorithmus ergibt sich nach Standard KQ Formel zu
 \begin{align}
@@ -3025,7 +3181,7 @@ Durchmultiplizieren von \eqref{eq:h0} mit $\mX_2^\prime\mM_{\mX_1}$ ergibt (ausn
 \end{frame}
 
 \begin{frame}{FWL Theorem}
-\protect\hypertarget{fwl-theorem-2}{}
+\phantomsection\label{fwl-theorem-2}
 \begin{block}{Beweis von Theorem \ref{thm:FWL} (2/3)}
 Zeigen nun: Letzter Term in \eqref{eq:(2.17)} ist gleich Null, d.h.\ $\mX_2^\prime\mM_{\mX_1}\mM\mY=\vzero$.\medskip
 
@@ -3050,7 +3206,7 @@ Damit und weil $\mM\mX_2=\vzero$ (aus Theorem \ref{thm:Eig M}.\ref{it:M1}):
 \end{frame}
 
 \begin{frame}{FWL Theorem}
-\protect\hypertarget{fwl-theorem-3}{}
+\phantomsection\label{fwl-theorem-3}
 \begin{block}{Beweis von Theorem \ref{thm:FWL} (3/3)}
 Einsetzen von \eqref{eq:(2.18)} in \eqref{eq:(2.17)} ergibt:
 \[
@@ -3069,7 +3225,7 @@ Da (nach obigem) $\widehat{\vbeta}_2$ der Schätzer einer Regression von $\widet
 \end{frame}
 
 \begin{frame}{Anwendung des FWL Theorems}
-\protect\hypertarget{anwendung-des-fwl-theorems}{}
+\phantomsection\label{anwendung-des-fwl-theorems}
 \xmpl[Regression mit Konstante]\label{ex:FWL}
 
 \begin{itemize}
@@ -3094,7 +3250,7 @@ Da (nach obigem) $\widehat{\vbeta}_2$ der Schätzer einer Regression von $\widet
 \end{frame}
 
 \begin{frame}{Überblick}
-\protect\hypertarget{uxfcberblick-10}{}
+\phantomsection\label{uxfcberblick-10}
 \begin{itemize}
 \tightlist
 \item
@@ -3109,7 +3265,7 @@ Da (nach obigem) $\widehat{\vbeta}_2$ der Schätzer einer Regression von $\widet
 \end{frame}
 
 \begin{frame}{TSS, ESS und SSR}
-\protect\hypertarget{tss-ess-und-ssr}{}
+\phantomsection\label{tss-ess-und-ssr}
 \begin{itemize}
 \tightlist
 \item
@@ -3137,7 +3293,7 @@ Da (nach obigem) $\widehat{\vbeta}_2$ der Schätzer einer Regression von $\widet
 \end{frame}
 
 \begin{frame}{Unzentriertes \(R^2\)}
-\protect\hypertarget{unzentriertes-r2}{}
+\phantomsection\label{unzentriertes-r2}
 \begin{itemize}
 \tightlist
 \item
@@ -3168,7 +3324,7 @@ Da (nach obigem) $\widehat{\vbeta}_2$ der Schätzer einer Regression von $\widet
 \end{frame}
 
 \begin{frame}{Zentriertes \(R^2\)}
-\protect\hypertarget{zentriertes-r2}{}
+\phantomsection\label{zentriertes-r2}
 \begin{itemize}
 \tightlist
 \item
@@ -3197,18 +3353,17 @@ Da (nach obigem) $\widehat{\vbeta}_2$ der Schätzer einer Regression von $\widet
 \end{itemize}
 \end{frame}
 
-\hypertarget{eigenschaften-von-kq-in-kleinen-stichproben}{%
 \section{Eigenschaften von KQ in kleinen
-Stichproben}\label{eigenschaften-von-kq-in-kleinen-stichproben}}
+Stichproben}\label{eigenschaften-von-kq-in-kleinen-stichproben}
 
 \begin{frame}{}
-\protect\hypertarget{section-3}{}
+\phantomsection\label{section-3}
 \centerline{\textbf{Eigenschaften von KQ in kleinen Stichproben}}
 \centerline{(Hansen, 2022, Kapitel 4)}
 \end{frame}
 
 \begin{frame}{Modell}
-\protect\hypertarget{modell}{}
+\phantomsection\label{modell}
 \begin{itemize}
 \tightlist
 \item
@@ -3237,7 +3392,7 @@ Stichproben}\label{eigenschaften-von-kq-in-kleinen-stichproben}}
 \end{frame}
 
 \begin{frame}{Stichprobe}
-\protect\hypertarget{stichprobe}{}
+\phantomsection\label{stichprobe}
 \begin{itemize}
 \tightlist
 \item
@@ -3274,7 +3429,7 @@ gemeinsamen Verteilung \(F\). \endass
 \end{frame}
 
 \begin{frame}{Überblick}
-\protect\hypertarget{uxfcberblick-11}{}
+\phantomsection\label{uxfcberblick-11}
 \begin{itemize}
 \tightlist
 \item
@@ -3289,7 +3444,7 @@ gemeinsamen Verteilung \(F\). \endass
 \end{frame}
 
 \begin{frame}{Erwartungswert}
-\protect\hypertarget{erwartungswert}{}
+\phantomsection\label{erwartungswert}
 \begin{itemize}
 \tightlist
 \item
@@ -3326,7 +3481,7 @@ Verteilung \(\widehat{\vbeta}\mid\mX\) um \(\vbeta\) zentriert ist, d.h.
 \end{frame}
 
 \begin{frame}{Erwartungswert}
-\protect\hypertarget{erwartungswert-1}{}
+\phantomsection\label{erwartungswert-1}
 \begin{block}{Beweis von Theorem \ref{thm:cond exp ols}}
 Unter Annahme \ref{ass:iid} gilt im linearen bedingten Erwartungswertmodell
 \[
@@ -3347,7 +3502,7 @@ Dies ausnutzend erhalten wir
 \end{frame}
 
 \begin{frame}{Illustration der Unverzerrtheit in \R}
-\protect\hypertarget{illustration-der-unverzerrtheit-in}{}
+\phantomsection\label{illustration-der-unverzerrtheit-in}
 \xmpl[Simulationsbeispiel]
 
 \begin{itemize}
@@ -3372,7 +3527,7 @@ Dies ausnutzend erhalten wir
 \end{frame}
 
 \begin{frame}[fragile]{Illustration der Unverzerrtheit in \R}
-\protect\hypertarget{illustration-der-unverzerrtheit-in-1}{}
+\phantomsection\label{illustration-der-unverzerrtheit-in-1}
 \footnotesize
 
 \begin{Shaded}
@@ -3397,14 +3552,14 @@ Dies ausnutzend erhalten wir
 \end{frame}
 
 \begin{frame}{Illustration der Unverzerrtheit in \R}
-\protect\hypertarget{illustration-der-unverzerrtheit-in-2}{}
+\phantomsection\label{illustration-der-unverzerrtheit-in-2}
 \footnotesize
 \begin{center}\includegraphics{Resources/Plots/Unbiased2-1} \end{center}
 \normalsize
 \end{frame}
 
 \begin{frame}{Illustration der bedingten Unverzerrtheit in \R}
-\protect\hypertarget{illustration-der-bedingten-unverzerrtheit-in}{}
+\phantomsection\label{illustration-der-bedingten-unverzerrtheit-in}
 \xmpl[Simulationsbeispiel]
 
 \begin{itemize}
@@ -3433,7 +3588,7 @@ Dies ausnutzend erhalten wir
 \end{frame}
 
 \begin{frame}[fragile]{Illustration der bedingten Unverzerrtheit in \R}
-\protect\hypertarget{illustration-der-bedingten-unverzerrtheit-in-1}{}
+\phantomsection\label{illustration-der-bedingten-unverzerrtheit-in-1}
 \footnotesize
 
 \begin{Shaded}
@@ -3458,14 +3613,14 @@ Dies ausnutzend erhalten wir
 \end{frame}
 
 \begin{frame}{Illustration der bedingten Unverzerrtheit in \R}
-\protect\hypertarget{illustration-der-bedingten-unverzerrtheit-in-2}{}
+\phantomsection\label{illustration-der-bedingten-unverzerrtheit-in-2}
 \footnotesize
 \begin{center}\includegraphics{Resources/Plots/Unbiased4-1} \end{center}
 \normalsize
 \end{frame}
 
 \begin{frame}{Überblick}
-\protect\hypertarget{uxfcberblick-12}{}
+\phantomsection\label{uxfcberblick-12}
 \begin{itemize}
 \tightlist
 \item
@@ -3480,7 +3635,7 @@ Dies ausnutzend erhalten wir
 \end{frame}
 
 \begin{frame}{Varianz-Kovarianz Matrix}
-\protect\hypertarget{varianz-kovarianz-matrix}{}
+\phantomsection\label{varianz-kovarianz-matrix}
 \begin{itemize}
 \tightlist
 \item
@@ -3508,7 +3663,7 @@ Dies ausnutzend erhalten wir
 \end{frame}
 
 \begin{frame}{Varianz}
-\protect\hypertarget{varianz}{}
+\phantomsection\label{varianz}
 \begin{itemize}
 \tightlist
 \item
@@ -3540,7 +3695,7 @@ Dies ausnutzend erhalten wir
 \end{frame}
 
 \begin{frame}{Varianz}
-\protect\hypertarget{varianz-1}{}
+\phantomsection\label{varianz-1}
 \begin{itemize}
 \item
   Aus der Definition der Varianz-Kovarianz Matrix folgt unmittelbar
@@ -3559,7 +3714,7 @@ Dies ausnutzend erhalten wir
 \end{frame}
 
 \begin{frame}{Varianz}
-\protect\hypertarget{varianz-2}{}
+\phantomsection\label{varianz-2}
 \framesubtitle{Homoskedastie}
 
 \ass[Bedingte Homoskedastie]\label{ass:cond hom} Die Fehler sind
@@ -3586,7 +3741,7 @@ Dies ausnutzend erhalten wir
 \end{frame}
 
 \begin{frame}{Varianz}
-\protect\hypertarget{varianz-3}{}
+\phantomsection\label{varianz-3}
 \framesubtitle{Homoskedastie}
 
 \begin{itemize}
@@ -3620,7 +3775,7 @@ Dies ausnutzend erhalten wir
 \end{frame}
 
 \begin{frame}{Varianz}
-\protect\hypertarget{varianz-4}{}
+\phantomsection\label{varianz-4}
 \begin{itemize}
 \tightlist
 \item
@@ -3650,14 +3805,14 @@ die Formel zu \[
 \end{frame}
 
 \begin{frame}{Illustration von Heteroskedastie in \R}
-\protect\hypertarget{illustration-von-heteroskedastie-in}{}
+\phantomsection\label{illustration-von-heteroskedastie-in}
 \xmpl[Card (1995)]
 
 \begin{itemize}
 \tightlist
 \item
-  Erinnern Sie sich an die Lohnregression von Card (1995) aus
-  Beispiel~\ref{ex:Card}: \[
+  Erinnern Sie sich an die Lohnregression von Card
+  (\citeproc{ref-Car95}{1995}) aus Beispiel~\ref{ex:Card}: \[
    \log(wage) = \beta_0+\beta_1\cdot educ + e.
    \]
 \item
@@ -3674,7 +3829,7 @@ die Formel zu \[
 \end{frame}
 
 \begin{frame}{Unbedingte Varianz}
-\protect\hypertarget{unbedingte-varianz}{}
+\phantomsection\label{unbedingte-varianz}
 \begin{itemize}
 \tightlist
 \item
@@ -3712,7 +3867,7 @@ die Formel zu \[
 \end{frame}
 
 \begin{frame}{Überblick}
-\protect\hypertarget{uxfcberblick-13}{}
+\phantomsection\label{uxfcberblick-13}
 \begin{itemize}
 \tightlist
 \item
@@ -3727,7 +3882,7 @@ die Formel zu \[
 \end{frame}
 
 \begin{frame}{Motivation}
-\protect\hypertarget{motivation}{}
+\phantomsection\label{motivation}
 \begin{itemize}
 \tightlist
 \item
@@ -3775,7 +3930,7 @@ semi-definit (p.s.d.) ist (geschrieben:
 \end{frame}
 
 \begin{frame}{Gauss--Markov Theorem}
-\protect\hypertarget{gaussmarkov-theorem}{}
+\phantomsection\label{gaussmarkov-theorem}
 \begin{itemize}
 \tightlist
 \item
@@ -3806,7 +3961,7 @@ den Annahmen \ref{ass:1}, \ref{ass:iid}, \ref{ass:pd} und
 \end{frame}
 
 \begin{frame}{Beweis}
-\protect\hypertarget{beweis}{}
+\phantomsection\label{beweis}
 \begin{block}{Beweis von Theorem \ref{thm:GMT} (1/2)}
 Aus $\widetilde{\vbeta}=\mA^\prime\mY$ folgt
 \[
@@ -3831,7 +3986,7 @@ Wir müssen also nur noch zeigen, dass für alle $\mA$ mit $\mA^\prime\mX=\mI_{k
 \end{frame}
 
 \begin{frame}{Beweis}
-\protect\hypertarget{beweis-1}{}
+\phantomsection\label{beweis-1}
 \begin{block}{Beweis von Theorem \ref{thm:GMT} (2/2)}
 Setze $\mC=\mA-\mX(\mX^\prime\mX)^{-1}$. Wegen $\mA^\prime\mX=\mI_{k}$ gilt $\mX^\prime\mC=\vzero$. Damit:
 \begin{align*}
@@ -3848,7 +4003,7 @@ Beachte für letzte Ungleichung: Klar, dass $\mC^\prime\mC$ p.s.d., da für alle
 \end{frame}
 
 \begin{frame}{Illustration des GMT via \R Beispiel}
-\protect\hypertarget{illustration-des-gmt-via-beispiel}{}
+\phantomsection\label{illustration-des-gmt-via-beispiel}
 \xmpl[Simulationsbeispiel]
 
 \begin{itemize}
@@ -3884,7 +4039,7 @@ Beachte für letzte Ungleichung: Klar, dass $\mC^\prime\mC$ p.s.d., da für alle
 
 \begin{frame}[fragile,allowframebreaks]{Illustration des GMT via
 \R Beispiel}
-\protect\hypertarget{illustration-des-gmt-via-beispiel-1}{}
+\phantomsection\label{illustration-des-gmt-via-beispiel-1}
 \footnotesize
 
 \begin{Shaded}
@@ -3918,7 +4073,7 @@ Beachte für letzte Ungleichung: Klar, dass $\mC^\prime\mC$ p.s.d., da für alle
 \end{frame}
 
 \begin{frame}{Überblick}
-\protect\hypertarget{uxfcberblick-14}{}
+\phantomsection\label{uxfcberblick-14}
 \begin{itemize}
 \tightlist
 \item
@@ -3933,7 +4088,7 @@ Beachte für letzte Ungleichung: Klar, dass $\mC^\prime\mC$ p.s.d., da für alle
 \end{frame}
 
 \begin{frame}{Ausschluss relevanter Variablen}
-\protect\hypertarget{ausschluss-relevanter-variablen}{}
+\phantomsection\label{ausschluss-relevanter-variablen}
 \begin{itemize}
 \tightlist
 \item
@@ -3971,7 +4126,7 @@ Beachte für letzte Ungleichung: Klar, dass $\mC^\prime\mC$ p.s.d., da für alle
 \end{frame}
 
 \begin{frame}{Ausschluss relevanter Variablen}
-\protect\hypertarget{ausschluss-relevanter-variablen-1}{}
+\phantomsection\label{ausschluss-relevanter-variablen-1}
 \begin{itemize}
 \tightlist
 \item
@@ -4001,7 +4156,7 @@ Beachte für letzte Ungleichung: Klar, dass $\mC^\prime\mC$ p.s.d., da für alle
 \end{frame}
 
 \begin{frame}{Inklusion irrelevanter Variablen}
-\protect\hypertarget{inklusion-irrelevanter-variablen}{}
+\phantomsection\label{inklusion-irrelevanter-variablen}
 \begin{itemize}
 \tightlist
 \item
@@ -4021,7 +4176,7 @@ Beachte für letzte Ungleichung: Klar, dass $\mC^\prime\mC$ p.s.d., da für alle
 \end{frame}
 
 \begin{frame}{Inklusion irrelevanter Variablen}
-\protect\hypertarget{inklusion-irrelevanter-variablen-1}{}
+\phantomsection\label{inklusion-irrelevanter-variablen-1}
 \begin{itemize}
 \tightlist
 \item
@@ -4044,7 +4199,7 @@ Beachte für letzte Ungleichung: Klar, dass $\mC^\prime\mC$ p.s.d., da für alle
 \end{frame}
 
 \begin{frame}{Zusammenfassung}
-\protect\hypertarget{zusammenfassung}{}
+\phantomsection\label{zusammenfassung}
 \begin{itemize}
 \tightlist
 \item
@@ -4064,18 +4219,17 @@ Beachte für letzte Ungleichung: Klar, dass $\mC^\prime\mC$ p.s.d., da für alle
 \end{itemize}
 \end{frame}
 
-\hypertarget{eigenschaften-von-kq-in-grouxdfen-stichproben}{%
 \section{Eigenschaften von KQ in großen
-Stichproben}\label{eigenschaften-von-kq-in-grouxdfen-stichproben}}
+Stichproben}\label{eigenschaften-von-kq-in-grouxdfen-stichproben}
 
 \begin{frame}{}
-\protect\hypertarget{section-4}{}
+\phantomsection\label{section-4}
 \centerline{\textbf{Eigenschaften von KQ in großen Stichproben}}
 \centerline{(Hansen, 2022, Kapitel 7)}
 \end{frame}
 
 \begin{frame}{Ausblick}
-\protect\hypertarget{ausblick}{}
+\phantomsection\label{ausblick}
 \begin{itemize}
 \tightlist
 \item
@@ -4102,7 +4256,7 @@ Stichproben}\label{eigenschaften-von-kq-in-grouxdfen-stichproben}}
 \end{frame}
 
 \begin{frame}{Überblick}
-\protect\hypertarget{uxfcberblick-15}{}
+\phantomsection\label{uxfcberblick-15}
 \begin{itemize}
 \tightlist
 \item
@@ -4115,7 +4269,7 @@ Stichproben}\label{eigenschaften-von-kq-in-grouxdfen-stichproben}}
 \end{frame}
 
 \begin{frame}{Wiederholung asymptotischer Theorie}
-\protect\hypertarget{wiederholung-asymptotischer-theorie}{}
+\phantomsection\label{wiederholung-asymptotischer-theorie}
 \begin{itemize}
 \tightlist
 \item
@@ -4148,7 +4302,7 @@ Stichproben}\label{eigenschaften-von-kq-in-grouxdfen-stichproben}}
 \end{frame}
 
 \begin{frame}{Konvergenzmodi}
-\protect\hypertarget{konvergenzmodi}{}
+\phantomsection\label{konvergenzmodi}
 \framesubtitle{Definitionen}
 
 \defn[Konvergenz in Wahrscheinlichkeit]Die Zufallsmatrizen \(\mZ_n\)
@@ -4178,7 +4332,7 @@ heißt \hil{asymptotische Verteilung} von \(\mZ_n\). \enddefn
 \end{frame}
 
 \begin{frame}{Konvergenzmodi}
-\protect\hypertarget{konvergenzmodi-1}{}
+\phantomsection\label{konvergenzmodi-1}
 \framesubtitle{Beispiele}
 
 \xmpl
@@ -4214,7 +4368,7 @@ heißt \hil{asymptotische Verteilung} von \(\mZ_n\). \enddefn
 \end{frame}
 
 \begin{frame}{Regeln für Konvergenzen}
-\protect\hypertarget{regeln-fuxfcr-konvergenzen}{}
+\phantomsection\label{regeln-fuxfcr-konvergenzen}
 \begin{enumerate}
 \tightlist
 \item
@@ -4235,7 +4389,7 @@ heißt \hil{asymptotische Verteilung} von \(\mZ_n\). \enddefn
 \end{frame}
 
 \begin{frame}{Regeln für Konvergenzen}
-\protect\hypertarget{regeln-fuxfcr-konvergenzen-1}{}
+\phantomsection\label{regeln-fuxfcr-konvergenzen-1}
 \begin{enumerate}
 \setcounter{enumi}{2}
 \tightlist
@@ -4265,7 +4419,7 @@ heißt \hil{asymptotische Verteilung} von \(\mZ_n\). \enddefn
 \end{frame}
 
 \begin{frame}{Zwei Klassiker}
-\protect\hypertarget{zwei-klassiker}{}
+\phantomsection\label{zwei-klassiker}
 \thmn[\hil{Gesetz der großen Zahlen (GGZ)}]\label{thm:GGZ} Für
 u.i.v.~Zufallsmatrizen \(\mZ_i\) mit \(\E\Vert \mZ\Vert<\infty\) gilt \[
   \boxed{\ \overline{\mZ}_n:=\frac{1}{n}\sum_{i=1}^{n}\mZ_i\overset{\Pr}{\longrightarrow}\vmu=\E[\mZ].\ }
@@ -4279,7 +4433,7 @@ u.i.v.~Zufallsvektoren \(\mZ_i\) mit \(\E\Vert \mZ\Vert^2<\infty\) gilt
 \end{frame}
 
 \begin{frame}[fragile,allowframebreaks]{\R Illustration des ZGWS}
-\protect\hypertarget{illustration-des-zgws}{}
+\phantomsection\label{illustration-des-zgws}
 \xmpl[ZGWS für Rademacher Verteilung]
 
 \begin{itemize}
@@ -4346,7 +4500,7 @@ u.i.v.~Zufallsvektoren \(\mZ_i\) mit \(\E\Vert \mZ\Vert^2<\infty\) gilt
 \end{frame}
 
 \begin{frame}{Überblick}
-\protect\hypertarget{uxfcberblick-16}{}
+\phantomsection\label{uxfcberblick-16}
 \begin{itemize}
 \tightlist
 \item
@@ -4359,7 +4513,7 @@ u.i.v.~Zufallsvektoren \(\mZ_i\) mit \(\E\Vert \mZ\Vert^2<\infty\) gilt
 \end{frame}
 
 \begin{frame}{Konsistenz}
-\protect\hypertarget{konsistenz}{}
+\phantomsection\label{konsistenz}
 \begin{itemize}
 \tightlist
 \item
@@ -4384,7 +4538,7 @@ dass \[
 \end{frame}
 
 \begin{frame}{Beweis}
-\protect\hypertarget{beweis-2}{}
+\phantomsection\label{beweis-2}
 \begin{block}{Beweis von Theorem \ref{thm:KQ cons} (1/3)}
 Ausgangspunkt ist \eqref{eq:decomp beta hat}, d.h.
 \begin{align*}
@@ -4404,7 +4558,7 @@ Wir können also das GGZ (Theorem \ref{thm:GGZ}) anwenden und erhalten
 \end{frame}
 
 \begin{frame}{Beweis}
-\protect\hypertarget{beweis-3}{}
+\phantomsection\label{beweis-3}
 \begin{block}{Beweis von Theorem \ref{thm:KQ cons} (2/3)}
 Ebenso können wir das GGZ (Theorem \ref{thm:GGZ}) auf den \alert{zweiten Term} anwenden:
 \begin{equation}\label{eq:cons2}
@@ -4426,7 +4580,7 @@ Daher also, wie behauptet,
 \end{frame}
 
 \begin{frame}{Beweis}
-\protect\hypertarget{beweis-4}{}
+\phantomsection\label{beweis-4}
 \begin{block}{Beweis von Theorem \ref{thm:KQ cons} (3/3)}
 Warum ist $g(\mA,\vb)=\mA^{-1}\vb$ stetig (für die Anwendung von CMT 1)?
 \begin{itemize}
@@ -4438,7 +4592,7 @@ Warum ist $g(\mA,\vb)=\mA^{-1}\vb$ stetig (für die Anwendung von CMT 1)?
 \end{frame}
 
 \begin{frame}[fragile,allowframebreaks]{\R Illustration von Konsistenz}
-\protect\hypertarget{illustration-von-konsistenz}{}
+\phantomsection\label{illustration-von-konsistenz}
 \xmpl
 
 \begin{itemize}
@@ -4482,7 +4636,7 @@ Warum ist $g(\mA,\vb)=\mA^{-1}\vb$ stetig (für die Anwendung von CMT 1)?
 
 \begin{frame}[fragile,allowframebreaks]{\R Illustration von
 Inkonsistenz}
-\protect\hypertarget{illustration-von-inkonsistenz}{}
+\phantomsection\label{illustration-von-inkonsistenz}
 \framesubtitle{Oder warum Momentenbedingungen wichtig sind}
 
 \xmpl
@@ -4527,7 +4681,7 @@ Inkonsistenz}
 \end{frame}
 
 \begin{frame}{Überblick}
-\protect\hypertarget{uxfcberblick-17}{}
+\phantomsection\label{uxfcberblick-17}
 \begin{itemize}
 \tightlist
 \item
@@ -4540,7 +4694,7 @@ Inkonsistenz}
 \end{frame}
 
 \begin{frame}{Asymptotische Normalität}
-\protect\hypertarget{asymptotische-normalituxe4t}{}
+\phantomsection\label{asymptotische-normalituxe4t}
 \begin{itemize}
 \tightlist
 \item
@@ -4574,7 +4728,7 @@ Inkonsistenz}
 \end{frame}
 
 \begin{frame}{Asymptotische Normalität}
-\protect\hypertarget{asymptotische-normalituxe4t-1}{}
+\phantomsection\label{asymptotische-normalituxe4t-1}
 \begin{itemize}
 \tightlist
 \item
@@ -4606,7 +4760,7 @@ Inkonsistenz}
 \end{frame}
 
 \begin{frame}{Asymptotische Normalität}
-\protect\hypertarget{asymptotische-normalituxe4t-2}{}
+\phantomsection\label{asymptotische-normalituxe4t-2}
 \thmn[Asymptotische Normalität von $\widehat{\vbeta}$]\label{thm:KQ AN}
 Im linearen Projektionsmodell gilt unter den Annahmen \ref{ass:iid} und
 \ref{ass:1 ex}, dass \[
@@ -4636,7 +4790,7 @@ Im linearen Projektionsmodell gilt unter den Annahmen \ref{ass:iid} und
 \end{frame}
 
 \begin{frame}{Beweis}
-\protect\hypertarget{beweis-5}{}
+\phantomsection\label{beweis-5}
 \begin{block}{Beweis von Theorem \ref{thm:KQ AN} (1/3)}
 Ausgangspunkt ist wieder \eqref{eq:decomp beta hat}, d.h.
 \begin{equation*}
@@ -4652,7 +4806,7 @@ Also müssen wir uns nur noch um den \alert{zweiten Term} kümmern...
 \end{frame}
 
 \begin{frame}{Beweis}
-\protect\hypertarget{beweis-6}{}
+\phantomsection\label{beweis-6}
 \begin{block}{Beweis von Theorem \ref{thm:KQ AN} (2/3)}
 Für $\frac{1}{\sqrt{n}}\sum_{i=1}^{n}X_i e_i$ können wir den ZGWS (Theorem \ref{thm:ZGWS}) anwenden, denn:
 \begin{enumerate}
@@ -4670,7 +4824,7 @@ Theorem \ref{thm:ZGWS} impliziert daher:
 \end{frame}
 
 \begin{frame}{Beweis}
-\protect\hypertarget{beweis-7}{}
+\phantomsection\label{beweis-7}
 \begin{block}{Beweis von Theorem \ref{thm:KQ AN} (3/3)}
 Kombiniere \eqref{eq:convXX} und \eqref{eq:error CLT} mit dem Satz von Slutzky:
 \begin{align*}
@@ -4689,7 +4843,7 @@ wobei der vorletzte Schritt aus Proposition\ \zref{S-rules3}.\zref{S-it:21.3} un
 \end{frame}
 
 \begin{frame}{\R Illustration}
-\protect\hypertarget{illustration}{}
+\phantomsection\label{illustration}
 \xmpl
 
 \begin{itemize}
@@ -4718,7 +4872,7 @@ wobei der vorletzte Schritt aus Proposition\ \zref{S-rules3}.\zref{S-it:21.3} un
 \end{frame}
 
 \begin{frame}[fragile]{\R Illustration}
-\protect\hypertarget{illustration-1}{}
+\phantomsection\label{illustration-1}
 \footnotesize
 
 \begin{Shaded}
@@ -4753,7 +4907,7 @@ wobei der vorletzte Schritt aus Proposition\ \zref{S-rules3}.\zref{S-it:21.3} un
 \end{frame}
 
 \begin{frame}[fragile,allowframebreaks]{\R Illustration}
-\protect\hypertarget{illustration-2}{}
+\phantomsection\label{illustration-2}
 \footnotesize
 
 \begin{Shaded}
@@ -4779,7 +4933,7 @@ wobei der vorletzte Schritt aus Proposition\ \zref{S-rules3}.\zref{S-it:21.3} un
 \end{frame}
 
 \begin{frame}{Diskussion von Theorem \ref{thm:KQ AN}}
-\protect\hypertarget{diskussion-von-theorem}{}
+\phantomsection\label{diskussion-von-theorem}
 \begin{itemize}
 \tightlist
 \item
@@ -4805,17 +4959,16 @@ wobei der vorletzte Schritt aus Proposition\ \zref{S-rules3}.\zref{S-it:21.3} un
 \end{itemize}
 \end{frame}
 
-\hypertarget{inferenz}{%
-\section{Inferenz}\label{inferenz}}
+\section{Inferenz}\label{inferenz}
 
 \begin{frame}{}
-\protect\hypertarget{section-5}{}
+\phantomsection\label{section-5}
 \centerline{\textbf{Inferenz}}
 \centerline{(Hansen, 2022, Kapitel 7 \& 9)}
 \end{frame}
 
 \begin{frame}{Ausblick}
-\protect\hypertarget{ausblick-1}{}
+\phantomsection\label{ausblick-1}
 \begin{itemize}
 \tightlist
 \item
@@ -4831,7 +4984,7 @@ wobei der vorletzte Schritt aus Proposition\ \zref{S-rules3}.\zref{S-it:21.3} un
 \end{frame}
 
 \begin{frame}{Überblick}
-\protect\hypertarget{uxfcberblick-18}{}
+\phantomsection\label{uxfcberblick-18}
 \begin{itemize}
 \tightlist
 \item
@@ -4848,7 +5001,7 @@ wobei der vorletzte Schritt aus Proposition\ \zref{S-rules3}.\zref{S-it:21.3} un
 \end{frame}
 
 \begin{frame}{Motivation}
-\protect\hypertarget{motivation-1}{}
+\phantomsection\label{motivation-1}
 \begin{itemize}
 \tightlist
 \item
@@ -4878,7 +5031,7 @@ wobei der vorletzte Schritt aus Proposition\ \zref{S-rules3}.\zref{S-it:21.3} un
 \end{frame}
 
 \begin{frame}{Hypothesen}
-\protect\hypertarget{hypothesen}{}
+\phantomsection\label{hypothesen}
 \defn[Hypothesen]Die \hil{Nullhypothese} (kurz: \hil{Null})
 \(\mathbb{H}_0\) ist die Restriktion \(\vtheta=\vtheta_0\).\bigskip
 
@@ -4904,7 +5057,7 @@ kann entweder zweiseitig sein (\(\vtheta\neq\vtheta_0\)) oder einseitig
 \end{frame}
 
 \begin{frame}{Teststatistik und kritische Werte}
-\protect\hypertarget{teststatistik-und-kritische-werte}{}
+\phantomsection\label{teststatistik-und-kritische-werte}
 \begin{itemize}
 \tightlist
 \item
@@ -4924,7 +5077,7 @@ kann entweder zweiseitig sein (\(\vtheta\neq\vtheta_0\)) oder einseitig
 \end{frame}
 
 \begin{frame}{Teststatistik und kritische Werte}
-\protect\hypertarget{teststatistik-und-kritische-werte-1}{}
+\phantomsection\label{teststatistik-und-kritische-werte-1}
 \xmpl
 
 \begin{itemize}
@@ -4950,7 +5103,7 @@ kann entweder zweiseitig sein (\(\vtheta\neq\vtheta_0\)) oder einseitig
 \end{frame}
 
 \begin{frame}{Fehler 1.~Art}
-\protect\hypertarget{fehler-1.-art}{}
+\phantomsection\label{fehler-1.-art}
 \defn[\hil{Fehler 1.\ Art}]Die Null fälschlicherweise abzulehnen
 (\(\mathbb{H}_0\) abzulehnen, obwohl \(\mathbb{H}_0\) wahr) ist ein
 \hil{Fehler 1.\ Art}.\medskip
@@ -4977,7 +5130,7 @@ Die Wahrscheinlichkeit eines Fehlers 1.~Art nennen wir das
 \end{frame}
 
 \begin{frame}{Fehler 2.~Art}
-\protect\hypertarget{fehler-2.-art}{}
+\phantomsection\label{fehler-2.-art}
 \begin{itemize}
 \tightlist
 \item
@@ -5017,7 +5170,7 @@ Die Wahrscheinlichkeit \(H_0\) abzulehnen, wenn \(H_1\) wahr ist, heißt
 \end{frame}
 
 \begin{frame}{Fehler 1.~und 2.~Art}
-\protect\hypertarget{fehler-1.-und-2.-art}{}
+\phantomsection\label{fehler-1.-und-2.-art}
 \begin{itemize}
 \tightlist
 \item
@@ -5043,7 +5196,7 @@ Verwirf $\mathbb{H}_0$      & Fehler 1.\ Art    & korrekt \\
 \end{frame}
 
 \begin{frame}{Fehler 1.~und 2.~Art}
-\protect\hypertarget{fehler-1.-und-2.-art-1}{}
+\phantomsection\label{fehler-1.-und-2.-art-1}
 \xmpl[Fortsetzung]\label{ex:Error types}
 
 \begin{itemize}
@@ -5071,7 +5224,7 @@ Verwirf $\mathbb{H}_0$      & Fehler 1.\ Art    & korrekt \\
 \end{frame}
 
 \begin{frame}{\(p\)-Wert}
-\protect\hypertarget{p-wert}{}
+\phantomsection\label{p-wert}
 \begin{itemize}
 \tightlist
 \item
@@ -5108,7 +5261,7 @@ Teststatistik ist. \enddefn
 \end{frame}
 
 \begin{frame}{\(p\)-Wert}
-\protect\hypertarget{p-wert-1}{}
+\phantomsection\label{p-wert-1}
 \[
    \boxed{\ T>c\ \text{mit asympt. Wkt.}\ \alpha\qquad\Longleftrightarrow\qquad p<\alpha\ \text{mit asympt. Wkt.}\ \alpha\ }
 \]
@@ -5135,7 +5288,7 @@ Teststatistik ist. \enddefn
 \end{frame}
 
 \begin{frame}{\(p\)-Wert}
-\protect\hypertarget{p-wert-2}{}
+\phantomsection\label{p-wert-2}
 \begin{itemize}
 \tightlist
 \item
@@ -5172,7 +5325,7 @@ stetig ist. Dann gilt \[
 \end{frame}
 
 \begin{frame}{\(p\)-Wert}
-\protect\hypertarget{p-wert-3}{}
+\phantomsection\label{p-wert-3}
 \begin{block}{Beweis von Theorem \ref{thm:p-Wert}}
 Das CMT 2 und $T\overset{d}{\longrightarrow}\xi$ implizieren, dass 
 \[
@@ -5195,7 +5348,7 @@ Wir haben also gezeigt, dass
 \end{frame}
 
 \begin{frame}{\(p\)-Wert}
-\protect\hypertarget{p-wert-4}{}
+\phantomsection\label{p-wert-4}
 \begin{quote}
 \glqq ... surely, God loves the .06 nearly as much as the .05. Can there be any doubt that God views the strength of evidence for or against the null as a fairly continuous function of the magnitude of p?\grqq{} \textup{---Rosnow, R. L., \& Rosenthal, R. (1989). Statistical procedures and the justification of knowledge in psychological science. American Psychologist, 44(10), 1276-1284.}\\[2ex]
 \end{quote}
@@ -5212,7 +5365,7 @@ Wir haben also gezeigt, dass
 \end{frame}
 
 \begin{frame}{\(p\)-Wert}
-\protect\hypertarget{p-wert-5}{}
+\phantomsection\label{p-wert-5}
 \xmpl[Fortsetzung]\label{ex:p val}
 
 \begin{itemize}
@@ -5241,14 +5394,14 @@ Wir haben also gezeigt, dass
 \end{frame}
 
 \begin{frame}{\(p\)-Wert}
-\protect\hypertarget{p-wert-6}{}
+\phantomsection\label{p-wert-6}
 \footnotesize
 \begin{center}\includegraphics{Resources/Plots/pVal-1} \end{center}
 \normalsize
 \end{frame}
 
 \begin{frame}{Rezept}
-\protect\hypertarget{rezept}{}
+\phantomsection\label{rezept}
 Allgemein geht man beim \alert{Hypothesentesten} wie folgt vor:
 
 \begin{enumerate}
@@ -5277,7 +5430,7 @@ Allgemein geht man beim \alert{Hypothesentesten} wie folgt vor:
 \end{frame}
 
 \begin{frame}{Überblick}
-\protect\hypertarget{uxfcberblick-19}{}
+\phantomsection\label{uxfcberblick-19}
 \begin{itemize}
 \tightlist
 \item
@@ -5294,7 +5447,7 @@ Allgemein geht man beim \alert{Hypothesentesten} wie folgt vor:
 \end{frame}
 
 \begin{frame}{}
-\protect\hypertarget{section-6}{}
+\phantomsection\label{section-6}
 \begin{itemize}
 \tightlist
 \item
@@ -5316,7 +5469,7 @@ Allgemein geht man beim \alert{Hypothesentesten} wie folgt vor:
 \end{frame}
 
 \begin{frame}{Bedingte Homoskedastie}
-\protect\hypertarget{bedingte-homoskedastie}{}
+\phantomsection\label{bedingte-homoskedastie}
 \begin{itemize}
 \tightlist
 \item
@@ -5341,7 +5494,7 @@ Allgemein geht man beim \alert{Hypothesentesten} wie folgt vor:
 \end{frame}
 
 \begin{frame}{Schätzer von \(\mQ_{XX^\prime}^{-1}\) und \(\sigma^2\)}
-\protect\hypertarget{schuxe4tzer-von-mq_xxprime-1-und-sigma2}{}
+\phantomsection\label{schuxe4tzer-von-mq_xxprime-1-und-sigma2}
 \begin{itemize}
 \tightlist
 \item
@@ -5367,7 +5520,7 @@ Allgemein geht man beim \alert{Hypothesentesten} wie folgt vor:
 \end{frame}
 
 \begin{frame}{Konsistenz von \(\widehat{\sigma}^2\)}
-\protect\hypertarget{konsistenz-von-widehatsigma2}{}
+\phantomsection\label{konsistenz-von-widehatsigma2}
 \begin{itemize}
 \tightlist
 \item
@@ -5390,7 +5543,7 @@ Allgemein geht man beim \alert{Hypothesentesten} wie folgt vor:
 \end{frame}
 
 \begin{frame}{Zusammenfassung}
-\protect\hypertarget{zusammenfassung-1}{}
+\phantomsection\label{zusammenfassung-1}
 \begin{itemize}
 \tightlist
 \item
@@ -5406,7 +5559,7 @@ dass \begin{align*}
 \end{frame}
 
 \begin{frame}{Anwendung}
-\protect\hypertarget{anwendung}{}
+\phantomsection\label{anwendung}
 \begin{itemize}
 \tightlist
 \item
@@ -5437,7 +5590,7 @@ dass \begin{align*}
 \end{frame}
 
 \begin{frame}{Überblick}
-\protect\hypertarget{uxfcberblick-20}{}
+\phantomsection\label{uxfcberblick-20}
 \begin{itemize}
 \tightlist
 \item
@@ -5454,7 +5607,7 @@ dass \begin{align*}
 \end{frame}
 
 \begin{frame}{Bedingte Heteroskedastie}
-\protect\hypertarget{bedingte-heteroskedastie}{}
+\phantomsection\label{bedingte-heteroskedastie}
 \begin{itemize}
 \tightlist
 \item
@@ -5488,7 +5641,7 @@ dass \begin{align*}
 \end{frame}
 
 \begin{frame}{Bedingte Heteroskedastie}
-\protect\hypertarget{bedingte-heteroskedastie-1}{}
+\phantomsection\label{bedingte-heteroskedastie-1}
 \begin{itemize}
 \tightlist
 \item
@@ -5519,7 +5672,7 @@ dass \begin{align*}
 
 \begin{frame}{Konsistenz von \(\widehat{\mOmega}\) und
 \(\widehat{\mV}_{\vbeta}^{\text{HC0}}\)}
-\protect\hypertarget{konsistenz-von-widehatmomega-und-widehatmv_vbetatexthc0}{}
+\phantomsection\label{konsistenz-von-widehatmomega-und-widehatmv_vbetatexthc0}
 \thmn[Hansen (2022, Theorem 7.6)]\label{thm:KQ under cond hetero} Im
 linearen Projektionsmodell gilt unter den Annahmen \ref{ass:iid} und
 \ref{ass:1 ex}, dass \[
@@ -5553,7 +5706,7 @@ linearen Projektionsmodell gilt unter den Annahmen \ref{ass:iid} und
 \end{frame}
 
 \begin{frame}{Überblick}
-\protect\hypertarget{uxfcberblick-21}{}
+\phantomsection\label{uxfcberblick-21}
 \begin{itemize}
 \tightlist
 \item
@@ -5570,7 +5723,7 @@ linearen Projektionsmodell gilt unter den Annahmen \ref{ass:iid} und
 \end{frame}
 
 \begin{frame}{\(t\)-Test}
-\protect\hypertarget{t-test}{}
+\phantomsection\label{t-test}
 \begin{itemize}
 \tightlist
 \item
@@ -5605,7 +5758,7 @@ linearen Projektionsmodell gilt unter den Annahmen \ref{ass:iid} und
 \end{frame}
 
 \begin{frame}{\(t\)-Test}
-\protect\hypertarget{t-test-1}{}
+\phantomsection\label{t-test-1}
 \framesubtitle{Die Konstruktion}
 
 \begin{itemize}
@@ -5633,7 +5786,7 @@ linearen Projektionsmodell gilt unter den Annahmen \ref{ass:iid} und
 \end{frame}
 
 \begin{frame}{\(t\)-Test}
-\protect\hypertarget{t-test-2}{}
+\phantomsection\label{t-test-2}
 \framesubtitle{Zusammenfassung}
 
 \begin{itemize}
@@ -5661,7 +5814,7 @@ Wir bezeichnen
 \end{frame}
 
 \begin{frame}{\(t\)-Test}
-\protect\hypertarget{t-test-3}{}
+\phantomsection\label{t-test-3}
 \framesubtitle{Anwendung}
 
 \begin{itemize}
@@ -5690,14 +5843,14 @@ Wir bezeichnen
 \end{frame}
 
 \begin{frame}{\(t\)-Test in \R}
-\protect\hypertarget{t-test-in}{}
+\phantomsection\label{t-test-in}
 \xmpl[Card (1995)]\label{ex:Card1}
 
 \begin{itemize}
 \tightlist
 \item
-  Wir erweitern die Lohnregression von Card (1995) um weitere
-  Regressoren: \begin{align*}
+  Wir erweitern die Lohnregression von Card (\citeproc{ref-Car95}{1995})
+  um weitere Regressoren: \begin{align*}
   experience &= \alert{age - educ - 6}\ (exper), \\
   black &= \text{\alert{Indikatorvariable fuer Hautfarbe}}\ (black),\\
   south &= \text{\alert{Indikatorvariable fuer Suedstaaten}}\ (reg76r),\\
@@ -5726,7 +5879,7 @@ Wir bezeichnen
 \end{frame}
 
 \begin{frame}[fragile,allowframebreaks]{\(t\)-Test im \R Beispiel}
-\protect\hypertarget{t-test-im-beispiel}{}
+\phantomsection\label{t-test-im-beispiel}
 \footnotesize
 
 \begin{Shaded}
@@ -5795,7 +5948,7 @@ Wir bezeichnen
 \end{frame}
 
 \begin{frame}{Wald Test}
-\protect\hypertarget{wald-test}{}
+\phantomsection\label{wald-test}
 \begin{itemize}
 \tightlist
 \item
@@ -5822,7 +5975,7 @@ Wir bezeichnen
 \end{frame}
 
 \begin{frame}{Wald Test}
-\protect\hypertarget{wald-test-1}{}
+\phantomsection\label{wald-test-1}
 \framesubtitle{Die Konstruktion}
 
 \begin{itemize}
@@ -5850,7 +6003,7 @@ Wir bezeichnen
 \end{frame}
 
 \begin{frame}{Wald Test}
-\protect\hypertarget{wald-test-2}{}
+\phantomsection\label{wald-test-2}
 \framesubtitle{Die Konstruktion}
 
 \begin{itemize}
@@ -5871,7 +6024,7 @@ Wir bezeichnen
 \end{frame}
 
 \begin{frame}{Wald Test}
-\protect\hypertarget{wald-test-3}{}
+\phantomsection\label{wald-test-3}
 \framesubtitle{Zusammenfassung und Anwendung}
 
 \begin{itemize}
@@ -5904,7 +6057,7 @@ Theorem~\ref{thm:KQ under cond hetero}. Dann gilt unter
 \end{frame}
 
 \begin{frame}[fragile]{Wald Test in \R}
-\protect\hypertarget{wald-test-in}{}
+\phantomsection\label{wald-test-in}
 \xmpl[Card (1995)]
 
 \begin{itemize}
@@ -5950,7 +6103,7 @@ Theorem~\ref{thm:KQ under cond hetero}. Dann gilt unter
 \end{frame}
 
 \begin{frame}{Überblick}
-\protect\hypertarget{uxfcberblick-22}{}
+\phantomsection\label{uxfcberblick-22}
 \begin{itemize}
 \tightlist
 \item
@@ -5967,7 +6120,7 @@ Theorem~\ref{thm:KQ under cond hetero}. Dann gilt unter
 \end{frame}
 
 \begin{frame}{Konfidenzintervalle}
-\protect\hypertarget{konfidenzintervalle}{}
+\phantomsection\label{konfidenzintervalle}
 \begin{itemize}
 \tightlist
 \item
@@ -6005,7 +6158,7 @@ dass \(\Pr\{\vtheta\in\widehat{C}\}=1-\alpha\), nennen wir ein
 \end{frame}
 
 \begin{frame}{Allgemeine Konstruktion}
-\protect\hypertarget{allgemeine-konstruktion}{}
+\phantomsection\label{allgemeine-konstruktion}
 \begin{itemize}
 \tightlist
 \item
@@ -6037,7 +6190,7 @@ dass \(\Pr\{\vtheta\in\widehat{C}\}=1-\alpha\), nennen wir ein
 \end{frame}
 
 \begin{frame}{1.~\(\vtheta=\va^\prime\vbeta\)}
-\protect\hypertarget{vthetavaprimevbeta}{}
+\phantomsection\label{vthetavaprimevbeta}
 \begin{itemize}
 \tightlist
 \item
@@ -6063,7 +6216,7 @@ dass \(\Pr\{\vtheta\in\widehat{C}\}=1-\alpha\), nennen wir ein
 \end{frame}
 
 \begin{frame}{1.~\(\vtheta=\va^\prime\vbeta\)}
-\protect\hypertarget{vthetavaprimevbeta-1}{}
+\phantomsection\label{vthetavaprimevbeta-1}
 \thmn\label{thm:conf int t} Unter den Annahmen von Theorem
 \ref{thm:t Test} ist \[
   \widehat{C} = \Big[\va^\prime\widehat{\vbeta} \pm \Phi^{-1}(1-\alpha/2)\sqrt{\va^\prime\widehat{\mV}_{\vbeta}^{\text{HC0}}\va/n}\Big]
@@ -6081,7 +6234,7 @@ Folgt direkt aus \eqref{eq:h7} und Theorem \ref{thm:t Test}.
 \end{frame}
 
 \begin{frame}{1.~\(\vtheta=\va^\prime\vbeta\)}
-\protect\hypertarget{vthetavaprimevbeta-2}{}
+\phantomsection\label{vthetavaprimevbeta-2}
 \framesubtitle{Interpretation}
 
 \begin{itemize}
@@ -6098,7 +6251,7 @@ Folgt direkt aus \eqref{eq:h7} und Theorem \ref{thm:t Test}.
 \end{frame}
 
 \begin{frame}{1.~\(\vtheta=\va^\prime\vbeta\)}
-\protect\hypertarget{vthetavaprimevbeta-3}{}
+\phantomsection\label{vthetavaprimevbeta-3}
 \framesubtitle{\R Illustration}
 
 \xmpl
@@ -6131,7 +6284,7 @@ Folgt direkt aus \eqref{eq:h7} und Theorem \ref{thm:t Test}.
 \end{frame}
 
 \begin{frame}[fragile]{1.~\(\vtheta=\va^\prime\vbeta\)}
-\protect\hypertarget{vthetavaprimevbeta-4}{}
+\phantomsection\label{vthetavaprimevbeta-4}
 \framesubtitle{\R Illustration}
 
 \footnotesize
@@ -6159,7 +6312,7 @@ Folgt direkt aus \eqref{eq:h7} und Theorem \ref{thm:t Test}.
 \end{frame}
 
 \begin{frame}{1.~\(\vtheta=\va^\prime\vbeta\)}
-\protect\hypertarget{vthetavaprimevbeta-5}{}
+\phantomsection\label{vthetavaprimevbeta-5}
 \framesubtitle{\R Illustration}
 
 \footnotesize
@@ -6168,7 +6321,7 @@ Folgt direkt aus \eqref{eq:h7} und Theorem \ref{thm:t Test}.
 \end{frame}
 
 \begin{frame}{2.~\(\vtheta=\mR^\prime\vbeta\)}
-\protect\hypertarget{vthetamrprimevbeta}{}
+\phantomsection\label{vthetamrprimevbeta}
 \begin{itemize}
 \tightlist
 \item
@@ -6192,7 +6345,7 @@ Folgt direkt aus \eqref{eq:h7} und Theorem \ref{thm:t Test}.
 \end{frame}
 
 \begin{frame}{2.~\(\vtheta=\mR^\prime\vbeta\)}
-\protect\hypertarget{vthetamrprimevbeta-1}{}
+\phantomsection\label{vthetamrprimevbeta-1}
 \thmn
 
 Unter den Annahmen von Theorem \ref{thm:Wald Test} ist \[
@@ -6212,17 +6365,16 @@ Folgt direkt aus \eqref{eq:h8} und Theorem \ref{thm:Wald Test}.
 \end{itemize}
 \end{frame}
 
-\hypertarget{instrumentvariablen}{%
-\section{Instrumentvariablen}\label{instrumentvariablen}}
+\section{Instrumentvariablen}\label{instrumentvariablen}
 
 \begin{frame}{}
-\protect\hypertarget{section-7}{}
+\phantomsection\label{section-7}
 \centerline{\textbf{Instrumentvariablen}}
 \centerline{(Hansen, 2022, Kapitel 12)}
 \end{frame}
 
 \begin{frame}{Ausblick}
-\protect\hypertarget{ausblick-2}{}
+\phantomsection\label{ausblick-2}
 \begin{itemize}
 \tightlist
 \item
@@ -6258,7 +6410,7 @@ Folgt direkt aus \eqref{eq:h8} und Theorem \ref{thm:Wald Test}.
 \end{frame}
 
 \begin{frame}{Ausblick}
-\protect\hypertarget{ausblick-3}{}
+\phantomsection\label{ausblick-3}
 \begin{itemize}
 \tightlist
 \item
@@ -6288,7 +6440,7 @@ Folgt direkt aus \eqref{eq:h8} und Theorem \ref{thm:Wald Test}.
 \end{frame}
 
 \begin{frame}{Überblick}
-\protect\hypertarget{uxfcberblick-23}{}
+\phantomsection\label{uxfcberblick-23}
 \begin{itemize}
 \tightlist
 \item
@@ -6309,7 +6461,7 @@ Folgt direkt aus \eqref{eq:h8} und Theorem \ref{thm:Wald Test}.
 \end{frame}
 
 \begin{frame}{1. Regressionen mit ausgelassenen Variablen}
-\protect\hypertarget{regressionen-mit-ausgelassenen-variablen}{}
+\phantomsection\label{regressionen-mit-ausgelassenen-variablen}
 \begin{itemize}
 \tightlist
 \item
@@ -6348,7 +6500,7 @@ Folgt direkt aus \eqref{eq:h8} und Theorem \ref{thm:Wald Test}.
 \end{frame}
 
 \begin{frame}{2. Messfehler in den Regressoren}
-\protect\hypertarget{messfehler-in-den-regressoren}{}
+\phantomsection\label{messfehler-in-den-regressoren}
 \begin{itemize}
 \tightlist
 \item
@@ -6379,7 +6531,7 @@ Folgt direkt aus \eqref{eq:h8} und Theorem \ref{thm:Wald Test}.
 \end{frame}
 
 \begin{frame}{2. Messfehler in den Regressoren}
-\protect\hypertarget{messfehler-in-den-regressoren-1}{}
+\phantomsection\label{messfehler-in-den-regressoren-1}
 \xmpl
 
 \begin{itemize}
@@ -6400,14 +6552,14 @@ Folgt direkt aus \eqref{eq:h8} und Theorem \ref{thm:Wald Test}.
 \end{frame}
 
 \begin{frame}{2. Messfehler in den Regressoren}
-\protect\hypertarget{messfehler-in-den-regressoren-2}{}
+\phantomsection\label{messfehler-in-den-regressoren-2}
 \footnotesize
 \begin{center}\includegraphics{Resources/Plots/Messfehler-1} \end{center}
 \normalsize
 \end{frame}
 
 \begin{frame}{3. Simultane Gleichungssyteme}
-\protect\hypertarget{simultane-gleichungssyteme}{}
+\phantomsection\label{simultane-gleichungssyteme}
 \begin{itemize}
 \tightlist
 \item
@@ -6435,7 +6587,7 @@ Folgt direkt aus \eqref{eq:h8} und Theorem \ref{thm:Wald Test}.
 \end{frame}
 
 \begin{frame}{3. Simultane Gleichungssyteme}
-\protect\hypertarget{simultane-gleichungssyteme-1}{}
+\phantomsection\label{simultane-gleichungssyteme-1}
 \begin{itemize}
 \tightlist
 \item
@@ -6455,7 +6607,7 @@ Folgt direkt aus \eqref{eq:h8} und Theorem \ref{thm:Wald Test}.
 \end{frame}
 
 \begin{frame}{Überblick}
-\protect\hypertarget{uxfcberblick-24}{}
+\phantomsection\label{uxfcberblick-24}
 \begin{itemize}
 \tightlist
 \item
@@ -6476,7 +6628,7 @@ Folgt direkt aus \eqref{eq:h8} und Theorem \ref{thm:Wald Test}.
 \end{frame}
 
 \begin{frame}{Das Problem}
-\protect\hypertarget{das-problem}{}
+\phantomsection\label{das-problem}
 \begin{itemize}
 \tightlist
 \item
@@ -6503,7 +6655,7 @@ Folgt direkt aus \eqref{eq:h8} und Theorem \ref{thm:Wald Test}.
 \end{frame}
 
 \begin{frame}{Instrumente}
-\protect\hypertarget{instrumente}{}
+\phantomsection\label{instrumente}
 \defn\label{defn:IV} Der \((\ell\times1)\) Zufallsvektor \(Z\) ist eine
 \hil{Instrumentvariable (IV)} für \eqref{eq:struc eq1}, falls
 \begin{align}
@@ -6521,7 +6673,7 @@ Folgt direkt aus \eqref{eq:h8} und Theorem \ref{thm:Wald Test}.
 \end{frame}
 
 \begin{frame}{Instrumentexogenität: \(\E[Ze]=\vzero\)}
-\protect\hypertarget{instrumentexogenituxe4t-ezevzero}{}
+\phantomsection\label{instrumentexogenituxe4t-ezevzero}
 \begin{itemize}
 \tightlist
 \item
@@ -6557,7 +6709,7 @@ Folgt direkt aus \eqref{eq:h8} und Theorem \ref{thm:Wald Test}.
 \end{frame}
 
 \begin{frame}{Nicht-Redundanz der Instrumente: \(\E[Z Z^\prime]>0\)}
-\protect\hypertarget{nicht-redundanz-der-instrumente-ez-zprime0}{}
+\phantomsection\label{nicht-redundanz-der-instrumente-ez-zprime0}
 \begin{itemize}
 \tightlist
 \item
@@ -6574,7 +6726,7 @@ Folgt direkt aus \eqref{eq:h8} und Theorem \ref{thm:Wald Test}.
 \end{frame}
 
 \begin{frame}{Instrumentrelevanz: \(\rk\big(\E[ZX^\prime]\big)=k\)}
-\protect\hypertarget{instrumentrelevanz-rkbigezxprimebigk}{}
+\phantomsection\label{instrumentrelevanz-rkbigezxprimebigk}
 \begin{itemize}
 \tightlist
 \item
@@ -6599,7 +6751,7 @@ Dann gilt: \[
 \end{frame}
 
 \begin{frame}{Instrumentrelevanz: \(\rk\big(\E[ZX^\prime]\big)=k\)}
-\protect\hypertarget{instrumentrelevanz-rkbigezxprimebigk-1}{}
+\phantomsection\label{instrumentrelevanz-rkbigezxprimebigk-1}
 \begin{block}{Beweis von Lemma \ref{lem:help}}
 Schreibe das lineare Projektionsmodell als $X=\varPi^\prime Z + \nu$ mit $\E[Z\nu^\prime]=\vzero$. Daher
 \begin{equation}\label{eq:impl Proj}
@@ -6621,7 +6773,7 @@ invertierbar, weil $\varPi$ vollen Rang hat und $\E[ZZ^\prime]>0$.
 \end{frame}
 
 \begin{frame}{Instrumentrelevanz: \(\rk\big(\E[ZX^\prime]\big)=k\)}
-\protect\hypertarget{instrumentrelevanz-rkbigezxprimebigk-2}{}
+\phantomsection\label{instrumentrelevanz-rkbigezxprimebigk-2}
 \begin{itemize}
 \tightlist
 \item
@@ -6648,7 +6800,7 @@ invertierbar, weil $\varPi$ vollen Rang hat und $\E[ZZ^\prime]>0$.
 \end{frame}
 
 \begin{frame}{Zusammenfassung}
-\protect\hypertarget{zusammenfassung-2}{}
+\phantomsection\label{zusammenfassung-2}
 \begin{itemize}
 \tightlist
 \item
@@ -6688,7 +6840,7 @@ invertierbar, weil $\varPi$ vollen Rang hat und $\E[ZZ^\prime]>0$.
 \end{frame}
 
 \begin{frame}{Überblick}
-\protect\hypertarget{uxfcberblick-25}{}
+\phantomsection\label{uxfcberblick-25}
 \begin{itemize}
 \tightlist
 \item
@@ -6709,7 +6861,7 @@ invertierbar, weil $\varPi$ vollen Rang hat und $\E[ZZ^\prime]>0$.
 \end{frame}
 
 \begin{frame}{IV Schätzer}
-\protect\hypertarget{iv-schuxe4tzer}{}
+\phantomsection\label{iv-schuxe4tzer}
 \begin{itemize}
 \tightlist
 \item
@@ -6736,7 +6888,7 @@ invertierbar, weil $\varPi$ vollen Rang hat und $\E[ZZ^\prime]>0$.
 \end{frame}
 
 \begin{frame}{IV Schätzer}
-\protect\hypertarget{iv-schuxe4tzer-1}{}
+\phantomsection\label{iv-schuxe4tzer-1}
 \begin{itemize}
 \tightlist
 \item
@@ -6762,7 +6914,7 @@ invertierbar, weil $\varPi$ vollen Rang hat und $\E[ZZ^\prime]>0$.
 \end{frame}
 
 \begin{frame}{IV Schätzer}
-\protect\hypertarget{iv-schuxe4tzer-2}{}
+\phantomsection\label{iv-schuxe4tzer-2}
 \xmpl
 
 \begin{itemize}
@@ -6789,7 +6941,7 @@ invertierbar, weil $\varPi$ vollen Rang hat und $\E[ZZ^\prime]>0$.
 \end{frame}
 
 \begin{frame}{Mehr zum IV Schätzer}
-\protect\hypertarget{mehr-zum-iv-schuxe4tzer}{}
+\phantomsection\label{mehr-zum-iv-schuxe4tzer}
 \begin{itemize}
 \tightlist
 \item
@@ -6813,7 +6965,7 @@ invertierbar, weil $\varPi$ vollen Rang hat und $\E[ZZ^\prime]>0$.
 \end{frame}
 
 \begin{frame}{Beispiel}
-\protect\hypertarget{beispiel-3}{}
+\phantomsection\label{beispiel-3}
 \xmpl[Card (1995)]\label{ex:Card5}
 
 \begin{itemize}
@@ -6848,7 +7000,7 @@ invertierbar, weil $\varPi$ vollen Rang hat und $\E[ZZ^\prime]>0$.
 \end{frame}
 
 \begin{frame}[fragile]{\R Beispiel}
-\protect\hypertarget{beispiel-4}{}
+\phantomsection\label{beispiel-4}
 \footnotesize
 
 \begin{Shaded}
@@ -6893,7 +7045,7 @@ invertierbar, weil $\varPi$ vollen Rang hat und $\E[ZZ^\prime]>0$.
 \end{frame}
 
 \begin{frame}{Überblick}
-\protect\hypertarget{uxfcberblick-26}{}
+\phantomsection\label{uxfcberblick-26}
 \begin{itemize}
 \tightlist
 \item
@@ -6914,7 +7066,7 @@ invertierbar, weil $\varPi$ vollen Rang hat und $\E[ZZ^\prime]>0$.
 \end{frame}
 
 \begin{frame}{TSLS Schätzer}
-\protect\hypertarget{tsls-schuxe4tzer}{}
+\phantomsection\label{tsls-schuxe4tzer}
 \begin{itemize}
 \tightlist
 \item
@@ -6942,7 +7094,7 @@ invertierbar, weil $\varPi$ vollen Rang hat und $\E[ZZ^\prime]>0$.
 \end{frame}
 
 \begin{frame}{TSLS Schätzer}
-\protect\hypertarget{tsls-schuxe4tzer-1}{}
+\phantomsection\label{tsls-schuxe4tzer-1}
 \begin{itemize}
 \tightlist
 \item
@@ -6965,7 +7117,7 @@ invertierbar, weil $\varPi$ vollen Rang hat und $\E[ZZ^\prime]>0$.
 \end{frame}
 
 \begin{frame}{Zwei Interpretationen}
-\protect\hypertarget{zwei-interpretationen}{}
+\phantomsection\label{zwei-interpretationen}
 \begin{itemize}
 \tightlist
 \item
@@ -6993,7 +7145,7 @@ invertierbar, weil $\varPi$ vollen Rang hat und $\E[ZZ^\prime]>0$.
 \end{frame}
 
 \begin{frame}{Zwei Interpretationen}
-\protect\hypertarget{zwei-interpretationen-1}{}
+\phantomsection\label{zwei-interpretationen-1}
 \begin{itemize}
 \tightlist
 \item
@@ -7014,7 +7166,7 @@ invertierbar, weil $\varPi$ vollen Rang hat und $\E[ZZ^\prime]>0$.
 \end{frame}
 
 \begin{frame}{Mehr zum TSLS Schätzer}
-\protect\hypertarget{mehr-zum-tsls-schuxe4tzer}{}
+\phantomsection\label{mehr-zum-tsls-schuxe4tzer}
 \begin{itemize}
 \tightlist
 \item
@@ -7037,7 +7189,7 @@ invertierbar, weil $\varPi$ vollen Rang hat und $\E[ZZ^\prime]>0$.
 \end{frame}
 
 \begin{frame}[fragile,allowframebreaks]{\R Beispiel}
-\protect\hypertarget{beispiel-5}{}
+\phantomsection\label{beispiel-5}
 \xmpl[*]
 
 \begin{itemize}
@@ -7112,7 +7264,7 @@ invertierbar, weil $\varPi$ vollen Rang hat und $\E[ZZ^\prime]>0$.
 \end{frame}
 
 \begin{frame}{Überblick}
-\protect\hypertarget{uxfcberblick-27}{}
+\phantomsection\label{uxfcberblick-27}
 \begin{itemize}
 \tightlist
 \item
@@ -7133,7 +7285,7 @@ invertierbar, weil $\varPi$ vollen Rang hat und $\E[ZZ^\prime]>0$.
 \end{frame}
 
 \begin{frame}{Asymptotische Eigenschaften}
-\protect\hypertarget{asymptotische-eigenschaften}{}
+\phantomsection\label{asymptotische-eigenschaften}
 \begin{itemize}
 \tightlist
 \item
@@ -7156,7 +7308,7 @@ invertierbar, weil $\varPi$ vollen Rang hat und $\E[ZZ^\prime]>0$.
 \end{frame}
 
 \begin{frame}{Konsistenz}
-\protect\hypertarget{konsistenz-1}{}
+\phantomsection\label{konsistenz-1}
 \thmn[Hansen (2022, Theorem 12.1)]\label{thm:cons TSLS} Seien \(Z\)
 Instrumentvariablen für \(X\) (d.h.~Definition \ref{defn:IV} gilt für
 \(Z\)). Gelten Annahme \ref{ass:iid IV} und \[
@@ -7174,7 +7326,7 @@ Instrumentvariablen für \(X\) (d.h.~Definition \ref{defn:IV} gilt für
 \end{frame}
 
 \begin{frame}{Konsistenz}
-\protect\hypertarget{konsistenz-2}{}
+\phantomsection\label{konsistenz-2}
 \begin{block}{Beweisskizze von Theorem \ref{thm:cons TSLS}}
 Schreibe \eqref{eq:TSLS help} um zu
 \begin{align*}
@@ -7186,7 +7338,7 @@ wobei die Konvergenzen aus (den Annahmen in Kombination mit) dem GGZ in Theorem 
 \end{frame}
 
 \begin{frame}{Asymptotische Normalität}
-\protect\hypertarget{asymptotische-normalituxe4t-3}{}
+\phantomsection\label{asymptotische-normalituxe4t-3}
 \thmn[Hansen (2022, Theorem 12.2)]\label{thm:AN TSLS} Seien \(Z\)
 Instrumentvariablen für \(X\) (d.h.~Definition \ref{defn:IV} gilt für
 \(Z\)). Gelten Annahme \ref{ass:iid IV} und \[  
@@ -7209,7 +7361,7 @@ Instrumentvariablen für \(X\) (d.h.~Definition \ref{defn:IV} gilt für
 \end{frame}
 
 \begin{frame}{Asymptotische Normalität}
-\protect\hypertarget{asymptotische-normalituxe4t-4}{}
+\phantomsection\label{asymptotische-normalituxe4t-4}
 \begin{block}{Beweisskizze von Theorem \ref{thm:AN TSLS}}
 Schreibe \eqref{eq:TSLS help} um zu
 \begin{align*}
@@ -7227,7 +7379,7 @@ folgen.
 \end{frame}
 
 \begin{frame}{Asymptotische Varianz}
-\protect\hypertarget{asymptotische-varianz}{}
+\phantomsection\label{asymptotische-varianz}
 \begin{itemize}
 \tightlist
 \item
@@ -7252,7 +7404,7 @@ folgen.
 \end{frame}
 
 \begin{frame}{Asymptotische Varianz}
-\protect\hypertarget{asymptotische-varianz-1}{}
+\phantomsection\label{asymptotische-varianz-1}
 \begin{itemize}
   \item Wenn die Instrumente $Z=(Z_a, Z_b)$ so sind, dass schon $\dim(Z_a)\geq k$, dann kann man unter bedingter Homoskedastie zeigen (siehe Hansen, 2022, S.\ 364), dass 
   \begin{itemize}
@@ -7268,7 +7420,7 @@ folgen.
 \end{frame}
 
 \begin{frame}{\R Beispiel}
-\protect\hypertarget{beispiel-6}{}
+\phantomsection\label{beispiel-6}
 \xmpl[Card (1995)]\label{ex:Card6}
 
 \begin{itemize}
@@ -7301,7 +7453,7 @@ folgen.
 \end{frame}
 
 \begin{frame}[fragile,allowframebreaks]{\R Beispiel}
-\protect\hypertarget{beispiel-7}{}
+\phantomsection\label{beispiel-7}
 \footnotesize
 
 \begin{Shaded}
@@ -7353,7 +7505,7 @@ folgen.
 \end{frame}
 
 \begin{frame}{Überblick}
-\protect\hypertarget{uxfcberblick-28}{}
+\phantomsection\label{uxfcberblick-28}
 \begin{itemize}
 \tightlist
 \item
@@ -7374,7 +7526,7 @@ folgen.
 \end{frame}
 
 \begin{frame}{Testen überidentifizierender Restriktionen}
-\protect\hypertarget{testen-uxfcberidentifizierender-restriktionen}{}
+\phantomsection\label{testen-uxfcberidentifizierender-restriktionen}
 \begin{itemize}
 \tightlist
 \item
@@ -7410,7 +7562,7 @@ folgen.
 \end{frame}
 
 \begin{frame}{Sargans Teststatistik}
-\protect\hypertarget{sargans-teststatistik}{}
+\phantomsection\label{sargans-teststatistik}
 \begin{itemize}
 \tightlist
 \item
@@ -7444,7 +7596,7 @@ folgen.
 \end{frame}
 
 \begin{frame}{Sargans Test}
-\protect\hypertarget{sargans-test}{}
+\phantomsection\label{sargans-test}
 \thmn[Sargans Test (Hansen, 2022, Theorem 12.16)]Unter den Annahmen von
 Theorem \ref{thm:AN TSLS} und \(\E[e^2\mid Z]=\sigma^2\) gilt \[
   \boxed{\ S\overset{d}{\longrightarrow}\chi_{\ell-k}^{2}.\ }
@@ -7459,7 +7611,7 @@ asymptotisches Signifikanzniveau \(\alpha\) hat. \endthmn
 \end{frame}
 
 \begin{frame}{Kommentare}
-\protect\hypertarget{kommentare}{}
+\phantomsection\label{kommentare}
 \begin{itemize}
 \tightlist
 \item
@@ -7498,7 +7650,7 @@ asymptotisches Signifikanzniveau \(\alpha\) hat. \endthmn
 \end{frame}
 
 \begin{frame}{Beispiel}
-\protect\hypertarget{beispiel-8}{}
+\phantomsection\label{beispiel-8}
 \xmpl[Card (1995)]
 
 \begin{itemize}
@@ -7521,7 +7673,7 @@ asymptotisches Signifikanzniveau \(\alpha\) hat. \endthmn
 \end{frame}
 
 \begin{frame}{Überblick}
-\protect\hypertarget{uxfcberblick-29}{}
+\phantomsection\label{uxfcberblick-29}
 \begin{itemize}
 \tightlist
 \item
@@ -7542,7 +7694,7 @@ asymptotisches Signifikanzniveau \(\alpha\) hat. \endthmn
 \end{frame}
 
 \begin{frame}{Motivation für Endogenitätstest}
-\protect\hypertarget{motivation-fuxfcr-endogenituxe4tstest}{}
+\phantomsection\label{motivation-fuxfcr-endogenituxe4tstest}
 \begin{itemize}
 \tightlist
 \item
@@ -7574,7 +7726,7 @@ asymptotisches Signifikanzniveau \(\alpha\) hat. \endthmn
 \end{frame}
 
 \begin{frame}{Endogenitätstest}
-\protect\hypertarget{endogenituxe4tstest}{}
+\phantomsection\label{endogenituxe4tstest}
 \begin{itemize}
 \tightlist
 \item
@@ -7605,7 +7757,7 @@ asymptotisches Signifikanzniveau \(\alpha\) hat. \endthmn
 \end{frame}
 
 \begin{frame}{Endogenitätstest}
-\protect\hypertarget{endogenituxe4tstest-1}{}
+\phantomsection\label{endogenituxe4tstest-1}
 \begin{itemize}
 \tightlist
 \item
@@ -7639,7 +7791,7 @@ asymptotisches Signifikanzniveau \(\alpha\) hat. \endthmn
 \end{frame}
 
 \begin{frame}{Wu--Hausman Test}
-\protect\hypertarget{wuhausman-test}{}
+\phantomsection\label{wuhausman-test}
 \thmn[\hil{Wu--Hausman Test} (Hansen, 2022, Theorem 12.14)]Unter den
 Annahmen von Theorem \ref{thm:AN TSLS} gilt unter
 \(\mathbb{H}_0\colon \E[X_2e]=\vzero\), dass \[
@@ -7671,16 +7823,15 @@ asymptotisches Signifikanzniveau \(\alpha\) hat. \endthmn
 \endxmpl
 \end{frame}
 
-\hypertarget{zusammenfassung-3}{%
-\section{Zusammenfassung}\label{zusammenfassung-3}}
+\section{Zusammenfassung}\label{zusammenfassung-3}
 
 \begin{frame}{}
-\protect\hypertarget{section-8}{}
+\phantomsection\label{section-8}
 \centerline{\textbf{Zusammenfassung}}
 \end{frame}
 
 \begin{frame}{Die Vorlesung in drei Folien}
-\protect\hypertarget{die-vorlesung-in-drei-folien}{}
+\phantomsection\label{die-vorlesung-in-drei-folien}
 \framesubtitle{Was wir gemacht haben}
 
 \begin{itemize}
@@ -7712,7 +7863,7 @@ asymptotisches Signifikanzniveau \(\alpha\) hat. \endthmn
 \end{frame}
 
 \begin{frame}{Die Vorlesung in drei Folien}
-\protect\hypertarget{die-vorlesung-in-drei-folien-1}{}
+\phantomsection\label{die-vorlesung-in-drei-folien-1}
 \framesubtitle{Was wir lernen können}
 
 \begin{equation*}
@@ -7759,7 +7910,7 @@ asymptotisches Signifikanzniveau \(\alpha\) hat. \endthmn
 \end{frame}
 
 \begin{frame}{Die Vorlesung in drei Folien}
-\protect\hypertarget{die-vorlesung-in-drei-folien-2}{}
+\phantomsection\label{die-vorlesung-in-drei-folien-2}
 \framesubtitle{Was wir tun, wenn es schwierig wird}
 
 \begin{itemize}
@@ -7791,21 +7942,20 @@ asymptotisches Signifikanzniveau \(\alpha\) hat. \endthmn
 \end{itemize}
 \end{frame}
 
-\hypertarget{referenzen}{%
-\section*{Referenzen}\label{referenzen}}
+\section*{Referenzen}\label{referenzen}
 
 \begin{frame}[allowframebreaks]{Referenzen}
-\protect\hypertarget{referenzen-1}{}
-\hypertarget{refs}{}
+\phantomsection\label{referenzen-1}
+\phantomsection\label{refs}
 \begin{CSLReferences}{1}{0}
-\leavevmode\vadjust pre{\hypertarget{ref-Car95}{}}%
+\bibitem[\citeproctext]{ref-Car95}
 Card, D. 1995. {``Using Geographic Variation in College Proximity to
 Estimate the Return to Schooling.''} In \emph{Aspects of Labor Market
 Behaviour: Essays in Honour of John Vanderkamp}, edited by L. N. L. N.
 Christofides, E. K. Grant, and R. Swidinsky, 201--22. Toronto:
 University of Toronto Press.
 
-\leavevmode\vadjust pre{\hypertarget{ref-Rub74}{}}%
+\bibitem[\citeproctext]{ref-Rub74}
 Rubin, D. B. 1974. {``Estimating Causal Effects of Treatments in
 Randomized and Nonrandomized Studies.''} \emph{Journal of Educational
 Psychology} 66 (5): 688--701.

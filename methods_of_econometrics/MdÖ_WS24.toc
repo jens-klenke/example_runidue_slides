@@ -1,0 +1,9 @@
+\babel@toc {ngerman}{}\relax 
+\beamer@sectionintoc {1}{Einführung}{2}{0}{1}
+\beamer@sectionintoc {2}{Regression, Projektion und Kausalität}{37}{0}{2}
+\beamer@sectionintoc {3}{Lineare Regression}{83}{0}{3}
+\beamer@sectionintoc {4}{Eigenschaften von KQ in kleinen Stichproben}{122}{0}{4}
+\beamer@sectionintoc {5}{Eigenschaften von KQ in großen Stichproben}{158}{0}{5}
+\beamer@sectionintoc {6}{Inferenz}{192}{0}{6}
+\beamer@sectionintoc {7}{Instrumentvariablen}{247}{0}{7}
+\beamer@sectionintoc {8}{Zusammenfassung}{305}{0}{8}

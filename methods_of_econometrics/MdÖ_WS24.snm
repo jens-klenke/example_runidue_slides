@@ -1,0 +1,539 @@
+\beamer@slide {einfuxfchrung}{3}
+\beamer@slide {uxfcberblick}{3}
+\beamer@slide {details-zur-veranstaltung}{4}
+\beamer@slide {ressourcen}{5}
+\beamer@slide {f-a}{6}
+\beamer@slide {uxfcberblick-1}{7}
+\beamer@slide {was-ist-uxf6konometrie-und-wofuxfcr-brauchen-wir-sie}{8}
+\beamer@slide {was-ist-uxf6konometrie-und-wofuxfcr-brauchen-wir-sie-1}{9}
+\beamer@slide {was-ist-uxf6konometrie-und-wofuxfcr-brauchen-wir-sie-2}{10}
+\beamer@slide {fig:unnamed-chunk-1}{10}
+\beamer@slide {was-ist-uxf6konometrie-und-wofuxfcr-brauchen-wir-sie-3}{11}
+\beamer@slide {was-ist-uxf6konometrie-und-wofuxfcr-brauchen-wir-sie-4}{12}
+\beamer@slide {fig:unnamed-chunk-2}{12}
+\beamer@slide {gesundheitsuxf6konomisches-beispiel}{13}
+\beamer@slide {tab:NHIS}{13}
+\beamer@slide {gesundheitsuxf6konomisches-beispiel-1}{14}
+\beamer@slide {gesundheitsuxf6konomisches-beispiel-2}{15}
+\beamer@slide {gesundheitsuxf6konomisches-beispiel-3}{16}
+\beamer@slide {tab:KM}{16}
+\beamer@slide {gesundheitsuxf6konomisches-beispiel-4}{17}
+\beamer@slide {eq:const kap}{17}
+\beamer@slide {eq:const kap}{17}
+\beamer@slide {ziel-der-veranstaltung}{18}
+\beamer@slide {uxfcberblick-2}{19}
+\beamer@slide {wiederholung}{20}
+\beamer@slide {zufallsvariable}{21}
+\beamer@slide {zufallsvariable-1}{22}
+\beamer@slide {momente}{23}
+\beamer@slide {momente-1}{24}
+\beamer@slide {eq:mom}{24}
+\beamer@slide {gemeinsame-verteilung}{25}
+\beamer@slide {bedingte-verteilung}{26}
+\beamer@slide {bedingte-verteilung-1}{27}
+\beamer@slide {bedingte-momente}{28}
+\beamer@slide {bedingte-momente-1}{29}
+\beamer@slide {eq:cE trafo}{29}
+\beamer@slide {eq:cE trafo}{29}
+\beamer@slide {bedingte-momente-2}{30}
+\beamer@slide {bedingte-momente-3}{31}
+\beamer@slide {bedingte-momente-4}{32}
+\beamer@slide {bedingte-momente-5}{33}
+\beamer@slide {bedingte-momente-6}{34}
+\beamer@slide {thm:bed mom}{34}
+\beamer@slide {eq:bE indep}{34}
+\beamer@slide {eq:bE indep}{34}
+\beamer@slide {eigenschaften-der-bedingten-erwartung}{35}
+\beamer@slide {eq:GIE}{35}
+\beamer@slide {eq:GIE}{35}
+\beamer@slide {eigenschaften-der-bedingten-erwartung-1}{36}
+\beamer@slide {eq:GIE advanced}{36}
+\beamer@slide {eq:GIE advanced}{36}
+\beamer@slide {eq:pull out}{36}
+\beamer@slide {eq:pull out}{36}
+\beamer@slide {regression-projektion-und-kausalituxe4t}{38}
+\beamer@slide {section}{38}
+\beamer@slide {uxfcberblick-3}{39}
+\beamer@slide {bedingte-erwartung-und-prognose}{40}
+\beamer@slide {optimale-vorhersage}{41}
+\beamer@slide {optimales-g}{42}
+\beamer@slide {thm:Opt Cond Exp}{42}
+\beamer@slide {eq:bE}{42}
+\beamer@slide {eq:bE}{42}
+\beamer@slide {eq:error lbE}{42}
+\beamer@slide {eq:error lbE}{42}
+\beamer@slide {eigenschaften-des-regressionsfehlers}{43}
+\beamer@slide {eq:mean zero}{43}
+\beamer@slide {eq:mean zero}{43}
+\beamer@slide {eq:uncorr}{43}
+\beamer@slide {eq:uncorr}{43}
+\beamer@slide {section-1}{44}
+\beamer@slide {bedingtes-erwartungswertmodell}{45}
+\beamer@slide {eq:Regressionsfehler}{45}
+\beamer@slide {eq:Regressionsfehler}{45}
+\beamer@slide {beispiel}{46}
+\beamer@slide {ex:Biv Norm}{46}
+\beamer@slide {verschiedene-perspektiven}{47}
+\beamer@slide {uxfcberblick-4}{48}
+\beamer@slide {lineare-projektion}{49}
+\beamer@slide {ass:1}{49}
+\beamer@slide {lineare-projektionskoeffizienten}{50}
+\beamer@slide {eq:proj coeff}{50}
+\beamer@slide {eq:proj coeff}{50}
+\beamer@slide {eq:MQF calc}{50}
+\beamer@slide {eq:MQF calc}{50}
+\beamer@slide {blp-und-projektionsfehler}{51}
+\beamer@slide {eq:BLP eq}{51}
+\beamer@slide {eq:BLP eq}{51}
+\beamer@slide {lineares-projektionsmodell}{52}
+\beamer@slide {beispiel-1}{53}
+\beamer@slide {beispiel-2}{54}
+\beamer@slide {weitere-interpretation-des-blp}{55}
+\beamer@slide {uxfcberblick-5}{56}
+\beamer@slide {potential-outcomes-framework}{57}
+\beamer@slide {potential-outcomes-framework-1}{58}
+\beamer@slide {eq:R easy}{58}
+\beamer@slide {eq:R easy}{58}
+\beamer@slide {potential-outcomes-framework-2}{59}
+\beamer@slide {schuxe4tzung-des-ate}{60}
+\beamer@slide {schuxe4tzung-des-ate-1}{61}
+\beamer@slide {erweiterung-unseres-frameworks}{64}
+\beamer@slide {eq:R ext}{64}
+\beamer@slide {eq:R ext}{64}
+\beamer@slide {bedingte-unabhuxe4ngigkeitsannahme}{65}
+\beamer@slide {verbindung-atex-und-bef-mdx}{66}
+\beamer@slide {eq:dens under BUA}{66}
+\beamer@slide {eq:dens under BUA}{66}
+\beamer@slide {verbindung-atex-und-bef-mdx-1}{67}
+\beamer@slide {thm:BEF CE}{67}
+\beamer@slide {verbindung-atex-und-bef-mdx-2}{68}
+\beamer@slide {eq:ATE dx}{68}
+\beamer@slide {eq:ATE dx}{68}
+\beamer@slide {thm:BEF CE cts D}{68}
+\beamer@slide {verbindung-atex-und-bef-mdx-3}{69}
+\beamer@slide {verbindung-atex-und-regressionskoeffizienten}{70}
+\beamer@slide {thm:reg coeff caus eff}{70}
+\beamer@slide {beispiel-bef-und-ate}{71}
+\beamer@slide {eq:CD DGP}{71}
+\beamer@slide {eq:CD DGP}{71}
+\beamer@slide {beispiel-bef-und-ate-1}{72}
+\beamer@slide {uxfcberblick-6}{78}
+\beamer@slide {zusammenhuxe4nge-in-kuxfcrze}{79}
+\beamer@slide {zusammenhuxe4nge-in-kuxfcrze-1}{80}
+\beamer@slide {eq:true lin DGP}{80}
+\beamer@slide {eq:true lin DGP}{80}
+\beamer@slide {warnung}{81}
+\beamer@slide {drei-interpretationen}{82}
+\beamer@slide {lineare-regression}{84}
+\beamer@slide {section-2}{84}
+\beamer@slide {das-lineare-modell}{85}
+\beamer@slide {eq:LPM}{85}
+\beamer@slide {eq:LPM}{85}
+\beamer@slide {uxfcberblick-7}{86}
+\beamer@slide {kq-schuxe4tzer}{87}
+\beamer@slide {ass:id}{87}
+\beamer@slide {eq:beta hat ausf}{87}
+\beamer@slide {eq:beta hat ausf}{87}
+\beamer@slide {kq-schuxe4tzer-1}{88}
+\beamer@slide {thm:KQ}{88}
+\beamer@slide {visualisierung-kq-schuxe4tzer}{89}
+\beamer@slide {visualisierung-kq-schuxe4tzer-1}{90}
+\beamer@slide {visualisierung-kq-schuxe4tzer-2}{91}
+\beamer@slide {visualisierung-kq-schuxe4tzer-3}{92}
+\beamer@slide {visualisierung-kq-schuxe4tzer-4}{93}
+\beamer@slide {visualisierung-kq-schuxe4tzer-5}{94}
+\beamer@slide {kq-schuxe4tzer-in}{95}
+\beamer@slide {ex:Card}{95}
+\beamer@slide {kq-schuxe4tzer-in-1}{96}
+\beamer@slide {kq-schuxe4tzer-in-2}{97}
+\beamer@slide {matrixnotation}{98}
+\beamer@slide {eq:Matrixnotation}{98}
+\beamer@slide {eq:Matrixnotation}{98}
+\beamer@slide {eq:beta hat mat}{98}
+\beamer@slide {eq:beta hat mat}{98}
+\beamer@slide {positive-definitheit}{99}
+\beamer@slide {eq:equiv pd rk}{99}
+\beamer@slide {eq:equiv pd rk}{99}
+\beamer@slide {positive-definitheit-1}{100}
+\beamer@slide {uxfcberblick-8}{101}
+\beamer@slide {terminologie}{102}
+\beamer@slide {defn:Aw and Resids}{102}
+\beamer@slide {eq:e hat why}{102}
+\beamer@slide {eq:e hat why}{102}
+\beamer@slide {visualisierung-in}{103}
+\beamer@slide {projektionsmatrix}{104}
+\beamer@slide {thm:Eig P}{104}
+\beamer@slide {it:P1}{104}
+\beamer@slide {it:P2}{104}
+\beamer@slide {it:P3}{104}
+\beamer@slide {it:P4}{104}
+\beamer@slide {it:P5}{104}
+\beamer@slide {it:P6}{104}
+\beamer@slide {it:P7}{104}
+\beamer@slide {projektionsmatrix-1}{105}
+\beamer@slide {projektionsmatrix-2}{106}
+\beamer@slide {projektionsmatrix-3}{107}
+\beamer@slide {residuenmachermatrix}{108}
+\beamer@slide {thm:Eig M}{108}
+\beamer@slide {it:M1}{108}
+\beamer@slide {it:M2}{108}
+\beamer@slide {it:M3}{108}
+\beamer@slide {it:M4}{108}
+\beamer@slide {it:M5}{108}
+\beamer@slide {it:M6}{108}
+\beamer@slide {it:M7}{108}
+\beamer@slide {angepasste-werte-und-residuen}{109}
+\beamer@slide {thm:ortho}{109}
+\beamer@slide {eq:X e.hat}{109}
+\beamer@slide {eq:X e.hat}{109}
+\beamer@slide {eq:Y.hat e.hat}{109}
+\beamer@slide {eq:Y.hat e.hat}{109}
+\beamer@slide {eq:Zerl fit resid}{109}
+\beamer@slide {eq:Zerl fit resid}{109}
+\beamer@slide {angepasste-werte-und-residuen-1}{110}
+\beamer@slide {angepasste-werte-und-residuen-2}{111}
+\beamer@slide {uxfcberblick-9}{112}
+\beamer@slide {fwl-theorem}{113}
+\beamer@slide {eq:part LM}{113}
+\beamer@slide {eq:part LM}{113}
+\beamer@slide {thm:FWL}{113}
+\beamer@slide {eq:FWL1}{113}
+\beamer@slide {eq:FWL2}{113}
+\beamer@slide {eq:FWL3}{113}
+\beamer@slide {fwl-theorem-1}{114}
+\beamer@slide {eq:(2.15)}{114}
+\beamer@slide {eq:(2.15)}{114}
+\beamer@slide {eq:h0}{114}
+\beamer@slide {eq:h0}{114}
+\beamer@slide {eq:(2.17)}{114}
+\beamer@slide {eq:(2.17)}{114}
+\beamer@slide {fwl-theorem-2}{115}
+\beamer@slide {eq:help MM}{115}
+\beamer@slide {eq:help MM}{115}
+\beamer@slide {eq:(2.18)}{115}
+\beamer@slide {eq:(2.18)}{115}
+\beamer@slide {fwl-theorem-3}{116}
+\beamer@slide {anwendung-des-fwl-theorems}{117}
+\beamer@slide {ex:FWL}{117}
+\beamer@slide {uxfcberblick-10}{118}
+\beamer@slide {tss-ess-und-ssr}{119}
+\beamer@slide {unzentriertes-r2}{120}
+\beamer@slide {zentriertes-r2}{121}
+\beamer@slide {eigenschaften-von-kq-in-kleinen-stichproben}{123}
+\beamer@slide {section-3}{123}
+\beamer@slide {modell}{124}
+\beamer@slide {eq:lbE}{124}
+\beamer@slide {eq:lbE}{124}
+\beamer@slide {stichprobe}{125}
+\beamer@slide {ass:iid}{125}
+\beamer@slide {ass:pd}{125}
+\beamer@slide {uxfcberblick-11}{126}
+\beamer@slide {erwartungswert}{127}
+\beamer@slide {thm:cond exp ols}{127}
+\beamer@slide {erwartungswert-1}{128}
+\beamer@slide {eq:h1}{128}
+\beamer@slide {eq:h1}{128}
+\beamer@slide {illustration-der-unverzerrtheit-in}{129}
+\beamer@slide {illustration-der-unverzerrtheit-in-1}{130}
+\beamer@slide {illustration-der-unverzerrtheit-in-2}{131}
+\beamer@slide {illustration-der-bedingten-unverzerrtheit-in}{132}
+\beamer@slide {illustration-der-bedingten-unverzerrtheit-in-1}{133}
+\beamer@slide {illustration-der-bedingten-unverzerrtheit-in-2}{134}
+\beamer@slide {uxfcberblick-12}{135}
+\beamer@slide {varianz-kovarianz-matrix}{136}
+\beamer@slide {eq:bed Var}{136}
+\beamer@slide {eq:bed Var}{136}
+\beamer@slide {eq:Form VaR}{136}
+\beamer@slide {eq:Form VaR}{136}
+\beamer@slide {varianz}{137}
+\beamer@slide {eq:decomp beta hat}{137}
+\beamer@slide {varianz-1}{138}
+\beamer@slide {eq:var form ols}{138}
+\beamer@slide {varianz-2}{139}
+\beamer@slide {ass:cond hom}{139}
+\beamer@slide {eq:homo impl}{139}
+\beamer@slide {varianz-3}{140}
+\beamer@slide {varianz-4}{141}
+\beamer@slide {thm:Var KQ}{141}
+\beamer@slide {illustration-von-heteroskedastie-in}{142}
+\beamer@slide {unbedingte-varianz}{143}
+\beamer@slide {thm:Var decomp}{143}
+\beamer@slide {uxfcberblick-13}{144}
+\beamer@slide {motivation}{145}
+\beamer@slide {gaussmarkov-theorem}{146}
+\beamer@slide {thm:GMT}{146}
+\beamer@slide {beweis}{147}
+\beamer@slide {beweis-1}{148}
+\beamer@slide {illustration-des-gmt-via-beispiel}{149}
+\beamer@slide {illustration-des-gmt-via-beispiel-1}{150}
+\beamer@slide {uxfcberblick-14}{152}
+\beamer@slide {ausschluss-relevanter-variablen}{153}
+\beamer@slide {eq:true DGP}{153}
+\beamer@slide {eq:true DGP}{153}
+\beamer@slide {eq:small model}{153}
+\beamer@slide {eq:small model}{153}
+\beamer@slide {ausschluss-relevanter-variablen-1}{154}
+\beamer@slide {inklusion-irrelevanter-variablen}{155}
+\beamer@slide {inklusion-irrelevanter-variablen-1}{156}
+\beamer@slide {zusammenfassung}{157}
+\beamer@slide {eigenschaften-von-kq-in-grouxdfen-stichproben}{159}
+\beamer@slide {section-4}{159}
+\beamer@slide {ausblick}{160}
+\beamer@slide {uxfcberblick-15}{161}
+\beamer@slide {wiederholung-asymptotischer-theorie}{162}
+\beamer@slide {konvergenzmodi}{163}
+\beamer@slide {konvergenzmodi-1}{164}
+\beamer@slide {regeln-fuxfcr-konvergenzen}{165}
+\beamer@slide {eq:pr impl d}{165}
+\beamer@slide {eq:pr impl d}{165}
+\beamer@slide {eq:equiv cj conv}{165}
+\beamer@slide {eq:equiv cj conv}{165}
+\beamer@slide {regeln-fuxfcr-konvergenzen-1}{166}
+\beamer@slide {zwei-klassiker}{167}
+\beamer@slide {thm:GGZ}{167}
+\beamer@slide {thm:ZGWS}{167}
+\beamer@slide {illustration-des-zgws}{168}
+\beamer@slide {fig:ZGWS}{168}
+\beamer@slide {uxfcberblick-16}{171}
+\beamer@slide {konsistenz}{172}
+\beamer@slide {thm:KQ cons}{172}
+\beamer@slide {beweis-2}{173}
+\beamer@slide {eq:cons1}{173}
+\beamer@slide {eq:cons1}{173}
+\beamer@slide {beweis-3}{174}
+\beamer@slide {eq:cons2}{174}
+\beamer@slide {eq:cons2}{174}
+\beamer@slide {beweis-4}{175}
+\beamer@slide {illustration-von-konsistenz}{176}
+\beamer@slide {illustration-von-inkonsistenz}{178}
+\beamer@slide {uxfcberblick-17}{180}
+\beamer@slide {asymptotische-normalituxe4t}{181}
+\beamer@slide {ass:1 ex}{181}
+\beamer@slide {asymptotische-normalituxe4t-1}{182}
+\beamer@slide {eq:Omega}{182}
+\beamer@slide {eq:Omega}{182}
+\beamer@slide {eq:fin var}{182}
+\beamer@slide {eq:fin var}{182}
+\beamer@slide {asymptotische-normalituxe4t-2}{183}
+\beamer@slide {thm:KQ AN}{183}
+\beamer@slide {beweis-5}{184}
+\beamer@slide {eq:convXX}{184}
+\beamer@slide {eq:convXX}{184}
+\beamer@slide {beweis-6}{185}
+\beamer@slide {eq:error CLT}{185}
+\beamer@slide {eq:error CLT}{185}
+\beamer@slide {beweis-7}{186}
+\beamer@slide {illustration}{187}
+\beamer@slide {illustration-1}{188}
+\beamer@slide {illustration-2}{189}
+\beamer@slide {diskussion-von-theorem}{191}
+\beamer@slide {inferenz}{193}
+\beamer@slide {section-5}{193}
+\beamer@slide {ausblick-1}{194}
+\beamer@slide {uxfcberblick-18}{195}
+\beamer@slide {motivation-1}{196}
+\beamer@slide {hypothesen}{197}
+\beamer@slide {teststatistik-und-kritische-werte}{198}
+\beamer@slide {teststatistik-und-kritische-werte-1}{199}
+\beamer@slide {fehler-1.-art}{200}
+\beamer@slide {fehler-2.-art}{201}
+\beamer@slide {fehler-1.-und-2.-art}{202}
+\beamer@slide {fehler-1.-und-2.-art-1}{203}
+\beamer@slide {ex:Error types}{203}
+\beamer@slide {eq:t ex distr}{203}
+\beamer@slide {eq:t ex distr}{203}
+\beamer@slide {p-wert}{204}
+\beamer@slide {p-wert-1}{205}
+\beamer@slide {eq:hyp}{205}
+\beamer@slide {eq:hyp}{205}
+\beamer@slide {p-wert-2}{206}
+\beamer@slide {thm:p-Wert}{206}
+\beamer@slide {p-wert-3}{207}
+\beamer@slide {p-wert-4}{208}
+\beamer@slide {p-wert-5}{209}
+\beamer@slide {ex:p val}{209}
+\beamer@slide {p-wert-6}{210}
+\beamer@slide {rezept}{211}
+\beamer@slide {uxfcberblick-19}{212}
+\beamer@slide {section-6}{213}
+\beamer@slide {bedingte-homoskedastie}{214}
+\beamer@slide {schuxe4tzer-von-mq_xxprime-1-und-sigma2}{215}
+\beamer@slide {konsistenz-von-widehatsigma2}{216}
+\beamer@slide {zusammenfassung-1}{217}
+\beamer@slide {thm:KQ under cond homo}{217}
+\beamer@slide {anwendung}{218}
+\beamer@slide {eq:beta hat cond homo}{218}
+\beamer@slide {eq:beta hat cond homo}{218}
+\beamer@slide {uxfcberblick-20}{219}
+\beamer@slide {bedingte-heteroskedastie}{220}
+\beamer@slide {eq:toy model}{220}
+\beamer@slide {eq:toy model}{220}
+\beamer@slide {bedingte-heteroskedastie-1}{221}
+\beamer@slide {eq:Omega hat}{221}
+\beamer@slide {eq:Omega hat}{221}
+\beamer@slide {konsistenz-von-widehatmomega-und-widehatmv_vbetatexthc0}{222}
+\beamer@slide {thm:KQ under cond hetero}{222}
+\beamer@slide {eq:beta hat cond hetero}{222}
+\beamer@slide {eq:beta hat cond hetero}{222}
+\beamer@slide {uxfcberblick-21}{223}
+\beamer@slide {t-test}{224}
+\beamer@slide {t-test-1}{225}
+\beamer@slide {eq:h2}{225}
+\beamer@slide {eq:h2}{225}
+\beamer@slide {eq:h3}{225}
+\beamer@slide {eq:h3}{225}
+\beamer@slide {t-test-2}{226}
+\beamer@slide {thm:t Test}{226}
+\beamer@slide {eq:t statistic}{226}
+\beamer@slide {eq:t statistic}{226}
+\beamer@slide {t-test-3}{227}
+\beamer@slide {eq:t Test}{227}
+\beamer@slide {eq:t Test}{227}
+\beamer@slide {t-test-in}{228}
+\beamer@slide {ex:Card1}{228}
+\beamer@slide {eq:Card1}{228}
+\beamer@slide {t-test-im-beispiel}{229}
+\beamer@slide {wald-test}{231}
+\beamer@slide {wald-test-1}{232}
+\beamer@slide {eq:h4}{232}
+\beamer@slide {eq:h4}{232}
+\beamer@slide {eq:h5}{232}
+\beamer@slide {eq:h5}{232}
+\beamer@slide {eq:h6}{232}
+\beamer@slide {eq:h6}{232}
+\beamer@slide {wald-test-2}{233}
+\beamer@slide {wald-test-3}{234}
+\beamer@slide {thm:Wald Test}{234}
+\beamer@slide {wald-test-in}{235}
+\beamer@slide {uxfcberblick-22}{236}
+\beamer@slide {konfidenzintervalle}{237}
+\beamer@slide {allgemeine-konstruktion}{238}
+\beamer@slide {eq:Def C}{238}
+\beamer@slide {eq:Def C}{238}
+\beamer@slide {vthetavaprimevbeta}{239}
+\beamer@slide {eq:h7}{239}
+\beamer@slide {vthetavaprimevbeta-1}{240}
+\beamer@slide {thm:conf int t}{240}
+\beamer@slide {vthetavaprimevbeta-2}{241}
+\beamer@slide {vthetavaprimevbeta-3}{242}
+\beamer@slide {vthetavaprimevbeta-4}{243}
+\beamer@slide {vthetavaprimevbeta-5}{244}
+\beamer@slide {vthetamrprimevbeta}{245}
+\beamer@slide {eq:h8}{245}
+\beamer@slide {vthetamrprimevbeta-1}{246}
+\beamer@slide {instrumentvariablen}{248}
+\beamer@slide {section-7}{248}
+\beamer@slide {ausblick-2}{249}
+\beamer@slide {eq:struc eq}{249}
+\beamer@slide {eq:struc eq}{249}
+\beamer@slide {ausblick-3}{250}
+\beamer@slide {eq:bias beta}{250}
+\beamer@slide {eq:bias beta}{250}
+\beamer@slide {uxfcberblick-23}{251}
+\beamer@slide {regressionen-mit-ausgelassenen-variablen}{252}
+\beamer@slide {eq:ovb mod}{252}
+\beamer@slide {eq:ovb mod}{252}
+\beamer@slide {messfehler-in-den-regressoren}{253}
+\beamer@slide {messfehler-in-den-regressoren-1}{254}
+\beamer@slide {messfehler-in-den-regressoren-2}{255}
+\beamer@slide {simultane-gleichungssyteme}{256}
+\beamer@slide {simultane-gleichungssyteme-1}{257}
+\beamer@slide {uxfcberblick-24}{258}
+\beamer@slide {das-problem}{259}
+\beamer@slide {eq:struc eq1}{259}
+\beamer@slide {eq:struc eq1}{259}
+\beamer@slide {instrumente}{260}
+\beamer@slide {defn:IV}{260}
+\beamer@slide {eq:(12.5)}{260}
+\beamer@slide {eq:(12.5)}{260}
+\beamer@slide {eq:(12.6)}{260}
+\beamer@slide {eq:(12.6)}{260}
+\beamer@slide {eq:(12.7)}{260}
+\beamer@slide {eq:(12.7)}{260}
+\beamer@slide {instrumentexogenituxe4t-ezevzero}{261}
+\beamer@slide {nicht-redundanz-der-instrumente-ez-zprime0}{262}
+\beamer@slide {instrumentrelevanz-rkbigezxprimebigk}{263}
+\beamer@slide {lem:help}{263}
+\beamer@slide {instrumentrelevanz-rkbigezxprimebigk-1}{264}
+\beamer@slide {eq:impl Proj}{264}
+\beamer@slide {eq:impl Proj}{264}
+\beamer@slide {instrumentrelevanz-rkbigezxprimebigk-2}{265}
+\beamer@slide {zusammenfassung-2}{266}
+\beamer@slide {uxfcberblick-25}{267}
+\beamer@slide {iv-schuxe4tzer}{268}
+\beamer@slide {eq:beta IV eq}{268}
+\beamer@slide {eq:beta IV eq}{268}
+\beamer@slide {iv-schuxe4tzer-1}{269}
+\beamer@slide {ass:iid IV}{269}
+\beamer@slide {eq:IV}{269}
+\beamer@slide {eq:IV}{269}
+\beamer@slide {iv-schuxe4tzer-2}{270}
+\beamer@slide {eq:fs ex}{270}
+\beamer@slide {eq:fs ex}{270}
+\beamer@slide {mehr-zum-iv-schuxe4tzer}{271}
+\beamer@slide {beispiel-3}{272}
+\beamer@slide {ex:Card5}{272}
+\beamer@slide {beispiel-4}{273}
+\beamer@slide {uxfcberblick-26}{274}
+\beamer@slide {tsls-schuxe4tzer}{275}
+\beamer@slide {tsls-schuxe4tzer-1}{276}
+\beamer@slide {eq:Proj Pi}{276}
+\beamer@slide {eq:Proj Pi}{276}
+\beamer@slide {eq:TSLS}{276}
+\beamer@slide {eq:TSLS}{276}
+\beamer@slide {zwei-interpretationen}{277}
+\beamer@slide {eq:h11}{277}
+\beamer@slide {eq:h11}{277}
+\beamer@slide {eq:TSLS why}{277}
+\beamer@slide {eq:TSLS why}{277}
+\beamer@slide {zwei-interpretationen-1}{278}
+\beamer@slide {mehr-zum-tsls-schuxe4tzer}{279}
+\beamer@slide {beispiel-5}{280}
+\beamer@slide {uxfcberblick-27}{283}
+\beamer@slide {asymptotische-eigenschaften}{284}
+\beamer@slide {eq:TSLS help}{284}
+\beamer@slide {eq:TSLS help}{284}
+\beamer@slide {konsistenz-1}{285}
+\beamer@slide {thm:cons TSLS}{285}
+\beamer@slide {konsistenz-2}{286}
+\beamer@slide {asymptotische-normalituxe4t-3}{287}
+\beamer@slide {thm:AN TSLS}{287}
+\beamer@slide {asymptotische-normalituxe4t-4}{288}
+\beamer@slide {asymptotische-varianz}{289}
+\beamer@slide {thm:cons var TSLS}{289}
+\beamer@slide {asymptotische-varianz-1}{290}
+\beamer@slide {beispiel-6}{291}
+\beamer@slide {ex:Card6}{291}
+\beamer@slide {beispiel-7}{292}
+\beamer@slide {uxfcberblick-28}{294}
+\beamer@slide {testen-uxfcberidentifizierender-restriktionen}{295}
+\beamer@slide {ex:illu over}{295}
+\beamer@slide {sargans-teststatistik}{296}
+\beamer@slide {eq:Sargan}{296}
+\beamer@slide {eq:Sargan}{296}
+\beamer@slide {sargans-test}{297}
+\beamer@slide {kommentare}{298}
+\beamer@slide {beispiel-8}{299}
+\beamer@slide {uxfcberblick-29}{300}
+\beamer@slide {motivation-fuxfcr-endogenituxe4tstest}{301}
+\beamer@slide {endogenituxe4tstest}{302}
+\beamer@slide {eq:seq}{302}
+\beamer@slide {eq:seq}{302}
+\beamer@slide {eq:rf}{302}
+\beamer@slide {eq:rf}{302}
+\beamer@slide {eq:e}{302}
+\beamer@slide {eq:e}{302}
+\beamer@slide {eq:WH}{302}
+\beamer@slide {eq:WH}{302}
+\beamer@slide {endogenituxe4tstest-1}{303}
+\beamer@slide {wuhausman-test}{304}
+\beamer@slide {zusammenfassung-3}{306}
+\beamer@slide {section-8}{306}
+\beamer@slide {die-vorlesung-in-drei-folien}{307}
+\beamer@slide {eq:lm}{307}
+\beamer@slide {eq:lm}{307}
+\beamer@slide {die-vorlesung-in-drei-folien-1}{308}
+\beamer@slide {die-vorlesung-in-drei-folien-2}{309}
+\beamer@slide {referenzen}{310}
+\beamer@slide {referenzen-1}{310}
+\beamer@slide {refs}{310}
